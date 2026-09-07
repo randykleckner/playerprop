@@ -1,0 +1,807 @@
+{
+  "fetchedAt": "2026-09-06T19:16:36.969387+00:00",
+  "payload": {
+    "events": [
+      {
+        "id": "401872656",
+        "date": "2026-09-10T00:20Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 76,
+          "highTemperature": 76,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "98134"
+            ],
+            "href": "http://www.accuweather.com/en/us/lumen-field-wa/98104/hourly-weather-forecast/53660_poi?day=4&hbhhour=17&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3673",
+              "fullName": "Lumen Field",
+              "address": {
+                "city": "Seattle",
+                "state": "WA",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "SEA",
+                  "displayName": "Seattle Seahawks"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "NE",
+                  "displayName": "New England Patriots"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872657",
+        "date": "2026-09-11T00:35Z",
+        "weather": null,
+        "competitions": [
+          {
+            "venue": {
+              "id": "9119",
+              "fullName": "Melbourne Cricket Ground",
+              "address": {
+                "city": "Melbourne",
+                "state": "VIC",
+                "country": "Australia"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "LAR",
+                  "displayName": "Los Angeles Rams"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "SF",
+                  "displayName": "San Francisco 49ers"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872925",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 86,
+          "highTemperature": 86,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "45202"
+            ],
+            "href": "http://www.accuweather.com/en/us/paycor-stadium-oh/45212/hourly-weather-forecast/53622_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3874",
+              "fullName": "Paycor Stadium",
+              "address": {
+                "city": "Cincinnati",
+                "state": "OH",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "CIN",
+                  "displayName": "Cincinnati Bengals"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "TB",
+                  "displayName": "Tampa Bay Buccaneers"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872923",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Showers",
+          "temperature": 81,
+          "highTemperature": 81,
+          "conditionId": "12",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "48226"
+            ],
+            "href": "http://www.accuweather.com/en/us/ford-field-mi/48226/hourly-weather-forecast/43021_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3727",
+              "fullName": "Ford Field",
+              "address": {
+                "city": "Detroit",
+                "state": "MI",
+                "country": "USA"
+              },
+              "indoor": true
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "DET",
+                  "displayName": "Detroit Lions"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "NO",
+                  "displayName": "New Orleans Saints"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872924",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 86,
+          "highTemperature": 86,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "37213"
+            ],
+            "href": "http://www.accuweather.com/en/us/nissan-stadium-tn/37219/hourly-weather-forecast/53638_poi?day=8&hbhhour=12&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3810",
+              "fullName": "Nissan Stadium",
+              "address": {
+                "city": "Nashville",
+                "state": "TN",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "TEN",
+                  "displayName": "Tennessee Titans"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "NYJ",
+                  "displayName": "New York Jets"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872659",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 82,
+          "highTemperature": 82,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "46225"
+            ],
+            "href": "http://www.accuweather.com/en/us/lucas-oil-stadium-in/46204/hourly-weather-forecast/53571_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3812",
+              "fullName": "Lucas Oil Stadium",
+              "address": {
+                "city": "Indianapolis",
+                "state": "IN",
+                "country": "USA"
+              },
+              "indoor": true
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "IND",
+                  "displayName": "Indianapolis Colts"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "BAL",
+                  "displayName": "Baltimore Ravens"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872658",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Mostly cloudy w/ t-storms",
+          "temperature": 82,
+          "highTemperature": 82,
+          "conditionId": "16",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "15212"
+            ],
+            "href": "http://www.accuweather.com/en/us/acrisure-stadium-pa/15219/hourly-weather-forecast/53633_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3752",
+              "fullName": "Acrisure Stadium",
+              "address": {
+                "city": "Pittsburgh",
+                "state": "PA",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "PIT",
+                  "displayName": "Pittsburgh Steelers"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "ATL",
+                  "displayName": "Atlanta Falcons"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872661",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 83,
+          "highTemperature": 83,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "28202"
+            ],
+            "href": "http://www.accuweather.com/en/us/bank-of-america-stadium-nc/28202/hourly-weather-forecast/53601_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3628",
+              "fullName": "Bank of America Stadium",
+              "address": {
+                "city": "Charlotte",
+                "state": "NC",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "CAR",
+                  "displayName": "Carolina Panthers"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "CHI",
+                  "displayName": "Chicago Bears"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872922",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 86,
+          "highTemperature": 86,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "32202"
+            ],
+            "href": "http://www.accuweather.com/en/us/everbank-stadium-fl/32202/hourly-weather-forecast/53553_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3712",
+              "fullName": "EverBank Stadium",
+              "address": {
+                "city": "Jacksonville",
+                "state": "FL",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "JAX",
+                  "displayName": "Jacksonville Jaguars"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "CLE",
+                  "displayName": "Cleveland Browns"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872660",
+        "date": "2026-09-13T17:00Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 82,
+          "highTemperature": 82,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "77054"
+            ],
+            "href": "http://www.accuweather.com/en/us/nrg-stadium-tx/77002/hourly-weather-forecast/43039_poi?day=8&hbhhour=12&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3891",
+              "fullName": "Reliant Stadium",
+              "address": {
+                "city": "Houston",
+                "state": "TX",
+                "country": "USA"
+              },
+              "indoor": true
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "HOU",
+                  "displayName": "Houston Texans"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "BUF",
+                  "displayName": "Buffalo Bills"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872928",
+        "date": "2026-09-13T20:25Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 94,
+          "highTemperature": 94,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "89118"
+            ],
+            "href": "http://www.accuweather.com/en/us/allegiant-stadium-nv/89101/hourly-weather-forecast/209206_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "6501",
+              "fullName": "Allegiant Stadium",
+              "address": {
+                "city": "Las Vegas",
+                "state": "NV",
+                "country": "USA"
+              },
+              "indoor": true
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "LV",
+                  "displayName": "Las Vegas Raiders"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "MIA",
+                  "displayName": "Miami Dolphins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872927",
+        "date": "2026-09-13T20:25Z",
+        "weather": {
+          "displayValue": "Cloudy",
+          "temperature": 71,
+          "highTemperature": 71,
+          "conditionId": "7",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "55415"
+            ],
+            "href": "http://www.accuweather.com/en/us/us-bank-stadium-mn/55415/hourly-weather-forecast/35911_poi?day=8&hbhhour=15&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "5239",
+              "fullName": "U.S. Bank Stadium",
+              "address": {
+                "city": "Minneapolis",
+                "state": "MN",
+                "country": "USA"
+              },
+              "indoor": true
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "MIN",
+                  "displayName": "Minnesota Vikings"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "GB",
+                  "displayName": "Green Bay Packers"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872929",
+        "date": "2026-09-13T20:25Z",
+        "weather": {
+          "displayValue": "Intermittent clouds",
+          "temperature": 85,
+          "highTemperature": 85,
+          "conditionId": "4",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "19103"
+            ],
+            "href": "http://www.accuweather.com/en/us/lincoln-financial-field-pa/19107/hourly-weather-forecast/43025_poi?day=8&hbhhour=16&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3806",
+              "fullName": "Lincoln Financial Field",
+              "address": {
+                "city": "Philadelphia",
+                "state": "PA",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "PHI",
+                  "displayName": "Philadelphia Eagles"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "WSH",
+                  "displayName": "Washington Commanders"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872926",
+        "date": "2026-09-13T20:25Z",
+        "weather": {
+          "displayValue": "Mostly sunny",
+          "temperature": 74,
+          "highTemperature": 74,
+          "conditionId": "2",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "90301"
+            ],
+            "href": "http://www.accuweather.com/en/us/sofi-stadium-ca/90301/hourly-weather-forecast/209205_poi?day=8&hbhhour=13&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "7065",
+              "fullName": "SoFi Stadium",
+              "address": {
+                "city": "Inglewood",
+                "state": "CA",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "LAC",
+                  "displayName": "Los Angeles Chargers"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "ARI",
+                  "displayName": "Arizona Cardinals"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872930",
+        "date": "2026-09-14T00:20Z",
+        "weather": {
+          "displayValue": "Intermittent clouds",
+          "temperature": 79,
+          "highTemperature": 79,
+          "conditionId": "36",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "07073"
+            ],
+            "href": "http://www.accuweather.com/en/us/metlife-stadium-nj/07073/hourly-weather-forecast/52866_poi?day=8&hbhhour=20&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3839",
+              "fullName": "MetLife Stadium",
+              "address": {
+                "city": "East Rutherford",
+                "state": "NJ",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "NYG",
+                  "displayName": "New York Giants"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "DAL",
+                  "displayName": "Dallas Cowboys"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "401872931",
+        "date": "2026-09-15T00:15Z",
+        "weather": {
+          "displayValue": "Cloudy",
+          "temperature": 74,
+          "highTemperature": 74,
+          "conditionId": "7",
+          "link": {
+            "language": "en-US",
+            "rel": [
+              "64129"
+            ],
+            "href": "http://www.accuweather.com/en/us/geha-field-at-arrowhead-stadium-mo/64106/hourly-weather-forecast/43032_poi?day=9&hbhhour=19&lang=en-us",
+            "text": "Weather",
+            "shortText": "Weather",
+            "isExternal": true,
+            "isPremium": false
+          }
+        },
+        "competitions": [
+          {
+            "venue": {
+              "id": "3622",
+              "fullName": "Arrowhead Stadium",
+              "address": {
+                "city": "Kansas City",
+                "state": "MO",
+                "country": "USA"
+              },
+              "indoor": false
+            },
+            "competitors": [
+              {
+                "homeAway": "home",
+                "team": {
+                  "abbreviation": "KC",
+                  "displayName": "Kansas City Chiefs"
+                }
+              },
+              {
+                "homeAway": "away",
+                "team": {
+                  "abbreviation": "DEN",
+                  "displayName": "Denver Broncos"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

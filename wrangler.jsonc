@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "drlocks-nfl-props-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-03",
+  "routes": [
+    {
+      "pattern": "api.drlocksmd.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "drlocksmd.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "PLAYERPROP_DB",
+      "database_name": "playerprop-db",
+      "database_id": "15198033-dca2-42cd-bd14-f7fa22bb9d93",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

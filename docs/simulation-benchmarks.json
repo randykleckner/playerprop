@@ -1,0 +1,150 @@
+{
+  "measured_at": "2026-09-07T13:36:56.733Z",
+  "method": "One cold Node process per count, full 329-player/12-game slate, 120 stacks and five candidates; elapsed simulation and aggregation excludes disk writes. RSS is process-wide peak, not Worker isolate memory.",
+  "runs": [
+    {
+      "output": ".dfs-simulations/benchmark-summary-1000.json",
+      "run_id": "sim-7432ff5720696ca28baa5e6597fe0338",
+      "benchmark": {
+        "count": 1000,
+        "players": 329,
+        "games": 12,
+        "seconds": 0.7282724580000001,
+        "peak_rss_mb": 109.875,
+        "heap_mb": 19.64331817626953,
+        "array_buffers_mb": 1.2688817977905273,
+        "node": "v24.14.0",
+        "platform": "darwin",
+        "arch": "arm64"
+      },
+      "lineups": [
+        {
+          "strategy": "Median",
+          "salary": 50000,
+          "mean": 138.65974011993407,
+          "p90": 169.92200775146486
+        },
+        {
+          "strategy": "Floor",
+          "salary": 49800,
+          "mean": 140.1973999633789,
+          "p90": 174.0719985961914
+        },
+        {
+          "strategy": "Ceiling",
+          "salary": 50000,
+          "mean": 136.5479401397705,
+          "p90": 169.2500015258789
+        },
+        {
+          "strategy": "Value",
+          "salary": 48000,
+          "mean": 135.97480024719238,
+          "p90": 169.8479965209961
+        },
+        {
+          "strategy": "Stack",
+          "salary": 50000,
+          "mean": 136.9777599029541,
+          "p90": 170.6659896850586
+        }
+      ]
+    },
+    {
+      "output": ".dfs-simulations/benchmark-summary-10000.json",
+      "run_id": "sim-989a6d9d74105bb60c10e0777b4ef110",
+      "benchmark": {
+        "count": 10000,
+        "players": 329,
+        "games": 12,
+        "seconds": 5.384025874999999,
+        "peak_rss_mb": 170.6875,
+        "heap_mb": 16.610450744628906,
+        "array_buffers_mb": 12.598498344421387,
+        "node": "v24.14.0",
+        "platform": "darwin",
+        "arch": "arm64"
+      },
+      "lineups": [
+        {
+          "strategy": "Median",
+          "salary": 50000,
+          "mean": 140.6407760055542,
+          "p90": 174.44000396728515
+        },
+        {
+          "strategy": "Floor",
+          "salary": 49900,
+          "mean": 139.8767479877472,
+          "p90": 173.5800018310547
+        },
+        {
+          "strategy": "Ceiling",
+          "salary": 50000,
+          "mean": 138.18663594322206,
+          "p90": 172.08200225830078
+        },
+        {
+          "strategy": "Value",
+          "salary": 48400,
+          "mean": 137.10481208229064,
+          "p90": 170.3400115966797
+        },
+        {
+          "strategy": "Stack",
+          "salary": 50000,
+          "mean": 137.98818199768067,
+          "p90": 172.36200103759765
+        }
+      ]
+    },
+    {
+      "output": ".dfs-simulations/benchmark-summary-50000.json",
+      "run_id": "sim-d44f1c31aafd90b2558dfdfb22e0c2cc",
+      "benchmark": {
+        "count": 50000,
+        "players": 329,
+        "games": 12,
+        "seconds": 26.269516375,
+        "peak_rss_mb": 367.578125,
+        "heap_mb": 30.4537353515625,
+        "array_buffers_mb": 63.14323711395264,
+        "node": "v24.14.0",
+        "platform": "darwin",
+        "arch": "arm64"
+      },
+      "lineups": [
+        {
+          "strategy": "Median",
+          "salary": 50000,
+          "mean": 141.1676948110962,
+          "p90": 174.86000061035156
+        },
+        {
+          "strategy": "Floor",
+          "salary": 50000,
+          "mean": 139.92055486320496,
+          "p90": 173.87999114990234
+        },
+        {
+          "strategy": "Ceiling",
+          "salary": 50000,
+          "mean": 138.70738079696656,
+          "p90": 172.8000030517578
+        },
+        {
+          "strategy": "Value",
+          "salary": 46900,
+          "mean": 133.20276481781005,
+          "p90": 166.74000549316406
+        },
+        {
+          "strategy": "Stack",
+          "salary": 50000,
+          "mean": 138.03672723129273,
+          "p90": 172.36000061035156
+        }
+      ]
+    }
+  ]
+}

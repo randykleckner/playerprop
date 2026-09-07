@@ -1,0 +1,4 @@
+Position,Name + ID,Name,ID,Roster Position,Salary,Game Info,TeamAbbrev,AvgPointsPerGame
+QB,Sample Quarterback (1001),Sample Quarterback,1001,QB,6500,CHI@GB 09/13/2026 01:00PM ET,CHI,0
+WR,"Sample Receiver, Jr. (1002)","Sample Receiver, Jr.",1002,WR/FLEX,5100,CHI@GB 09/13/2026 01:00PM ET,CHI,0
+DST,Packers (1003),Packers,1003,DST,3000,CHI@GB 09/13/2026 01:00PM ET,GB,0

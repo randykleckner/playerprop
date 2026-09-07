@@ -1,0 +1,363 @@
+{
+  "season": {
+    "type": 2,
+    "year": 2026
+  },
+  "week": {
+    "number": 1
+  },
+  "events": [
+    {
+      "date": "2026-09-10T00:20Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "SEA"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "NE"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-11T00:35Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "LAR"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "SF"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "CIN"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "TB"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "DET"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "NO"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "TEN"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "NYJ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "IND"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "BAL"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "PIT"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "ATL"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "CAR"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "CHI"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "JAX"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "CLE"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T17:00Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "HOU"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "BUF"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T20:25Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "LV"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "MIA"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T20:25Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "MIN"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "GB"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T20:25Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "PHI"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "WSH"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13T20:25Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "LAC"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "ARI"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14T00:20Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "NYG"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "DAL"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15T00:15Z",
+      "week": {
+        "number": 1
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "team": {
+                "abbreviation": "KC"
+              }
+            },
+            {
+              "team": {
+                "abbreviation": "DEN"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

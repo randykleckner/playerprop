@@ -1,0 +1,12 @@
+{
+  "timezone": "America/New_York",
+  "preferred_weekday": 6,
+  "window_start": "12:00",
+  "window_end": "14:00",
+  "min_games": 2,
+  "discovery_seconds": 21600,
+  "refresh_seconds": 7200,
+  "stale_seconds": 10800,
+  "minimum_request_seconds": 5,
+  "failure_backoff_seconds": 3600
+}
