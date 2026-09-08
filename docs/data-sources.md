@@ -239,3 +239,8 @@ Shared game environment, opportunity allocation and discrete football statistics
 ### Research readiness enrichment
 
 The published simulation input now includes captured ESPN-reported DraftKings game totals/home spreads, a conservative DynastyProcess/NFLverse identity review, and prior-season NFLverse/PFR snap context. Original projection/salary capture times remain intact. Historical usage does not become a current projection, and corroborated identity candidates remain provisional. See [research readiness, frozen predictions and player workbench](research-readiness.md) for provenance, local freeze/evaluation commands and remaining calibration requirements.
+
+
+## Shared research refresh — September 8, 2026
+
+`npm run dfs:refresh` runs one public-only DK/ESPN collection cycle. The approved Mac task invokes it at 10 a.m. and 5 p.m. America/Chicago and publishes validated changes. The two frontends resolve `/research/latest.json` to immutable shared artifacts. Errors preserve the last valid data and appear separately from source freshness. ESPN scoreboard date responses can omit top-level season; the collector derives one consistent season/week from events and rejects ambiguity. Provider caches and conservative limits remain in effect. No authenticated DraftKings/account actions, paid odds refresh, production Cron or D1 migrations are part of this runner.

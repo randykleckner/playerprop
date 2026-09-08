@@ -272,3 +272,10 @@ The user-defined order is: audit existing simulation/staleness; repair ingestion
 [Simulation methodology](docs/simulation-methodology.md) traces every current source, allocation/distribution/correlation assumption and UI output. Fresh 10k-draw run `sim-1c5a807507462cda8986c5abdd118770` passed deterministic repeat equality, 120,000 game-draw invariants and player/joint-lineup quantile checks. No engine methodology changed.
 
 [Data-readiness audit](docs/data-readiness.md) identifies two separate static artifacts, manual-only regeneration, source-based expiry mislabeled as build age, and ESPN duplicated under the statistical projection label. The 744 salary entries belong to one selected draft group; 329 pass current research-pool gates. No automatic refresh, new score, roster grade or Newsroom is claimed at this checkpoint. No new migration or deployment was performed during this audit.
+
+
+## September 8 shared snapshot release
+
+DFS Daily and Simulation Lab now share an immutable research bundle with CURRENT / AGING / STALE / FAILED source readiness and a read-only identity/exclusion report. Public collection runs via `npm run dfs:refresh`; the approved Mac task runs at 10 a.m. and 5 p.m. America/Chicago and publishes validated changes. It requires this Mac to be available. No production D1 migration or Cron trigger was added.
+
+See [delivery order](docs/upgrade-roadmap.md) and [calibration plan](docs/calibration-plan.md). Identity verification and final-result ingestion remain the next calibration prerequisites; the model is still uncalibrated.

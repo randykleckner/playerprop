@@ -51,3 +51,14 @@ The complete 10,000-draw archive is `pregame-f7497e162c8b51d42a53fa4123407f56`, 
 ## Changed files
 
 Added `public/simulation/workbench.js`, `scripts/research/{prepare.py,archive.mjs}`, `scripts/{prepare_dfs_research.py,freeze_dfs_research.mjs,evaluate_frozen_dfs.mjs}`, `tests/{simulation-workbench.test.mjs,research-archive.test.mjs,test_research.py}`, and this report. Updated Simulation Lab HTML/JS/CSS/input, package scripts, `.gitignore`, and data-source documentation.
+
+
+## September 8 continuation
+
+The shared bundle `049409c3f0aeacba643614ad` now serves both research frontends. It was generated at 2026-09-08T13:57:22.063Z, with 329 players and 12 games. Fresh baseline `sim-fc47a10704e1e20c7f605a8562b0d73a` passed 10,000 draws per game, 120,000 allocation checks, deterministic rerun and independent player/lineup quantile verification. Archive `pregame-0e97387c89b70946bd2ddfddacf71681` was frozen at 2026-09-08T13:59:01.191Z with normalized input, predictions and scoreboard/market representations. The earlier six-source archive is retained.
+
+100 offline tests passed (54 Node and 46 Python), plus TypeScript. Browser verification completed a 1,000-draw simulation, RB/value filtering (67 RBs), all six DFS Daily builds, shared current timestamps and no page overflow at the available 641px width. The protected Worker diagnostic API and legacy CLI defaults still reference their explicit archived slate paths; this release changes the two browser frontends and adds a shared refresh command.
+
+The Mac-based public refresh/publication task is active at 10 a.m. and 5 p.m. America/Chicago, including daylight saving. No production D1 migration or Cron trigger was applied. The [calibration plan](calibration-plan.md) details identity and final-actual prerequisites; current provisional identities remain excluded from accuracy claims.
+
+Release deployed on both custom domains: `cf36bba3-7f3d-456e-9018-1ef2947b2d9f`.

@@ -19,7 +19,8 @@
     "dfs:benchmark": "node scripts/benchmark_dfs_simulation.mjs",
     "dfs:research": "python3 scripts/prepare_dfs_research.py",
     "dfs:freeze": "node scripts/freeze_dfs_research.mjs",
-    "dfs:evaluate": "node scripts/evaluate_frozen_dfs.mjs"
+    "dfs:evaluate": "node scripts/evaluate_frozen_dfs.mjs",
+    "dfs:refresh": "python3 scripts/refresh_current_research.py"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260903.1",

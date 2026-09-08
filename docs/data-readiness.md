@@ -34,3 +34,14 @@ Only ESPN supplies per-player forecasts. `statistical_projection` currently dupl
 6. Verify a fresh baseline, then implement configured player score, roster grading, Newsroom, and news-to-scenario links in that order. These features are not implemented by this audit.
 
 The site should report selected-slate salary entities, verified/provisional/unresolved mapping counts, NFL stats coverage, game-market and player-prop coverage, current injury coverage, source projection coverage and artifact readiness independently. Forecast and contest accuracy claims remain gated by held-out validation.
+
+
+## September 8 implementation update
+
+The audit above is historical. `scripts/refresh_current_research.py` now collects the selected upcoming Classic slate, current event-derived season/week, ESPN projections and public scoreboard game quotes. `scripts/refresh_dfs_research.mjs` validates and writes immutable simulation/lineup/identity artifacts, then atomically replaces one shared pointer. Failed refreshes retain the last valid bundle and record a separate failure timestamp. Unchanged source keys skip lineup rebuilding. ESPN is now labeled separately; the independent statistical projection is null, not a duplicate ESPN value.
+
+DFS Daily and Simulation Lab read this shared pointer. An open Simulation Lab detects a changed bundle and offers to load it without silently discarding a running simulation; source readiness still ages against capture times. The identity page reports namespaced external IDs, canonical candidates and first-failure exclusions; it cannot verify mappings.
+
+An active Codex task runs twice daily at 10:00 and 17:00 America/Chicago (Central local time including daylight saving). It uses this Mac and publishes validated bundle/status changes. No production Cron or D1 migration is active. Public collection caches remain six-hour lobby, two-hour salaries/scoreboard, six-hour ESPN projections; salary refresh stops after lock. No simulation is recomputed by the browser during refresh.
+
+Verification: 100 offline tests (54 Node, 46 Python), TypeScript, and a fresh shared-bundle 10,000-draw audit of 329 players/12 games. All 120,000 game allocation checks and independently computed quantiles passed. This is implementation verification, not calibration. See [calibration plan](calibration-plan.md).

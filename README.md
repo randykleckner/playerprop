@@ -60,3 +60,10 @@ The latest published site version is `6330f669-7980-4e7e-805d-5ef5c02d09f8`. App
 - [DFS model](docs/dfs-model.md) and [backtesting](docs/backtesting.md): implemented boundaries and remaining objectives.
 
 Current milestone: [simulation audit](docs/simulation-methodology.md) and [data-readiness repair](docs/data-readiness.md), then transparent player scores, roster grading, Newsroom and scenario links. Step 1 passed 120,000 game-draw invariant checks and repeat-run equality on fresh inputs. Automatic refresh and later features are pending. The first complete local commit exists; GitHub push is blocked by invalid saved credentials.
+
+
+## September 8 shared snapshot release
+
+DFS Daily and Simulation Lab now share an immutable research bundle with CURRENT / AGING / STALE / FAILED source readiness and a read-only identity/exclusion report. Public collection runs via `npm run dfs:refresh`; the approved Mac task runs at 10 a.m. and 5 p.m. America/Chicago and publishes validated changes. It requires this Mac to be available. No production D1 migration or Cron trigger was added.
+
+See [delivery order](docs/upgrade-roadmap.md) and [calibration plan](docs/calibration-plan.md). Identity verification and final-result ingestion remain the next calibration prerequisites; the model is still uncalibrated.

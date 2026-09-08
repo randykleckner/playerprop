@@ -154,3 +154,10 @@ Cloudflare references checked for this increment: [D1 batch transactions](https:
 ## Public salary provider increment (September 6, 2026)
 
 The GET-only DraftKings adapter and CSV fallback now share a provider-neutral Python snapshot contract. `scripts/diagnose_dk_salaries.py` discovers and explicitly selects NFL Classic slates, normalizes position/FLEX variants, reports identity/quality issues and optionally persists observations in isolated local D1. Migration `0007_dfs_provider_snapshots.sql` stores incomplete source observations separately from the stricter model-ready `dfs_player_salaries` table. No Worker routing, production schedule or projection feed was added. See [operations](data-sources.md) and [live diagnostic](draftkings-diagnostic-2026-09-06.md).
+
+
+## September 8 shared snapshot release
+
+DFS Daily and Simulation Lab now share an immutable research bundle with CURRENT / AGING / STALE / FAILED source readiness and a read-only identity/exclusion report. Public collection runs via `npm run dfs:refresh`; the approved Mac task runs at 10 a.m. and 5 p.m. America/Chicago and publishes validated changes. It requires this Mac to be available. No production D1 migration or Cron trigger was added.
+
+See [delivery order](upgrade-roadmap.md) and [calibration plan](calibration-plan.md). Identity verification and final-result ingestion remain the next calibration prerequisites; the model is still uncalibrated.

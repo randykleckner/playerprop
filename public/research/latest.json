@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "snapshot": {
+    "bundle": "049409c3f0aeacba643614ad",
+    "source_key": "495696c5bdbb0f529c4ba7574bc9213b4f6007232883067229da66884a949816",
+    "slate_id": "151307",
+    "season": 2026,
+    "week": 1,
+    "lock_time": "2026-09-13T17:00:00.000Z",
+    "generated_at": "2026-09-08T13:57:22.063Z",
+    "data_as_of": "2026-09-08T13:57:16.073Z",
+    "expires_at": "2026-09-09T13:57:16.073Z",
+    "simulation_path": "/research/bundles/049409c3f0aeacba643614ad/simulation.json",
+    "lineups_path": "/research/bundles/049409c3f0aeacba643614ad/lineups.json",
+    "identities_path": "/research/bundles/049409c3f0aeacba643614ad/identities.json",
+    "readiness": [
+      {
+        "label": "DK salaries",
+        "detail": "744 normalized entities in Classic draft group 151307; 329 eligible research entries",
+        "fetched_at": "2026-09-08T13:57:16.073Z"
+      },
+      {
+        "label": "Player mapping",
+        "detail": "Eligible offense: 0 verified, 305 provisional; 24 team defenses. Full offensive pool: 121 unresolved, 0 ambiguous"
+      },
+      {
+        "label": "NFLverse stats",
+        "detail": "254 prior-season snap contexts retained; independent current-season statistical forecast not connected"
+      },
+      {
+        "label": "Sportsbook game lines",
+        "detail": "12/12 games",
+        "fetched_at": "2026-09-08T13:57:15.645Z"
+      },
+      {
+        "label": "Sportsbook player props",
+        "detail": "Not connected to this snapshot; existing prop board is separate"
+      },
+      {
+        "label": "Injury data",
+        "detail": "DK salary status only; current injury/practice feed not connected",
+        "fetched_at": "2026-09-08T13:57:16.073Z"
+      },
+      {
+        "label": "Projections",
+        "detail": "ESPN 329/329; market player forecast 0; independent NFLverse forecast 0",
+        "fetched_at": "2026-09-08T13:57:17.913Z"
+      },
+      {
+        "label": "Simulation snapshot",
+        "detail": "329 players, 12 games; simulations run on demand",
+        "fetched_at": "2026-09-08T13:57:22.063Z"
+      }
+    ]
+  },
+  "attempt": {
+    "attempted_at": "2026-09-08T13:57:22.063Z",
+    "error": null
+  }
+}
