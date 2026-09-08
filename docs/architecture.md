@@ -6,7 +6,7 @@ The sections below retain the original repository/D1 audit as historical context
 
 Public DK ingestion, ESPN projections, DFS Daily lineups, Doctor Chart flip cards, correlated Monte Carlo simulations, a sortable/filterable player workbench and a $50,000 roster builder are implemented. The live application uses saved static simulation inputs and browser Web Workers. Local pregame freezing and final-actual evaluation interfaces are implemented, but verified identity reconciliation and historical calibration remain pending. No contest field/ownership model exists.
 
-Production site version: `6330f669-7980-4e7e-805d-5ef5c02d09f8`; 93 tests and TypeScript checks pass. Migrations 0006–0008 remain unapplied remotely; no production Cron jobs were added. Next milestone is evidence-backed identity review.
+Production site version: `6330f669-7980-4e7e-805d-5ef5c02d09f8`; 93 tests and TypeScript checks pass. Migrations 0006–0008 remain unapplied remotely; no production Cron jobs were added. The updated next milestone begins with the [simulation audit](simulation-methodology.md) and [data-readiness repair](data-readiness.md), followed by score, roster grading and Newsroom. The audit introduces no runtime architecture changes.
 
 ## Original audit record
 

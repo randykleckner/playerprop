@@ -263,3 +263,12 @@ Every source carries capture/provenance metadata. Research enrichment adds signe
 Site version `6330f669-7980-4e7e-805d-5ef5c02d09f8` is deployed on both custom domains. Current verification: 93 tests plus TypeScript and browser workbench/roster checks. See [research readiness](docs/research-readiness.md) for the 10,000-draw frozen receipt and [Simulation Lab](docs/simulation-lab.md) for benchmark/Worker limits.
 
 Next: a traceable identity review queue with exact provider/canonical IDs, discrepancy priority and evidence requirements. No automatic verification from name matching. Follow with final-actual ingestion and held-out calibration; ownership, field simulation and top-10%/ROI optimization follow only after those foundations.
+
+
+## Next milestone audit checkpoint — September 7 evening
+
+The user-defined order is: audit existing simulation/staleness; repair ingestion/readiness/mapping/projection coverage and automatic refresh; verify a current baseline; add transparent player scores; add roster grading; add Newsroom; connect impact scenarios. This supersedes the identity-review-only next-step plan above.
+
+[Simulation methodology](docs/simulation-methodology.md) traces every current source, allocation/distribution/correlation assumption and UI output. Fresh 10k-draw run `sim-1c5a807507462cda8986c5abdd118770` passed deterministic repeat equality, 120,000 game-draw invariants and player/joint-lineup quantile checks. No engine methodology changed.
+
+[Data-readiness audit](docs/data-readiness.md) identifies two separate static artifacts, manual-only regeneration, source-based expiry mislabeled as build age, and ESPN duplicated under the statistical projection label. The 744 salary entries belong to one selected draft group; 329 pass current research-pool gates. No automatic refresh, new score, roster grade or Newsroom is claimed at this checkpoint. No new migration or deployment was performed during this audit.

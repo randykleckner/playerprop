@@ -59,4 +59,4 @@ The latest published site version is `6330f669-7980-4e7e-805d-5ef5c02d09f8`. App
 - [Research readiness](docs/research-readiness.md): source checks, frozen predictions and calibration gates.
 - [DFS model](docs/dfs-model.md) and [backtesting](docs/backtesting.md): implemented boundaries and remaining objectives.
 
-Next milestone: evidence-backed player identity review. Then collect final actuals, evaluate eligible frozen forecasts, and use held-out results to inform model changes before building an ownership/contest-field model.
+Current milestone: [simulation audit](docs/simulation-methodology.md) and [data-readiness repair](docs/data-readiness.md), then transparent player scores, roster grading, Newsroom and scenario links. Step 1 passed 120,000 game-draw invariant checks and repeat-run equality on fresh inputs. Automatic refresh and later features are pending. The first complete local commit exists; GitHub push is blocked by invalid saved credentials.
