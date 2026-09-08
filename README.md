@@ -67,3 +67,8 @@ Current milestone: [simulation audit](docs/simulation-methodology.md) and [data-
 DFS Daily and Simulation Lab now share an immutable research bundle with CURRENT / AGING / STALE / FAILED source readiness and a read-only identity/exclusion report. Public collection runs via `npm run dfs:refresh`; the approved Mac task runs at 10 a.m. and 5 p.m. America/Chicago and publishes validated changes. It requires this Mac to be available. No production D1 migration or Cron trigger was added.
 
 See [delivery order](docs/upgrade-roadmap.md) and [calibration plan](docs/calibration-plan.md). Identity verification and final-result ingestion remain the next calibration prerequisites; the model is still uncalibrated.
+
+
+## September 8 identity evidence audit
+
+Corrected provider team-code aliases, reducing eligible-player context discrepancies from 52 to 3. Added source-backed scoped findings for Gainwell, Okonkwo and Bredeson, and a priority-filtered evidence report. 302 candidates are corroborated; all 305 offensive DK mappings remain provisional. No names were automatically verified. The missing requirement is an independently documented DK→ESPN/GSIS ID bridge. See [evidence review](docs/identity-evidence-review.md).

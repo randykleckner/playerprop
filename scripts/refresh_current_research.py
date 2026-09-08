@@ -18,6 +18,7 @@ from dfs.identity import map_identities
 from dfs.providers import utc_now, iso
 from dfs.storage import archive_snapshot, ROOT
 from research.prepare import markets
+from research.identity_evidence import recorded_evidence
 
 
 def scoreboard(date, state):
@@ -83,9 +84,12 @@ def main():
                     home,away=team(teams['home']),team(teams['away'])
                     games.append({'game_id':'-'.join(sorted([home,away])),'home':home,'away':away,'start_time':event['date']})
             quotes,issues=markets(schedule,games,observed['fetched_at'],season,week)
+            evidence=recorded_evidence(salary.records,canonical,ROOT)
+            evidence['sources']['canonical_catalog']=metadata
+            evidence_path=state/'identity-evidence.json';evidence_path.write_text(json.dumps(evidence))
             schedule_path=state/'schedule.json';schedule_path.write_text(json.dumps(schedule))
             market_path=state/'markets.json';market_path.write_text(json.dumps(quotes))
-            subprocess.run(['node','scripts/refresh_dfs_research.mjs','--salary',str(salary_path),'--projections',str(projection_path),'--schedule',str(schedule_path),'--markets',str(market_path),'--market-fetched-at',observed['fetched_at'],'--root',args.root],cwd=ROOT,check=True)
+            subprocess.run(['node','scripts/refresh_dfs_research.mjs','--salary',str(salary_path),'--projections',str(projection_path),'--schedule',str(schedule_path),'--markets',str(market_path),'--market-fetched-at',observed['fetched_at'],'--root',args.root,'--identity-evidence',str(evidence_path)],cwd=ROOT,check=True)
             return 0
         except Exception as error:
             # Do not leak upstream response bodies/credentials in public failure status.

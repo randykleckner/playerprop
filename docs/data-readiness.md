@@ -45,3 +45,8 @@ DFS Daily and Simulation Lab read this shared pointer. An open Simulation Lab de
 An active Codex task runs twice daily at 10:00 and 17:00 America/Chicago (Central local time including daylight saving). It uses this Mac and publishes validated bundle/status changes. No production Cron or D1 migration is active. Public collection caches remain six-hour lobby, two-hour salaries/scoreboard, six-hour ESPN projections; salary refresh stops after lock. No simulation is recomputed by the browser during refresh.
 
 Verification: 100 offline tests (54 Node, 46 Python), TypeScript, and a fresh shared-bundle 10,000-draw audit of 329 players/12 games. All 120,000 game allocation checks and independently computed quantiles passed. This is implementation verification, not calibration. See [calibration plan](calibration-plan.md).
+
+
+## September 8 identity evidence audit
+
+Corrected provider team-code aliases, reducing eligible-player context discrepancies from 52 to 3. Added source-backed scoped findings for Gainwell, Okonkwo and Bredeson, and a priority-filtered evidence report. 302 candidates are corroborated; all 305 offensive DK mappings remain provisional. No names were automatically verified. The missing requirement is an independently documented DK→ESPN/GSIS ID bridge. See [evidence review](identity-evidence-review.md).

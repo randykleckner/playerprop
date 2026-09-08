@@ -14,7 +14,7 @@ def timestamp(value):
 
 
 def team(value):
-    return {'JAC':'JAX','LAR':'LA','WSH':'WAS'}.get(value,value)
+    return {'JAC':'JAX','LAR':'LA','WSH':'WAS','LVR':'LV','NOS':'NO','TBB':'TB','GBP':'GB','KCC':'KC','SFO':'SF','NEP':'NE'}.get(value,value)
 
 
 def name(value):

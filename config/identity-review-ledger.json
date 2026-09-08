@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "policy": "Documented contextual review is not a verified DraftKings-to-GSIS mapping. Only an independently evidenced ID bridge can support that promotion.",
+  "reviews": [
+    {
+      "review_id": "2026-09-08-gainwell-name",
+      "player_id": "00-0036919",
+      "reviewer": "Codex public-source review",
+      "reviewed_on": "2026-09-08",
+      "disposition": "name_variant_documented",
+      "verified_draftkings_id": false,
+      "finding": "The Buccaneers roster uses Kenny Gainwell while the same club's signing coverage uses Kenneth Gainwell. The catalog and crosswalk agree on ESPN 4371733. This explains the name discrepancy; it does not independently bind either DraftKings ID to GSIS.",
+      "sources": ["https://www.buccaneers.com/team/players-roster/kenneth-gainwell/", "https://www.buccaneers.com/news/bucs-add-threat-rb-room-kenneth-gainwell"]
+    },
+    {
+      "review_id": "2026-09-08-okonkwo-name",
+      "player_id": "00-0037809",
+      "reviewer": "Codex public-source review",
+      "reviewed_on": "2026-09-08",
+      "disposition": "name_variant_documented",
+      "verified_draftkings_id": false,
+      "finding": "Washington lists Chig Okonkwo; the NFL-hosted Titans media guide records his full name as Chigoziem Charlton Okonkwo. Catalog and crosswalk agree on ESPN 4360635. This documents the name variant, not a DraftKings ID bridge.",
+      "sources": ["https://www.commanders.com/team/players-roster/chig-okonkwo/", "https://static.www.nfl.com/image/upload/league/apps/league-site/media-guides/2024/TEN.pdf"]
+    },
+    {
+      "review_id": "2026-09-08-bredeson-position",
+      "player_id": "00-0041081",
+      "reviewer": "Codex public-source review",
+      "reviewed_on": "2026-09-08",
+      "disposition": "position_taxonomy_review_required",
+      "verified_draftkings_id": false,
+      "finding": "Minnesota describes Max Bredeson as a fullback. DraftKings/catalog use RB while the crosswalk uses TE. Catalog and crosswalk agree on ESPN 4878695. Preserve DraftKings roster eligibility; do not globally equate TE and RB or verify identity from the shared name.",
+      "sources": ["https://www.vikings.com/team/players-roster/max-bredeson/", "https://www.vikings.com/draft/2026/picks/max-bredeson"]
+    }
+  ]
+}

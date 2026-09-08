@@ -27,3 +27,11 @@ test('shared refresh publishes both artifacts, skips unchanged builds and preser
  }finally{rmSync(root,{recursive:true,force:true});}});
 test('wrong slate format and future market captures fail before publication',()=>{const root=mkdtempSync(join(tmpdir(),'refresh-'));try{const f=structuredClone(fixture);assert.throws(()=>refreshResearch(f.salary,f.projection,f.schedule,{root,now,markets:[{game_id:['HOU','BUF'].sort().join('-'),total:44,home_spread:0}],marketFetchedAt:'2026-09-07T00:00:00Z'}),/stale or invalid/);f.salary.slate.format='Showdown';assert.throws(()=>refreshResearch(f.salary,f.projection,f.schedule,{root,now}),/Classic/);}finally{rmSync(root,{recursive:true,force:true});}});
 test('readiness output escapes failure text',()=>{assert.ok(!readinessHtml({snapshot:{readiness:[]},attempt:{error:'<script>bad</script>'}}).includes('<script>'));});
+test('identity evidence versions the bundle and cannot change provider identity status',()=>{const root=mkdtempSync(join(tmpdir(),'refresh-evidence-'));try{
+ const f=structuredClone(fixture),before=refreshResearch(f.salary,f.projection,f.schedule,{root,now});
+ const a=JSON.parse(readFileSync(join(root,before.snapshot.simulation_path.slice(1))));const player=a.players[0];
+ const evidence={version:1,verified_by_this_review:0,sources:{test:'recorded'},rows:[{draftable_id:player.draftable_id,candidate_player_id:player.player_id,priority:'bridge_needed',audit:{status:'corroborated_provisional',verified_draftkings_id:false,reasons:[]}}]};
+ const after=refreshResearch(f.salary,f.projection,f.schedule,{root,now,identityEvidence:evidence});const b=JSON.parse(readFileSync(join(root,after.snapshot.simulation_path.slice(1))));
+ assert.notEqual(before.snapshot.bundle,after.snapshot.bundle);assert.equal(b.players[0].identity_status,player.identity_status);assert.equal(b.players[0].final_projection,player.final_projection);assert.equal(b.players[0].identity_review.verified_draftkings_id,false);
+ assert.throws(()=>refreshResearch(f.salary,f.projection,f.schedule,{root,now,identityEvidence:{...evidence,verified_by_this_review:1}}),/non-verifying/);
+}finally{rmSync(root,{recursive:true,force:true});}});

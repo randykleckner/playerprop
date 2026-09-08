@@ -14,3 +14,8 @@ The diagnostic writes candidate_review entries containing the provider IDs and f
 Changed: scripts/dfs/catalog.py, scripts/diagnose_dk_salaries.py, tests/test_dfs_catalog.py, docs/data-sources.md and this report. Validation: 36 tests (6 Node and 30 Python), TypeScript check, public catalog retrieval and isolated local D1 snapshot persistence passed.
 
 Full local report: `/Users/randykleckner/Documents/playerprop/.dfs-salaries/salary-6ed43fb6baeb72e0c31b3b6f85b95b77e16fda58372f335eddea6402653c1bc8-report.json`.
+
+
+## September 8 identity evidence audit
+
+Corrected provider team-code aliases, reducing eligible-player context discrepancies from 52 to 3. Added source-backed scoped findings for Gainwell, Okonkwo and Bredeson, and a priority-filtered evidence report. 302 candidates are corroborated; all 305 offensive DK mappings remain provisional. No names were automatically verified. The missing requirement is an independently documented DK→ESPN/GSIS ID bridge. See [evidence review](identity-evidence-review.md).
