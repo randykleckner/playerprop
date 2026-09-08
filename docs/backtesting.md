@@ -37,3 +37,10 @@ Report ownership MAE/RMSE/Spearman and calibration by ownership bucket separatel
 ## Available checks now
 
 `npm test` tests salary snapshot cutoff equality/exclusion, timezone normalization, completion after lock, duplicate retry timestamps, immutable slate metadata, all-or-nothing imports and selection of a whole revised salary file. It also checks source adapter errors and some legacy route behavior. Scoring, optimizer, ownership and full historical-replay tests are required in their implementation milestones, not represented as passing by these foundation tests.
+
+
+## September 8 confidence-tier and calibration update
+
+The earlier strict DK-bridge blocker is superseded by the user-approved four-tier policy: NFLverse Players V2 is canonical, and all 305 eligible offensive players are strongly corroborated, including three scoped manual overrides. None is represented as provider-ID verified. Stop identity work; no paid provider integration. Repeated identity and uncalibrated labels are removed from the main player views; details retain tier counts and validation limitations.
+
+Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 training, 2025 held out, positional mean error, variance scaling, P75/P90 exceedance and QB/receiver correlation. The experimental correction is not deployed because improved tails came with worse MAE. See [results and next backend steps](calibration-results-2026-09-08.md).

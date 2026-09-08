@@ -25,8 +25,8 @@ export function heldoutCases(archive,actuals){
  const {input,result,manifest}=archive,seen=new Set(),cases=[],excluded=[];
  for(const row of actuals){const key=row.player_id+'|'+row.game_id;if(seen.has(key))throw Error('Duplicate actual observation');seen.add(key);const p=input.players.find(p=>p.player_id===row.player_id),g=input.games.find(g=>g.game_id===row.game_id);if(!p||!g||p.game_id!==g.game_id)throw Error('Actual identity/game not in frozen input');
  if(row.status!=='final'||!Number.isFinite(row.actual_points)||date(row.completed_at)<=date(g.start_time))throw Error('Only complete final actuals are eligible');
- if(p.identity_status?.startsWith('provisional')||p.identity_review?.status==='review_required'){excluded.push({player_id:p.player_id,reason:'identity_not_verified'});continue;}
+ if(p.identity_confidence?!['verified','strongly_corroborated'].includes(p.identity_confidence):(p.identity_status?.startsWith('provisional')||p.identity_review?.status==='review_required')){excluded.push({player_id:p.player_id,reason:'identity_not_verified'});continue;}
  if(p.position==='DST'){excluded.push({player_id:p.player_id,reason:'dst_placeholder'});continue;}
- const prediction=result.players.find(x=>x.player_id===p.player_id);cases.push({player_id:p.player_id,game_id:g.game_id,position:p.position,game_date:g.start_time,pregame_as_of:manifest.frozen_at,mean:prediction.mean,p10:prediction.p10,p90:prediction.p90,stddev:prediction.stddev,actual:row.actual_points});
+ const prediction=result.players.find(x=>x.player_id===p.player_id);cases.push({player_id:p.player_id,game_id:g.game_id,position:p.position,game_date:g.start_time,pregame_as_of:manifest.frozen_at,mean:prediction.mean,p10:prediction.p10,p75:prediction.p75,p90:prediction.p90,identity_confidence:p.identity_confidence||'verified',stddev:prediction.stddev,actual:row.actual_points});
  }return {cases,excluded};
 }

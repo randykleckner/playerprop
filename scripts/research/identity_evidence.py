@@ -50,7 +50,10 @@ def recorded_evidence(records, canonical, root):
     if not cross_path.exists():
         raise ValueError('Recorded identity crosswalk unavailable')
     report = build_evidence(records, canonical, list(csv.DictReader(cross_path.open())), json.loads(ledger_path.read_text()))
+    overrides_path=root / 'config/identity-overrides.json'
+    report['manual_overrides']=json.loads(overrides_path.read_text())['overrides']
     report['sources'] = {
+        'manual_overrides': {'sha256': sha256(overrides_path.read_bytes()).hexdigest()},
         'crosswalk': {'url': 'https://raw.githubusercontent.com/dynastyprocess/data/master/files/playerids.csv', 'sha256': sha256(cross_path.read_bytes()).hexdigest(), 'capture_time': None, 'note': 'Recorded local file; original download timestamp unavailable. Team fields are context, not current roster proof.'},
         'ledger': {'sha256': sha256(ledger_path.read_bytes()).hexdigest()},
     }

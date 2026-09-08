@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "status": "exploratory_historical_diagnostic_not_production_calibration",
+  "generated_at": "2026-09-08T19:06:16.865Z",
+  "model": "nfl-dk-mc-foundation-v1.1",
+  "draws_per_game": 1000,
+  "game_count": 354,
+  "training_cases": 2661,
+  "evaluation_cases": 2596,
+  "identity_source": "NFLverse GSIS directly; no DraftKings identity join",
+  "source_hashes": {
+    "stats-player-2024.csv": "3ddc45a84f759aa348ce465ae001752c530575455717657cdfe1f8abfcdb4759",
+    "stats-player-2025.csv": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+    "games.csv": "d64cef660c4b14c74f0e33ecee387343675137ed2f1a1fac2b0c70951b8a4c07"
+  },
+  "exclusions": {
+    "insufficient_prior_QB_history_games": 190,
+    "missing_or_no_offensive_opportunity": 1350
+  },
+  "training_fit": {
+    "QB": {
+      "count": 328,
+      "mean_bias": -1.3019818278712942,
+      "stddev_scale": 1.1777352024295178
+    },
+    "RB": {
+      "count": 711,
+      "mean_bias": -0.48859943617632084,
+      "stddev_scale": 1.2572299234204265
+    },
+    "WR": {
+      "count": 1071,
+      "mean_bias": -1.4314746959950186,
+      "stddev_scale": 1.2705402704936377
+    },
+    "TE": {
+      "count": 551,
+      "mean_bias": -0.9400820323468044,
+      "stddev_scale": 1.1747172846907583
+    }
+  },
+  "before": {
+    "trainingWindow": {
+      "start": "2024-01-01",
+      "end": "2025-03-01"
+    },
+    "evaluationWindow": {
+      "start": "2025-08-01",
+      "end": "2026-03-01"
+    },
+    "overall": {
+      "count": 2596,
+      "mean_error": -0.6182263398446466,
+      "rmse": 7.301496735682536,
+      "p75_observations": 2596,
+      "above_p75_pct": 31.664098613251156,
+      "variance_ratio": 1.5174178814503843,
+      "mae": 5.271248282184991,
+      "above_p90_pct": 17.4884437596302,
+      "below_p10_pct": 10.323574730354391,
+      "mean_squared_standardized_error": 2.504354943492359
+    },
+    "by_position": {
+      "WR": {
+        "count": 1034,
+        "mean_error": -0.6868184712807396,
+        "rmse": 7.101515149629189,
+        "p75_observations": 1034,
+        "above_p75_pct": 31.914893617021278,
+        "variance_ratio": 1.426636052980182,
+        "mae": 5.163340715678836,
+        "above_p90_pct": 17.214700193423596,
+        "below_p10_pct": 7.640232108317215,
+        "mean_squared_standardized_error": 2.294680622546368
+      },
+      "QB": {
+        "count": 300,
+        "mean_error": -0.36533793151110483,
+        "rmse": 8.822908076852883,
+        "p75_observations": 300,
+        "above_p75_pct": 30,
+        "variance_ratio": 1.3930002577927159,
+        "mae": 6.998471802172164,
+        "above_p90_pct": 16,
+        "below_p10_pct": 15.333333333333334,
+        "mean_squared_standardized_error": 1.651645851278018
+      },
+      "RB": {
+        "count": 704,
+        "mean_error": -0.5188963062857932,
+        "rmse": 7.843050590949277,
+        "p75_observations": 704,
+        "above_p75_pct": 31.960227272727273,
+        "variance_ratio": 1.850082988053267,
+        "mae": 5.560379261254706,
+        "above_p90_pct": 19.03409090909091,
+        "below_p10_pct": 15.056818181818182,
+        "mean_squared_standardized_error": 3.1240452326722585
+      },
+      "TE": {
+        "count": 558,
+        "mean_error": -0.7524030463331279,
+        "rmse": 5.925585407228189,
+        "p75_observations": 558,
+        "above_p75_pct": 31.72043010752688,
+        "variance_ratio": 1.3528891726344088,
+        "mae": 4.177809498145749,
+        "above_p90_pct": 16.845878136200717,
+        "below_p10_pct": 6.630824372759856,
+        "mean_squared_standardized_error": 2.569505502524276
+      }
+    }
+  },
+  "after_training_only_adjustment": {
+    "trainingWindow": {
+      "start": "2024-01-01",
+      "end": "2025-03-01"
+    },
+    "evaluationWindow": {
+      "start": "2025-08-01",
+      "end": "2026-03-01"
+    },
+    "overall": {
+      "count": 2596,
+      "mean_error": 0.43696594102510805,
+      "rmse": 7.2968424226962565,
+      "p75_observations": 2596,
+      "above_p75_pct": 23.38212634822804,
+      "variance_ratio": 0.9926739881002253,
+      "mae": 5.403384098864305,
+      "above_p90_pct": 11.517719568567026,
+      "below_p10_pct": 12.134052388289676,
+      "mean_squared_standardized_error": 1.5348720378979
+    },
+    "by_position": {
+      "WR": {
+        "count": 1034,
+        "mean_error": 0.744656224714279,
+        "rmse": 7.107342027855856,
+        "p75_observations": 1034,
+        "above_p75_pct": 21.47001934235977,
+        "variance_ratio": 0.8852149110496942,
+        "mae": 5.381365105082601,
+        "above_p90_pct": 10.444874274661508,
+        "below_p10_pct": 13.152804642166345,
+        "mean_squared_standardized_error": 1.3100211816185543
+      },
+      "QB": {
+        "count": 300,
+        "mean_error": 0.9366438963601907,
+        "rmse": 8.864961190946287,
+        "p75_observations": 300,
+        "above_p75_pct": 23.333333333333332,
+        "variance_ratio": 1.0138788245609929,
+        "mae": 7.042901694029976,
+        "above_p90_pct": 9,
+        "below_p10_pct": 14.666666666666666,
+        "mean_squared_standardized_error": 1.178098595806876
+      },
+      "RB": {
+        "count": 704,
+        "mean_error": -0.030296870109472764,
+        "rmse": 7.825925318826599,
+        "p75_observations": 704,
+        "above_p75_pct": 25.994318181818183,
+        "variance_ratio": 1.1653681837532208,
+        "mae": 5.6459353959217395,
+        "above_p90_pct": 13.494318181818182,
+        "below_p10_pct": 10.369318181818182,
+        "mean_squared_standardized_error": 1.8987123858643746
+      },
+      "TE": {
+        "count": 558,
+        "mean_error": 0.1876789860136775,
+        "rmse": 5.880618630383658,
+        "p75_observations": 558,
+        "above_p75_pct": 23.655913978494624,
+        "variance_ratio": 0.9655594303248329,
+        "mae": 4.256710707990047,
+        "above_p90_pct": 12.365591397849462,
+        "below_p10_pct": 11.11111111111111,
+        "mean_squared_standardized_error": 1.6843061114673388
+      }
+    }
+  },
+  "qb_primary_receiver": {
+    "pair_games": 260,
+    "unique_games": 164,
+    "mean_simulated_correlation": 0.4356759502198478,
+    "observed_standardized_residual_correlation": 0.43546866216969793
+  },
+  "limitations": [
+    "Reconstructed prior-five same-team inputs, not archived ESPN forecasts or historical decision replay. Data downloaded today may include later corrections.",
+    "Artificial salary=1 only satisfies engine schema; no value, lineup or contest metrics are computed.",
+    "2024 trains bias/scale; 2025 is held out. Adjustments are experimental post-processing and are not deployed to current predictions.",
+    "Missing/no-opportunity actual rows are excluded, not zero-filled. Injury/limited status is unavailable; the cohort is conditional on observed offensive opportunity.",
+    "Core offensive scoring omits two-point/return/recovery touchdowns; no DST evaluation.",
+    "Fixed 44/0 market defaults, no coaching changes or injury context. Game dates provide chronological order; synthetic previous-day timestamps are diagnostic cutoffs, not capture receipts.",
+    "Correlation pools standardized residuals for the prior-history leading QB and WR/TE; repeated teams/games are dependent. No confidence interval or production promotion claim."
+  ]
+}

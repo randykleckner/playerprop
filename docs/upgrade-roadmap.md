@@ -10,3 +10,10 @@ September 8, 2026. This consolidates the current milestone and older blueprint e
 6. **Newsroom and linked scenarios.** Add structured sourced news and evidence-backed player/team/game impacts, with suggested temporary scenario changes and links from cards. No silent forecast override.
 7. **Persisted production signals and specialized markets.** After schedule/identity correctness and quota review, persist compact versioned matchup model runs for browser reads. Fit and validate TD, alternate-line, long-reception, combo and defensive-player markets separately. The current salary refresh task does not refresh paid odds or persist board signals.
 8. **Contest modeling.** Ownership, field simulation, top-10% probability and ROI optimization follow the above evidence gates. No contest entry or wagering automation.
+
+
+## September 8 confidence-tier and calibration update
+
+The earlier strict DK-bridge blocker is superseded by the user-approved four-tier policy: NFLverse Players V2 is canonical, and all 305 eligible offensive players are strongly corroborated, including three scoped manual overrides. None is represented as provider-ID verified. Stop identity work; no paid provider integration. Repeated identity and uncalibrated labels are removed from the main player views; details retain tier counts and validation limitations.
+
+Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 training, 2025 held out, positional mean error, variance scaling, P75/P90 exceedance and QB/receiver correlation. The experimental correction is not deployed because improved tails came with worse MAE. See [results and next backend steps](calibration-results-2026-09-08.md).

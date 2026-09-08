@@ -11,6 +11,7 @@ import urllib.request
 from .adapters import team
 from .providers import ProviderError, iso, utc_now
 
+# NFLreadr load_players() uses this Players V2 release; GSIS is its primary key.
 SOURCE = "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv"
 MAX_BYTES = 32 * 1024 * 1024
 
@@ -59,7 +60,7 @@ def load_catalog(directory: Path) -> tuple[list[dict],dict]:
         if not archive.exists():
             with archive.open("xb") as file:file.write(gzip.compress(raw,mtime=0))
         data={"source":SOURCE,"fetched_at":utc_now(),"sha256":digest,
-              "production_membership_verified":False,"players":players}
+              "schema":"nflverse-players-v2","production_membership_verified":False,"players":players}
         temp=cache.with_suffix(".tmp");temp.write_text(json.dumps(data));temp.replace(cache)
         return players,{k:v for k,v in data.items() if k!="players"}
     except (OSError,ValueError) as error:

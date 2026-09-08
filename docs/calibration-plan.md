@@ -25,3 +25,10 @@ A calibrated P90 should be exceeded about 10% of the time across an appropriate 
 ## Next concrete implementation
 
 Build the evidence-backed identity review ledger and final-stat adapter next. The current `/research/` page is a read-only diagnostic queue, not an approval workflow. Production D1 changes require a separate concrete migration review. The local evaluator currently accepts supplied actuals; it does not download final stats automatically.
+
+
+## September 8 confidence-tier and calibration update
+
+The earlier strict DK-bridge blocker is superseded by the user-approved four-tier policy: NFLverse Players V2 is canonical, and all 305 eligible offensive players are strongly corroborated, including three scoped manual overrides. None is represented as provider-ID verified. Stop identity work; no paid provider integration. Repeated identity and uncalibrated labels are removed from the main player views; details retain tier counts and validation limitations.
+
+Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 training, 2025 held out, positional mean error, variance scaling, P75/P90 exceedance and QB/receiver correlation. The experimental correction is not deployed because improved tails came with worse MAE. See [results and next backend steps](calibration-results-2026-09-08.md).

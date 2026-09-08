@@ -62,3 +62,10 @@ The shared bundle `049409c3f0aeacba643614ad` now serves both research frontends.
 The Mac-based public refresh/publication task is active at 10 a.m. and 5 p.m. America/Chicago, including daylight saving. No production D1 migration or Cron trigger was applied. The [calibration plan](calibration-plan.md) details identity and final-actual prerequisites; current provisional identities remain excluded from accuracy claims.
 
 Release deployed on both custom domains: `cf36bba3-7f3d-456e-9018-1ef2947b2d9f`.
+
+
+## September 8 confidence-tier and calibration update
+
+The earlier strict DK-bridge blocker is superseded by the user-approved four-tier policy: NFLverse Players V2 is canonical, and all 305 eligible offensive players are strongly corroborated, including three scoped manual overrides. None is represented as provider-ID verified. Stop identity work; no paid provider integration. Repeated identity and uncalibrated labels are removed from the main player views; details retain tier counts and validation limitations.
+
+Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 training, 2025 held out, positional mean error, variance scaling, P75/P90 exceedance and QB/receiver correlation. The experimental correction is not deployed because improved tails came with worse MAE. See [results and next backend steps](calibration-results-2026-09-08.md).
