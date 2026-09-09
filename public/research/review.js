@@ -1,3 +1,4 @@
+import {newsIcon} from '../newsroom/shared.js';
 import {loadResearch,readinessHtml} from './readiness.js';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function evidenceHtml(e){
@@ -13,7 +14,7 @@ try{
  const render=()=>{
   const rows=report.rows.filter(r=>(!$('filter').value||r.confidence===$('filter').value)&&(!$('priority').value||r.priority===$('priority').value)&&(!$('eligible-only').checked||eligible.has(r.draftable_id))).sort((a,b)=>(rank[a.priority]??4)-(rank[b.priority]??4)||a.player_name.localeCompare(b.player_name));
   $('counts').textContent=`${rows.length} of ${report.rows.length} offensive salary entries · draft group ${report.slate_id}`;
-  $('rows').innerHTML=rows.map(r=>`<tr><td>${esc(r.player_name)}</td><td>${esc(r.team)} ${esc(r.position)}</td><td>${esc(r.confidence.replaceAll('_',' '))}</td><td>${esc(JSON.stringify(r.external_ids))}</td><td>${esc(r.canonical_player_id||r.candidates.join(', ')||'No candidate')}</td><td>${r.tier_evidence?`<p>${esc(r.tier_evidence.tier.replaceAll('_',' '))}${r.tier_evidence.override_id?' · Override '+esc(r.tier_evidence.override_id):''}</p>`:''}${evidenceHtml(r.review_evidence)}</td></tr>`).join('');
+  $('rows').innerHTML=rows.map(r=>`<tr><td>${esc(r.player_name)}${newsIcon(r.canonical_player_id,r.player_name)}</td><td>${esc(r.team)} ${esc(r.position)}</td><td>${esc(r.confidence.replaceAll('_',' '))}</td><td>${esc(JSON.stringify(r.external_ids))}</td><td>${esc(r.canonical_player_id||r.candidates.join(', ')||'No candidate')}</td><td>${r.tier_evidence?`<p>${esc(r.tier_evidence.tier.replaceAll('_',' '))}${r.tier_evidence.override_id?' · Override '+esc(r.tier_evidence.override_id):''}</p>`:''}${evidenceHtml(r.review_evidence)}</td></tr>`).join('');
  };
  for(const id of ['filter','priority','eligible-only'])$(id).onchange=render;
  render();$('sources').textContent=JSON.stringify(report.evidence_sources||{},null,2);

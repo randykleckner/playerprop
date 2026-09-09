@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { propCard, defenseGrade, flipCard } from '../public/prop-card.js';
 const signal={playerName:'Bo Nix',playerId:'nix',eventId:'game',marketKey:'passing_tds',position:'QB',playerTeam:'DEN',opponentTeam:'KC',direction:'under',line:1.5,marketLabel:'passing touchdowns',confidence:69,recentGames:5,recentAverage:1.2,defenseRankFewestAllowed:4,defenseAverageAllowed:1.1,leagueDefenseAverageAllowed:1.5};
 test('sports card shows both sides, derived grade and evidence without navigation',()=>{
- const html=propCard(signal,{},3);assert.match(html,/UNDER 1.5/);assert.match(html,/69%/);assert.match(html,/DOCTOR CHART/);assert.match(html,/card-evidence-3/);assert.match(html,/aria-hidden="true" inert/);assert.match(html,/Defense:/);assert.doesNotMatch(html,/<a |href=|doctor-badge/);
+ const html=propCard(signal,{},3);assert.match(html,/UNDER 1.5/);assert.match(html,/69%/);assert.match(html,/DOCTOR CHART/);assert.match(html,/card-evidence-3/);assert.match(html,/aria-hidden="true" inert/);assert.match(html,/Defense:/);assert.doesNotMatch(html,/doctor-badge/);assert.doesNotMatch(html.split('</button>')[0],/<a |href=/);assert.match(html,/<\/button><a class="player-news"/);
 });
 test('defense grades have explicit boundaries and missing data stays missing',()=>{
  assert.deepEqual([1,4,5,8,9,16,17,24,25,32,null,0,33].map(defenseGrade),['A+','A+','A','A','B','B','C','C','D','D','—','—','—']);

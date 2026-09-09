@@ -1,3 +1,4 @@
+import {newsIcon} from '../public/newsroom/shared.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -60,8 +61,8 @@ test('unavailable, conflicting and wrong-schedule players are excluded',()=>{
 async function render(data,now,failed=false){
   const elements=new Map();const get=id=>{if(!elements.has(id))elements.set(id,{hidden:false,innerHTML:'',textContent:'',setAttribute(){}});return elements.get(id)};
   class Clock extends Date{static now(){return Date.parse(now)}}
-  const context=vm.createContext({document:{getElementById:get,body:{dataset:{}}},localStorage:{getItem(){return null}},Date:Clock,Intl,console,loadResearch:async()=>{throw Error('Legacy fallback test')},setInterval(){},fetch:async()=>({ok:!failed,json:async()=>data})});
-  vm.runInContext(readFileSync(new URL('../public/lineups/lineups.js',import.meta.url),'utf8').replace(/^import .*\n/,''),context);
+  const context=vm.createContext({document:{getElementById:get,body:{dataset:{}}},localStorage:{getItem(){return null}},Date:Clock,Intl,console,newsIcon,loadResearch:async()=>{throw Error('Legacy fallback test')},setInterval(){},fetch:async()=>({ok:!failed,json:async()=>data})});
+  vm.runInContext(readFileSync(new URL('../public/lineups/lineups.js',import.meta.url),'utf8').replace(/^import .*\n/gm,''),context);
   await new Promise(resolve=>setImmediate(resolve));return get;
 }
 const saved=JSON.parse(readFileSync(new URL('../public/lineups/latest.json',import.meta.url)));

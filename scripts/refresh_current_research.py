@@ -96,6 +96,9 @@ def main():
             message=f'Public research refresh failed ({type(error).__name__}); last valid snapshot retained'
             subprocess.run(['node','scripts/refresh_dfs_research.mjs','--root',args.root,'--failure',message],cwd=ROOT,check=False)
             print(str(error));return 1
+        finally:
+            # News has an independent failure boundary and also refreshes when salary discovery fails.
+            subprocess.run(['python3','scripts/refresh_newsroom.py','--root',args.root],cwd=ROOT,check=False)
 
 
 if __name__=='__main__':raise SystemExit(main())

@@ -1,0 +1,8 @@
+export const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function activeStories(data,now=Date.now()) {return (data?.stories||[]).filter(s=>Number.isFinite(Date.parse(s.expires_at))&&Date.parse(s.expires_at)>now);}
+export function newsIcon(id,name){return `<a class="player-news" data-news-player="${escapeHtml(id)}" href="/newsroom/?player=${encodeURIComponent(id||'')}" aria-label="News affecting ${escapeHtml(name)}" title="Player news" hidden>📰</a>`;}
+const time=t=>t?new Date(t).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}):'Not supplied';
+export function briefHtml(s,includeIcon=false){
+ const safe=/^https:\/\/(www\.espn\.com|www\.nfl\.com)\//.test(s.source_url||'');
+ return `<article class="news-brief"><div class="news-kicker">${escapeHtml(s.topic)} · ${escapeHtml(s.team)} · ${escapeHtml(s.position)}</div><h2>${escapeHtml(s.player_name)}${includeIcon?newsIcon(s.player_id,s.player_name):''}</h2><p class="news-highlight">${escapeHtml(s.highlight)}</p><div class="news-impact"><strong>${escapeHtml(s.impact_label)}</strong><p>${escapeHtml(s.impact)}</p></div><p class="news-affected"><strong>Who’s impacted:</strong> ${escapeHtml(s.player_name)}. Teammate effects are not established by this brief.</p><div class="news-source">${safe?`<a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.source)} ↗</a>`:escapeHtml(s.source)}<span>${s.published_at?'Published '+time(s.published_at):'Report observed '+time(s.observed_at)}</span></div></article>`;
+}

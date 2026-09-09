@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {activeStories,newsIcon,briefHtml} from '../public/newsroom/shared.js';
+test('expired and malformed stories never produce active icons',()=>{assert.equal(activeStories({stories:[{expires_at:'broken'},{expires_at:'2026-01-01'},{expires_at:'2027-01-01'}]},Date.parse('2026-09-08')).length,1);});
+test('news markup escapes source content and excludes unsafe source links',()=>{const html=briefHtml({player_name:'<img onerror=alert(1)>',highlight:'<script>x</script>',source_url:'javascript:alert(1)'});assert.ok(!html.includes('<img'));assert.ok(!html.includes('javascript:'));assert.ok(html.includes('&lt;script&gt;'));const link=newsIcon('id"bad','<name>');assert.ok(link.includes('hidden'));assert.ok(link.includes('&lt;name&gt;'));});

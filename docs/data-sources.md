@@ -244,3 +244,7 @@ The published simulation input now includes captured ESPN-reported DraftKings ga
 ## Shared research refresh — September 8, 2026
 
 `npm run dfs:refresh` runs one public-only DK/ESPN collection cycle. The approved Mac task invokes it at 10 a.m. and 5 p.m. America/Chicago and publishes validated changes. The two frontends resolve `/research/latest.json` to immutable shared artifacts. Errors preserve the last valid data and appear separately from source freshness. ESPN scoreboard date responses can omit top-level season; the collector derives one consistent season/week from events and rejects ambiguity. Provider caches and conservative limits remain in effect. No authenticated DraftKings/account actions, paid odds refresh, production Cron or D1 migrations are part of this runner.
+
+## Actionable Newsroom — September 8, 2026
+
+The [Newsroom](newsroom.md) ingests ESPN NFL RSS and official NFL injury-report tables, with canonical player links, short factual templates, source timestamps, separately labeled implications and conservative expiry. Public JSON news returned 403; RSS is the active ESPN adapter. The existing 10 a.m./5 p.m. Central refresh automatically publishes news independently of salary success. Raw evidence and immutable snapshots stay in `.newsroom/`; browser views read `/newsroom/latest.json`. No account actions, paid provider, D1 migration or automatic projection adjustment is involved. Official team feeds and contextual teammate/defender/coaching impacts are not yet connected.

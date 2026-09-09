@@ -79,3 +79,7 @@ Corrected provider team-code aliases, reducing eligible-player context discrepan
 The earlier strict DK-bridge blocker is superseded by the user-approved four-tier policy: NFLverse Players V2 is canonical, and all 305 eligible offensive players are strongly corroborated, including three scoped manual overrides. None is represented as provider-ID verified. Stop identity work; no paid provider integration. Repeated identity and uncalibrated labels are removed from the main player views; details retain tier counts and validation limitations.
 
 Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 training, 2025 held out, positional mean error, variance scaling, P75/P90 exceedance and QB/receiver correlation. The experimental correction is not deployed because improved tails came with worse MAE. See [results and next backend steps](docs/calibration-results-2026-09-08.md).
+
+### Newsroom
+
+`/newsroom/` provides brief, actionable player news with source links, filters and newspaper icons across player views. `npm run news:refresh` fetches the public ESPN RSS and official NFL injury report; it also runs with the existing 10 a.m./5 p.m. Central refresh. See [Newsroom architecture and coverage](docs/newsroom.md). No additional keys or paid news service are required.
