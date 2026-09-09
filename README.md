@@ -87,3 +87,5 @@ Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 train
 ### Simulation V2 foundation (local experiment)
 
 V1 remains the production research simulator. V2.0-A is a separate deterministic play-by-play game-state/clock foundation, with no player allocation or production recommendation integration. Run `npm run v2:simulate -- --trace` or `npm run v2:benchmark`. See [architecture, rules, limitations and measured benchmark](docs/simulation-v2.md). V2.0-B requires review before implementation.
+
+Drive Lab is available at `/drive-lab/` as a separate experimental page. It supports V2 foundation/empirical comparisons, drive summaries and optional traces while V1 stays the DFS model. Build its browser worker with `npm run drive-lab:build`; fit/evaluate historical profiles with `npm run v2:fit` and `npm run v2:evaluate` after preparing the documented local data files.

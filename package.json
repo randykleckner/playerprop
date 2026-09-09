@@ -26,10 +26,14 @@
     "news:refresh": "python3 scripts/refresh_newsroom.py",
     "v2:benchmark": "node scripts/benchmark_v2.mjs",
     "v2:prepare": "python3 scripts/prepare_v2_example.py",
-    "v2:simulate": "node scripts/simulate_v2.mjs"
+    "v2:simulate": "node scripts/simulate_v2.mjs",
+    "v2:fit": "python3 scripts/fit_v2_pbp.py",
+    "v2:evaluate": "node scripts/evaluate_v2_b.mjs",
+    "drive-lab:build": "node scripts/build_drive_lab.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260903.1",
+    "esbuild": "0.28.1",
     "typescript": "^5.9.0",
     "wrangler": "^4.128.0"
   }

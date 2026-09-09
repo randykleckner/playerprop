@@ -93,3 +93,27 @@ Use `npm run v2:simulate -- --seed=review --trace` to inspect an optional play t
 ## Regression result
 
 137 tests passed: 77 Node (including 14 new V2 tests) and 60 Python; TypeScript strict check passed. Tests cover opening/first downs/goal-to-go, possession mirroring, running/stopped clocks, all quarter and halftime transitions, last-play scoring, PAT/FG/safety, punt/turnover/down failures, deterministic traces and IDs, tied regulation, max-play incomplete status, valid state sweeps and clock/drive/score/stat conservation. Existing V1 tests remain unchanged and passing. No test failures remain.
+
+## Drive Lab and V2.0-B — September 9 update
+
+The user approved a separate website page after reviewing V2.0-A. `/drive-lab/` now exposes the experimental V2 engine in a browser Dedicated Worker. This supersedes the initial no-page/no-deployment milestone restriction solely for the standalone research sandbox. V1 remains the production DFS model; V2 still has no recommendation, roster-grading or player-allocation integration.
+
+The page supports archived matchups, explicit foundation/empirical version selection, editable team baseline pass rates, seeds, 100/1,000/10,000 games, progress/cancel, score distributions, per-team aggregates, one representative game's drives, and optional first-game trace. Results are labeled as aggregate versus one example. Bulk plays are never stored. Games/markets are frozen examples with capture and kickoff timestamps; they do not auto-update with the production research bundle. Team input season is shown separately. `npm run drive-lab:build` bundles the same typed source into a static browser worker, avoiding a second simulation implementation.
+
+V2.0-B adds `empirical.ts` and an optional versioned profile to the V2 engine. Foundation defaults are preserved; empirical runs identify their model and profile in the run fingerprint. During expanded evaluation a terminal fourth-down goal-to-go edge case surfaced: distance was stale after a failed fourth-down gain as regulation expired. This V2-only state fix has a regression test. V1 files remain unchanged.
+
+### Empirical fit and held-out evaluation
+
+`npm run v2:fit` reads locally archived NFLverse 2024 and 2025 PBP. Fit uses only 2024 regular-season, regulation RUN/PASS plays, excluding penalties, kneels, spikes and missing required numeric fields. Down/distance/late-score cells use 50-observation smoothing toward the league pass baseline, with team baseline deviations added at simulation time. RUN and completed-PASS yardage use weighted observed league histograms rather than Gaussian draws. These are not opponent-adjusted or player-level distributions. Completion, sack, interception and fumble probabilities retain team inputs.
+
+Pace uses adjacent eligible snaps in the same game/quarter/drive/possession, with a running-clock prior result and no out-of-bounds/TD/fumble; acceptable clock gaps are 6–46 seconds, minus an assumed six seconds of play duration. Medians for normal/trailing-late/leading-late replace the foundation's three pace settings. This approximates dead-ball time; timestamps do not directly measure it.
+
+`npm run v2:evaluate` compares A/B over 258 non-overtime 2025 games, 200 draws per game per model, using 2024 team inputs. Fourteen overtime games are excluded. Final scores come from the completed schedule; actual play/yard counts use the filtered PBP cohort and therefore exclude penalties/kneels/spikes, whereas final points include all regulation scoring. Frozen retrospective files can contain later corrections; this is not an immutable pregame forecast backtest. Source hashes and all metrics are in `simulation-v2-b-evaluation.json`. Neither current markets nor held-out 2025 outcomes tune the profile.
+
+Play-call Brier error across 32,116 held-out plays improved from 0.2440 to 0.2138. Full-game scoring remains weak: B underpredicts total points by 9.82 on average. Better play selection does not establish calibrated game scoring. The Drive Lab defaults to foundation A and exposes B as an experiment. Neither is used for DFS decisions.
+
+Next focused work: diagnose drive finishing/red-zone distributions and missing scoring paths; measure conditional yardage and team/opponent adjustments, then evaluate on an additional untouched season before promoting any scoring model. No further phase has been started.
+
+Release verification: 145 tests (82 Node, 63 Python) passed, plus strict TypeScript. Browser checks exercised 1,000 foundation games, 10,000 empirical games, first-game drives/trace, cancellation, and responsive layout without horizontal overflow. The empirical 10,000-game browser run completed in about 1.1 seconds on the development Mac. Runtime varies by device. No server simulation quota or D1 writes are used.
+
+Published standalone Drive Lab on both existing custom domains as version `7a9fb563-858f-4176-8ee9-dca10f492db6`. The Cloudflare API worker and D1 bindings remain unchanged; simulation computation runs in the user's browser.

@@ -299,3 +299,7 @@ Added the [actionable Newsroom](docs/newsroom.md): isolated Python RSS/injury ad
 ## Simulation V2.0-A — local foundation
 
 Added a separate strongly typed `src/simulation/v2` game-state/clock engine and comparison envelope. Reuses the existing deterministic RNG; V1 methodology, scoring, UI and execution remain unchanged. The local benchmark runs 100/1,000/10,000 regulation games from a frozen real matchup with NFLverse 2025 team aggregates and archived market comparisons. No D1 persistence, V2 deployment, fantasy-player allocation or production recommendations. See [V2 architecture and measured results](docs/simulation-v2.md). Review required before V2.0-B empirical distributions and game/drive calibration.
+
+### Drive Lab and V2.0-B
+
+After user approval, the standalone `/drive-lab/` page exposes V2 through a bundled browser Dedicated Worker with cancellation, bounded counts and optional first-game trace. It does not replace V1 or feed recommendations. The empirical profile fits 2024 PBP; 2025 held-out diagnostics show better play-call Brier error (0.244→0.214) but substantial scoring underprediction. Foundation A remains selected by default. See [V2 update](docs/simulation-v2.md) and the checked-in evaluation JSON for assumptions, source hashes and metrics.

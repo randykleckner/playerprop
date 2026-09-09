@@ -1,0 +1,98 @@
+{
+  "status": "held-out exploratory diagnostics; not production calibration",
+  "trainingSeason": 2024,
+  "evaluationSeason": 2025,
+  "evaluationSha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+  "scheduleSha256": "d64cef660c4b14c74f0e33ecee387343675137ed2f1a1fac2b0c70951b8a4c07",
+  "playCases": 32116,
+  "brierA": 0.24403697870003085,
+  "brierB": 0.21376450097482252,
+  "gameCases": 258,
+  "excludedOvertimeGames": 14,
+  "profileId": "dd6363f1cc734f7787e959826ba7f9b0d869d1a3d27c191ed0327a8d7eea7749",
+  "drawsPerGame": 200,
+  "metrics": {
+    "A": {
+      "total": {
+        "meanError": -1.2090310077519384,
+        "mae": 11.025620155038766,
+        "rmse": 13.886455177729871
+      },
+      "margin": {
+        "meanError": -2.1692248062015502,
+        "mae": 11.910116279069753,
+        "rmse": 15.200412600224185
+      },
+      "plays": {
+        "meanError": 15.661705426356596,
+        "mae": 15.858217054263568,
+        "rmse": 17.3143164538357
+      },
+      "passAttempts": {
+        "meanError": 20.354903100775203,
+        "mae": 20.655329457364353,
+        "rmse": 23.101468561745207
+      },
+      "rushAttempts": {
+        "meanError": -6.116569767441859,
+        "mae": 7.810445736434108,
+        "rmse": 9.54122203527182
+      },
+      "yards": {
+        "meanError": 86.5669767441861,
+        "mae": 117.60193798449615,
+        "rmse": 144.75815527561286
+      },
+      "turnovers": {
+        "meanError": -0.051550387596899234,
+        "mae": 1.2100775193798443,
+        "rmse": 1.5202319029541809
+      }
+    },
+    "B": {
+      "total": {
+        "meanError": -9.815426356589148,
+        "mae": 13.350426356589143,
+        "rmse": 16.73458404904567
+      },
+      "margin": {
+        "meanError": -2.2939922480620147,
+        "mae": 11.594108527131784,
+        "rmse": 14.69750007087373
+      },
+      "plays": {
+        "meanError": -1.1904844961240302,
+        "mae": 5.983972868217052,
+        "rmse": 7.467352541086313
+      },
+      "passAttempts": {
+        "meanError": 0.48021317829457333,
+        "mae": 8.504941860465118,
+        "rmse": 10.701865097718597
+      },
+      "rushAttempts": {
+        "meanError": -1.6372286821705426,
+        "mae": 5.83734496124031,
+        "rmse": 7.176101102610225
+      },
+      "yards": {
+        "meanError": -29.964825581395324,
+        "mae": 93.32928294573638,
+        "rmse": 118.6186942871958
+      },
+      "turnovers": {
+        "meanError": -0.4399031007751937,
+        "mae": 1.201492248062015,
+        "rmse": 1.5414201458043393
+      }
+    }
+  },
+  "limits": [
+    "2024 fit and 2025 evaluation; no 2025 parameters fitted.",
+    "Final retrospective data may contain corrections; not frozen pregame receipts.",
+    "Overtime games excluded. Actual play/yard cohorts exclude penalties, kneels and spikes; final scores include all regulation scoring.",
+    "Yardage histograms are league-wide, not opponent/team-adjusted.",
+    "Pace estimates subtract six assumed play seconds from adjacent snap-clock gaps; not measured dead-ball duration.",
+    "200 draws/game; finite Monte Carlo uncertainty. No V1 player-level or DFS performance claim."
+  ]
+}
