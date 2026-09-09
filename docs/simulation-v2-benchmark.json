@@ -1,0 +1,172 @@
+{
+  "modelVersion": "V2.0-A",
+  "game": {
+    "gameId": "DET-NO",
+    "homeTeam": "DET",
+    "awayTeam": "NO",
+    "homeTeamInputs": {
+      "passRate": 0.5841956726246472,
+      "completionRate": 0.6769759450171822,
+      "sackRate": 0.06280193236714976,
+      "interceptionRate": 0.013745704467353952,
+      "runMean": 4.617647058823529,
+      "completionMean": 11.591370558375635,
+      "fumbleRate": 0.00904977375565611
+    },
+    "awayTeamInputs": {
+      "passRate": 0.5953488372093023,
+      "completionRate": 0.6717428087986463,
+      "sackRate": 0.0765625,
+      "interceptionRate": 0.02030456852791878,
+      "runMean": 3.685057471264368,
+      "completionMean": 10.143576826196474,
+      "fumbleRate": 0.009195402298850575
+    },
+    "inputsTimestamp": "2026-09-09T01:05:59.975Z",
+    "market": {
+      "game_id": "DET-NO",
+      "home": "DET",
+      "away": "NO",
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "total": 49.5,
+      "home_spread": -7,
+      "home_implied_total": 28.25,
+      "away_implied_total": 21.25,
+      "sportsbook": "DraftKings",
+      "source": "ESPN public scoreboard odds",
+      "captured_at": "2026-09-09T01:05:54.551Z",
+      "event_id": "401872923"
+    },
+    "historicalTeamAverages": {
+      "DET": {
+        "games": 17,
+        "plays": 62.529411764705884,
+        "passAttempts": 34.23529411764706,
+        "rushAttempts": 26,
+        "netYards": 404.2352941176471
+      },
+      "NO": {
+        "games": 17,
+        "plays": 63.23529411764706,
+        "passAttempts": 34.76470588235294,
+        "rushAttempts": 25.58823529411765,
+        "netYards": 348.7647058823529
+      }
+    },
+    "provenance": {
+      "snapshot": "public/research/bundles/36dc8a5bfda31f2e91298a56/simulation.json",
+      "snapshotSha256": "17b346e2b22b16118df57535470d4de8bf9d835043764c38716f33c25f975657",
+      "statsSource": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+      "statsSha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "season": 2025,
+      "limitations": "Prior-season unconditional team rates; current coaching/roster changes not modeled. SDs, timing and kicks use declared defaults."
+    }
+  },
+  "benchmarks": [
+    {
+      "count": 100,
+      "runtimeMs": 23.001165999999998,
+      "simulationsPerSecond": 4347.605682251065,
+      "sampledPeakHeapMiB": 8.222419738769531,
+      "processPeakRssMiB": 83.609375,
+      "aborted": 0,
+      "metrics": {
+        "meanHomeScore": 28.66,
+        "meanAwayScore": 18.5,
+        "meanTotal": 47.16,
+        "medianTotal": 47,
+        "totalStddev": 11.047823315024552,
+        "homeStddev": 7.932490151270283,
+        "awayStddev": 8.748142660016468,
+        "meanHomeDifferential": 10.16,
+        "playsPerTeam": 66.355,
+        "possessionsPerTeam": 11.75,
+        "passAttemptsPerTeam": 42.295,
+        "rushAttemptsPerTeam": 20.945,
+        "netYardsPerTeam": 371.55,
+        "yardsPerPlay": 5.5994273227337805,
+        "turnoversPerGame": 1.85,
+        "touchdownsPerGame": 5.27,
+        "averageDriveSeconds": 155.05848536042566
+      },
+      "flags": [],
+      "marketComparison": {
+        "total": 49.5,
+        "totalDifference": -2.3400000000000034,
+        "homeSpread": -7,
+        "expectedHomeDifferential": 7,
+        "differentialDifference": 3.16
+      }
+    },
+    {
+      "count": 1000,
+      "runtimeMs": 127.075542,
+      "simulationsPerSecond": 7869.334918909887,
+      "sampledPeakHeapMiB": 10.4222412109375,
+      "processPeakRssMiB": 84.203125,
+      "aborted": 0,
+      "metrics": {
+        "meanHomeScore": 26.419,
+        "meanAwayScore": 17.928,
+        "meanTotal": 44.347,
+        "medianTotal": 44,
+        "totalStddev": 11.490891653827395,
+        "homeStddev": 9.105571865621632,
+        "awayStddev": 7.884974064637118,
+        "meanHomeDifferential": 8.491,
+        "playsPerTeam": 66.1415,
+        "possessionsPerTeam": 11.588,
+        "passAttemptsPerTeam": 42.0925,
+        "rushAttemptsPerTeam": 20.882,
+        "netYardsPerTeam": 361.2915,
+        "yardsPerPlay": 5.462402576294762,
+        "turnoversPerGame": 1.86,
+        "touchdownsPerGame": 4.847,
+        "averageDriveSeconds": 157.42887574628355
+      },
+      "flags": [],
+      "marketComparison": {
+        "total": 49.5,
+        "totalDifference": -5.152999999999999,
+        "homeSpread": -7,
+        "expectedHomeDifferential": 7,
+        "differentialDifference": 1.4909999999999997
+      }
+    },
+    {
+      "count": 10000,
+      "runtimeMs": 1183.955334,
+      "simulationsPerSecond": 8446.2645784237,
+      "sampledPeakHeapMiB": 17.620513916015625,
+      "processPeakRssMiB": 100.59375,
+      "aborted": 0,
+      "metrics": {
+        "meanHomeScore": 26.3624,
+        "meanAwayScore": 17.9654,
+        "meanTotal": 44.3278,
+        "medianTotal": 44,
+        "totalStddev": 11.370723247005671,
+        "homeStddev": 8.91002055216478,
+        "awayStddev": 7.928051642112518,
+        "meanHomeDifferential": 8.397,
+        "playsPerTeam": 66.1608,
+        "possessionsPerTeam": 11.59815,
+        "passAttemptsPerTeam": 41.93935,
+        "rushAttemptsPerTeam": 21.08645,
+        "netYardsPerTeam": 359.68605,
+        "yardsPerPlay": 5.436543240105924,
+        "turnoversPerGame": 1.7866,
+        "touchdownsPerGame": 4.8398,
+        "averageDriveSeconds": 157.40102028824214
+      },
+      "flags": [],
+      "marketComparison": {
+        "total": 49.5,
+        "totalDifference": -5.172199999999997,
+        "homeSpread": -7,
+        "expectedHomeDifferential": 7,
+        "differentialDifference": 1.3970000000000002
+      }
+    }
+  ]
+}

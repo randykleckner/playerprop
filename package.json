@@ -23,7 +23,10 @@
     "dfs:refresh": "python3 scripts/refresh_current_research.py",
     "dfs:calibrate:historical": "node scripts/calibrate_historical_mc.mjs",
     "dfs:calibrate:prepare": "python3 scripts/prepare_historical_calibration.py",
-    "news:refresh": "python3 scripts/refresh_newsroom.py"
+    "news:refresh": "python3 scripts/refresh_newsroom.py",
+    "v2:benchmark": "node scripts/benchmark_v2.mjs",
+    "v2:prepare": "python3 scripts/prepare_v2_example.py",
+    "v2:simulate": "node scripts/simulate_v2.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260903.1",

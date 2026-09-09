@@ -295,3 +295,7 @@ Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 train
 ## Newsroom milestone — September 8, 2026
 
 Added the [actionable Newsroom](docs/newsroom.md): isolated Python RSS/injury adapters, immutable local source evidence, atomic public snapshot, expiry-aware shared player icons and accessible dialogs across cards, lineup tables, roster/stacks and simulation results. The existing twice-daily Mac refresh includes independent news ingestion and automatic publishing. Templates distinguish sourced facts from performance implications; news does not alter Monte Carlo inputs. Next news expansion: official team adapters and evidence-backed teammate/defender/coaching relationships, with coverage and temporal validation before broader auto-publication.
+
+## Simulation V2.0-A — local foundation
+
+Added a separate strongly typed `src/simulation/v2` game-state/clock engine and comparison envelope. Reuses the existing deterministic RNG; V1 methodology, scoring, UI and execution remain unchanged. The local benchmark runs 100/1,000/10,000 regulation games from a frozen real matchup with NFLverse 2025 team aggregates and archived market comparisons. No D1 persistence, V2 deployment, fantasy-player allocation or production recommendations. See [V2 architecture and measured results](docs/simulation-v2.md). Review required before V2.0-B empirical distributions and game/drive calibration.

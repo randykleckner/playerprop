@@ -83,3 +83,7 @@ Completed a 354-game reconstructed historical Monte Carlo diagnostic: 2024 train
 ### Newsroom
 
 `/newsroom/` provides brief, actionable player news with source links, filters and newspaper icons across player views. `npm run news:refresh` fetches the public ESPN RSS and official NFL injury report; it also runs with the existing 10 a.m./5 p.m. Central refresh. See [Newsroom architecture and coverage](docs/newsroom.md). No additional keys or paid news service are required.
+
+### Simulation V2 foundation (local experiment)
+
+V1 remains the production research simulator. V2.0-A is a separate deterministic play-by-play game-state/clock foundation, with no player allocation or production recommendation integration. Run `npm run v2:simulate -- --trace` or `npm run v2:benchmark`. See [architecture, rules, limitations and measured benchmark](docs/simulation-v2.md). V2.0-B requires review before implementation.
