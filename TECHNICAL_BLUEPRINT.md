@@ -303,3 +303,11 @@ Added a separate strongly typed `src/simulation/v2` game-state/clock engine and 
 ### Drive Lab and V2.0-B
 
 After user approval, the standalone `/drive-lab/` page exposes V2 through a bundled browser Dedicated Worker with cancellation, bounded counts and optional first-game trace. It does not replace V1 or feed recommendations. The empirical profile fits 2024 PBP; 2025 held-out diagnostics show better play-call Brier error (0.244→0.214) but substantial scoring underprediction. Foundation A remains selected by default. See [V2 update](docs/simulation-v2.md) and the checked-in evaluation JSON for assumptions, source hashes and metrics.
+
+## V2.0-B — Current Data and Personnel Foundation (September 9, 2026)
+
+Drive Lab now reads a distinct recency-weighted live profile (2025 primary, 2024 stabilizer, 2026 when completed PBP becomes available). Small current samples shrink toward historical team/league rates. Frozen historical evaluation is separate; no 2026 observations are invented. `config/v2-live.json` and `config/v2-evaluation.json` define these paths.
+
+The new `scripts/personnel` provider/model/storage layer imports public EA Madden NFL 27 structured data, joins NFLverse Players V2/current roster/depth evidence, and persists immutable local snapshots with D1-compatible schema `0009`. The website displays seven diagnostic unit ratings and expandable evidence from static `public/drive-lab/personnel.json`. It does not call EA during browsing or send personnel to the simulation engine. No production D1 migration, new Cron, V1 replacement, player allocation or personnel-based probability adjustment is included.
+
+Initial coverage: 2,364 Madden records; 1,900 strongly corroborated, 320 provisional, 144 unresolved, none verified through a direct provider ID crosswalk. Of 224 team/unit outputs, 179 are complete; 45 remain partial. See [personnel source, formulas and example](docs/personnel-ratings.md) and [recency and validation details](docs/simulation-v2.md). Next proposed milestone: diagnose/calibrate drive finishing using an untouched historical evaluation fold, after review of this release.

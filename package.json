@@ -29,7 +29,12 @@
     "v2:simulate": "node scripts/simulate_v2.mjs",
     "v2:fit": "python3 scripts/fit_v2_pbp.py",
     "v2:evaluate": "node scripts/evaluate_v2_b.mjs",
-    "drive-lab:build": "node scripts/build_drive_lab.mjs"
+    "drive-lab:build": "node scripts/build_drive_lab.mjs",
+    "personnel:import": "python3 scripts/import_personnel.py",
+    "personnel:build": "python3 scripts/build_personnel.py",
+    "personnel:diagnose": "python3 scripts/diagnose_personnel.py",
+    "v2:live:refresh": "python3 scripts/refresh_v2_live.py",
+    "v2:live:build": "python3 scripts/build_v2_live.py"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260903.1",

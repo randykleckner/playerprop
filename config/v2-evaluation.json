@@ -1,0 +1,1 @@
+{"version":1,"folds":[{"train_through":2023,"evaluate":2024},{"train_through":2024,"evaluate":2025},{"train_through":2025,"evaluate":2026}],"allow_same_season_training":false,"current_fold_status":"Accumulate final 2026 games; no future outcomes available before completion","existing_frozen_evaluation":"docs/simulation-v2-b-evaluation.json"}

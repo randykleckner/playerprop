@@ -161,3 +161,9 @@ The GET-only DraftKings adapter and CSV fallback now share a provider-neutral Py
 DFS Daily and Simulation Lab now share an immutable research bundle with CURRENT / AGING / STALE / FAILED source readiness and a read-only identity/exclusion report. Public collection runs via `npm run dfs:refresh`; the approved Mac task runs at 10 a.m. and 5 p.m. America/Chicago and publishes validated changes. It requires this Mac to be available. No production D1 migration or Cron trigger was added.
 
 See [delivery order](upgrade-roadmap.md) and [calibration plan](calibration-plan.md). Identity verification and final-result ingestion remain the next calibration prerequisites; the model is still uncalibrated.
+
+### Personnel foundation
+
+`EA public structured pages → PersonnelRatingsProvider → immutable local ratings snapshots → NFLverse canonical/roster/depth join → diagnostic units → static Drive Lab JSON`.
+
+`NFLverse historical/current PBP → separate live recency builder → live-empirical.json → browser V2 worker`. Frozen evaluation artifacts remain a separate path. The two paths meet only in the page's presentation; personnel never enters simulation requests. See [personnel-ratings.md](personnel-ratings.md). Local SQLite uses migration 0009; remote D1 is unchanged.

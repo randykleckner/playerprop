@@ -28,11 +28,12 @@ def fit(rows):
     delta=num(prev,'quarter_seconds_remaining')-num(r,'quarter_seconds_remaining')
     if 6<=delta<=46:pace[context(num(prev,'qtr'),num(prev,'quarter_seconds_remaining'),num(prev,'score_differential'))].append(delta-6)
   prev=r
+ if not n:raise ValueError('No eligible plays')
  base=calls['all']['pass']/sum(calls['all'].values());rates={}
  for k,c in calls.items():rates[k]={'count':sum(c.values()),'probability':(c['pass']+50*base)/(sum(c.values())+50)}
  team_inputs={}
  for tm,t in teams.items():team_inputs[tm]={'passRate':t['pass']/t['plays'],'completionRate':t['completions']/t['attempts'],'sackRate':t['sacks']/t['pass'],'interceptionRate':t['ints']/t['attempts'],'fumbleRate':t['fumbles']/t['run'],'runMean':t['rushYards']/t['run'],'completionMean':t['passYards']/t['completions']}
- return {'version':'V2.0-B-experimental','trainingSeason':2024,'baselinePassRate':base,'calls':rates,'yards':{k:sorted(v.items()) for k,v in hist.items()},'pace':{k:{'count':len(v),'seconds':statistics.median(v)} for k,v in pace.items()},'trainingPlays':n,'teamInputs':team_inputs}
+ return {'version':'V2.0-B-experimental','trainingSeason':2024,'baselinePassRate':base,'calls':rates,'yards':{k:sorted(v.items()) for k,v in hist.items()},'pace':{k:{'count':len(v),'seconds':statistics.median(v)} for k,v in pace.items()},'trainingPlays':n,'teamInputs':team_inputs,'teamSampleSizes':{tm:t['plays'] for tm,t in teams.items()}}
 
 def main():
  paths=[ROOT/f'.dfs-calibration/pbp-{s}.csv.gz' for s in [2024,2025]]

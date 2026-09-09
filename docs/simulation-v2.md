@@ -117,3 +117,29 @@ Next focused work: diagnose drive finishing/red-zone distributions and missing s
 Release verification: 145 tests (82 Node, 63 Python) passed, plus strict TypeScript. Browser checks exercised 1,000 foundation games, 10,000 empirical games, first-game drives/trace, cancellation, and responsive layout without horizontal overflow. The empirical 10,000-game browser run completed in about 1.1 seconds on the development Mac. Runtime varies by device. No server simulation quota or D1 writes are used.
 
 Published standalone Drive Lab on both existing custom domains as version `7a9fb563-858f-4176-8ee9-dca10f492db6`. The Cloudflare API worker and D1 bindings remain unchanged; simulation computation runs in the user's browser.
+
+## V2.0-B — Current Data and Personnel Foundation
+
+Audit before this milestone: Drive Lab loads static `examples.json` and `empirical.json` produced by `build_drive_lab.mjs`. The empirical file fits only 2024 PBP; examples take all team rates from that 2024 profile. Pace is a three-context median, yardage is a league histogram, conditional pass probabilities are smoothed down/distance/late-score cells. Current roster, depth and Madden information are absent. Archived 2026 matchup/market metadata comes from the shared research bundle but never adjusts outcomes. The separate evaluation uses 2025 with 2024 training. Raw 2024/2025 PBP is cached locally, not fetched by page visits. Fallbacks are the V2.0-A team/distribution/kick/clock assumptions already documented above. V1 remains untouched.
+
+This milestone separates current live-profile construction from frozen evaluation configuration, adds personnel snapshots and unit diagnostics, and keeps all personnel attributes outside engine requests.
+
+### Live recency and evaluation separation
+
+`config/v2-live.json` selects 2026 current data, 2025 weight 1, and 2024 weight 0.5; 2026 starts at weight 2. These are configurable starting assumptions (one-season historical half-life), not learned calibration. `build_v2_live.py` builds a separate `live-empirical.json`, and `build_drive_lab.mjs` now uses its team inputs. The frozen `empirical.json` and 2024→2025 evaluation receipt remain intact.
+
+Actual eligible observations on September 9: **2024 32,652; 2025 32,116; 2026 0**. The current-season NFLverse PBP release returned HTTP 404. `v2:live:refresh` checks the public source conservatively and retains last valid files. No future or same-day rows enter the fit. Current source absence is explicit in the UI; roster freshness does not imply available 2026 game observations.
+
+Historical team rates use season-weighted play counts, with `alpha = n/(n+200)` blending toward the historical league. Current team rates receive share `n_current/(n_current+400)` over that stabilized history. League/current conditional calls, yardage histograms and pace use weighted observation counts; the current season's configured league weight is further multiplied by `N_current/(N_current+6400)`. Existing 50-play conditional-cell smoothing remains. Pace is a count-weighted average of per-season context medians, not a pooled median. All priors and season weights are positive-finite validated configuration. Neutral/early-down/red-zone-specific team rates are not new model inputs; existing down/distance/late-score behavior remains the modeled context.
+
+`config/v2-evaluation.json` documents rolling folds: train through 2023→evaluate 2024; through 2024→2025; through 2025→2026. Evaluation season inclusion is strictly excluded by the tested season selector. Only the existing 2024→2025 fold has been executed; the 2023 training fold requires an additional archive, and 2026 awaits completed games. Current live-profile outputs are not described as held-out validation. Do not run the live profile against 2025 and call that a holdout. Late corrections in retrospective source files remain a limitation; frozen pregame receipts are stronger evidence.
+
+### Personnel integration and release scope
+
+See [personnel-ratings.md](personnel-ratings.md) for the source audit, exact attribute keys, tier coverage by position, formulas, sample matchup, storage and performance. Drive Lab adds one independent static `personnel.json` request, comparisons in both directions, expandable starter details and source/roster/depth timestamps. No personnel object is sent to the browser simulation worker. Missing personnel can render unavailable without preventing simulation. V1 engine files remain unchanged. A remains the initial engine choice; both live A team assumptions and optional live B use the newer weighted team baseline.
+
+The schema is created and tested in local SQLite; production D1 has not been migrated. EA refresh is manual and cached at least weekly, separately from roster refresh. Optional QB/RB/receiving composites and historical Madden sources are deferred. Stop after review of this milestone before V2.0-C; recommended next work is narrowly scoped drive-finishing calibration, keeping personnel out of outcome probabilities.
+
+Personnel-foundation verification: **162 passing tests (85 Node, 77 Python; 17 new)** plus TypeScript and Wrangler dry run. The browser exercised current-profile simulation and expandable personnel evidence. The refreshed research/news snapshot was also built through the existing authorized public-data workflow. Madden refresh remains manual.
+
+Published on both existing custom domains as version `34b6dcfe-ad06-4f60-a5b2-093149885e2b`. Remote D1 remains unchanged.

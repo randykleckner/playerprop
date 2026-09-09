@@ -1,0 +1,1 @@
+{"version":1,"target_season":2026,"season_weights":{"2024":0.5,"2025":1,"2026":2},"current_team_prior_plays":400,"historical_team_prior_plays":200,"current_league_prior_plays":6400,"notes":"Explicit starting hyperparameters, not fitted calibration: one-season half-life for completed historical seasons; current rates shrink toward historical rates over about six team games."}

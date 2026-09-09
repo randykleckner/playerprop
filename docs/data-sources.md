@@ -248,3 +248,7 @@ The published simulation input now includes captured ESPN-reported DraftKings ga
 ## Actionable Newsroom — September 8, 2026
 
 The [Newsroom](newsroom.md) ingests ESPN NFL RSS and official NFL injury-report tables, with canonical player links, short factual templates, source timestamps, separately labeled implications and conservative expiry. Public JSON news returned 403; RSS is the active ESPN adapter. The existing 10 a.m./5 p.m. Central refresh automatically publishes news independently of salary success. Raw evidence and immutable snapshots stay in `.newsroom/`; browser views read `/newsroom/latest.json`. No account actions, paid provider, D1 migration or automatic projection adjustment is involved. Official team feeds and contextual teammate/defender/coaching impacts are not yet connected.
+
+## EA Madden NFL 27 personnel diagnostics
+
+Drive Lab imports official public EA structured ratings into immutable local snapshots, with a minimum seven-day cache and no authenticated actions. NFLverse Players V2, current rosters and published depth charts supply identity and starter evidence. These ratings do not influence simulation outcomes. Exact delivery details, field mappings, confidence tiers, refresh commands and source limitations are in [personnel-ratings.md](personnel-ratings.md). Current live PBP uses weighted 2025/2024 data until eligible 2026 observations become available; frozen historical evaluation remains separate.

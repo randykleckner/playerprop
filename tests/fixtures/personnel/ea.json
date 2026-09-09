@@ -1,0 +1,677 @@
+{
+  "buildId": "J9U-w62d7n4Os5ydnPWd2",
+  "props": {
+    "pageProps": {
+      "gameDetails": {
+        "slug": "madden-nfl-27"
+      },
+      "ratingDetails": {
+        "items": [
+          {
+            "id": 21586,
+            "firstName": "Ja'Marr",
+            "lastName": "Chase",
+            "birthdate": "3/1/00",
+            "height": 72,
+            "weight": 205,
+            "overallRating": 99,
+            "college": "LSU",
+            "handedness": 1,
+            "age": 26,
+            "jerseyNum": 1,
+            "yearsPro": 5,
+            "playerAbilities": [
+              {
+                "id": "Z_07",
+                "label": "Double Me",
+                "description": "Aggressive receivers overpower defenders and attack the football. When they enter the zone, this ability increases their success rate on aggressive catches against single coverage.",
+                "imageUrl": "https://drop-assets.ea.com/images/17BKqtRugbIoCcUUWWhqyY/0a68bf3f0ce27575ded7f6da302e3967/DoubleMeXF.png",
+                "type": {
+                  "id": "xFactor",
+                  "label": "X-Factor",
+                  "imageUrl": "https://drop-assets.ea.com/images/6IV8keIff90zi9XNGjUax0/7fdab7560cf66ad7bdebeeb18e256aca/240717_M25-LOGO-X-FACTOR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/438X05gpHSj6bgCdxDJBAU/364bb01cdba7a6b51977533ab26a0207/005_XF_v03.png"
+                }
+              },
+              {
+                "id": "054",
+                "label": "Mid In Elite",
+                "description": "Receivers with this ability catch more consistently while catching passes less than 10-20 yards from the LoS, inside the numbers",
+                "imageUrl": "https://drop-assets.ea.com/images/3PzjrWMG8f5US6pVRwatnU/6fc40648d35517734f63de65f4bf699d/MidInElite.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              },
+              {
+                "id": "136",
+                "label": "Runoff Elite",
+                "description": "Players with this ability will distract defenders for longer with their runoffs",
+                "imageUrl": "https://drop-assets.ea.com/images/2iDRNDUcOT1InzNSylmO47/226cfc2b6a379e65ee0a2333b18a5aae/RunOffElite.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              },
+              {
+                "id": "053",
+                "label": "Mid Out Elite",
+                "description": "Receivers with this ability catch more consistently while catching passes less than 10-20 yards from the LoS, outside the numbers",
+                "imageUrl": "https://drop-assets.ea.com/images/3mn1uGnJkePmbbPlNpAcSn/a51de0bcb5645734317f74299b94f656/MidOutElite.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              },
+              {
+                "id": "083",
+                "label": "Acrobat",
+                "description": "Players with this ability are more likely to succeed at catching tipped passes",
+                "imageUrl": "https://drop-assets.ea.com/images/5YzcbfI6dYN0qRFxFULDMX/ce778d1d0c7726db31229a3adce2605d/Acrobat.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              },
+              {
+                "id": "169",
+                "label": "Quick Jump",
+                "description": "Players with this ability have a slightly reduced stamina cost and slightly longer perfect window for jumping snaps.",
+                "imageUrl": "https://drop-assets.ea.com/images/4tcsi80ho1OUcAd6xbgdCO/0479bcfae4709e622f4ed665a6e36df4/icon_signatureabilities_passiveabilities_TirelessRunner.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              }
+            ],
+            "avatarUrl": "https://ratings-images-prod.pulse.ea.com/madden-nfl-27/portraits/1370.png?im=FaceCrop,padding=0.7",
+            "archetype": {
+              "id": "WR_DeepThreat",
+              "label": "Deep Threat - WR"
+            },
+            "team": {
+              "id": 2,
+              "label": "Cincinnati Bengals",
+              "imageUrl": "https://drop-assets.ea.com/images/5oemvWKqCFgBCkCI4h9A2U/0629c6d345fe01a14ba9f40554fd182e/2.png",
+              "isPopular": false
+            },
+            "position": {
+              "id": "WR",
+              "shortLabel": "WR",
+              "label": "Wide Receiver",
+              "positionType": {
+                "id": "offense",
+                "name": "Offense"
+              }
+            },
+            "iteration": {
+              "id": "1-base",
+              "label": "Launch Ratings"
+            },
+            "availableIterations": [
+              {
+                "id": "1-base",
+                "label": "Launch Ratings",
+                "firstName": "Ja'Marr",
+                "lastName": "Chase",
+                "commonName": null
+              }
+            ],
+            "stats": {
+              "acceleration": {
+                "value": 95,
+                "diff": 0
+              },
+              "agility": {
+                "value": 92,
+                "diff": 0
+              },
+              "jumping": {
+                "value": 98,
+                "diff": 0
+              },
+              "stamina": {
+                "value": 96,
+                "diff": 0
+              },
+              "strength": {
+                "value": 73,
+                "diff": 0
+              },
+              "awareness": {
+                "value": 99,
+                "diff": 0
+              },
+              "bCVision": {
+                "value": 98,
+                "diff": 0
+              },
+              "blockShedding": {
+                "value": 37,
+                "diff": 0
+              },
+              "breakSack": {
+                "value": 29,
+                "diff": 0
+              },
+              "breakTackle": {
+                "value": 88,
+                "diff": 0
+              },
+              "carrying": {
+                "value": 71,
+                "diff": 0
+              },
+              "catchInTraffic": {
+                "value": 94,
+                "diff": 0
+              },
+              "catching": {
+                "value": 98,
+                "diff": 0
+              },
+              "changeOfDirection": {
+                "value": 96,
+                "diff": 0
+              },
+              "deepRouteRunning": {
+                "value": 98,
+                "diff": 0
+              },
+              "finesseMoves": {
+                "value": 10,
+                "diff": 0
+              },
+              "hitPower": {
+                "value": 27,
+                "diff": 0
+              },
+              "impactBlocking": {
+                "value": 46,
+                "diff": 0
+              },
+              "injury": {
+                "value": 92,
+                "diff": 0
+              },
+              "jukeMove": {
+                "value": 90,
+                "diff": 0
+              },
+              "kickAccuracy": {
+                "value": 17,
+                "diff": 0
+              },
+              "kickPower": {
+                "value": 24,
+                "diff": 0
+              },
+              "kickReturn": {
+                "value": 60,
+                "diff": 0
+              },
+              "leadBlock": {
+                "value": 27,
+                "diff": 0
+              },
+              "manCoverage": {
+                "value": 13,
+                "diff": 0
+              },
+              "mediumRouteRunning": {
+                "value": 97,
+                "diff": 0
+              },
+              "overall": {
+                "value": 99,
+                "diff": 0
+              },
+              "passBlock": {
+                "value": 37,
+                "diff": 0
+              },
+              "passBlockFinesse": {
+                "value": 20,
+                "diff": 0
+              },
+              "passBlockPower": {
+                "value": 26,
+                "diff": 0
+              },
+              "playAction": {
+                "value": 10,
+                "diff": 0
+              },
+              "playRecognition": {
+                "value": 17,
+                "diff": 0
+              },
+              "powerMoves": {
+                "value": 10,
+                "diff": 0
+              },
+              "press": {
+                "value": 15,
+                "diff": 0
+              },
+              "pursuit": {
+                "value": 36,
+                "diff": 0
+              },
+              "release": {
+                "value": 99,
+                "diff": 0
+              },
+              "runBlock": {
+                "value": 53,
+                "diff": 0
+              },
+              "runBlockFinesse": {
+                "value": 27,
+                "diff": 0
+              },
+              "runBlockPower": {
+                "value": 31,
+                "diff": 0
+              },
+              "runningStyle": {
+                "value": "Default",
+                "diff": 0
+              },
+              "shortRouteRunning": {
+                "value": 95,
+                "diff": 0
+              },
+              "spectacularCatch": {
+                "value": 97,
+                "diff": 0
+              },
+              "speed": {
+                "value": 96,
+                "diff": 0
+              },
+              "spinMove": {
+                "value": 83,
+                "diff": 0
+              },
+              "stiffArm": {
+                "value": 76,
+                "diff": 0
+              },
+              "tackle": {
+                "value": 39,
+                "diff": 0
+              },
+              "throwAccuracyDeep": {
+                "value": 10,
+                "diff": 0
+              },
+              "throwAccuracyMid": {
+                "value": 15,
+                "diff": 0
+              },
+              "throwAccuracyShort": {
+                "value": 20,
+                "diff": 0
+              },
+              "throwOnTheRun": {
+                "value": 19,
+                "diff": 0
+              },
+              "throwPower": {
+                "value": 33,
+                "diff": 0
+              },
+              "throwUnderPressure": {
+                "value": 22,
+                "diff": 0
+              },
+              "toughness": {
+                "value": 88,
+                "diff": 0
+              },
+              "trucking": {
+                "value": 71,
+                "diff": 0
+              },
+              "zoneCoverage": {
+                "value": 17,
+                "diff": 0
+              }
+            }
+          },
+          {
+            "id": 22694,
+            "firstName": "Jaxon",
+            "lastName": "Smith-Njigba",
+            "birthdate": "2/14/02",
+            "height": 73,
+            "weight": 200,
+            "overallRating": 99,
+            "college": "Ohio State",
+            "handedness": 1,
+            "age": 24,
+            "jerseyNum": 11,
+            "yearsPro": 3,
+            "playerAbilities": [
+              {
+                "id": "Z_07",
+                "label": "Double Me",
+                "description": "Aggressive receivers overpower defenders and attack the football. When they enter the zone, this ability increases their success rate on aggressive catches against single coverage.",
+                "imageUrl": "https://drop-assets.ea.com/images/17BKqtRugbIoCcUUWWhqyY/0a68bf3f0ce27575ded7f6da302e3967/DoubleMeXF.png",
+                "type": {
+                  "id": "xFactor",
+                  "label": "X-Factor",
+                  "imageUrl": "https://drop-assets.ea.com/images/6IV8keIff90zi9XNGjUax0/7fdab7560cf66ad7bdebeeb18e256aca/240717_M25-LOGO-X-FACTOR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/438X05gpHSj6bgCdxDJBAU/364bb01cdba7a6b51977533ab26a0207/005_XF_v03.png"
+                }
+              },
+              {
+                "id": "055",
+                "label": "Deep Out Elite",
+                "description": "Receivers with this ability catch more consistently while catching passes 20+ yards from the LoS, outside the numbers",
+                "imageUrl": "https://drop-assets.ea.com/images/2KunCOSZXc5sK3NS5J5ltN/97350cc45967ea2aaf3773ee2b9766d2/DeepOutElite.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              },
+              {
+                "id": "053",
+                "label": "Mid Out Elite",
+                "description": "Receivers with this ability catch more consistently while catching passes less than 10-20 yards from the LoS, outside the numbers",
+                "imageUrl": "https://drop-assets.ea.com/images/3mn1uGnJkePmbbPlNpAcSn/a51de0bcb5645734317f74299b94f656/MidOutElite.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              },
+              {
+                "id": "169",
+                "label": "Quick Jump",
+                "description": "Players with this ability have a slightly reduced stamina cost and slightly longer perfect window for jumping snaps.",
+                "imageUrl": "https://drop-assets.ea.com/images/4tcsi80ho1OUcAd6xbgdCO/0479bcfae4709e622f4ed665a6e36df4/icon_signatureabilities_passiveabilities_TirelessRunner.png",
+                "type": {
+                  "id": "superstarAbility",
+                  "label": "Superstar Ability",
+                  "imageUrl": "https://drop-assets.ea.com/images/57HI5RslkgMi1OgvzHrGAq/b36749357dc9e8b65ce175e871c6a0a8/240717_M25-LOGO-SUPER-STAR-CROPPED.png",
+                  "iconUrl": "https://drop-assets.ea.com/images/h3SsQOXrvPyxKUq7IlU14/6a6d597e7524fc282e69a5da45af07be/saIcon.png"
+                }
+              }
+            ],
+            "avatarUrl": "https://ratings-images-prod.pulse.ea.com/madden-nfl-27/portraits/2401.png?im=FaceCrop,padding=0.7",
+            "archetype": {
+              "id": "WR_DeepThreat",
+              "label": "Deep Threat - WR"
+            },
+            "team": {
+              "id": 28,
+              "label": "Seattle Seahawks",
+              "imageUrl": "https://drop-assets.ea.com/images/2WrGCB8Atuo0aZ4MbstBrI/bbe9263ce111287adcef479efbc72160/28.png",
+              "isPopular": false
+            },
+            "position": {
+              "id": "WR",
+              "shortLabel": "WR",
+              "label": "Wide Receiver",
+              "positionType": {
+                "id": "offense",
+                "name": "Offense"
+              }
+            },
+            "iteration": {
+              "id": "1-base",
+              "label": "Launch Ratings"
+            },
+            "availableIterations": [
+              {
+                "id": "1-base",
+                "label": "Launch Ratings",
+                "firstName": "Jaxon",
+                "lastName": "Smith-Njigba",
+                "commonName": null
+              }
+            ],
+            "stats": {
+              "acceleration": {
+                "value": 95,
+                "diff": 0
+              },
+              "agility": {
+                "value": 96,
+                "diff": 0
+              },
+              "jumping": {
+                "value": 89,
+                "diff": 0
+              },
+              "stamina": {
+                "value": 94,
+                "diff": 0
+              },
+              "strength": {
+                "value": 63,
+                "diff": 0
+              },
+              "awareness": {
+                "value": 98,
+                "diff": 0
+              },
+              "bCVision": {
+                "value": 93,
+                "diff": 0
+              },
+              "blockShedding": {
+                "value": 25,
+                "diff": 0
+              },
+              "breakSack": {
+                "value": 18,
+                "diff": 0
+              },
+              "breakTackle": {
+                "value": 81,
+                "diff": 0
+              },
+              "carrying": {
+                "value": 72,
+                "diff": 0
+              },
+              "catchInTraffic": {
+                "value": 93,
+                "diff": 0
+              },
+              "catching": {
+                "value": 97,
+                "diff": 0
+              },
+              "changeOfDirection": {
+                "value": 94,
+                "diff": 0
+              },
+              "deepRouteRunning": {
+                "value": 97,
+                "diff": 0
+              },
+              "finesseMoves": {
+                "value": 10,
+                "diff": 0
+              },
+              "hitPower": {
+                "value": 20,
+                "diff": 0
+              },
+              "impactBlocking": {
+                "value": 48,
+                "diff": 0
+              },
+              "injury": {
+                "value": 87,
+                "diff": 0
+              },
+              "jukeMove": {
+                "value": 86,
+                "diff": 0
+              },
+              "kickAccuracy": {
+                "value": 11,
+                "diff": 0
+              },
+              "kickPower": {
+                "value": 16,
+                "diff": 0
+              },
+              "kickReturn": {
+                "value": 70,
+                "diff": 0
+              },
+              "leadBlock": {
+                "value": 31,
+                "diff": 0
+              },
+              "manCoverage": {
+                "value": 16,
+                "diff": 0
+              },
+              "mediumRouteRunning": {
+                "value": 99,
+                "diff": 0
+              },
+              "overall": {
+                "value": 99,
+                "diff": 0
+              },
+              "passBlock": {
+                "value": 31,
+                "diff": 0
+              },
+              "passBlockFinesse": {
+                "value": 22,
+                "diff": 0
+              },
+              "passBlockPower": {
+                "value": 24,
+                "diff": 0
+              },
+              "playAction": {
+                "value": 6,
+                "diff": 0
+              },
+              "playRecognition": {
+                "value": 17,
+                "diff": 0
+              },
+              "powerMoves": {
+                "value": 10,
+                "diff": 0
+              },
+              "press": {
+                "value": 10,
+                "diff": 0
+              },
+              "pursuit": {
+                "value": 27,
+                "diff": 0
+              },
+              "release": {
+                "value": 98,
+                "diff": 0
+              },
+              "runBlock": {
+                "value": 50,
+                "diff": 0
+              },
+              "runBlockFinesse": {
+                "value": 24,
+                "diff": 0
+              },
+              "runBlockPower": {
+                "value": 27,
+                "diff": 0
+              },
+              "runningStyle": {
+                "value": "Default",
+                "diff": 0
+              },
+              "shortRouteRunning": {
+                "value": 97,
+                "diff": 0
+              },
+              "spectacularCatch": {
+                "value": 98,
+                "diff": 0
+              },
+              "speed": {
+                "value": 93,
+                "diff": 0
+              },
+              "spinMove": {
+                "value": 76,
+                "diff": 0
+              },
+              "stiffArm": {
+                "value": 61,
+                "diff": 0
+              },
+              "tackle": {
+                "value": 24,
+                "diff": 0
+              },
+              "throwAccuracyDeep": {
+                "value": 6,
+                "diff": 0
+              },
+              "throwAccuracyMid": {
+                "value": 10,
+                "diff": 0
+              },
+              "throwAccuracyShort": {
+                "value": 15,
+                "diff": 0
+              },
+              "throwOnTheRun": {
+                "value": 10,
+                "diff": 0
+              },
+              "throwPower": {
+                "value": 29,
+                "diff": 0
+              },
+              "throwUnderPressure": {
+                "value": 16,
+                "diff": 0
+              },
+              "toughness": {
+                "value": 82,
+                "diff": 0
+              },
+              "trucking": {
+                "value": 45,
+                "diff": 0
+              },
+              "zoneCoverage": {
+                "value": 14,
+                "diff": 0
+              }
+            }
+          }
+        ],
+        "totalItems": 2
+      }
+    }
+  }
+}
