@@ -1,0 +1,45 @@
+{
+  "version": "V2.0-C-personnel-1",
+  "levels": {
+    "zero": 0,
+    "low": 0.5,
+    "standard": 1,
+    "high": 1.5
+  },
+  "pressurePerRatingPoint": 0.002,
+  "maxPressureDelta": 0.06,
+  "pressureBounds": [
+    0.08,
+    0.6
+  ],
+  "completionPerRatingPoint": 0.0015,
+  "maxCompletionDelta": 0.04,
+  "completionBounds": [
+    0.15,
+    0.9
+  ],
+  "runShapePerRatingPoint": 0.012,
+  "completionShapePerRatingPoint": 0.008,
+  "maxShapeTilt": 0.2,
+  "runExplosiveYards": 15,
+  "completionExplosiveYards": 20,
+  "receivingAttributes": {
+    "release": 1,
+    "shortRouteRunning": 1,
+    "mediumRouteRunning": 1,
+    "deepRouteRunning": 1,
+    "speed": 0.5,
+    "acceleration": 0.5,
+    "catching": 1,
+    "catchInTraffic": 0.5
+  },
+  "notes": "Unfitted research coefficients; low is the initial UI setting. No Madden value is a literal probability. Missing complete units or receiving evidence disable the respective adjustment.",
+  "runShapeScores": {
+    "loss": -1,
+    "short": -0.5,
+    "successful": 0.25,
+    "firstDown": 0.6,
+    "explosive": 1
+  },
+  "minimumReceivingCoverage": 0.9
+}

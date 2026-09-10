@@ -1,0 +1,26 @@
+{
+  "version": "V2.0-C-opportunity-1",
+  "historicalPriorGames": 5,
+  "recentHalfLifeWeeks": 8,
+  "tradedHistoryWeight": 0.35,
+  "minimumDetailedCarryShare": 0.04,
+  "minimumDetailedTargetShare": 0.025,
+  "leaguePressurePriorDropbacks": 200,
+  "positionCarryPriors": {
+    "QB": 0.08,
+    "RB": 0.8,
+    "WR": 0.1,
+    "TE": 0.02
+  },
+  "positionTargetPriors": {
+    "RB": 0.2,
+    "WR": 0.6,
+    "TE": 0.2
+  },
+  "starterPriorWeight": 3,
+  "reservePriorWeight": 1,
+  "contextPriorGames": 20,
+  "minimumUsageGames": 2,
+  "residualCarryShare": 0.03,
+  "residualTargetShare": 0.04
+}

@@ -2,7 +2,7 @@
 
 September 9, 2026 · V2.0-B — Current Data and Personnel Foundation.
 
-Personnel is a diagnostic layer in [Drive Lab](https://drlocksmd.com/drive-lab/). It does **not** alter any simulation probability, yardage, clock, score, player allocation, DFS recommendation, or V1 behavior. The browser reads a saved static snapshot and never calls EA.
+The V2.0-B foundation described below established a diagnostic layer in [Drive Lab](https://drlocksmd.com/drive-lab/). In V2.0-B it did **not** alter simulation outcomes. The V2.0-C section below documents the new separately selected personnel-aware variant; the controls and V1 remain unaffected. The browser reads a saved static snapshot and never calls EA.
 
 ## Source audit and reproducible import
 
@@ -130,3 +130,9 @@ The smallest next milestone is **drive-finishing calibration**: retain the froze
 Final refresh: the canonical catalog update corroborated two additional Madden players, raising coverage to 1,900 and lowering unresolved to 144. Two immutable local personnel contexts occupy 7.67 MB; the final build took 7.01 seconds.
 
 Validation: **162 tests passed (85 Node, 77 Python)**, including 17 new tests for recency, provider schema/cache/fallback, identity/overrides, local persistence/immutability, all unit formulas, starter gaps, frontend evidence and personnel isolation. TypeScript and deployment dry run passed. Browser checks confirmed the current empirical engine runs, timestamps render, and starter evidence expands correctly in the narrow layout.
+
+## V2.0-C update — separately selectable personnel influence
+
+The diagnostic-only restriction above describes V2.0-B. V2.0-C now permits bounded personnel influence **only in the explicitly selected V2 Personnel variant**. V2 Base, the foundation, legacy empirical engine and V1 remain controls without Madden adjustments. Existing seven unit formulas and immutable snapshot identities are unchanged.
+
+The new receiving composite uses release/route/catching attributes and current target shares, requiring at least 90% corroborated share and a complete opposing secondary. Missing receiving coverage is disclosed, attenuated, or disables that channel. Central coefficients, clipping limits, pressure-proxy assumptions and empirical histogram reweighting are documented in [player-simulation-v2.md](player-simulation-v2.md). Opportunity volume comes from NFL evidence and explicit role/projection priors, never Madden ratings. Current Madden data has not been retroactively used to claim historical validation.

@@ -1,0 +1,11 @@
+export type Position='QB'|'RB'|'WR'|'TE';
+export interface PlayerInput {player_id:string;name:string;team:string;position:Position;active:boolean;starter:boolean;detailed:boolean;salary:number|null;salary_as_of:string|null;shares:Record<string,number>;scramble_share:number;madden_attributes:Record<string,number>|null;madden_identity:string;flags:string[];}
+export interface Pressure {probability:number;sack_given_pressure:number;scramble_given_pressure:number;incomplete_given_pressure:number;source:string;}
+export interface PlayerTeam {qb_id:string;players:PlayerInput[];pressure:Pressure;}
+export interface PlayerSnapshot {version:string;snapshot_id:string;as_of:string;roster_snapshot:string;roster_at:string;madden_snapshot:string;personnel_snapshot:string;salary_snapshot:string;salary_as_of:string;teams:Record<string,PlayerTeam>;}
+export interface Unit {rating:number|null;complete:boolean;confidence:string;}
+export interface PersonnelSnapshot {snapshot_id:string;ratings_snapshot_id:string;units:Record<string,Record<string,Unit>>;}
+export interface InfluenceConfig {version:string;levels:Record<string,number>;pressurePerRatingPoint:number;maxPressureDelta:number;pressureBounds:[number,number];completionPerRatingPoint:number;maxCompletionDelta:number;completionBounds:[number,number];runShapePerRatingPoint:number;completionShapePerRatingPoint:number;maxShapeTilt:number;runExplosiveYards:number;completionExplosiveYards:number;receivingAttributes:Record<string,number>;runShapeScores:Record<string,number>;minimumReceivingCoverage:number;}
+export interface PlayerStats {pass_attempts:number;completions:number;passing_yards:number;passing_tds:number;interceptions:number;sacks_taken:number;carries:number;designed_runs:number;scrambles:number;rushing_yards:number;rushing_tds:number;targets:number;receptions:number;receiving_yards:number;receiving_tds:number;fumbles_lost:number;}
+export const emptyPlayerStats=():PlayerStats=>({pass_attempts:0,completions:0,passing_yards:0,passing_tds:0,interceptions:0,sacks_taken:0,carries:0,designed_runs:0,scrambles:0,rushing_yards:0,rushing_tds:0,targets:0,receptions:0,receiving_yards:0,receiving_tds:0,fumbles_lost:0});
+export interface PlayerBox {player:PlayerInput;stats:PlayerStats;dk_points:number;}

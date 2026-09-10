@@ -9,7 +9,7 @@ test('personnel output has vintage, partial evidence and safely escaped names',(
 });
 test('Madden diagnostics cannot alter the seeded engine',()=>{
  const options={seed:'personnel-isolation'};const before=simulateGameV2(game,options);const after=simulateGameV2({...game,personnel:{pass_rush:99,pass_protection:0}},options);const {runId:a,...outcomeA}=before,{runId:b,...outcomeB}=after;assert.deepEqual(outcomeB,outcomeA);
- const source=readFileSync(new URL('../public/drive-lab/lab.js',import.meta.url),'utf8');const request=source.split('worker.postMessage(')[1].split(');')[0];assert.doesNotMatch(request,/personnel/);
+ const source=readFileSync(new URL('../public/drive-lab/lab.js',import.meta.url),'utf8');const request=source.split('worker.postMessage(')[1].split(');')[0];assert.match(request,/isFantasy/); // V2.0-C explicitly gates personnel to the new variants.
 });
 test('live weighted profile is accepted and repeatable',()=>{
  const profile=JSON.parse(readFileSync(new URL('../public/drive-lab/live-empirical.json',import.meta.url)));const options={seed:'live-profile',empirical:profile};const result=simulateGameV2(game,options);assert.equal(result.modelVersion,'V2.0-B-live-recency');assert.deepEqual(result,simulateGameV2(game,options));

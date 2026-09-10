@@ -167,3 +167,7 @@ See [delivery order](upgrade-roadmap.md) and [calibration plan](calibration-plan
 `EA public structured pages → PersonnelRatingsProvider → immutable local ratings snapshots → NFLverse canonical/roster/depth join → diagnostic units → static Drive Lab JSON`.
 
 `NFLverse historical/current PBP → separate live recency builder → live-empirical.json → browser V2 worker`. Frozen evaluation artifacts remain a separate path. The two paths meet only in the page's presentation; personnel never enters simulation requests. See [personnel-ratings.md](personnel-ratings.md). Local SQLite uses migration 0009; remote D1 is unchanged.
+
+### V2.0-C player engine
+
+The V2.0-B presentation-only personnel separation is superseded only for the new opt-in V2 Personnel variant. `player-engine` wraps the existing state engine with a resolver and stat observer; `personnel-influence` intervenes on a bounded subset of empirical outcomes. Independent allocation RNG preserves the zero-influence control. The browser worker summarizes actual player box scores via the shared DK scorer. `playerOutcome(run,id)` supplies the future drill-down data contract. All other engines remain independent. See [player-simulation-v2.md](player-simulation-v2.md).

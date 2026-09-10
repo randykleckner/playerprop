@@ -1,0 +1,5856 @@
+{
+  "game": {
+    "gameId": "BUF-HOU",
+    "homeTeam": "HOU",
+    "awayTeam": "BUF",
+    "homeTeamInputs": {
+      "passRate": 0.5817716874577628,
+      "completionRate": 0.6299102269190123,
+      "sackRate": 0.0638663398139323,
+      "interceptionRate": 0.016908483956274353,
+      "fumbleRate": 0.002857833824249508,
+      "runMean": 4.218293658749214,
+      "completionMean": 10.851388293603344
+    },
+    "awayTeamInputs": {
+      "passRate": 0.520160690492443,
+      "completionRate": 0.6725439596248857,
+      "sackRate": 0.05862907064638266,
+      "interceptionRate": 0.016910237518807315,
+      "fumbleRate": 0.006578537035148919,
+      "runMean": 4.988649814379506,
+      "completionMean": 11.588263954966578
+    },
+    "inputsTimestamp": "2026-09-09T19:12:16.025Z",
+    "market": {
+      "game_id": "BUF-HOU",
+      "home": "HOU",
+      "away": "BUF",
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "total": 44.5,
+      "home_spread": 1.5,
+      "home_implied_total": 21.5,
+      "away_implied_total": 23,
+      "sportsbook": "DraftKings",
+      "source": "ESPN public scoreboard odds",
+      "captured_at": "2026-09-09T19:12:10.424Z",
+      "event_id": "401872660"
+    }
+  },
+  "players": {
+    "version": "V2.0-C-opportunity-1",
+    "as_of": "2026-09-10T00:09:28.270607+00:00",
+    "roster_snapshot": "0b005c45d924a54190e28486496fbd8cbc42bde74d9d4538c48be1cec5d13c68",
+    "roster_at": "2026-09-09T14:20:49.166397+00:00",
+    "depth_snapshot": "396f8faf4d85d51277b3e946e5ed11081a402d6a9579d96d2a14b6a7cad22694",
+    "madden_snapshot": "madden27-d83a029c1910cd1d89561585",
+    "personnel_snapshot": "madden27-d83a029c1910cd1d89561585-05eba91f1dfe68f24e62",
+    "empirical_sources": [
+      {
+        "season": 2024,
+        "sha256": "23370d5d10f8104d80d46a1fc5e61f4f6f5a3263fe96fe2dd629913cfcb08c06"
+      },
+      {
+        "season": 2025,
+        "sha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978"
+      }
+    ],
+    "salary_snapshot": "8d33f340355c5bb560f093bf",
+    "salary_as_of": "2026-09-09T19:12:16.025Z",
+    "config": {
+      "version": "V2.0-C-opportunity-1",
+      "historicalPriorGames": 5,
+      "contextPriorOpportunities": 20,
+      "recentHalfLifeWeeks": 8,
+      "tradedHistoryWeight": 0.35,
+      "minimumDetailedCarryShare": 0.04,
+      "minimumDetailedTargetShare": 0.025,
+      "leaguePressurePriorDropbacks": 200,
+      "positionCarryPriors": {
+        "QB": 0.08,
+        "RB": 0.8,
+        "WR": 0.1,
+        "TE": 0.02
+      },
+      "positionTargetPriors": {
+        "RB": 0.2,
+        "WR": 0.6,
+        "TE": 0.2
+      },
+      "starterPriorWeight": 3,
+      "reservePriorWeight": 1
+    },
+    "teams": {
+      "BUF": {
+        "qb_id": "00-0034857",
+        "players": [
+          {
+            "player_id": "00-0034827",
+            "name": "DJ Moore",
+            "team": "BUF",
+            "position": "WR",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 5600,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.01989829517536168,
+              "redzone_carry": 0.017973388771230437,
+              "goal_carry": 0.016886276530059995,
+              "normal_target": 0.16840683948432297,
+              "redzone_target": 0.16825657883518913,
+              "goal_target": 0.17370425182132346
+            },
+            "recent_shares": {
+              "normal_carry": 0.008144734345779687,
+              "normal_target": 0.1262050501090054,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.11670381457878622,
+              "goal_carry": 0.0,
+              "goal_target": 0.2947924488935813
+            },
+            "weighted_active_games": 4.815,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Prior-team history downweighted",
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 91,
+              "agility": 92,
+              "jumping": 95,
+              "stamina": 94,
+              "strength": 66,
+              "awareness": 83,
+              "bCVision": 95,
+              "blockShedding": 22,
+              "breakSack": 23,
+              "breakTackle": 85,
+              "carrying": 73,
+              "catchInTraffic": 89,
+              "catching": 91,
+              "changeOfDirection": 88,
+              "deepRouteRunning": 80,
+              "finesseMoves": 10,
+              "hitPower": 18,
+              "impactBlocking": 41,
+              "injury": 95,
+              "jukeMove": 92,
+              "kickAccuracy": 13,
+              "kickPower": 18,
+              "kickReturn": 80,
+              "leadBlock": 20,
+              "manCoverage": 18,
+              "mediumRouteRunning": 81,
+              "overall": 84,
+              "passBlock": 30,
+              "passBlockFinesse": 25,
+              "passBlockPower": 22,
+              "playAction": 15,
+              "playRecognition": 22,
+              "powerMoves": 10,
+              "press": 29,
+              "pursuit": 36,
+              "release": 85,
+              "runBlock": 53,
+              "runBlockFinesse": 21,
+              "runBlockPower": 27,
+              "shortRouteRunning": 81,
+              "spectacularCatch": 91,
+              "speed": 91,
+              "spinMove": 79,
+              "stiffArm": 82,
+              "tackle": 30,
+              "throwAccuracyDeep": 20,
+              "throwAccuracyMid": 27,
+              "throwAccuracyShort": 33,
+              "throwOnTheRun": 23,
+              "throwPower": 43,
+              "throwUnderPressure": 22,
+              "toughness": 92,
+              "trucking": 70,
+              "zoneCoverage": 24
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0034857",
+            "name": "Josh Allen",
+            "team": "BUF",
+            "position": "QB",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 7000,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.20224346248754285,
+              "redzone_carry": 0.21309049186896628,
+              "goal_carry": 0.2481464817998542,
+              "normal_target": 0.0,
+              "redzone_target": 0.0,
+              "goal_target": 0.0
+            },
+            "recent_shares": {
+              "normal_carry": 0.2117090805219973,
+              "normal_target": 0.0,
+              "redzone_carry": 0.24460860969163817,
+              "redzone_target": 0.0,
+              "goal_carry": 0.348237567173497,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 12.091,
+            "scramble_share": 0.4604205806404661,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 90,
+              "agility": 84,
+              "jumping": 92,
+              "stamina": 98,
+              "strength": 81,
+              "awareness": 96,
+              "bCVision": 97,
+              "blockShedding": 23,
+              "breakSack": 94,
+              "breakTackle": 86,
+              "carrying": 63,
+              "catchInTraffic": 20,
+              "catching": 40,
+              "changeOfDirection": 81,
+              "deepRouteRunning": 13,
+              "finesseMoves": 9,
+              "hitPower": 11,
+              "impactBlocking": 26,
+              "injury": 99,
+              "jukeMove": 81,
+              "kickAccuracy": 14,
+              "kickPower": 22,
+              "kickReturn": 13,
+              "leadBlock": 17,
+              "manCoverage": 12,
+              "mediumRouteRunning": 15,
+              "overall": 99,
+              "passBlock": 14,
+              "passBlockFinesse": 10,
+              "passBlockPower": 15,
+              "playAction": 97,
+              "playRecognition": 15,
+              "powerMoves": 9,
+              "press": 9,
+              "pursuit": 33,
+              "release": 18,
+              "runBlock": 17,
+              "runBlockFinesse": 10,
+              "runBlockPower": 10,
+              "shortRouteRunning": 22,
+              "spectacularCatch": 23,
+              "speed": 87,
+              "spinMove": 78,
+              "stiffArm": 83,
+              "tackle": 32,
+              "throwAccuracyDeep": 93,
+              "throwAccuracyMid": 90,
+              "throwAccuracyShort": 97,
+              "throwOnTheRun": 98,
+              "throwPower": 98,
+              "throwUnderPressure": 94,
+              "toughness": 98,
+              "trucking": 76,
+              "zoneCoverage": 18
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0035537",
+            "name": "Ty Johnson",
+            "team": "BUF",
+            "position": "RB",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 4200,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.09772356139729833,
+              "redzone_carry": 0.13247312160183414,
+              "goal_carry": 0.1119194609911525,
+              "normal_target": 0.055087002635896276,
+              "redzone_target": 0.04976274471881269,
+              "goal_target": 0.04407365457599382
+            },
+            "recent_shares": {
+              "normal_carry": 0.18359301779601694,
+              "normal_target": 0.07796370285558069,
+              "redzone_carry": 0.33619699295164757,
+              "redzone_target": 0.06971368881375378,
+              "goal_carry": 0.34154938204362006,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 13.591,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 89,
+              "agility": 85,
+              "jumping": 82,
+              "stamina": 85,
+              "strength": 64,
+              "awareness": 80,
+              "bCVision": 79,
+              "blockShedding": 24,
+              "breakSack": 20,
+              "breakTackle": 77,
+              "carrying": 91,
+              "catchInTraffic": 54,
+              "catching": 67,
+              "changeOfDirection": 84,
+              "deepRouteRunning": 51,
+              "finesseMoves": 10,
+              "hitPower": 28,
+              "impactBlocking": 31,
+              "injury": 90,
+              "jukeMove": 82,
+              "kickAccuracy": 16,
+              "kickPower": 13,
+              "kickReturn": 81,
+              "leadBlock": 29,
+              "manCoverage": 12,
+              "mediumRouteRunning": 56,
+              "overall": 75,
+              "passBlock": 51,
+              "passBlockFinesse": 28,
+              "passBlockPower": 25,
+              "playAction": 13,
+              "playRecognition": 15,
+              "powerMoves": 10,
+              "press": 15,
+              "pursuit": 34,
+              "release": 47,
+              "runBlock": 31,
+              "runBlockFinesse": 23,
+              "runBlockPower": 17,
+              "shortRouteRunning": 65,
+              "spectacularCatch": 52,
+              "speed": 90,
+              "spinMove": 75,
+              "stiffArm": 71,
+              "tackle": 31,
+              "throwAccuracyDeep": 10,
+              "throwAccuracyMid": 15,
+              "throwAccuracyShort": 20,
+              "throwOnTheRun": 15,
+              "throwPower": 23,
+              "throwUnderPressure": 11,
+              "toughness": 79,
+              "trucking": 65,
+              "zoneCoverage": 15
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0035689",
+            "name": "Dawson Knox",
+            "team": "BUF",
+            "position": "TE",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 3100,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.08087819475983511,
+              "redzone_target": 0.10933991625930821,
+              "goal_target": 0.11520052093782648
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.13961698464111333,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.26484767788282576,
+              "goal_carry": 0.0,
+              "goal_target": 0.3385846159845421
+            },
+            "weighted_active_games": 12.531,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 89,
+              "agility": 83,
+              "jumping": 91,
+              "stamina": 90,
+              "strength": 72,
+              "awareness": 76,
+              "bCVision": 73,
+              "blockShedding": 28,
+              "breakSack": 21,
+              "breakTackle": 53,
+              "carrying": 71,
+              "catchInTraffic": 82,
+              "catching": 83,
+              "changeOfDirection": 75,
+              "deepRouteRunning": 58,
+              "finesseMoves": 10,
+              "hitPower": 21,
+              "impactBlocking": 65,
+              "injury": 89,
+              "jukeMove": 62,
+              "kickAccuracy": 12,
+              "kickPower": 14,
+              "kickReturn": 25,
+              "leadBlock": 53,
+              "manCoverage": 13,
+              "mediumRouteRunning": 63,
+              "overall": 76,
+              "passBlock": 63,
+              "passBlockFinesse": 62,
+              "passBlockPower": 59,
+              "playAction": 21,
+              "playRecognition": 14,
+              "powerMoves": 10,
+              "press": 13,
+              "pursuit": 31,
+              "release": 68,
+              "runBlock": 65,
+              "runBlockFinesse": 65,
+              "runBlockPower": 60,
+              "shortRouteRunning": 68,
+              "spectacularCatch": 85,
+              "speed": 86,
+              "spinMove": 56,
+              "stiffArm": 75,
+              "tackle": 31,
+              "throwAccuracyDeep": 17,
+              "throwAccuracyMid": 23,
+              "throwAccuracyShort": 28,
+              "throwOnTheRun": 25,
+              "throwPower": 41,
+              "throwUnderPressure": 20,
+              "toughness": 85,
+              "trucking": 72,
+              "zoneCoverage": 16
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0036988",
+            "name": "Josh Palmer",
+            "team": "BUF",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": null,
+            "salary_as_of": null,
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.00531175320621909,
+              "redzone_carry": 0.003828139865187467,
+              "goal_carry": 0.004057136654593337,
+              "normal_target": 0.079791176177532,
+              "redzone_target": 0.07971944038080801,
+              "goal_target": 0.07264384280170992
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.07389805855789724,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.10621042717846983,
+              "goal_carry": 0.0,
+              "goal_target": 0.13830645961618565
+            },
+            "weighted_active_games": 7.782,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Prior-team history downweighted",
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": null,
+            "madden_identity": "unavailable"
+          },
+          {
+            "player_id": "00-0037248",
+            "name": "James Cook",
+            "team": "BUF",
+            "position": "RB",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 7200,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.5254852624671733,
+              "redzone_carry": 0.49906146992926503,
+              "goal_carry": 0.4940947872631689,
+              "normal_target": 0.0671714835207129,
+              "redzone_target": 0.0536666470275638,
+              "goal_target": 0.06654281016992399
+            },
+            "recent_shares": {
+              "normal_carry": 0.4615692861028471,
+              "normal_target": 0.07774689030850487,
+              "redzone_carry": 0.38506867934115974,
+              "redzone_target": 0.03148988884367358,
+              "goal_carry": 0.33842127468712824,
+              "goal_target": 0.0824566986302659
+            },
+            "weighted_active_games": 13.414,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 94,
+              "agility": 94,
+              "jumping": 81,
+              "stamina": 89,
+              "strength": 67,
+              "awareness": 90,
+              "bCVision": 91,
+              "blockShedding": 35,
+              "breakSack": 20,
+              "breakTackle": 87,
+              "carrying": 90,
+              "catchInTraffic": 52,
+              "catching": 70,
+              "changeOfDirection": 92,
+              "deepRouteRunning": 57,
+              "finesseMoves": 10,
+              "hitPower": 37,
+              "impactBlocking": 38,
+              "injury": 89,
+              "jukeMove": 95,
+              "kickAccuracy": 14,
+              "kickPower": 19,
+              "kickReturn": 74,
+              "leadBlock": 43,
+              "manCoverage": 24,
+              "mediumRouteRunning": 65,
+              "overall": 94,
+              "passBlock": 51,
+              "passBlockFinesse": 26,
+              "passBlockPower": 21,
+              "playAction": 10,
+              "playRecognition": 31,
+              "powerMoves": 10,
+              "press": 17,
+              "pursuit": 47,
+              "release": 62,
+              "runBlock": 42,
+              "runBlockFinesse": 29,
+              "runBlockPower": 24,
+              "shortRouteRunning": 68,
+              "spectacularCatch": 54,
+              "speed": 93,
+              "spinMove": 89,
+              "stiffArm": 71,
+              "tackle": 40,
+              "throwAccuracyDeep": 10,
+              "throwAccuracyMid": 14,
+              "throwAccuracyShort": 20,
+              "throwOnTheRun": 10,
+              "throwPower": 27,
+              "throwUnderPressure": 17,
+              "toughness": 84,
+              "trucking": 64,
+              "zoneCoverage": 34
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0037261",
+            "name": "Khalil Shakir",
+            "team": "BUF",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 4800,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0026027517972522373,
+              "redzone_carry": 0.0016242140052450593,
+              "goal_carry": 0.001739412158738374,
+              "normal_target": 0.17001297407710955,
+              "redzone_target": 0.1650248157651935,
+              "goal_target": 0.14940072540159727
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.17906877993508563,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.1135052228126778,
+              "goal_carry": 0.0,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 11.929,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 93,
+              "agility": 85,
+              "jumping": 89,
+              "stamina": 89,
+              "strength": 63,
+              "awareness": 91,
+              "bCVision": 92,
+              "blockShedding": 27,
+              "breakSack": 26,
+              "breakTackle": 83,
+              "carrying": 73,
+              "catchInTraffic": 81,
+              "catching": 94,
+              "changeOfDirection": 86,
+              "deepRouteRunning": 79,
+              "finesseMoves": 10,
+              "hitPower": 21,
+              "impactBlocking": 40,
+              "injury": 88,
+              "jukeMove": 88,
+              "kickAccuracy": 15,
+              "kickPower": 19,
+              "kickReturn": 76,
+              "leadBlock": 21,
+              "manCoverage": 11,
+              "mediumRouteRunning": 84,
+              "overall": 83,
+              "passBlock": 29,
+              "passBlockFinesse": 25,
+              "passBlockPower": 20,
+              "playAction": 21,
+              "playRecognition": 16,
+              "powerMoves": 10,
+              "press": 14,
+              "pursuit": 28,
+              "release": 74,
+              "runBlock": 39,
+              "runBlockFinesse": 24,
+              "runBlockPower": 20,
+              "shortRouteRunning": 82,
+              "spectacularCatch": 85,
+              "speed": 90,
+              "spinMove": 79,
+              "stiffArm": 52,
+              "tackle": 25,
+              "throwAccuracyDeep": 21,
+              "throwAccuracyMid": 27,
+              "throwAccuracyShort": 31,
+              "throwOnTheRun": 29,
+              "throwPower": 39,
+              "throwUnderPressure": 27,
+              "toughness": 80,
+              "trucking": 45,
+              "zoneCoverage": 17
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0038933",
+            "name": "Dalton Kincaid",
+            "team": "BUF",
+            "position": "TE",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 4600,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.13181191055122188,
+              "redzone_target": 0.12007338172501042,
+              "goal_target": 0.10925839375200072
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.12356329391755236,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.10348167875246561,
+              "goal_carry": 0.0,
+              "goal_target": 0.08383369862349362
+            },
+            "weighted_active_games": 9.082,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 90,
+              "agility": 67,
+              "jumping": 90,
+              "stamina": 84,
+              "strength": 71,
+              "awareness": 84,
+              "bCVision": 75,
+              "blockShedding": 35,
+              "breakSack": 17,
+              "breakTackle": 67,
+              "carrying": 76,
+              "catchInTraffic": 82,
+              "catching": 92,
+              "changeOfDirection": 79,
+              "deepRouteRunning": 72,
+              "finesseMoves": 10,
+              "hitPower": 41,
+              "impactBlocking": 62,
+              "injury": 87,
+              "jukeMove": 73,
+              "kickAccuracy": 19,
+              "kickPower": 21,
+              "kickReturn": 39,
+              "leadBlock": 56,
+              "manCoverage": 16,
+              "mediumRouteRunning": 70,
+              "overall": 81,
+              "passBlock": 58,
+              "passBlockFinesse": 58,
+              "passBlockPower": 54,
+              "playAction": 6,
+              "playRecognition": 17,
+              "powerMoves": 10,
+              "press": 23,
+              "pursuit": 33,
+              "release": 74,
+              "runBlock": 60,
+              "runBlockFinesse": 60,
+              "runBlockPower": 57,
+              "shortRouteRunning": 76,
+              "spectacularCatch": 84,
+              "speed": 86,
+              "spinMove": 61,
+              "stiffArm": 63,
+              "tackle": 37,
+              "throwAccuracyDeep": 6,
+              "throwAccuracyMid": 10,
+              "throwAccuracyShort": 15,
+              "throwOnTheRun": 10,
+              "throwPower": 25,
+              "throwUnderPressure": 10,
+              "toughness": 83,
+              "trucking": 67,
+              "zoneCoverage": 20
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0039875",
+            "name": "Ray Davis",
+            "team": "BUF",
+            "position": "RB",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 4600,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.1432648271887326,
+              "redzone_carry": 0.12898261215190207,
+              "goal_carry": 0.1201313320438896,
+              "normal_target": 0.03097757006439257,
+              "redzone_target": 0.04173967713158718,
+              "goal_target": 0.04930149240299593
+            },
+            "recent_shares": {
+              "normal_carry": 0.21005519300839107,
+              "normal_target": 0.05498392856814845,
+              "redzone_carry": 0.0937407654155679,
+              "redzone_target": 0.053105213589234916,
+              "goal_carry": 0.0,
+              "goal_target": 0.13830645961618565
+            },
+            "weighted_active_games": 10.932,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 88,
+              "agility": 86,
+              "jumping": 84,
+              "stamina": 88,
+              "strength": 78,
+              "awareness": 74,
+              "bCVision": 82,
+              "blockShedding": 30,
+              "breakSack": 34,
+              "breakTackle": 83,
+              "carrying": 93,
+              "catchInTraffic": 52,
+              "catching": 71,
+              "changeOfDirection": 85,
+              "deepRouteRunning": 54,
+              "finesseMoves": 10,
+              "hitPower": 30,
+              "impactBlocking": 35,
+              "injury": 87,
+              "jukeMove": 82,
+              "kickAccuracy": 55,
+              "kickPower": 58,
+              "kickReturn": 88,
+              "leadBlock": 30,
+              "manCoverage": 12,
+              "mediumRouteRunning": 61,
+              "overall": 75,
+              "passBlock": 52,
+              "passBlockFinesse": 27,
+              "passBlockPower": 33,
+              "playAction": 25,
+              "playRecognition": 19,
+              "powerMoves": 10,
+              "press": 15,
+              "pursuit": 36,
+              "release": 55,
+              "runBlock": 36,
+              "runBlockFinesse": 28,
+              "runBlockPower": 33,
+              "shortRouteRunning": 66,
+              "spectacularCatch": 56,
+              "speed": 88,
+              "spinMove": 76,
+              "stiffArm": 75,
+              "tackle": 33,
+              "throwAccuracyDeep": 20,
+              "throwAccuracyMid": 26,
+              "throwAccuracyShort": 32,
+              "throwOnTheRun": 31,
+              "throwPower": 40,
+              "throwUnderPressure": 27,
+              "toughness": 85,
+              "trucking": 81,
+              "zoneCoverage": 12
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0039901",
+            "name": "Keon Coleman",
+            "team": "BUF",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 4000,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.001049593250762422,
+              "redzone_carry": 0.0007281229554242133,
+              "goal_carry": 0.0007682054968975625,
+              "normal_target": 0.10511343622314658,
+              "redzone_target": 0.10408450382400408,
+              "goal_target": 0.10460944375264729
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.12998673957454795,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.18469903125906464,
+              "goal_carry": 0.0,
+              "goal_target": 0.16336344838611802
+            },
+            "weighted_active_games": 8.722,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 88,
+              "agility": 87,
+              "jumping": 94,
+              "stamina": 85,
+              "strength": 72,
+              "awareness": 73,
+              "bCVision": 84,
+              "blockShedding": 40,
+              "breakSack": 22,
+              "breakTackle": 77,
+              "carrying": 74,
+              "catchInTraffic": 85,
+              "catching": 84,
+              "changeOfDirection": 88,
+              "deepRouteRunning": 75,
+              "finesseMoves": 10,
+              "hitPower": 39,
+              "impactBlocking": 40,
+              "injury": 88,
+              "jukeMove": 78,
+              "kickAccuracy": 20,
+              "kickPower": 22,
+              "kickReturn": 77,
+              "leadBlock": 15,
+              "manCoverage": 25,
+              "mediumRouteRunning": 77,
+              "overall": 75,
+              "passBlock": 52,
+              "passBlockFinesse": 30,
+              "passBlockPower": 30,
+              "playAction": 28,
+              "playRecognition": 26,
+              "powerMoves": 10,
+              "press": 28,
+              "pursuit": 45,
+              "release": 79,
+              "runBlock": 42,
+              "runBlockFinesse": 27,
+              "runBlockPower": 33,
+              "shortRouteRunning": 77,
+              "spectacularCatch": 88,
+              "speed": 87,
+              "spinMove": 73,
+              "stiffArm": 62,
+              "tackle": 40,
+              "throwAccuracyDeep": 40,
+              "throwAccuracyMid": 46,
+              "throwAccuracyShort": 52,
+              "throwOnTheRun": 35,
+              "throwPower": 65,
+              "throwUnderPressure": 19,
+              "toughness": 84,
+              "trucking": 52,
+              "zoneCoverage": 31
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0040194",
+            "name": "Jackson Hawes",
+            "team": "BUF",
+            "position": "TE",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 2500,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.03857362614039053,
+              "redzone_target": 0.039148584146360285,
+              "goal_target": 0.04815714271056691
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.04913786419155185,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.03253102032363543,
+              "goal_carry": 0.0,
+              "goal_target": 0.08383369862349362
+            },
+            "weighted_active_games": 6.99,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 86,
+              "agility": 73,
+              "jumping": 83,
+              "stamina": 85,
+              "strength": 72,
+              "awareness": 71,
+              "bCVision": 68,
+              "blockShedding": 33,
+              "breakSack": 21,
+              "breakTackle": 60,
+              "carrying": 70,
+              "catchInTraffic": 73,
+              "catching": 75,
+              "changeOfDirection": 71,
+              "deepRouteRunning": 53,
+              "finesseMoves": 32,
+              "hitPower": 41,
+              "impactBlocking": 69,
+              "injury": 91,
+              "jukeMove": 64,
+              "kickAccuracy": 27,
+              "kickPower": 24,
+              "kickReturn": 23,
+              "leadBlock": 60,
+              "manCoverage": 17,
+              "mediumRouteRunning": 57,
+              "overall": 68,
+              "passBlock": 61,
+              "passBlockFinesse": 60,
+              "passBlockPower": 62,
+              "playAction": 20,
+              "playRecognition": 25,
+              "powerMoves": 28,
+              "press": 13,
+              "pursuit": 30,
+              "release": 63,
+              "runBlock": 69,
+              "runBlockFinesse": 66,
+              "runBlockPower": 69,
+              "shortRouteRunning": 65,
+              "spectacularCatch": 73,
+              "speed": 78,
+              "spinMove": 65,
+              "stiffArm": 67,
+              "tackle": 33,
+              "throwAccuracyDeep": 15,
+              "throwAccuracyMid": 9,
+              "throwAccuracyShort": 25,
+              "throwOnTheRun": 21,
+              "throwPower": 24,
+              "throwUnderPressure": 26,
+              "toughness": 91,
+              "trucking": 66,
+              "zoneCoverage": 20
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0040363",
+            "name": "Keleki Latu",
+            "team": "BUF",
+            "position": "TE",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": null,
+            "salary_as_of": null,
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.002420493029657483,
+              "redzone_carry": 0.002238438850945268,
+              "goal_carry": 0.002256907061645569,
+              "normal_target": 0.03693894898502068,
+              "redzone_target": 0.03412059080900784,
+              "goal_target": 0.03309673773178651
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.10714285714285714,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.0,
+              "goal_carry": 0.0,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 1.545,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 87,
+              "agility": 81,
+              "jumping": 74,
+              "stamina": 82,
+              "strength": 67,
+              "awareness": 62,
+              "bCVision": 64,
+              "blockShedding": 35,
+              "breakSack": 13,
+              "breakTackle": 62,
+              "carrying": 70,
+              "catchInTraffic": 73,
+              "catching": 75,
+              "changeOfDirection": 73,
+              "deepRouteRunning": 51,
+              "finesseMoves": 12,
+              "hitPower": 35,
+              "impactBlocking": 61,
+              "injury": 87,
+              "jukeMove": 63,
+              "kickAccuracy": 14,
+              "kickPower": 17,
+              "kickReturn": 13,
+              "leadBlock": 55,
+              "manCoverage": 15,
+              "mediumRouteRunning": 58,
+              "overall": 62,
+              "passBlock": 60,
+              "passBlockFinesse": 58,
+              "passBlockPower": 62,
+              "playAction": 6,
+              "playRecognition": 25,
+              "powerMoves": 11,
+              "press": 15,
+              "pursuit": 37,
+              "release": 64,
+              "runBlock": 61,
+              "runBlockFinesse": 55,
+              "runBlockPower": 59,
+              "shortRouteRunning": 63,
+              "spectacularCatch": 74,
+              "speed": 76,
+              "spinMove": 52,
+              "stiffArm": 60,
+              "tackle": 32,
+              "throwAccuracyDeep": 6,
+              "throwAccuracyMid": 10,
+              "throwAccuracyShort": 15,
+              "throwOnTheRun": 10,
+              "throwPower": 25,
+              "throwUnderPressure": 10,
+              "toughness": 83,
+              "trucking": 59,
+              "zoneCoverage": 17
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0041443",
+            "name": "Skyler Bell",
+            "team": "BUF",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 3100,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.03523683738041899,
+              "redzone_target": 0.035063119377154874,
+              "goal_target": 0.03401098394162773
+            },
+            "recent_shares": {},
+            "weighted_active_games": 0,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "No historical opportunities; projection/depth prior",
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 94,
+              "agility": 92,
+              "jumping": 92,
+              "stamina": 85,
+              "strength": 67,
+              "awareness": 49,
+              "bCVision": 82,
+              "blockShedding": 37,
+              "breakSack": 28,
+              "breakTackle": 77,
+              "carrying": 71,
+              "catchInTraffic": 79,
+              "catching": 77,
+              "changeOfDirection": 92,
+              "deepRouteRunning": 71,
+              "finesseMoves": 36,
+              "hitPower": 36,
+              "impactBlocking": 44,
+              "injury": 90,
+              "jukeMove": 83,
+              "kickAccuracy": 37,
+              "kickPower": 46,
+              "kickReturn": 58,
+              "leadBlock": 29,
+              "manCoverage": 33,
+              "mediumRouteRunning": 72,
+              "overall": 71,
+              "passBlock": 33,
+              "passBlockFinesse": 25,
+              "passBlockPower": 29,
+              "playAction": 26,
+              "playRecognition": 33,
+              "powerMoves": 30,
+              "press": 31,
+              "pursuit": 42,
+              "release": 71,
+              "runBlock": 50,
+              "runBlockFinesse": 33,
+              "runBlockPower": 30,
+              "shortRouteRunning": 71,
+              "spectacularCatch": 78,
+              "speed": 92,
+              "spinMove": 77,
+              "stiffArm": 62,
+              "tackle": 41,
+              "throwAccuracyDeep": 20,
+              "throwAccuracyMid": 25,
+              "throwAccuracyShort": 30,
+              "throwOnTheRun": 33,
+              "throwPower": 40,
+              "throwUnderPressure": 31,
+              "toughness": 90,
+              "trucking": 51,
+              "zoneCoverage": 38
+            },
+            "madden_identity": "strongly_corroborated"
+          }
+        ],
+        "pressure": {
+          "probability": 0.1925232187863818,
+          "sack_given_pressure": 0.2839415597626014,
+          "scramble_given_pressure": 0.3859877639540509,
+          "incomplete_given_pressure": 0.1907620324652574,
+          "source": "NFLverse sack / QB hit / scramble proxy; not charted total pressures"
+        }
+      },
+      "HOU": {
+        "qb_id": "00-0039163",
+        "players": [
+          {
+            "player_id": "00-0034383",
+            "name": "Dalton Schultz",
+            "team": "HOU",
+            "position": "TE",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 3400,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.1514563608934675,
+              "redzone_target": 0.1567758428014095,
+              "goal_target": 0.15718553358328285
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.16228337340433882,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.16498512579596278,
+              "goal_carry": 0.0,
+              "goal_target": 0.5074302288608745
+            },
+            "weighted_active_games": 13.567,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 84,
+              "agility": 79,
+              "jumping": 79,
+              "stamina": 93,
+              "strength": 76,
+              "awareness": 89,
+              "bCVision": 76,
+              "blockShedding": 31,
+              "breakSack": 12,
+              "breakTackle": 63,
+              "carrying": 72,
+              "catchInTraffic": 84,
+              "catching": 96,
+              "changeOfDirection": 73,
+              "deepRouteRunning": 65,
+              "finesseMoves": 10,
+              "hitPower": 27,
+              "impactBlocking": 72,
+              "injury": 93,
+              "jukeMove": 72,
+              "kickAccuracy": 14,
+              "kickPower": 16,
+              "kickReturn": 38,
+              "leadBlock": 59,
+              "manCoverage": 12,
+              "mediumRouteRunning": 70,
+              "overall": 84,
+              "passBlock": 59,
+              "passBlockFinesse": 59,
+              "passBlockPower": 56,
+              "playAction": 5,
+              "playRecognition": 16,
+              "powerMoves": 10,
+              "press": 12,
+              "pursuit": 34,
+              "release": 74,
+              "runBlock": 65,
+              "runBlockFinesse": 65,
+              "runBlockPower": 62,
+              "shortRouteRunning": 77,
+              "spectacularCatch": 83,
+              "speed": 83,
+              "spinMove": 59,
+              "stiffArm": 66,
+              "tackle": 29,
+              "throwAccuracyDeep": 5,
+              "throwAccuracyMid": 10,
+              "throwAccuracyShort": 15,
+              "throwOnTheRun": 10,
+              "throwPower": 24,
+              "throwUnderPressure": 10,
+              "toughness": 86,
+              "trucking": 68,
+              "zoneCoverage": 15
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0034981",
+            "name": "Foster Moreau",
+            "team": "HOU",
+            "position": "TE",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 2600,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.03438646303197695,
+              "redzone_target": 0.04288419461761366,
+              "goal_target": 0.03986624128540959
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.02796952840449384,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.0,
+              "goal_carry": 0.0,
+              "goal_target": null
+            },
+            "weighted_active_games": 2.888,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Prior-team history downweighted",
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 84,
+              "agility": 80,
+              "jumping": 86,
+              "stamina": 86,
+              "strength": 76,
+              "awareness": 72,
+              "bCVision": 70,
+              "blockShedding": 37,
+              "breakSack": 20,
+              "breakTackle": 61,
+              "carrying": 75,
+              "catchInTraffic": 79,
+              "catching": 86,
+              "changeOfDirection": 78,
+              "deepRouteRunning": 57,
+              "finesseMoves": 10,
+              "hitPower": 31,
+              "impactBlocking": 68,
+              "injury": 92,
+              "jukeMove": 59,
+              "kickAccuracy": 13,
+              "kickPower": 17,
+              "kickReturn": 40,
+              "leadBlock": 57,
+              "manCoverage": 12,
+              "mediumRouteRunning": 61,
+              "overall": 72,
+              "passBlock": 61,
+              "passBlockFinesse": 60,
+              "passBlockPower": 59,
+              "playAction": 10,
+              "playRecognition": 15,
+              "powerMoves": 10,
+              "press": 15,
+              "pursuit": 42,
+              "release": 66,
+              "runBlock": 62,
+              "runBlockFinesse": 61,
+              "runBlockPower": 62,
+              "shortRouteRunning": 66,
+              "spectacularCatch": 79,
+              "speed": 83,
+              "spinMove": 51,
+              "stiffArm": 63,
+              "tackle": 33,
+              "throwAccuracyDeep": 10,
+              "throwAccuracyMid": 15,
+              "throwAccuracyShort": 20,
+              "throwOnTheRun": 10,
+              "throwPower": 25,
+              "throwUnderPressure": 10,
+              "toughness": 84,
+              "trucking": 71,
+              "zoneCoverage": 15
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0035685",
+            "name": "David Montgomery",
+            "team": "HOU",
+            "position": "RB",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 6000,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.40285429606045126,
+              "redzone_carry": 0.3882962033335276,
+              "goal_carry": 0.4126673758323028,
+              "normal_target": 0.059606136384056894,
+              "redzone_target": 0.05180389769805001,
+              "goal_target": 0.050902313293408614
+            },
+            "recent_shares": {
+              "normal_carry": 0.32601823214426984,
+              "normal_target": 0.02567541006842934,
+              "redzone_carry": 0.416569111072076,
+              "redzone_target": 0.0,
+              "goal_carry": 0.5958564237844297,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 4.309,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Prior-team history downweighted",
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 88,
+              "agility": 83,
+              "jumping": 75,
+              "stamina": 90,
+              "strength": 77,
+              "awareness": 94,
+              "bCVision": 91,
+              "blockShedding": 24,
+              "breakSack": 29,
+              "breakTackle": 86,
+              "carrying": 93,
+              "catchInTraffic": 56,
+              "catching": 74,
+              "changeOfDirection": 85,
+              "deepRouteRunning": 49,
+              "finesseMoves": 10,
+              "hitPower": 27,
+              "impactBlocking": 41,
+              "injury": 88,
+              "jukeMove": 83,
+              "kickAccuracy": 12,
+              "kickPower": 17,
+              "kickReturn": 45,
+              "leadBlock": 43,
+              "manCoverage": 12,
+              "mediumRouteRunning": 59,
+              "overall": 83,
+              "passBlock": 61,
+              "passBlockFinesse": 35,
+              "passBlockPower": 38,
+              "playAction": 22,
+              "playRecognition": 16,
+              "powerMoves": 10,
+              "press": 15,
+              "pursuit": 25,
+              "release": 60,
+              "runBlock": 46,
+              "runBlockFinesse": 26,
+              "runBlockPower": 31,
+              "shortRouteRunning": 66,
+              "spectacularCatch": 54,
+              "speed": 87,
+              "spinMove": 76,
+              "stiffArm": 80,
+              "tackle": 30,
+              "throwAccuracyDeep": 27,
+              "throwAccuracyMid": 40,
+              "throwAccuracyShort": 50,
+              "throwOnTheRun": 31,
+              "throwPower": 52,
+              "throwUnderPressure": 21,
+              "toughness": 91,
+              "trucking": 89,
+              "zoneCoverage": 13
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0036554",
+            "name": "Nico Collins",
+            "team": "HOU",
+            "position": "WR",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 7000,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.003091596350592702,
+              "redzone_carry": 0.003987668315462996,
+              "goal_carry": 0.0022387532299136437,
+              "normal_target": 0.21356066594972847,
+              "redzone_target": 0.21667080280205514,
+              "goal_target": 0.23333161845267925
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.20447290592112843,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.19654348545652892,
+              "goal_carry": 0.0,
+              "goal_target": 0.3283798474260836
+            },
+            "weighted_active_games": 11.087,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 91,
+              "agility": 88,
+              "jumping": 93,
+              "stamina": 88,
+              "strength": 67,
+              "awareness": 92,
+              "bCVision": 90,
+              "blockShedding": 30,
+              "breakSack": 28,
+              "breakTackle": 87,
+              "carrying": 77,
+              "catchInTraffic": 89,
+              "catching": 96,
+              "changeOfDirection": 81,
+              "deepRouteRunning": 88,
+              "finesseMoves": 10,
+              "hitPower": 20,
+              "impactBlocking": 46,
+              "injury": 90,
+              "jukeMove": 79,
+              "kickAccuracy": 15,
+              "kickPower": 22,
+              "kickReturn": 40,
+              "leadBlock": 28,
+              "manCoverage": 13,
+              "mediumRouteRunning": 92,
+              "overall": 90,
+              "passBlock": 35,
+              "passBlockFinesse": 27,
+              "passBlockPower": 30,
+              "playAction": 25,
+              "playRecognition": 16,
+              "powerMoves": 10,
+              "press": 19,
+              "pursuit": 32,
+              "release": 93,
+              "runBlock": 46,
+              "runBlockFinesse": 26,
+              "runBlockPower": 30,
+              "shortRouteRunning": 88,
+              "spectacularCatch": 88,
+              "speed": 93,
+              "spinMove": 74,
+              "stiffArm": 73,
+              "tackle": 26,
+              "throwAccuracyDeep": 20,
+              "throwAccuracyMid": 25,
+              "throwAccuracyShort": 30,
+              "throwOnTheRun": 33,
+              "throwPower": 39,
+              "throwUnderPressure": 26,
+              "toughness": 83,
+              "trucking": 64,
+              "zoneCoverage": 19
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0036556",
+            "name": "Brevin Jordan",
+            "team": "HOU",
+            "position": "TE",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": null,
+            "salary_as_of": null,
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.002497785266189025,
+              "redzone_carry": 0.0023699334436600053,
+              "goal_carry": 0.002429856772863331,
+              "normal_target": 0.026942077068201863,
+              "redzone_target": 0.02641501683534084,
+              "goal_target": 0.026411454463412982
+            },
+            "recent_shares": {},
+            "weighted_active_games": 0.24,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 88,
+              "agility": 82,
+              "jumping": 85,
+              "stamina": 82,
+              "strength": 73,
+              "awareness": 59,
+              "bCVision": 82,
+              "blockShedding": 43,
+              "breakSack": 32,
+              "breakTackle": 74,
+              "carrying": 74,
+              "catchInTraffic": 77,
+              "catching": 79,
+              "changeOfDirection": 76,
+              "deepRouteRunning": 55,
+              "finesseMoves": 27,
+              "hitPower": 41,
+              "impactBlocking": 65,
+              "injury": 84,
+              "jukeMove": 78,
+              "kickAccuracy": 11,
+              "kickPower": 15,
+              "kickReturn": 42,
+              "leadBlock": 51,
+              "manCoverage": 15,
+              "mediumRouteRunning": 59,
+              "overall": 68,
+              "passBlock": 59,
+              "passBlockFinesse": 56,
+              "passBlockPower": 58,
+              "playAction": 21,
+              "playRecognition": 29,
+              "powerMoves": 21,
+              "press": 20,
+              "pursuit": 46,
+              "release": 70,
+              "runBlock": 58,
+              "runBlockFinesse": 56,
+              "runBlockPower": 58,
+              "shortRouteRunning": 65,
+              "spectacularCatch": 78,
+              "speed": 86,
+              "spinMove": 71,
+              "stiffArm": 66,
+              "tackle": 43,
+              "throwAccuracyDeep": 28,
+              "throwAccuracyMid": 31,
+              "throwAccuracyShort": 39,
+              "throwOnTheRun": 30,
+              "throwPower": 42,
+              "throwUnderPressure": 26,
+              "toughness": 78,
+              "trucking": 67,
+              "zoneCoverage": 19
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0038608",
+            "name": "Kayshon Boutte",
+            "team": "HOU",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 4500,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.1315038180729933,
+              "redzone_target": 0.11920545852775656,
+              "goal_target": 0.12576373294260423
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.0950518970855673,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.13360722122109817,
+              "goal_carry": 0.0,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 3.854,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Prior-team history downweighted",
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": null,
+            "madden_identity": "unavailable"
+          },
+          {
+            "player_id": "00-0038618",
+            "name": "Xavier Hutchinson",
+            "team": "HOU",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 3200,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0046215627381749206,
+              "redzone_carry": 0.005065754010573587,
+              "goal_carry": 0.003265299106979878,
+              "normal_target": 0.09454626028073726,
+              "redzone_target": 0.08419154194475574,
+              "goal_target": 0.09408500144374099
+            },
+            "recent_shares": {
+              "normal_carry": 0.007424159297849409,
+              "normal_target": 0.12833990081506327,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.0692310958486936,
+              "goal_carry": 0.0,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 12.321,
+            "scramble_share": 0.34155763918504845,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 89,
+              "agility": 86,
+              "jumping": 86,
+              "stamina": 86,
+              "strength": 62,
+              "awareness": 77,
+              "bCVision": 85,
+              "blockShedding": 25,
+              "breakSack": 30,
+              "breakTackle": 75,
+              "carrying": 71,
+              "catchInTraffic": 82,
+              "catching": 86,
+              "changeOfDirection": 83,
+              "deepRouteRunning": 73,
+              "finesseMoves": 10,
+              "hitPower": 29,
+              "impactBlocking": 40,
+              "injury": 92,
+              "jukeMove": 75,
+              "kickAccuracy": 15,
+              "kickPower": 19,
+              "kickReturn": 29,
+              "leadBlock": 20,
+              "manCoverage": 14,
+              "mediumRouteRunning": 74,
+              "overall": 73,
+              "passBlock": 26,
+              "passBlockFinesse": 22,
+              "passBlockPower": 19,
+              "playAction": 30,
+              "playRecognition": 17,
+              "powerMoves": 10,
+              "press": 18,
+              "pursuit": 38,
+              "release": 69,
+              "runBlock": 45,
+              "runBlockFinesse": 20,
+              "runBlockPower": 25,
+              "shortRouteRunning": 75,
+              "spectacularCatch": 83,
+              "speed": 88,
+              "spinMove": 68,
+              "stiffArm": 57,
+              "tackle": 32,
+              "throwAccuracyDeep": 38,
+              "throwAccuracyMid": 42,
+              "throwAccuracyShort": 47,
+              "throwOnTheRun": 45,
+              "throwPower": 57,
+              "throwUnderPressure": 35,
+              "toughness": 91,
+              "trucking": 52,
+              "zoneCoverage": 19
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0038728",
+            "name": "Jared Wayne",
+            "team": "HOU",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": null,
+            "salary_as_of": null,
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.01207416493988053,
+              "redzone_carry": 0.011354691957547142,
+              "goal_carry": 0.011886531800740719,
+              "normal_target": 0.07637385751865416,
+              "redzone_target": 0.0742167182631622,
+              "goal_target": 0.07529877767849227
+            },
+            "recent_shares": {},
+            "weighted_active_games": 0.42,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 90,
+              "agility": 87,
+              "jumping": 91,
+              "stamina": 82,
+              "strength": 64,
+              "awareness": 64,
+              "bCVision": 80,
+              "blockShedding": 27,
+              "breakSack": 22,
+              "breakTackle": 77,
+              "carrying": 70,
+              "catchInTraffic": 83,
+              "catching": 79,
+              "changeOfDirection": 88,
+              "deepRouteRunning": 60,
+              "finesseMoves": 10,
+              "hitPower": 29,
+              "impactBlocking": 46,
+              "injury": 88,
+              "jukeMove": 77,
+              "kickAccuracy": 16,
+              "kickPower": 22,
+              "kickReturn": 32,
+              "leadBlock": 28,
+              "manCoverage": 17,
+              "mediumRouteRunning": 64,
+              "overall": 67,
+              "passBlock": 36,
+              "passBlockFinesse": 15,
+              "passBlockPower": 20,
+              "playAction": 25,
+              "playRecognition": 14,
+              "powerMoves": 10,
+              "press": 16,
+              "pursuit": 33,
+              "release": 69,
+              "runBlock": 49,
+              "runBlockFinesse": 20,
+              "runBlockPower": 27,
+              "shortRouteRunning": 66,
+              "spectacularCatch": 82,
+              "speed": 89,
+              "spinMove": 69,
+              "stiffArm": 63,
+              "tackle": 26,
+              "throwAccuracyDeep": 20,
+              "throwAccuracyMid": 24,
+              "throwAccuracyShort": 28,
+              "throwOnTheRun": 31,
+              "throwPower": 43,
+              "throwUnderPressure": 29,
+              "toughness": 83,
+              "trucking": 60,
+              "zoneCoverage": 28
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0039163",
+            "name": "C.J. Stroud",
+            "team": "HOU",
+            "position": "QB",
+            "active": true,
+            "starter": true,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 5200,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.08830283118826292,
+              "redzone_carry": 0.09061846747186242,
+              "goal_carry": 0.10859466847203338,
+              "normal_target": 0.0,
+              "redzone_target": 0.0,
+              "goal_target": 0.0
+            },
+            "recent_shares": {
+              "normal_carry": 0.07365374832861601,
+              "normal_target": 0.0,
+              "redzone_carry": 0.20053787050318064,
+              "redzone_target": 0.0,
+              "goal_carry": 0.3183933119001563,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 11.927,
+            "scramble_share": 0.68679974137646,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 87,
+              "agility": 80,
+              "jumping": 78,
+              "stamina": 85,
+              "strength": 61,
+              "awareness": 74,
+              "bCVision": 76,
+              "blockShedding": 19,
+              "breakSack": 72,
+              "breakTackle": 54,
+              "carrying": 61,
+              "catchInTraffic": 13,
+              "catching": 21,
+              "changeOfDirection": 75,
+              "deepRouteRunning": 10,
+              "finesseMoves": 10,
+              "hitPower": 16,
+              "impactBlocking": 17,
+              "injury": 88,
+              "jukeMove": 58,
+              "kickAccuracy": 19,
+              "kickPower": 20,
+              "kickReturn": 12,
+              "leadBlock": 13,
+              "manCoverage": 9,
+              "mediumRouteRunning": 11,
+              "overall": 76,
+              "passBlock": 12,
+              "passBlockFinesse": 15,
+              "passBlockPower": 13,
+              "playAction": 85,
+              "playRecognition": 14,
+              "powerMoves": 10,
+              "press": 9,
+              "pursuit": 29,
+              "release": 14,
+              "runBlock": 12,
+              "runBlockFinesse": 15,
+              "runBlockPower": 12,
+              "shortRouteRunning": 12,
+              "spectacularCatch": 10,
+              "speed": 82,
+              "spinMove": 45,
+              "stiffArm": 37,
+              "tackle": 24,
+              "throwAccuracyDeep": 82,
+              "throwAccuracyMid": 83,
+              "throwAccuracyShort": 87,
+              "throwOnTheRun": 87,
+              "throwPower": 91,
+              "throwUnderPressure": 82,
+              "toughness": 88,
+              "trucking": 31,
+              "zoneCoverage": 10
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0039359",
+            "name": "Cade Stover",
+            "team": "HOU",
+            "position": "TE",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 2500,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.009395113409782094,
+              "redzone_carry": 0.013220591028762727,
+              "goal_carry": 0.007364613965153276,
+              "normal_target": 0.0521136618405422,
+              "redzone_target": 0.051658002374246045,
+              "goal_target": 0.0413383979800932
+            },
+            "recent_shares": {
+              "normal_carry": 0.0,
+              "normal_target": 0.08437187394884318,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.12514840726520643,
+              "goal_carry": 0.0,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 7.432,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 88,
+              "agility": 70,
+              "jumping": 83,
+              "stamina": 82,
+              "strength": 74,
+              "awareness": 69,
+              "bCVision": 73,
+              "blockShedding": 56,
+              "breakSack": 16,
+              "breakTackle": 68,
+              "carrying": 70,
+              "catchInTraffic": 75,
+              "catching": 77,
+              "changeOfDirection": 70,
+              "deepRouteRunning": 52,
+              "finesseMoves": 51,
+              "hitPower": 60,
+              "impactBlocking": 66,
+              "injury": 88,
+              "jukeMove": 68,
+              "kickAccuracy": 14,
+              "kickPower": 15,
+              "kickReturn": 15,
+              "leadBlock": 67,
+              "manCoverage": 44,
+              "mediumRouteRunning": 59,
+              "overall": 67,
+              "passBlock": 58,
+              "passBlockFinesse": 56,
+              "passBlockPower": 56,
+              "playAction": 10,
+              "playRecognition": 45,
+              "powerMoves": 53,
+              "press": 33,
+              "pursuit": 60,
+              "release": 65,
+              "runBlock": 64,
+              "runBlockFinesse": 59,
+              "runBlockPower": 58,
+              "shortRouteRunning": 64,
+              "spectacularCatch": 76,
+              "speed": 84,
+              "spinMove": 59,
+              "stiffArm": 67,
+              "tackle": 58,
+              "throwAccuracyDeep": 10,
+              "throwAccuracyMid": 15,
+              "throwAccuracyShort": 20,
+              "throwOnTheRun": 10,
+              "throwPower": 26,
+              "throwUnderPressure": 14,
+              "toughness": 86,
+              "trucking": 67,
+              "zoneCoverage": 50
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0039603",
+            "name": "British Brooks",
+            "team": "HOU",
+            "position": "RB",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 4000,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.07234901618162573,
+              "redzone_carry": 0.06789774869232372,
+              "goal_carry": 0.07488815621631487,
+              "normal_target": 0.0,
+              "redzone_target": 0.0,
+              "goal_target": 0.0
+            },
+            "recent_shares": {
+              "normal_carry": 0.43333333333333335,
+              "normal_target": 0.0,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.0,
+              "goal_carry": 0.0,
+              "goal_target": null
+            },
+            "weighted_active_games": 1.919,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 89,
+              "agility": 81,
+              "jumping": 86,
+              "stamina": 82,
+              "strength": 78,
+              "awareness": 61,
+              "bCVision": 68,
+              "blockShedding": 33,
+              "breakSack": 20,
+              "breakTackle": 65,
+              "carrying": 73,
+              "catchInTraffic": 54,
+              "catching": 69,
+              "changeOfDirection": 74,
+              "deepRouteRunning": 41,
+              "finesseMoves": 21,
+              "hitPower": 40,
+              "impactBlocking": 64,
+              "injury": 88,
+              "jukeMove": 69,
+              "kickAccuracy": 14,
+              "kickPower": 20,
+              "kickReturn": 35,
+              "leadBlock": 68,
+              "manCoverage": 23,
+              "mediumRouteRunning": 47,
+              "overall": 68,
+              "passBlock": 58,
+              "passBlockFinesse": 52,
+              "passBlockPower": 49,
+              "playAction": 6,
+              "playRecognition": 32,
+              "powerMoves": 25,
+              "press": 21,
+              "pursuit": 51,
+              "release": 53,
+              "runBlock": 59,
+              "runBlockFinesse": 55,
+              "runBlockPower": 51,
+              "shortRouteRunning": 51,
+              "spectacularCatch": 51,
+              "speed": 86,
+              "spinMove": 60,
+              "stiffArm": 71,
+              "tackle": 39,
+              "throwAccuracyDeep": 6,
+              "throwAccuracyMid": 6,
+              "throwAccuracyShort": 6,
+              "throwOnTheRun": 6,
+              "throwPower": 25,
+              "throwUnderPressure": 10,
+              "toughness": 85,
+              "trucking": 69,
+              "zoneCoverage": 32
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0040138",
+            "name": "Jaylin Noel",
+            "team": "HOU",
+            "position": "WR",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 3600,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.009753818763217853,
+              "redzone_carry": 0.008798193878430468,
+              "goal_carry": 0.007631837556683678,
+              "normal_target": 0.09115808271609652,
+              "redzone_target": 0.08012796351529634,
+              "goal_target": 0.092364011087154
+            },
+            "recent_shares": {
+              "normal_carry": 0.0089022150291542,
+              "normal_target": 0.07932023721759827,
+              "redzone_carry": 0.0,
+              "redzone_target": 0.0,
+              "goal_carry": 0.0,
+              "goal_target": null
+            },
+            "weighted_active_games": 7.3,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 94,
+              "agility": 89,
+              "jumping": 84,
+              "stamina": 90,
+              "strength": 66,
+              "awareness": 68,
+              "bCVision": 83,
+              "blockShedding": 39,
+              "breakSack": 38,
+              "breakTackle": 70,
+              "carrying": 73,
+              "catchInTraffic": 79,
+              "catching": 82,
+              "changeOfDirection": 86,
+              "deepRouteRunning": 78,
+              "finesseMoves": 33,
+              "hitPower": 39,
+              "impactBlocking": 51,
+              "injury": 93,
+              "jukeMove": 77,
+              "kickAccuracy": 30,
+              "kickPower": 29,
+              "kickReturn": 83,
+              "leadBlock": 35,
+              "manCoverage": 25,
+              "mediumRouteRunning": 76,
+              "overall": 73,
+              "passBlock": 29,
+              "passBlockFinesse": 24,
+              "passBlockPower": 30,
+              "playAction": 35,
+              "playRecognition": 35,
+              "powerMoves": 28,
+              "press": 25,
+              "pursuit": 42,
+              "release": 72,
+              "runBlock": 52,
+              "runBlockFinesse": 22,
+              "runBlockPower": 24,
+              "shortRouteRunning": 76,
+              "spectacularCatch": 78,
+              "speed": 93,
+              "spinMove": 74,
+              "stiffArm": 55,
+              "tackle": 25,
+              "throwAccuracyDeep": 56,
+              "throwAccuracyMid": 59,
+              "throwAccuracyShort": 63,
+              "throwOnTheRun": 55,
+              "throwPower": 68,
+              "throwUnderPressure": 47,
+              "toughness": 88,
+              "trucking": 47,
+              "zoneCoverage": 37
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0040583",
+            "name": "Woody Marks",
+            "team": "HOU",
+            "position": "RB",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 5000,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.39505981510182303,
+              "redzone_carry": 0.40839074786784935,
+              "goal_carry": 0.3690329070470144,
+              "normal_target": 0.059156055219201455,
+              "redzone_target": 0.08692587833668726,
+              "goal_target": 0.05438581254615655
+            },
+            "recent_shares": {
+              "normal_carry": 0.4858541357113052,
+              "normal_target": 0.0786242462386495,
+              "redzone_carry": 0.37509967736345473,
+              "redzone_target": 0.17747029312229584,
+              "goal_carry": 0.13862235664455638,
+              "goal_target": 0.0
+            },
+            "weighted_active_games": 8.321,
+            "scramble_share": 0.0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": true,
+            "madden_attributes": {
+              "acceleration": 88,
+              "agility": 84,
+              "jumping": 85,
+              "stamina": 87,
+              "strength": 70,
+              "awareness": 86,
+              "bCVision": 87,
+              "blockShedding": 32,
+              "breakSack": 29,
+              "breakTackle": 83,
+              "carrying": 94,
+              "catchInTraffic": 49,
+              "catching": 73,
+              "changeOfDirection": 84,
+              "deepRouteRunning": 45,
+              "finesseMoves": 24,
+              "hitPower": 25,
+              "impactBlocking": 39,
+              "injury": 89,
+              "jukeMove": 86,
+              "kickAccuracy": 23,
+              "kickPower": 23,
+              "kickReturn": 76,
+              "leadBlock": 39,
+              "manCoverage": 22,
+              "mediumRouteRunning": 55,
+              "overall": 80,
+              "passBlock": 51,
+              "passBlockFinesse": 42,
+              "passBlockPower": 40,
+              "playAction": 30,
+              "playRecognition": 32,
+              "powerMoves": 24,
+              "press": 24,
+              "pursuit": 34,
+              "release": 61,
+              "runBlock": 40,
+              "runBlockFinesse": 33,
+              "runBlockPower": 29,
+              "shortRouteRunning": 65,
+              "spectacularCatch": 55,
+              "speed": 88,
+              "spinMove": 79,
+              "stiffArm": 71,
+              "tackle": 31,
+              "throwAccuracyDeep": 10,
+              "throwAccuracyMid": 12,
+              "throwAccuracyShort": 9,
+              "throwOnTheRun": 10,
+              "throwPower": 27,
+              "throwUnderPressure": 23,
+              "toughness": 88,
+              "trucking": 78,
+              "zoneCoverage": 25
+            },
+            "madden_identity": "strongly_corroborated"
+          },
+          {
+            "player_id": "00-0041472",
+            "name": "Marlin Klein",
+            "team": "HOU",
+            "position": "TE",
+            "active": true,
+            "starter": false,
+            "roster_status": "ACT",
+            "roster_at": "2026-09-09T14:20:49.166397+00:00",
+            "salary": 2700,
+            "salary_as_of": "2026-09-09T19:12:16.025Z",
+            "identity_status": "canonical_roster",
+            "shares": {
+              "normal_carry": 0.0,
+              "redzone_carry": 0.0,
+              "goal_carry": 0.0,
+              "normal_target": 0.009196561024343334,
+              "redzone_target": 0.009124682283626796,
+              "goal_target": 0.00906710524356553
+            },
+            "recent_shares": {},
+            "weighted_active_games": 0,
+            "scramble_share": 0,
+            "snap_share": null,
+            "routes": null,
+            "flags": [
+              "No historical opportunities; projection/depth prior",
+              "Snap share unavailable",
+              "Routes unavailable"
+            ],
+            "detailed": false,
+            "madden_attributes": {
+              "acceleration": 86,
+              "agility": 80,
+              "jumping": 86,
+              "stamina": 82,
+              "strength": 74,
+              "awareness": 58,
+              "bCVision": 66,
+              "blockShedding": 26,
+              "breakSack": 27,
+              "breakTackle": 64,
+              "carrying": 74,
+              "catchInTraffic": 73,
+              "catching": 73,
+              "changeOfDirection": 72,
+              "deepRouteRunning": 56,
+              "finesseMoves": 18,
+              "hitPower": 29,
+              "impactBlocking": 64,
+              "injury": 87,
+              "jukeMove": 66,
+              "kickAccuracy": 22,
+              "kickPower": 24,
+              "kickReturn": 32,
+              "leadBlock": 56,
+              "manCoverage": 16,
+              "mediumRouteRunning": 62,
+              "overall": 64,
+              "passBlock": 61,
+              "passBlockFinesse": 59,
+              "passBlockPower": 61,
+              "playAction": 17,
+              "playRecognition": 20,
+              "powerMoves": 22,
+              "press": 21,
+              "pursuit": 28,
+              "release": 65,
+              "runBlock": 59,
+              "runBlockFinesse": 60,
+              "runBlockPower": 59,
+              "shortRouteRunning": 67,
+              "spectacularCatch": 74,
+              "speed": 85,
+              "spinMove": 60,
+              "stiffArm": 61,
+              "tackle": 28,
+              "throwAccuracyDeep": 12,
+              "throwAccuracyMid": 15,
+              "throwAccuracyShort": 20,
+              "throwOnTheRun": 23,
+              "throwPower": 27,
+              "throwUnderPressure": 26,
+              "toughness": 88,
+              "trucking": 67,
+              "zoneCoverage": 23
+            },
+            "madden_identity": "strongly_corroborated"
+          }
+        ],
+        "pressure": {
+          "probability": 0.19071288739832762,
+          "sack_given_pressure": 0.3215724160271683,
+          "scramble_given_pressure": 0.259830867652017,
+          "incomplete_given_pressure": 0.24999828710870217,
+          "source": "NFLverse sack / QB hit / scramble proxy; not charted total pressures"
+        }
+      }
+    },
+    "missing_teams": [],
+    "snapshot_id": "e42fe20cee1c835a707a2df7f17b0336d1ae112307c500ac3ce309a8e3945535"
+  },
+  "personnel": {
+    "snapshot_id": "madden27-d83a029c1910cd1d89561585-05eba91f1dfe68f24e62",
+    "ratings_snapshot_id": "madden27-d83a029c1910cd1d89561585",
+    "units": {
+      "BUF": {
+        "pass_protection": {
+          "unit": "pass_protection",
+          "rating": 80.09,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0033904",
+              "team": "BUF",
+              "role": "LT",
+              "slot": "3",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Dion Dawkins",
+              "rating": 89.29,
+              "weight": 1.2,
+              "attributes": {
+                "passBlock": 88,
+                "passBlockPower": 90,
+                "passBlockFinesse": 86,
+                "awareness": 97
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037428",
+              "team": "BUF",
+              "role": "LG",
+              "slot": "4",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Alec Anderson",
+              "rating": 68.29,
+              "weight": 1,
+              "attributes": {
+                "passBlock": 68,
+                "passBlockPower": 72,
+                "passBlockFinesse": 65,
+                "awareness": 68
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035679",
+              "team": "BUF",
+              "role": "C",
+              "slot": "5",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Connor McGovern",
+              "rating": 84.0,
+              "weight": 1,
+              "attributes": {
+                "passBlock": 83,
+                "passBlockPower": 81,
+                "passBlockFinesse": 84,
+                "awareness": 92
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0038548",
+              "team": "BUF",
+              "role": "RG",
+              "slot": "6",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "O'Cyrus Torrence",
+              "rating": 75.86,
+              "weight": 1,
+              "attributes": {
+                "passBlock": 76,
+                "passBlockPower": 79,
+                "passBlockFinesse": 73,
+                "awareness": 75
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0036976",
+              "team": "BUF",
+              "role": "RT",
+              "slot": "7",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Spencer Brown",
+              "rating": 81.0,
+              "weight": 1.2,
+              "attributes": {
+                "passBlock": 80,
+                "passBlockPower": 83,
+                "passBlockFinesse": 78,
+                "awareness": 85
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "run_block": {
+          "unit": "run_block",
+          "rating": 83.38,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0033904",
+              "team": "BUF",
+              "role": "LT",
+              "slot": "3",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Dion Dawkins",
+              "rating": 86.12,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 84,
+                "runBlockPower": 87,
+                "runBlockFinesse": 82,
+                "strength": 92,
+                "impactBlocking": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037428",
+              "team": "BUF",
+              "role": "LG",
+              "slot": "4",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Alec Anderson",
+              "rating": 77.75,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 76,
+                "runBlockPower": 73,
+                "runBlockFinesse": 78,
+                "strength": 85,
+                "impactBlocking": 83
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035679",
+              "team": "BUF",
+              "role": "C",
+              "slot": "5",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Connor McGovern",
+              "rating": 82.88,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 82,
+                "runBlockPower": 81,
+                "runBlockFinesse": 83,
+                "strength": 87,
+                "impactBlocking": 84
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0038548",
+              "team": "BUF",
+              "role": "RG",
+              "slot": "6",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "O'Cyrus Torrence",
+              "rating": 81.38,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 79,
+                "runBlockPower": 82,
+                "runBlockFinesse": 76,
+                "strength": 91,
+                "impactBlocking": 86
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0036976",
+              "team": "BUF",
+              "role": "RT",
+              "slot": "7",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Spencer Brown",
+              "rating": 88.75,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 88,
+                "runBlockPower": 89,
+                "runBlockFinesse": 87,
+                "strength": 91,
+                "impactBlocking": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "pass_rush": {
+          "unit": "pass_rush",
+          "rating": 78.83,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0040724",
+              "team": "BUF",
+              "role": "LDE",
+              "slot": "1",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "T.J. Sanders",
+              "rating": 75.14,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 75,
+                "finesseMoves": 68,
+                "blockShedding": 80,
+                "acceleration": 83,
+                "pursuit": 77
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0040710",
+              "team": "BUF",
+              "role": "NT",
+              "slot": "2",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Deone Walker",
+              "rating": 75.57,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 77,
+                "finesseMoves": 74,
+                "blockShedding": 78,
+                "acceleration": 73,
+                "pursuit": 76
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035230",
+              "team": "BUF",
+              "role": "RDE",
+              "slot": "3",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Ed Oliver",
+              "rating": 79.86,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 82,
+                "finesseMoves": 75,
+                "blockShedding": 80,
+                "acceleration": 84,
+                "pursuit": 81
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0036914",
+              "team": "BUF",
+              "role": "WLB",
+              "slot": "4",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Greg Rousseau",
+              "rating": 86.14,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 87,
+                "finesseMoves": 82,
+                "blockShedding": 87,
+                "acceleration": 89,
+                "pursuit": 89
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0034832",
+              "team": "BUF",
+              "role": "SLB",
+              "slot": "7",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Bradley Chubb",
+              "rating": 77.43,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 71,
+                "finesseMoves": 77,
+                "blockShedding": 79,
+                "acceleration": 85,
+                "pursuit": 82
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "run_front": {
+          "unit": "run_front",
+          "rating": 80.79,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0040724",
+              "team": "BUF",
+              "role": "LDE",
+              "slot": "1",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "T.J. Sanders",
+              "rating": 79.88,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 80,
+                "strength": 88,
+                "tackle": 78,
+                "pursuit": 77,
+                "playRecognition": 70
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0040710",
+              "team": "BUF",
+              "role": "NT",
+              "slot": "2",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Deone Walker",
+              "rating": 79.88,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 78,
+                "strength": 82,
+                "tackle": 84,
+                "pursuit": 76,
+                "playRecognition": 75
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035230",
+              "team": "BUF",
+              "role": "RDE",
+              "slot": "3",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Ed Oliver",
+              "rating": 84.12,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 80,
+                "strength": 89,
+                "tackle": 85,
+                "pursuit": 81,
+                "playRecognition": 84
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0036914",
+              "team": "BUF",
+              "role": "WLB",
+              "slot": "4",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Greg Rousseau",
+              "rating": 87.12,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 87,
+                "strength": 83,
+                "tackle": 89,
+                "pursuit": 89,
+                "playRecognition": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0038557",
+              "team": "BUF",
+              "role": "LILB",
+              "slot": "5",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Dorian Williams",
+              "rating": 73.62,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 67,
+                "strength": 63,
+                "tackle": 85,
+                "pursuit": 86,
+                "playRecognition": 73
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037254",
+              "team": "BUF",
+              "role": "RILB",
+              "slot": "6",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Terrel Bernard",
+              "rating": 78.88,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 72,
+                "strength": 67,
+                "tackle": 86,
+                "pursuit": 92,
+                "playRecognition": 89
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0034832",
+              "team": "BUF",
+              "role": "SLB",
+              "slot": "7",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Bradley Chubb",
+              "rating": 82.0,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 79,
+                "strength": 89,
+                "tackle": 79,
+                "pursuit": 82,
+                "playRecognition": 80
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "secondary_man": {
+          "unit": "secondary_man",
+          "rating": 78.6,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0037288",
+              "team": "BUF",
+              "role": "LCB",
+              "slot": "8",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Christian Benford",
+              "rating": 85.0,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 80,
+                "press": 86,
+                "playRecognition": 88,
+                "awareness": 87,
+                "speed": 89
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039872",
+              "team": "BUF",
+              "role": "SS",
+              "slot": "9",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Cole Bishop",
+              "rating": 77.67,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 74,
+                "press": 71,
+                "playRecognition": 77,
+                "awareness": 79,
+                "speed": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035253",
+              "team": "BUF",
+              "role": "FS",
+              "slot": "10",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "C.J. Gardner-Johnson",
+              "rating": 75.83,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 69,
+                "press": 77,
+                "playRecognition": 73,
+                "awareness": 77,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0040709",
+              "team": "BUF",
+              "role": "RCB",
+              "slot": "11",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Maxwell Hairston",
+              "rating": 77.0,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 78,
+                "press": 73,
+                "playRecognition": 67,
+                "awareness": 70,
+                "speed": 96
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037034",
+              "team": "BUF",
+              "role": "NB",
+              "slot": "12",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Dee Alford",
+              "rating": 77.5,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 76,
+                "press": 67,
+                "playRecognition": 77,
+                "awareness": 78,
+                "speed": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "secondary_zone": {
+          "unit": "secondary_zone",
+          "rating": 80.88,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0037288",
+              "team": "BUF",
+              "role": "LCB",
+              "slot": "8",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Christian Benford",
+              "rating": 86.4,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 84,
+                "playRecognition": 88,
+                "awareness": 87,
+                "speed": 89
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039872",
+              "team": "BUF",
+              "role": "SS",
+              "slot": "9",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Cole Bishop",
+              "rating": 81.8,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 81,
+                "playRecognition": 77,
+                "awareness": 79,
+                "speed": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035253",
+              "team": "BUF",
+              "role": "FS",
+              "slot": "10",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "C.J. Gardner-Johnson",
+              "rating": 78.0,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 75,
+                "playRecognition": 73,
+                "awareness": 77,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0040709",
+              "team": "BUF",
+              "role": "RCB",
+              "slot": "11",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Maxwell Hairston",
+              "rating": 77.8,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 78,
+                "playRecognition": 67,
+                "awareness": 70,
+                "speed": 96
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037034",
+              "team": "BUF",
+              "role": "NB",
+              "slot": "12",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Dee Alford",
+              "rating": 80.4,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 78,
+                "playRecognition": 77,
+                "awareness": 78,
+                "speed": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "secondary": {
+          "unit": "secondary",
+          "rating": 79.64,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0037288",
+              "team": "BUF",
+              "role": "LCB",
+              "slot": "8",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Christian Benford",
+              "rating": 85.64,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 80,
+                "zoneCoverage": 84,
+                "press": 86,
+                "playRecognition": 88,
+                "awareness": 87,
+                "speed": 89
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039872",
+              "team": "BUF",
+              "role": "SS",
+              "slot": "9",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Cole Bishop",
+              "rating": 79.55,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 74,
+                "zoneCoverage": 81,
+                "press": 71,
+                "playRecognition": 77,
+                "awareness": 79,
+                "speed": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035253",
+              "team": "BUF",
+              "role": "FS",
+              "slot": "10",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "C.J. Gardner-Johnson",
+              "rating": 76.82,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 69,
+                "zoneCoverage": 75,
+                "press": 77,
+                "playRecognition": 73,
+                "awareness": 77,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0040709",
+              "team": "BUF",
+              "role": "RCB",
+              "slot": "11",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Maxwell Hairston",
+              "rating": 77.36,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 78,
+                "zoneCoverage": 78,
+                "press": 73,
+                "playRecognition": 67,
+                "awareness": 70,
+                "speed": 96
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037034",
+              "team": "BUF",
+              "role": "NB",
+              "slot": "12",
+              "formation": "Base 3-4 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Dee Alford",
+              "rating": 78.82,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 76,
+                "zoneCoverage": 78,
+                "press": 67,
+                "playRecognition": 77,
+                "awareness": 78,
+                "speed": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        }
+      },
+      "HOU": {
+        "pass_protection": {
+          "unit": "pass_protection",
+          "rating": 76.63,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0040745",
+              "team": "HOU",
+              "role": "LT",
+              "slot": "3",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Aireontae Ersery",
+              "rating": 75.71,
+              "weight": 1.2,
+              "attributes": {
+                "passBlock": 76,
+                "passBlockPower": 78,
+                "passBlockFinesse": 74,
+                "awareness": 74
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0041532",
+              "team": "HOU",
+              "role": "LG",
+              "slot": "4",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Keylan Rutledge",
+              "rating": 77.29,
+              "weight": 1,
+              "attributes": {
+                "passBlock": 78,
+                "passBlockPower": 78,
+                "passBlockFinesse": 76,
+                "awareness": 77
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0034495",
+              "team": "HOU",
+              "role": "C",
+              "slot": "5",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Evan Brown",
+              "rating": 75.57,
+              "weight": 1,
+              "attributes": {
+                "passBlock": 75,
+                "passBlockPower": 73,
+                "passBlockFinesse": 77,
+                "awareness": 79
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0038131",
+              "team": "HOU",
+              "role": "RG",
+              "slot": "6",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Ed Ingram",
+              "rating": 74.43,
+              "weight": 1,
+              "attributes": {
+                "passBlock": 74,
+                "passBlockPower": 77,
+                "passBlockFinesse": 71,
+                "awareness": 77
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0032071",
+              "team": "HOU",
+              "role": "RT",
+              "slot": "7",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Trent Brown",
+              "rating": 79.71,
+              "weight": 1.2,
+              "attributes": {
+                "passBlock": 81,
+                "passBlockPower": 83,
+                "passBlockFinesse": 76,
+                "awareness": 78
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "run_block": {
+          "unit": "run_block",
+          "rating": 80.05,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0040745",
+              "team": "HOU",
+              "role": "LT",
+              "slot": "3",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Aireontae Ersery",
+              "rating": 75.88,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 73,
+                "runBlockPower": 75,
+                "runBlockFinesse": 72,
+                "strength": 85,
+                "impactBlocking": 82
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0041532",
+              "team": "HOU",
+              "role": "LG",
+              "slot": "4",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Keylan Rutledge",
+              "rating": 80.5,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 78,
+                "runBlockPower": 80,
+                "runBlockFinesse": 79,
+                "strength": 87,
+                "impactBlocking": 83
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0034495",
+              "team": "HOU",
+              "role": "C",
+              "slot": "5",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Evan Brown",
+              "rating": 76.62,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 74,
+                "runBlockPower": 70,
+                "runBlockFinesse": 77,
+                "strength": 90,
+                "impactBlocking": 81
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0038131",
+              "team": "HOU",
+              "role": "RG",
+              "slot": "6",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Ed Ingram",
+              "rating": 83.5,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 83,
+                "runBlockPower": 85,
+                "runBlockFinesse": 81,
+                "strength": 87,
+                "impactBlocking": 83
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0032071",
+              "team": "HOU",
+              "role": "RT",
+              "slot": "7",
+              "formation": "3WR 1TE",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Trent Brown",
+              "rating": 83.75,
+              "weight": 1,
+              "attributes": {
+                "runBlock": 82,
+                "runBlockPower": 84,
+                "runBlockFinesse": 79,
+                "strength": 91,
+                "impactBlocking": 89
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "pass_rush": {
+          "unit": "pass_rush",
+          "rating": 82.43,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0039108",
+              "team": "HOU",
+              "role": "LDE",
+              "slot": "1",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Will Anderson Jr.",
+              "rating": 91.43,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 91,
+                "finesseMoves": 97,
+                "blockShedding": 85,
+                "acceleration": 90,
+                "pursuit": 89
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0036883",
+              "team": "HOU",
+              "role": "LDT",
+              "slot": "2",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Tommy Togiai",
+              "rating": 73.29,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 78,
+                "finesseMoves": 65,
+                "blockShedding": 76,
+                "acceleration": 72,
+                "pursuit": 79
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0032759",
+              "team": "HOU",
+              "role": "RDT",
+              "slot": "3",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Sheldon Rankins",
+              "rating": 75.86,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 78,
+                "finesseMoves": 71,
+                "blockShedding": 80,
+                "acceleration": 73,
+                "pursuit": 80
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0031565",
+              "team": "HOU",
+              "role": "RDE",
+              "slot": "4",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Danielle Hunter",
+              "rating": 89.14,
+              "weight": 1,
+              "attributes": {
+                "powerMoves": 87,
+                "finesseMoves": 95,
+                "blockShedding": 82,
+                "acceleration": 87,
+                "pursuit": 91
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "run_front": {
+          "unit": "run_front",
+          "rating": 80.93,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0039108",
+              "team": "HOU",
+              "role": "LDE",
+              "slot": "1",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Will Anderson Jr.",
+              "rating": 88.75,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 85,
+                "strength": 90,
+                "tackle": 87,
+                "pursuit": 89,
+                "playRecognition": 97
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0036883",
+              "team": "HOU",
+              "role": "LDT",
+              "slot": "2",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Tommy Togiai",
+              "rating": 82.0,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 76,
+                "strength": 91,
+                "tackle": 86,
+                "pursuit": 79,
+                "playRecognition": 71
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0032759",
+              "team": "HOU",
+              "role": "RDT",
+              "slot": "3",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Sheldon Rankins",
+              "rating": 84.38,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 80,
+                "strength": 87,
+                "tackle": 84,
+                "pursuit": 80,
+                "playRecognition": 93
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0031565",
+              "team": "HOU",
+              "role": "RDE",
+              "slot": "4",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Danielle Hunter",
+              "rating": 85.88,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 82,
+                "strength": 82,
+                "tackle": 87,
+                "pursuit": 91,
+                "playRecognition": 94
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0038599",
+              "team": "HOU",
+              "role": "WLB",
+              "slot": "5",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Henry To'oTo'o",
+              "rating": 74.62,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 71,
+                "strength": 65,
+                "tackle": 78,
+                "pursuit": 89,
+                "playRecognition": 80
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0035166",
+              "team": "HOU",
+              "role": "MLB",
+              "slot": "6",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Azeez Al-Shaair",
+              "rating": 82.0,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 75,
+                "strength": 77,
+                "tackle": 88,
+                "pursuit": 88,
+                "playRecognition": 88
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037633",
+              "team": "HOU",
+              "role": "SLB",
+              "slot": "7",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Jacob Hummel",
+              "rating": 68.88,
+              "weight": 1,
+              "attributes": {
+                "blockShedding": 60,
+                "strength": 67,
+                "tackle": 76,
+                "pursuit": 80,
+                "playRecognition": 65
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "secondary_man": {
+          "unit": "secondary_man",
+          "rating": 83.07,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0037237",
+              "team": "HOU",
+              "role": "LCB",
+              "slot": "8",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Derek Stingley Jr.",
+              "rating": 91.5,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 91,
+                "press": 84,
+                "playRecognition": 95,
+                "awareness": 95,
+                "speed": 93
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037130",
+              "team": "HOU",
+              "role": "SS",
+              "slot": "9",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Reed Blankenship",
+              "rating": 74.83,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 68,
+                "press": 60,
+                "playRecognition": 81,
+                "awareness": 85,
+                "speed": 87
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039838",
+              "team": "HOU",
+              "role": "FS",
+              "slot": "10",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Calen Bullock",
+              "rating": 78.17,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 72,
+                "press": 66,
+                "playRecognition": 84,
+                "awareness": 85,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039343",
+              "team": "HOU",
+              "role": "RCB",
+              "slot": "11",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Kamari Lassiter",
+              "rating": 86.33,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 85,
+                "press": 74,
+                "playRecognition": 91,
+                "awareness": 91,
+                "speed": 92
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037246",
+              "team": "HOU",
+              "role": "NB",
+              "slot": "12",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Jalen Pitre",
+              "rating": 84.5,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 84,
+                "press": 66,
+                "playRecognition": 93,
+                "awareness": 90,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "secondary_zone": {
+          "unit": "secondary_zone",
+          "rating": 87.84,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0037237",
+              "team": "HOU",
+              "role": "LCB",
+              "slot": "8",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Derek Stingley Jr.",
+              "rating": 93.8,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 93,
+                "playRecognition": 95,
+                "awareness": 95,
+                "speed": 93
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037130",
+              "team": "HOU",
+              "role": "SS",
+              "slot": "9",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Reed Blankenship",
+              "rating": 80.2,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 74,
+                "playRecognition": 81,
+                "awareness": 85,
+                "speed": 87
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039838",
+              "team": "HOU",
+              "role": "FS",
+              "slot": "10",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Calen Bullock",
+              "rating": 85.0,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 83,
+                "playRecognition": 84,
+                "awareness": 85,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039343",
+              "team": "HOU",
+              "role": "RCB",
+              "slot": "11",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Kamari Lassiter",
+              "rating": 90.4,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 89,
+                "playRecognition": 91,
+                "awareness": 91,
+                "speed": 92
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037246",
+              "team": "HOU",
+              "role": "NB",
+              "slot": "12",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Jalen Pitre",
+              "rating": 89.8,
+              "weight": 1,
+              "attributes": {
+                "zoneCoverage": 88,
+                "playRecognition": 93,
+                "awareness": 90,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        },
+        "secondary": {
+          "unit": "secondary",
+          "rating": 85.24,
+          "confidence": "moderate",
+          "complete": true,
+          "players": [
+            {
+              "player_id": "00-0037237",
+              "team": "HOU",
+              "role": "LCB",
+              "slot": "8",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Derek Stingley Jr.",
+              "rating": 92.55,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 91,
+                "zoneCoverage": 93,
+                "press": 84,
+                "playRecognition": 95,
+                "awareness": 95,
+                "speed": 93
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037130",
+              "team": "HOU",
+              "role": "SS",
+              "slot": "9",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Reed Blankenship",
+              "rating": 77.27,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 68,
+                "zoneCoverage": 74,
+                "press": 60,
+                "playRecognition": 81,
+                "awareness": 85,
+                "speed": 87
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039838",
+              "team": "HOU",
+              "role": "FS",
+              "slot": "10",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Calen Bullock",
+              "rating": 81.27,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 72,
+                "zoneCoverage": 83,
+                "press": 66,
+                "playRecognition": 84,
+                "awareness": 85,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0039343",
+              "team": "HOU",
+              "role": "RCB",
+              "slot": "11",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Kamari Lassiter",
+              "rating": 88.18,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 85,
+                "zoneCoverage": 89,
+                "press": 74,
+                "playRecognition": 91,
+                "awareness": 91,
+                "speed": 92
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            },
+            {
+              "player_id": "00-0037246",
+              "team": "HOU",
+              "role": "NB",
+              "slot": "12",
+              "formation": "Base 4-3 D",
+              "depth_at": "2026-09-09T12:06:21Z",
+              "starter_confidence": "depth_chart_listed",
+              "source": "NFLverse current ESPN depth chart",
+              "name": "Jalen Pitre",
+              "rating": 86.91,
+              "weight": 1,
+              "attributes": {
+                "manCoverage": 84,
+                "zoneCoverage": 88,
+                "press": 66,
+                "playRecognition": 93,
+                "awareness": 90,
+                "speed": 90
+              },
+              "mapping_status": "strongly_corroborated",
+              "roster_status": "ACT",
+              "roster_at": "2026-09-09T14:20:49.166397+00:00"
+            }
+          ],
+          "missing": [],
+          "scale": "EA attribute points 0\u201399; uncalibrated diagnostic"
+        }
+      }
+    }
+  },
+  "empirical": {
+    "version": "V2.0-B-live-recency",
+    "trainingSeason": 2025,
+    "trainingSeasons": [
+      2024,
+      2025
+    ],
+    "targetSeason": 2026,
+    "baselinePassRate": 0.5705895710334008,
+    "calls": {
+      "2|short|normal": {
+        "count": 2401.0,
+        "probability": 0.32847714493631625
+      },
+      "3|medium|trail": {
+        "count": 197.5,
+        "probability": 0.7901668696299755
+      },
+      "2|long|lead": {
+        "count": 285.5,
+        "probability": 0.3683757609931471
+      },
+      "2|long|normal": {
+        "count": 7246.0,
+        "probability": 0.7119641282870647
+      },
+      "2|short|lead": {
+        "count": 55.5,
+        "probability": 0.3852772869286684
+      },
+      "1|medium|normal": {
+        "count": 576.5,
+        "probability": 0.3427470480480585
+      },
+      "4|medium|lead": {
+        "count": 11.5,
+        "probability": 0.591533353601039
+      },
+      "1|long|lead": {
+        "count": 527.0,
+        "probability": 0.13669147766703668
+      },
+      "1|short|lead": {
+        "count": 8.0,
+        "probability": 0.5193142967030835
+      },
+      "2|medium|normal": {
+        "count": 4823.5,
+        "probability": 0.5275681178408391
+      },
+      "3|long|lead": {
+        "count": 148.5,
+        "probability": 0.5538835085266548
+      },
+      "3|long|normal": {
+        "count": 3486.5,
+        "probability": 0.8651671669644386
+      },
+      "1|short|normal": {
+        "count": 397.5,
+        "probability": 0.317937381821772
+      },
+      "2|medium|lead": {
+        "count": 191.5,
+        "probability": 0.2825178405001981
+      },
+      "4|medium|normal": {
+        "count": 160.5,
+        "probability": 0.8128461488678507
+      },
+      "3|medium|lead": {
+        "count": 166.0,
+        "probability": 0.5240635119863722
+      },
+      "4|medium|trail": {
+        "count": 72.0,
+        "probability": 0.7467863098858185
+      },
+      "1|long|trail": {
+        "count": 1300.5,
+        "probability": 0.7646486520567102
+      },
+      "3|medium|normal": {
+        "count": 2790.5,
+        "probability": 0.8744713707431641
+      },
+      "1|medium|trail": {
+        "count": 50.0,
+        "probability": 0.6103972078951158
+      },
+      "4|short|normal": {
+        "count": 698.5,
+        "probability": 0.470386788536388
+      },
+      "2|medium|trail": {
+        "count": 299.0,
+        "probability": 0.7186273062250579
+      },
+      "4|long|lead": {
+        "count": 3.5,
+        "probability": 0.5756395379513813
+      },
+      "2|long|trail": {
+        "count": 581.0,
+        "probability": 0.827421482489444
+      },
+      "1|long|normal": {
+        "count": 18200.5,
+        "probability": 0.47275282921137085
+      },
+      "1|medium|lead": {
+        "count": 19.0,
+        "probability": 0.4601845511087264
+      },
+      "3|short|trail": {
+        "count": 175.0,
+        "probability": 0.5688565835150197
+      },
+      "2|short|trail": {
+        "count": 189.5,
+        "probability": 0.6135587263578277
+      },
+      "4|long|trail": {
+        "count": 105.0,
+        "probability": 0.7942378284389703
+      },
+      "3|short|lead": {
+        "count": 116.0,
+        "probability": 0.3893784548235009
+      },
+      "4|short|lead": {
+        "count": 35.0,
+        "probability": 0.4846406699586524
+      },
+      "3|short|normal": {
+        "count": 2661.5,
+        "probability": 0.4588952524235217
+      },
+      "4|long|normal": {
+        "count": 59.5,
+        "probability": 0.7159877927779019
+      },
+      "1|short|trail": {
+        "count": 39.5,
+        "probability": 0.5355459770036478
+      },
+      "4|short|trail": {
+        "count": 90.5,
+        "probability": 0.6455472490405043
+      },
+      "all": {
+        "count": 48442.0,
+        "probability": 0.5705895710334008
+      },
+      "3|long|trail": {
+        "count": 273.5,
+        "probability": 0.8100761433337376
+      }
+    },
+    "yards": {
+      "run": [
+        [
+          -34,
+          1.0
+        ],
+        [
+          -18,
+          1.0
+        ],
+        [
+          -15,
+          1.0
+        ],
+        [
+          -13,
+          1.0
+        ],
+        [
+          -12,
+          1.0
+        ],
+        [
+          -11,
+          1.5
+        ],
+        [
+          -10,
+          4.0
+        ],
+        [
+          -9,
+          7.0
+        ],
+        [
+          -8,
+          8.5
+        ],
+        [
+          -7,
+          19.0
+        ],
+        [
+          -6,
+          25.0
+        ],
+        [
+          -5,
+          82.0
+        ],
+        [
+          -4,
+          132.0
+        ],
+        [
+          -3,
+          260.5
+        ],
+        [
+          -2,
+          463.5
+        ],
+        [
+          -1,
+          782.0
+        ],
+        [
+          0,
+          1667.0
+        ],
+        [
+          1,
+          2330.0
+        ],
+        [
+          2,
+          2612.5
+        ],
+        [
+          3,
+          2564.5
+        ],
+        [
+          4,
+          2128.0
+        ],
+        [
+          5,
+          1614.5
+        ],
+        [
+          6,
+          1262.5
+        ],
+        [
+          7,
+          940.0
+        ],
+        [
+          8,
+          712.5
+        ],
+        [
+          9,
+          684.0
+        ],
+        [
+          10,
+          314.0
+        ],
+        [
+          11,
+          380.0
+        ],
+        [
+          12,
+          292.0
+        ],
+        [
+          13,
+          221.0
+        ],
+        [
+          14,
+          157.0
+        ],
+        [
+          15,
+          149.0
+        ],
+        [
+          16,
+          110.0
+        ],
+        [
+          17,
+          90.0
+        ],
+        [
+          18,
+          79.5
+        ],
+        [
+          19,
+          69.5
+        ],
+        [
+          20,
+          49.5
+        ],
+        [
+          21,
+          46.0
+        ],
+        [
+          22,
+          44.0
+        ],
+        [
+          23,
+          25.0
+        ],
+        [
+          24,
+          33.0
+        ],
+        [
+          25,
+          28.5
+        ],
+        [
+          26,
+          18.5
+        ],
+        [
+          27,
+          17.5
+        ],
+        [
+          28,
+          13.0
+        ],
+        [
+          29,
+          28.5
+        ],
+        [
+          30,
+          16.0
+        ],
+        [
+          31,
+          11.5
+        ],
+        [
+          32,
+          12.5
+        ],
+        [
+          33,
+          7.5
+        ],
+        [
+          34,
+          10.0
+        ],
+        [
+          35,
+          10.0
+        ],
+        [
+          36,
+          2.0
+        ],
+        [
+          37,
+          4.0
+        ],
+        [
+          38,
+          7.5
+        ],
+        [
+          39,
+          5.5
+        ],
+        [
+          40,
+          6.0
+        ],
+        [
+          41,
+          7.5
+        ],
+        [
+          42,
+          2.5
+        ],
+        [
+          43,
+          8.0
+        ],
+        [
+          44,
+          4.0
+        ],
+        [
+          45,
+          7.0
+        ],
+        [
+          46,
+          6.0
+        ],
+        [
+          47,
+          1.5
+        ],
+        [
+          48,
+          5.5
+        ],
+        [
+          49,
+          5.5
+        ],
+        [
+          50,
+          4.5
+        ],
+        [
+          51,
+          2.0
+        ],
+        [
+          52,
+          3.0
+        ],
+        [
+          53,
+          2.0
+        ],
+        [
+          54,
+          2.0
+        ],
+        [
+          55,
+          5.5
+        ],
+        [
+          56,
+          2.5
+        ],
+        [
+          58,
+          1.5
+        ],
+        [
+          59,
+          5.0
+        ],
+        [
+          60,
+          1.0
+        ],
+        [
+          61,
+          1.0
+        ],
+        [
+          62,
+          0.5
+        ],
+        [
+          64,
+          2.0
+        ],
+        [
+          65,
+          6.0
+        ],
+        [
+          66,
+          1.5
+        ],
+        [
+          68,
+          1.5
+        ],
+        [
+          69,
+          1.0
+        ],
+        [
+          70,
+          1.5
+        ],
+        [
+          71,
+          2.0
+        ],
+        [
+          72,
+          2.5
+        ],
+        [
+          75,
+          0.5
+        ],
+        [
+          76,
+          0.5
+        ],
+        [
+          78,
+          1.0
+        ],
+        [
+          80,
+          1.0
+        ],
+        [
+          81,
+          1.5
+        ],
+        [
+          83,
+          1.0
+        ],
+        [
+          87,
+          0.5
+        ],
+        [
+          92,
+          0.5
+        ],
+        [
+          93,
+          1.0
+        ]
+      ],
+      "complete": [
+        [
+          -24,
+          0.5
+        ],
+        [
+          -11,
+          0.5
+        ],
+        [
+          -10,
+          1.5
+        ],
+        [
+          -9,
+          3.5
+        ],
+        [
+          -8,
+          3.5
+        ],
+        [
+          -7,
+          11.5
+        ],
+        [
+          -6,
+          21.5
+        ],
+        [
+          -5,
+          40.5
+        ],
+        [
+          -4,
+          46.5
+        ],
+        [
+          -3,
+          80.0
+        ],
+        [
+          -2,
+          115.5
+        ],
+        [
+          -1,
+          172.5
+        ],
+        [
+          0,
+          254.0
+        ],
+        [
+          1,
+          451.0
+        ],
+        [
+          2,
+          616.0
+        ],
+        [
+          3,
+          730.5
+        ],
+        [
+          4,
+          1109.5
+        ],
+        [
+          5,
+          1241.5
+        ],
+        [
+          6,
+          1267.0
+        ],
+        [
+          7,
+          1151.5
+        ],
+        [
+          8,
+          1009.0
+        ],
+        [
+          9,
+          1069.0
+        ],
+        [
+          10,
+          686.0
+        ],
+        [
+          11,
+          818.0
+        ],
+        [
+          12,
+          624.0
+        ],
+        [
+          13,
+          562.5
+        ],
+        [
+          14,
+          472.0
+        ],
+        [
+          15,
+          437.5
+        ],
+        [
+          16,
+          411.0
+        ],
+        [
+          17,
+          343.0
+        ],
+        [
+          18,
+          307.0
+        ],
+        [
+          19,
+          270.5
+        ],
+        [
+          20,
+          227.5
+        ],
+        [
+          21,
+          214.5
+        ],
+        [
+          22,
+          182.0
+        ],
+        [
+          23,
+          162.0
+        ],
+        [
+          24,
+          150.5
+        ],
+        [
+          25,
+          133.0
+        ],
+        [
+          26,
+          120.5
+        ],
+        [
+          27,
+          96.5
+        ],
+        [
+          28,
+          91.0
+        ],
+        [
+          29,
+          79.0
+        ],
+        [
+          30,
+          82.0
+        ],
+        [
+          31,
+          68.5
+        ],
+        [
+          32,
+          52.0
+        ],
+        [
+          33,
+          53.5
+        ],
+        [
+          34,
+          49.5
+        ],
+        [
+          35,
+          31.0
+        ],
+        [
+          36,
+          40.5
+        ],
+        [
+          37,
+          44.5
+        ],
+        [
+          38,
+          26.5
+        ],
+        [
+          39,
+          37.5
+        ],
+        [
+          40,
+          28.0
+        ],
+        [
+          41,
+          25.5
+        ],
+        [
+          42,
+          21.5
+        ],
+        [
+          43,
+          25.0
+        ],
+        [
+          44,
+          25.0
+        ],
+        [
+          45,
+          18.5
+        ],
+        [
+          46,
+          10.0
+        ],
+        [
+          47,
+          11.0
+        ],
+        [
+          48,
+          11.0
+        ],
+        [
+          49,
+          11.5
+        ],
+        [
+          50,
+          14.5
+        ],
+        [
+          51,
+          10.0
+        ],
+        [
+          52,
+          14.0
+        ],
+        [
+          53,
+          8.5
+        ],
+        [
+          54,
+          6.5
+        ],
+        [
+          55,
+          4.5
+        ],
+        [
+          56,
+          6.0
+        ],
+        [
+          57,
+          7.5
+        ],
+        [
+          58,
+          7.0
+        ],
+        [
+          59,
+          4.0
+        ],
+        [
+          60,
+          9.5
+        ],
+        [
+          61,
+          5.5
+        ],
+        [
+          62,
+          2.5
+        ],
+        [
+          63,
+          5.5
+        ],
+        [
+          64,
+          4.0
+        ],
+        [
+          65,
+          3.0
+        ],
+        [
+          66,
+          4.5
+        ],
+        [
+          67,
+          4.0
+        ],
+        [
+          68,
+          1.0
+        ],
+        [
+          69,
+          3.0
+        ],
+        [
+          70,
+          3.0
+        ],
+        [
+          71,
+          1.5
+        ],
+        [
+          72,
+          2.0
+        ],
+        [
+          74,
+          1.0
+        ],
+        [
+          75,
+          1.0
+        ],
+        [
+          76,
+          0.5
+        ],
+        [
+          77,
+          1.0
+        ],
+        [
+          79,
+          1.0
+        ],
+        [
+          80,
+          1.5
+        ],
+        [
+          81,
+          1.0
+        ],
+        [
+          82,
+          0.5
+        ],
+        [
+          83,
+          0.5
+        ],
+        [
+          84,
+          0.5
+        ],
+        [
+          85,
+          0.5
+        ],
+        [
+          86,
+          1.5
+        ],
+        [
+          87,
+          1.0
+        ],
+        [
+          88,
+          1.0
+        ],
+        [
+          89,
+          0.5
+        ],
+        [
+          93,
+          0.5
+        ],
+        [
+          97,
+          0.5
+        ],
+        [
+          98,
+          0.5
+        ]
+      ]
+    },
+    "pace": {
+      "normal": {
+        "count": 21907.0,
+        "seconds": 33.0
+      },
+      "lead": {
+        "count": 445.0,
+        "seconds": 37.0
+      },
+      "trail": {
+        "count": 1249.5,
+        "seconds": 20.0
+      }
+    },
+    "teamInputs": {
+      "BAL": {
+        "passRate": 0.4961226696273877,
+        "completionRate": 0.6646648523470232,
+        "sackRate": 0.07961627144537448,
+        "interceptionRate": 0.020422035003048854,
+        "fumbleRate": 0.007874091838406767,
+        "runMean": 5.424251072612594,
+        "completionMean": 12.114539038179327
+      },
+      "DEN": {
+        "passRate": 0.5820760012523724,
+        "completionRate": 0.6408017846633499,
+        "sackRate": 0.04193098157909371,
+        "interceptionRate": 0.01961760506507787,
+        "fumbleRate": 0.005481889138151357,
+        "runMean": 4.514795112485171,
+        "completionMean": 10.20970881462287
+      },
+      "BUF": {
+        "passRate": 0.520160690492443,
+        "completionRate": 0.6725439596248857,
+        "sackRate": 0.05862907064638266,
+        "interceptionRate": 0.016910237518807315,
+        "fumbleRate": 0.006578537035148919,
+        "runMean": 4.988649814379506,
+        "completionMean": 11.588263954966578
+      },
+      "SF": {
+        "passRate": 0.5631243402508935,
+        "completionRate": 0.6816357277719917,
+        "sackRate": 0.05295735224388621,
+        "interceptionRate": 0.026150376899559732,
+        "fumbleRate": 0.0026984413023320966,
+        "runMean": 4.282252897784719,
+        "completionMean": 11.394634934681148
+      },
+      "TB": {
+        "passRate": 0.5664409364317464,
+        "completionRate": 0.655789555822605,
+        "sackRate": 0.06536179701763518,
+        "interceptionRate": 0.02110183377059215,
+        "fumbleRate": 0.0046571062946695555,
+        "runMean": 4.569619208408381,
+        "completionMean": 10.798288544193891
+      },
+      "NE": {
+        "passRate": 0.5545159461148694,
+        "completionRate": 0.6892654633832663,
+        "sackRate": 0.08674002988927916,
+        "interceptionRate": 0.01762249670237066,
+        "fumbleRate": 0.009997777963703398,
+        "runMean": 4.6630592578291425,
+        "completionMean": 11.443448186069547
+      },
+      "CAR": {
+        "passRate": 0.5710227372875601,
+        "completionRate": 0.6389696282385303,
+        "sackRate": 0.0643291291514789,
+        "interceptionRate": 0.022960046281947286,
+        "fumbleRate": 0.009167099367189914,
+        "runMean": 4.585607029266785,
+        "completionMean": 10.04051393586146
+      },
+      "DAL": {
+        "passRate": 0.5977315444327203,
+        "completionRate": 0.652785102262736,
+        "sackRate": 0.05059729817137042,
+        "interceptionRate": 0.020795188493731194,
+        "fumbleRate": 0.01044639016202066,
+        "runMean": 4.515833996428984,
+        "completionMean": 10.90822337604935
+      },
+      "LAC": {
+        "passRate": 0.5721085844520756,
+        "completionRate": 0.6511102321986838,
+        "sackRate": 0.08970379014279807,
+        "interceptionRate": 0.01830415514505366,
+        "fumbleRate": 0.0033861509673687703,
+        "runMean": 4.482996190344544,
+        "completionMean": 10.979024729643974
+      },
+      "CHI": {
+        "passRate": 0.565028172230612,
+        "completionRate": 0.6050750486006392,
+        "sackRate": 0.06344495256501073,
+        "interceptionRate": 0.013473795140633977,
+        "fumbleRate": 0.004585647810008218,
+        "runMean": 4.706393993048222,
+        "completionMean": 11.29315867631677
+      },
+      "MIA": {
+        "passRate": 0.5650245903295894,
+        "completionRate": 0.6830019323505367,
+        "sackRate": 0.07264566265903316,
+        "interceptionRate": 0.02493089514992932,
+        "fumbleRate": 0.00718947240830707,
+        "runMean": 4.552815221826371,
+        "completionMean": 10.207807868186263
+      },
+      "LA": {
+        "passRate": 0.5785590715274243,
+        "completionRate": 0.6517913663005017,
+        "sackRate": 0.04494065470308142,
+        "interceptionRate": 0.013908116493776965,
+        "fumbleRate": 0.006934855540304384,
+        "runMean": 4.678647908974147,
+        "completionMean": 11.632498396432183
+      },
+      "GB": {
+        "passRate": 0.5166272812803613,
+        "completionRate": 0.6560349868144805,
+        "sackRate": 0.05310956715703921,
+        "interceptionRate": 0.018179880057214482,
+        "fumbleRate": 0.008145343075321321,
+        "runMean": 4.486498007798266,
+        "completionMean": 12.050716045384855
+      },
+      "PHI": {
+        "passRate": 0.5135509461938337,
+        "completionRate": 0.6525644743918744,
+        "sackRate": 0.0754981147616085,
+        "interceptionRate": 0.013798144142641777,
+        "fumbleRate": 0.004885544455076167,
+        "runMean": 4.632312248473041,
+        "completionMean": 11.175699634905756
+      },
+      "CIN": {
+        "passRate": 0.639827674961027,
+        "completionRate": 0.6647011246120111,
+        "sackRate": 0.059723830311101,
+        "interceptionRate": 0.02157926133997904,
+        "fumbleRate": 0.005610031823259691,
+        "runMean": 4.359126942177171,
+        "completionMean": 10.45707615464517
+      },
+      "NO": {
+        "passRate": 0.588927886423589,
+        "completionRate": 0.6581418129577163,
+        "sackRate": 0.07242497505849099,
+        "interceptionRate": 0.01972225152336213,
+        "fumbleRate": 0.0064829349205614475,
+        "runMean": 4.043322350010877,
+        "completionMean": 10.51912551021551
+      },
+      "IND": {
+        "passRate": 0.5618644766528106,
+        "completionRate": 0.630449626539503,
+        "sackRate": 0.056070189318933275,
+        "interceptionRate": 0.027979588761063302,
+        "fumbleRate": 0.004062937230191034,
+        "runMean": 4.724109079232479,
+        "completionMean": 11.60155119359926
+      },
+      "ARI": {
+        "passRate": 0.6211321775653579,
+        "completionRate": 0.6689268837167449,
+        "sackRate": 0.07305772628985299,
+        "interceptionRate": 0.01822666347898537,
+        "fumbleRate": 0.008390680834274456,
+        "runMean": 4.7180870369931664,
+        "completionMean": 10.35086049582965
+      },
+      "CLE": {
+        "passRate": 0.6079049852440962,
+        "completionRate": 0.5944693050246121,
+        "sackRate": 0.08577720821912266,
+        "interceptionRate": 0.03209273664278932,
+        "fumbleRate": 0.004595933916030455,
+        "runMean": 4.057831158085337,
+        "completionMean": 9.966396362783229
+      },
+      "NYJ": {
+        "passRate": 0.5816116572321866,
+        "completionRate": 0.6198173151240478,
+        "sackRate": 0.09123905938894472,
+        "interceptionRate": 0.022780531386651554,
+        "fumbleRate": 0.009123219057469505,
+        "runMean": 4.582751277355538,
+        "completionMean": 9.834692403832783
+      },
+      "ATL": {
+        "passRate": 0.5512946113747071,
+        "completionRate": 0.6340774987785089,
+        "sackRate": 0.05059093760178223,
+        "interceptionRate": 0.020144120398292387,
+        "fumbleRate": 0.006495683737033362,
+        "runMean": 4.655687961882638,
+        "completionMean": 11.218680009588686
+      },
+      "HOU": {
+        "passRate": 0.5817716874577628,
+        "completionRate": 0.6299102269190123,
+        "sackRate": 0.0638663398139323,
+        "interceptionRate": 0.016908483956274353,
+        "fumbleRate": 0.002857833824249508,
+        "runMean": 4.218293658749214,
+        "completionMean": 10.851388293603344
+      },
+      "KC": {
+        "passRate": 0.5997219003211308,
+        "completionRate": 0.6396815409720223,
+        "sackRate": 0.0715455983132062,
+        "interceptionRate": 0.01892046978587634,
+        "fumbleRate": 0.005109456419163138,
+        "runMean": 4.397531631021055,
+        "completionMean": 10.542913826988489
+      },
+      "WAS": {
+        "passRate": 0.5233679296336202,
+        "completionRate": 0.651604907740889,
+        "sackRate": 0.07925681991825816,
+        "interceptionRate": 0.020782145953911885,
+        "fumbleRate": 0.011203782123890362,
+        "runMean": 4.8809001228602,
+        "completionMean": 11.254478487536907
+      },
+      "JAX": {
+        "passRate": 0.5743574661675451,
+        "completionRate": 0.6229356917719266,
+        "sackRate": 0.06518030186470412,
+        "interceptionRate": 0.023446395305497247,
+        "fumbleRate": 0.006898243141161245,
+        "runMean": 4.288326181024628,
+        "completionMean": 11.332004700558993
+      },
+      "TEN": {
+        "passRate": 0.6041501562428624,
+        "completionRate": 0.6168119638022033,
+        "sackRate": 0.0878763986912959,
+        "interceptionRate": 0.02216523787175121,
+        "fumbleRate": 0.008079762170128537,
+        "runMean": 4.258617175667756,
+        "completionMean": 10.047940002134299
+      },
+      "SEA": {
+        "passRate": 0.5554925485996255,
+        "completionRate": 0.6827622018771907,
+        "sackRate": 0.06469735403303101,
+        "interceptionRate": 0.02784959193822777,
+        "fumbleRate": 0.004464820948107017,
+        "runMean": 4.366765759345272,
+        "completionMean": 11.691420292488177
+      },
+      "MIN": {
+        "passRate": 0.5796532475056633,
+        "completionRate": 0.6348004795274209,
+        "sackRate": 0.0977465345837285,
+        "interceptionRate": 0.03467395151279146,
+        "fumbleRate": 0.004475164281810273,
+        "runMean": 4.524554713852851,
+        "completionMean": 11.229460796979106
+      },
+      "PIT": {
+        "passRate": 0.5682589759514654,
+        "completionRate": 0.6561498859866126,
+        "sackRate": 0.06772881100835955,
+        "interceptionRate": 0.015871670422917875,
+        "fumbleRate": 0.003221105256476913,
+        "runMean": 4.4260339795147265,
+        "completionMean": 10.453018937028823
+      },
+      "NYG": {
+        "passRate": 0.5604913597976404,
+        "completionRate": 0.62006050564239,
+        "sackRate": 0.07985093194856019,
+        "interceptionRate": 0.0195661474927582,
+        "fumbleRate": 0.006146017600849584,
+        "runMean": 4.367688212212808,
+        "completionMean": 10.836017171447288
+      },
+      "DET": {
+        "passRate": 0.5703261366854855,
+        "completionRate": 0.6885073795261833,
+        "sackRate": 0.06262763886794914,
+        "interceptionRate": 0.01732413735858291,
+        "fumbleRate": 0.0068427264065105495,
+        "runMean": 4.647441950024943,
+        "completionMean": 11.490109589805403
+      },
+      "LV": {
+        "passRate": 0.6183040160334539,
+        "completionRate": 0.6569382722543359,
+        "sackRate": 0.0940881595407344,
+        "interceptionRate": 0.03099350757960849,
+        "fumbleRate": 0.010900199522259723,
+        "runMean": 3.76041723193537,
+        "completionMean": 9.994648710907391
+      }
+    },
+    "trainingPlays": 64768,
+    "shrinkage": {
+      "BAL": {
+        "historical_weighted_plays": 1446.0,
+        "historical_team_share": 0.8784933171324423,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "DEN": {
+        "historical_weighted_plays": 1562.0,
+        "historical_team_share": 0.8864926220204313,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "BUF": {
+        "historical_weighted_plays": 1529.5,
+        "historical_team_share": 0.8843596415148887,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "SF": {
+        "historical_weighted_plays": 1540.5,
+        "historical_team_share": 0.88509049123815,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "TB": {
+        "historical_weighted_plays": 1566.5,
+        "historical_team_share": 0.8867817718652703,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "NE": {
+        "historical_weighted_plays": 1503.5,
+        "historical_team_share": 0.8825946580569416,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "CAR": {
+        "historical_weighted_plays": 1445.5,
+        "historical_team_share": 0.8784563962321483,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "DAL": {
+        "historical_weighted_plays": 1599.5,
+        "historical_team_share": 0.8888580161155877,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "LAC": {
+        "historical_weighted_plays": 1549.0,
+        "historical_team_share": 0.8856489422527158,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "CHI": {
+        "historical_weighted_plays": 1589.5,
+        "historical_team_share": 0.8882369376920928,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "MIA": {
+        "historical_weighted_plays": 1443.5,
+        "historical_team_share": 0.8783084879829632,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "LA": {
+        "historical_weighted_plays": 1529.5,
+        "historical_team_share": 0.8843596415148887,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "GB": {
+        "historical_weighted_plays": 1461.0,
+        "historical_team_share": 0.8795906080674293,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "PHI": {
+        "historical_weighted_plays": 1506.0,
+        "historical_team_share": 0.8827667057444314,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "CIN": {
+        "historical_weighted_plays": 1553.0,
+        "historical_team_share": 0.8859098687963491,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "NO": {
+        "historical_weighted_plays": 1541.5,
+        "historical_team_share": 0.8851564743037611,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "IND": {
+        "historical_weighted_plays": 1483.0,
+        "historical_team_share": 0.88116458704694,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "ARI": {
+        "historical_weighted_plays": 1547.0,
+        "historical_team_share": 0.8855180309101317,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "CLE": {
+        "historical_weighted_plays": 1548.0,
+        "historical_team_share": 0.88558352402746,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "NYJ": {
+        "historical_weighted_plays": 1474.0,
+        "historical_team_share": 0.8805256869772998,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "ATL": {
+        "historical_weighted_plays": 1532.5,
+        "historical_team_share": 0.8845598845598845,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "HOU": {
+        "historical_weighted_plays": 1565.5,
+        "historical_team_share": 0.8867176437269895,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "KC": {
+        "historical_weighted_plays": 1533.5,
+        "historical_team_share": 0.8846264782232478,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "WAS": {
+        "historical_weighted_plays": 1474.0,
+        "historical_team_share": 0.8805256869772998,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "JAX": {
+        "historical_weighted_plays": 1523.0,
+        "historical_team_share": 0.8839233894370284,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "TEN": {
+        "historical_weighted_plays": 1491.0,
+        "historical_team_share": 0.8817267888823181,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "SEA": {
+        "historical_weighted_plays": 1455.5,
+        "historical_team_share": 0.8791905768649955,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "MIN": {
+        "historical_weighted_plays": 1421.0,
+        "historical_team_share": 0.8766193707587908,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "PIT": {
+        "historical_weighted_plays": 1475.5,
+        "historical_team_share": 0.8806326469710534,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "NYG": {
+        "historical_weighted_plays": 1546.0,
+        "historical_team_share": 0.8854524627720504,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "DET": {
+        "historical_weighted_plays": 1572.0,
+        "historical_team_share": 0.8871331828442438,
+        "current_plays": 0,
+        "current_share": 0.0
+      },
+      "LV": {
+        "historical_weighted_plays": 1434.5,
+        "historical_team_share": 0.8776384215356378,
+        "current_plays": 0,
+        "current_share": 0.0
+      }
+    },
+    "configured_weights": {
+      "2024": 0.5,
+      "2025": 1,
+      "2026": 2
+    },
+    "effective_league_weights": {
+      "2024": 0.5,
+      "2025": 1
+    },
+    "as_of": "2026-09-09T19:11:10.662446+00:00",
+    "season_counts": {
+      "2024": 32652,
+      "2025": 32116
+    },
+    "current_season_note": "No eligible current-season PBP available; historical stabilization only",
+    "sources": [
+      {
+        "season": 2024,
+        "status": "included",
+        "sha256": "23370d5d10f8104d80d46a1fc5e61f4f6f5a3263fe96fe2dd629913cfcb08c06",
+        "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2024.csv.gz"
+      },
+      {
+        "season": 2025,
+        "status": "included",
+        "sha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+        "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2025.csv.gz"
+      },
+      {
+        "season": 2026,
+        "status": "unavailable"
+      }
+    ],
+    "profileId": "bd5d725c1f8137874720d507398a9506c3a7b9856b199338e5eecb40236d43c7"
+  }
+}

@@ -252,3 +252,5 @@ The [Newsroom](newsroom.md) ingests ESPN NFL RSS and official NFL injury-report 
 ## EA Madden NFL 27 personnel diagnostics
 
 Drive Lab imports official public EA structured ratings into immutable local snapshots, with a minimum seven-day cache and no authenticated actions. NFLverse Players V2, current rosters and published depth charts supply identity and starter evidence. These ratings do not influence simulation outcomes. Exact delivery details, field mappings, confidence tiers, refresh commands and source limitations are in [personnel-ratings.md](personnel-ratings.md). Current live PBP uses weighted 2025/2024 data until eligible 2026 observations become available; frozen historical evaluation remains separate.
+
+V2.0-C separately uses Madden attributes for bounded opt-in personnel modifiers. NFLverse opportunity-bearing PBP samples, current roster/depth and existing ESPN opportunity projections provide player usage; missing routes/snaps remain explicit. No new paid or authenticated source is added. See [player-simulation-v2.md](player-simulation-v2.md) for pressure-proxy definitions, role priors, source limitations and unchanged zero-influence controls.
