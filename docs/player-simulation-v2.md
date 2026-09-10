@@ -191,3 +191,7 @@ Validation: **183 tests passed (100 Node, 83 Python), 21 new**, plus strict Type
 Browser verification ran 10,000 games per engine in paired comparison, rendered player distributions and the first-game box score, and expanded Josh Allen’s football/DK distributions. Personnel-only browser runtime was 3.32 seconds in that check; Node benchmark timings above are from the fixed release receipt.
 
 Release: Cloudflare version `c903230d-ca04-4c0b-b943-23e2bec44b5e`, on the existing domains. All 13 available matchups completed under both player engines (26 release checks). Paired-run cancellation was verified. No production D1 migration, new Cron trigger, authenticated provider action or V1 replacement occurred.
+
+## V2.0-D — expected-active personnel
+
+Drive Lab now supports current availability, depth-driven replacements, historical snap-informed rotations, weighted Madden evidence, conserved opportunity redistribution and ephemeral ACTIVE/LIMITED/OUT controls. V1 and legacy V2 controls are preserved; V2 Base uses the same availability scenario with zero Madden influence. See [availability and workload](availability-and-workload.md) for sources, unfitted participation priors, all 32 team audit results, remaining gaps and the 10,000-game scenario receipt. This supersedes first-string-only/complete-evidence limitations in historical sections above.

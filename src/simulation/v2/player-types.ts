@@ -1,9 +1,9 @@
 export type Position='QB'|'RB'|'WR'|'TE';
 export interface PlayerInput {player_id:string;name:string;team:string;position:Position;active:boolean;starter:boolean;detailed:boolean;salary:number|null;salary_as_of:string|null;shares:Record<string,number>;scramble_share:number;madden_attributes:Record<string,number>|null;madden_identity:string;flags:string[];}
 export interface Pressure {probability:number;sack_given_pressure:number;scramble_given_pressure:number;incomplete_given_pressure:number;source:string;}
-export interface PlayerTeam {qb_id:string;players:PlayerInput[];pressure:Pressure;}
+export interface PlayerTeam {qb_id:string;players:PlayerInput[];pressure:Pressure;qb_shares?:Record<string,number>;}
 export interface PlayerSnapshot {version:string;snapshot_id:string;as_of:string;roster_snapshot:string;roster_at:string;madden_snapshot:string;personnel_snapshot:string;salary_snapshot:string;salary_as_of:string;teams:Record<string,PlayerTeam>;}
-export interface Unit {rating:number|null;complete:boolean;confidence:string;}
+export interface Unit {rating:number|null;complete:boolean;confidence:string;coverage?:number;scale?:number;missing?:string[];}
 export interface PersonnelSnapshot {snapshot_id:string;ratings_snapshot_id:string;units:Record<string,Record<string,Unit>>;}
 export interface InfluenceConfig {version:string;levels:Record<string,number>;pressurePerRatingPoint:number;maxPressureDelta:number;pressureBounds:[number,number];completionPerRatingPoint:number;maxCompletionDelta:number;completionBounds:[number,number];runShapePerRatingPoint:number;completionShapePerRatingPoint:number;maxShapeTilt:number;runExplosiveYards:number;completionExplosiveYards:number;receivingAttributes:Record<string,number>;runShapeScores:Record<string,number>;minimumReceivingCoverage:number;}
 export interface PlayerStats {pass_attempts:number;completions:number;passing_yards:number;passing_tds:number;interceptions:number;sacks_taken:number;carries:number;designed_runs:number;scrambles:number;rushing_yards:number;rushing_tds:number;targets:number;receptions:number;receiving_yards:number;receiving_tds:number;fumbles_lost:number;}

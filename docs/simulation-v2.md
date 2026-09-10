@@ -161,3 +161,7 @@ Drive Lab now shows Fantasy Player Outcomes, expandable stat/DK quantiles, first
 Recommended V2.0-D: freeze pregame player forecasts from both variants, ingest final actuals, and evaluate usage/yard/TD/DK calibration with an untouched cohort before modifying coefficients. V2.0-C does not establish calibrated accuracy, tournament performance or V1 replacement. Do not proceed beyond this milestone automatically.
 
 Published V2.0-C on both existing custom domains as version `c903230d-ca04-4c0b-b943-23e2bec44b5e`. The Worker API/D1 configuration is unchanged; simulations run in the browser. The scheduled public research/news refresh completed through the existing workflow and its validated snapshots were included in the release. Browser cancellation discarded partial paired-run results correctly.
+
+## V2.0-D — expected-active personnel
+
+Drive Lab now supports current availability, depth-driven replacements, historical snap-informed rotations, weighted Madden evidence, conserved opportunity redistribution and ephemeral ACTIVE/LIMITED/OUT controls. V1 and legacy V2 controls are preserved; V2 Base uses the same availability scenario with zero Madden influence. See [availability and workload](availability-and-workload.md) for sources, unfitted participation priors, all 32 team audit results, remaining gaps and the 10,000-game scenario receipt. This supersedes first-string-only/complete-evidence limitations in historical sections above.

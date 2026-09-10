@@ -319,3 +319,7 @@ The experimental Drive Lab now supports V2 Base, V2 Personnel and matched compar
 New modules: `player-types.ts`, `personnel-influence.ts`, `player-engine.ts`, `player-bulk.ts`; builder `scripts/build_v2_players.py`; configuration `config/v2-personnel.json` and `config/v2-opportunity.json`; UI `public/drive-lab/player-views.js`. The browser retains bounded numeric draws and optional first-game debug output, with no per-play D1 writes. V1 code and recommendations remain unchanged. Tests: 183 passing plus TypeScript. See [full V2 player methodology and benchmark](docs/player-simulation-v2.md).
 
 Next proposed milestone is frozen pregame player forecast evaluation and final-actual calibration, after review of V2.0-C. No field simulation, lineup optimization, news-driven substitution or production V1 replacement is included.
+
+## Simulation V2.0-D
+
+Expected-active personnel and workload redistribution are implemented in Drive Lab. Official injury/practice evidence, canonical roster/depth, historical snap context and Madden attributes feed a pure preparation step before Base/Personnel simulations. Scenario controls and source-grounded player explanations preserve official snapshots. See [availability and workload](docs/availability-and-workload.md) for the release audit and known limits. Next proposed milestone: freeze pregame availability inputs and evaluate final workload; no automatic expansion beyond V2.0-D.

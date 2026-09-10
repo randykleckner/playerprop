@@ -36,7 +36,9 @@
     "v2:live:refresh": "python3 scripts/refresh_v2_live.py",
     "v2:live:build": "python3 scripts/build_v2_live.py",
     "v2:players:build": "python3 scripts/build_v2_players.py",
-    "v2:benchmark:players": "node scripts/benchmark_v2_c.mjs"
+    "v2:benchmark:players": "node scripts/benchmark_v2_c.mjs",
+    "v2:availability:build": "python3 scripts/build_v2_availability.py",
+    "v2:availability:report": "node scripts/report_v2_d.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260903.1",

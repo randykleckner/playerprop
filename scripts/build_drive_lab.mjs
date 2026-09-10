@@ -5,3 +5,6 @@ writeFileSync('public/drive-lab/examples.json',JSON.stringify({capturedAt:input.
 writeFileSync('public/drive-lab/evaluation.json',readFileSync('docs/simulation-v2-b-evaluation.json'));
 
 writeFileSync('public/drive-lab/personnel-config.json',readFileSync('config/v2-personnel.json'));
+
+await build({entryPoints:['src/simulation/v2/availability.ts'],outfile:'public/drive-lab/availability-engine.js',bundle:true,format:'esm',platform:'browser',target:'es2022',minify:true});
+writeFileSync('public/drive-lab/availability-config.json',readFileSync('config/v2-availability.json'));

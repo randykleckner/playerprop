@@ -1,0 +1,103 @@
+{
+  "version": "V2.0-D-availability-1",
+  "freshnessHours": 24,
+  "fullCoverage": 0.9,
+  "minimumCoverage": 0.7,
+  "statusPriors": {
+    "ACTIVE": [
+      1,
+      1
+    ],
+    "LIMITED": [
+      1,
+      0.7
+    ],
+    "QUESTIONABLE": [
+      0.75,
+      1
+    ],
+    "DOUBTFUL": [
+      0.25,
+      1
+    ],
+    "OUT": [
+      0,
+      0
+    ],
+    "IR/PUP": [
+      0,
+      0
+    ],
+    "SUSPENDED": [
+      0,
+      0
+    ],
+    "INACTIVE": [
+      0,
+      0
+    ],
+    "UNKNOWN": [
+      1,
+      1
+    ]
+  },
+  "rotation": {
+    "line": [
+      1
+    ],
+    "front": [
+      0.7,
+      0.2,
+      0.1
+    ],
+    "secondary": [
+      0.9,
+      0.1
+    ]
+  },
+  "redistribution": {
+    "carry": {
+      "QB": 0.1,
+      "RB": 1,
+      "WR": 0.1,
+      "TE": 0.02
+    },
+    "target": {
+      "QB": 0,
+      "RB": 0.3,
+      "WR": 1,
+      "TE": 0.7
+    }
+  },
+  "notes": "Unfitted sensitivity priors, not medical probabilities. UNKNOWN on a current active roster retains baseline workload with low confidence. Missing reserve evidence has no OL starter weight. Full at 90%; 70-90% scaled by observed coverage; below 70% disabled. Defensive rotation weights are depth-role priors, not measured snaps.",
+  "roleWeights": {
+    "secondary": {
+      "LCB": 1,
+      "RCB": 1,
+      "FS": 0.95,
+      "SS": 0.95,
+      "NB": 0.65
+    },
+    "pass_rush": {
+      "LDE": 1,
+      "RDE": 1,
+      "LDT": 0.7,
+      "RDT": 0.7,
+      "NT": 0.6,
+      "WLB": 1,
+      "SLB": 1
+    },
+    "run_front": {
+      "LDE": 0.9,
+      "RDE": 0.9,
+      "LDT": 0.85,
+      "RDT": 0.85,
+      "NT": 0.85,
+      "WLB": 0.85,
+      "SLB": 0.85,
+      "MLB": 1,
+      "LILB": 1,
+      "RILB": 1
+    }
+  }
+}

@@ -1,0 +1,2896 @@
+{
+  "personnel_snapshot": "madden27-d83a029c1910cd1d89561585-05eba91f1dfe68f24e62",
+  "built_at": "2026-09-09T19:15:24.170348+00:00",
+  "definition": "Six unit channels; partial and disabled overlap: the old model disables any incomplete unit. Receiving uses its existing 90% threshold.",
+  "teams": {
+    "ARI": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0037004",
+              "name": "Hunter Long",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "ATL": {
+      "complete": 4,
+      "partial": 2,
+      "disabled": 2,
+      "causes": {
+        "missing Madden mapping": 3
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039070",
+              "name": "Gervon Dexter Sr.",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039070",
+              "name": "Gervon Dexter Sr.",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0036463",
+              "name": "Chris Blair",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "BAL": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "BUF": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0036988",
+              "name": "Josh Palmer",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "CAR": {
+      "complete": 5,
+      "partial": 1,
+      "disabled": 1,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0035687",
+              "name": "Bobby Okereke",
+              "role": "RILB",
+              "reason": "missing Madden mapping",
+              "detail": "RILB: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "CHI": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "CIN": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0040785",
+              "name": "Dohnte Meyers",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "CLE": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "DAL": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0038705",
+              "name": "Emari Demercado",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "DEN": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "DET": {
+      "complete": 4,
+      "partial": 2,
+      "disabled": 2,
+      "causes": {
+        "missing roster evidence": 2,
+        "missing Madden mapping": 2
+      },
+      "units": {
+        "pass_protection": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0011237",
+              "name": "Blake Miller",
+              "role": "RT",
+              "reason": "missing roster evidence",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "run_block": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0011237",
+              "name": "Blake Miller",
+              "role": "RT",
+              "reason": "missing roster evidence",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0037524",
+              "name": "Tay Martin",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040390",
+              "name": "Jackson Meeks",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "GB": {
+      "complete": 3,
+      "partial": 3,
+      "disabled": 3,
+      "causes": {
+        "missing Madden mapping": 6
+      },
+      "units": {
+        "pass_protection": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0037817",
+              "name": "Zach Bako-Bewele",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "run_block": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0037817",
+              "name": "Zach Bako-Bewele",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0033858",
+              "name": "Jonnu Smith",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040142",
+              "name": "Kaleb Johnson",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040598",
+              "name": "Mark Redman",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040948",
+              "name": "J. Michael Sturdivant",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "HOU": {
+      "complete": 5,
+      "partial": 1,
+      "disabled": 1,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0038608",
+              "name": "Kayshon Boutte",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "IND": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0037292",
+              "name": "Andrew Ogletree",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "JAX": {
+      "complete": 5,
+      "partial": 1,
+      "disabled": 1,
+      "causes": {
+        "missing Madden mapping": 2
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0040718",
+              "name": "Travis Hunter",
+              "role": "LCB",
+              "reason": "missing Madden mapping",
+              "detail": "LCB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0040718",
+              "name": "Travis Hunter",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "KC": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "LA": {
+      "complete": 0,
+      "partial": 0,
+      "disabled": 6,
+      "causes": {
+        "missing Madden mapping": 40,
+        "missing starter": 2
+      },
+      "units": {
+        "pass_protection": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0036603",
+              "name": "Alaric Jackson",
+              "role": "LT",
+              "reason": "missing Madden mapping",
+              "detail": "LT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039058",
+              "name": "Steve Avila",
+              "role": "LG",
+              "reason": "missing Madden mapping",
+              "detail": "LG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034114",
+              "name": "Coleman Shelton",
+              "role": "C",
+              "reason": "missing Madden mapping",
+              "detail": "C: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036339",
+              "name": "Kevin Dotson",
+              "role": "RG",
+              "reason": "missing Madden mapping",
+              "detail": "RG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039077",
+              "name": "Warren McClendon Jr.",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_block": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0036603",
+              "name": "Alaric Jackson",
+              "role": "LT",
+              "reason": "missing Madden mapping",
+              "detail": "LT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039058",
+              "name": "Steve Avila",
+              "role": "LG",
+              "reason": "missing Madden mapping",
+              "detail": "LG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034114",
+              "name": "Coleman Shelton",
+              "role": "C",
+              "reason": "missing Madden mapping",
+              "detail": "C: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036339",
+              "name": "Kevin Dotson",
+              "role": "RG",
+              "reason": "missing Madden mapping",
+              "detail": "RG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039077",
+              "name": "Warren McClendon Jr.",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039138",
+              "name": "Kobie Turner",
+              "role": "LDE",
+              "reason": "missing Madden mapping",
+              "detail": "LDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034234",
+              "name": "Poona Ford",
+              "role": "NT",
+              "reason": "missing Madden mapping",
+              "detail": "NT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0031388",
+              "name": "Aaron Donald",
+              "role": "RDE",
+              "reason": "missing starter",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": null
+            },
+            {
+              "player_id": "00-0039137",
+              "name": "Byron Young",
+              "role": "WLB",
+              "reason": "missing Madden mapping",
+              "detail": "WLB: no active, corroborated rated starter",
+              "mapping_evidence": null
+            },
+            {
+              "player_id": "00-0033868",
+              "name": "Myles Garrett",
+              "role": "SLB",
+              "reason": "missing Madden mapping",
+              "detail": "SLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039138",
+              "name": "Kobie Turner",
+              "role": "LDE",
+              "reason": "missing Madden mapping",
+              "detail": "LDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034234",
+              "name": "Poona Ford",
+              "role": "NT",
+              "reason": "missing Madden mapping",
+              "detail": "NT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0031388",
+              "name": "Aaron Donald",
+              "role": "RDE",
+              "reason": "missing starter",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": null
+            },
+            {
+              "player_id": "00-0039137",
+              "name": "Byron Young",
+              "role": "WLB",
+              "reason": "missing Madden mapping",
+              "detail": "WLB: no active, corroborated rated starter",
+              "mapping_evidence": null
+            },
+            {
+              "player_id": "00-0037587",
+              "name": "Nate Landman",
+              "role": "LILB",
+              "reason": "missing Madden mapping",
+              "detail": "LILB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039774",
+              "name": "Omar Speights",
+              "role": "RILB",
+              "reason": "missing Madden mapping",
+              "detail": "RILB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0033868",
+              "name": "Myles Garrett",
+              "role": "SLB",
+              "reason": "missing Madden mapping",
+              "detail": "SLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "secondary": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0037195",
+              "name": "Jaylen Watson",
+              "role": "LCB",
+              "reason": "missing Madden mapping",
+              "detail": "LCB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039834",
+              "name": "Kamren Kinchens",
+              "role": "SS",
+              "reason": "missing Madden mapping",
+              "detail": "SS: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036349",
+              "name": "Kam Curl",
+              "role": "FS",
+              "reason": "missing Madden mapping",
+              "detail": "FS: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0037191",
+              "name": "Trent McDuffie",
+              "role": "RCB",
+              "reason": "missing Madden mapping",
+              "detail": "RCB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0037841",
+              "name": "Quentin Lake",
+              "role": "NB",
+              "reason": "missing Madden mapping",
+              "detail": "NB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "receiving": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0031381",
+              "name": "Davante Adams",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0033110",
+              "name": "Tyler Higbee",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0036244",
+              "name": "Colby Parkinson",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0036849",
+              "name": "Tutu Atwell",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0037557",
+              "name": "Ronnie Rivers",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0037840",
+              "name": "Kyren Williams",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0038359",
+              "name": "Xavier Smith",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039074",
+              "name": "Davis Allen",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039075",
+              "name": "Puka Nacua",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039738",
+              "name": "Blake Corum",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039751",
+              "name": "Jordan Whittington",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040590",
+              "name": "Konata Mumpfield",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040737",
+              "name": "Terrance Ferguson",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041399",
+              "name": "CJ Daniels",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041510",
+              "name": "Max Klare",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "LAC": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "LV": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0037304",
+              "name": "Connor Heyward",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "MIA": {
+      "complete": 2,
+      "partial": 4,
+      "disabled": 4,
+      "causes": {
+        "missing roster evidence": 2,
+        "missing Madden mapping": 4
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0031557",
+              "name": "Jordan Phillips",
+              "role": "LDT",
+              "reason": "missing roster evidence",
+              "detail": "LDT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0031557",
+              "name": "Jordan Phillips",
+              "role": "LDT",
+              "reason": "missing roster evidence",
+              "detail": "LDT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "secondary": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039156",
+              "name": "Julius Brents",
+              "role": "RCB",
+              "reason": "missing Madden mapping",
+              "detail": "RCB: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "receiving": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0038824",
+              "name": "Ryan Miller",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041077",
+              "name": "Justin Joly",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041436",
+              "name": "DJ Herman",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "MIN": {
+      "complete": 5,
+      "partial": 1,
+      "disabled": 1,
+      "causes": {
+        "missing roster evidence": 1,
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0029606",
+              "name": "Harrison Smith",
+              "role": "FS",
+              "reason": "missing roster evidence",
+              "detail": "FS: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0040509",
+              "name": "Ben Yurosek",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "NE": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 3
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0038564",
+              "name": "Cameron Latu",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040556",
+              "name": "Corey Kiner",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041314",
+              "name": "Tanner Arkin",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "NO": {
+      "complete": 4,
+      "partial": 2,
+      "disabled": 2,
+      "causes": {
+        "missing Madden mapping": 2
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0038387",
+              "name": "Colby Wooden",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0038387",
+              "name": "Colby Wooden",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "NYG": {
+      "complete": 0,
+      "partial": 0,
+      "disabled": 6,
+      "causes": {
+        "missing Madden mapping": 41
+      },
+      "units": {
+        "pass_protection": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0036386",
+              "name": "Andrew Thomas",
+              "role": "LT",
+              "reason": "missing Madden mapping",
+              "detail": "LT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036246",
+              "name": "Jon Runyan",
+              "role": "LG",
+              "reason": "missing Madden mapping",
+              "detail": "LG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039019",
+              "name": "John Michael Schmitz",
+              "role": "C",
+              "reason": "missing Madden mapping",
+              "detail": "C: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0041505",
+              "name": "Francis Mauigoa",
+              "role": "RG",
+              "reason": "missing Madden mapping",
+              "detail": "RG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0033290",
+              "name": "Jermaine Eluemunor",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_block": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0036386",
+              "name": "Andrew Thomas",
+              "role": "LT",
+              "reason": "missing Madden mapping",
+              "detail": "LT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036246",
+              "name": "Jon Runyan",
+              "role": "LG",
+              "reason": "missing Madden mapping",
+              "detail": "LG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039019",
+              "name": "John Michael Schmitz",
+              "role": "C",
+              "reason": "missing Madden mapping",
+              "detail": "C: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0041505",
+              "name": "Francis Mauigoa",
+              "role": "RG",
+              "reason": "missing Madden mapping",
+              "detail": "RG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0033290",
+              "name": "Jermaine Eluemunor",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0031270",
+              "name": "Shelby Harris",
+              "role": "LDE",
+              "reason": "missing Madden mapping",
+              "detail": "LDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0032424",
+              "name": "DJ Reader",
+              "role": "NT",
+              "reason": "missing Madden mapping",
+              "detail": "NT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036982",
+              "name": "Chauncey Golston",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0035713",
+              "name": "Brian Burns",
+              "role": "WLB",
+              "reason": "missing Madden mapping",
+              "detail": "WLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0040677",
+              "name": "Abdul Carter",
+              "role": "SLB",
+              "reason": "missing Madden mapping",
+              "detail": "SLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0031270",
+              "name": "Shelby Harris",
+              "role": "LDE",
+              "reason": "missing Madden mapping",
+              "detail": "LDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0032424",
+              "name": "DJ Reader",
+              "role": "NT",
+              "reason": "missing Madden mapping",
+              "detail": "NT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036982",
+              "name": "Chauncey Golston",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0035713",
+              "name": "Brian Burns",
+              "role": "WLB",
+              "reason": "missing Madden mapping",
+              "detail": "WLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0041509",
+              "name": "Arvell Reese",
+              "role": "LILB",
+              "reason": "missing Madden mapping",
+              "detail": "LILB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034673",
+              "name": "Tremaine Edmunds",
+              "role": "RILB",
+              "reason": "missing Madden mapping",
+              "detail": "RILB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0040677",
+              "name": "Abdul Carter",
+              "role": "SLB",
+              "reason": "missing Madden mapping",
+              "detail": "SLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "secondary": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039000",
+              "name": "Deonte Banks",
+              "role": "LCB",
+              "reason": "missing Madden mapping",
+              "detail": "LCB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039861",
+              "name": "Tyler Nubin",
+              "role": "SS",
+              "reason": "missing Madden mapping",
+              "detail": "SS: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036998",
+              "name": "Jevon Holland",
+              "role": "FS",
+              "reason": "missing Madden mapping",
+              "detail": "FS: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036996",
+              "name": "Greg Newsome II",
+              "role": "RCB",
+              "reason": "missing Madden mapping",
+              "detail": "RCB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039821",
+              "name": "Andru Phillips",
+              "role": "NB",
+              "reason": "missing Madden mapping",
+              "detail": "NB: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "receiving": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0031235",
+              "name": "Odell Beckham Jr.",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0031484",
+              "name": "Chris Manhertz",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0033376",
+              "name": "Patrick Ricard",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0035250",
+              "name": "Devin Singletary",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0035535",
+              "name": "Darius Slayton",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0036309",
+              "name": "Darnell Mooney",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0036893",
+              "name": "Najee Harris",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0037838",
+              "name": "Isaiah Likely",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039337",
+              "name": "Malik Nabers",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039384",
+              "name": "Tyrone Tracy Jr.",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039847",
+              "name": "Theo Johnson",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040225",
+              "name": "Thomas Fidone II",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040715",
+              "name": "Cam Skattebo",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041042",
+              "name": "Malachi Fields",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "NYJ": {
+      "complete": 0,
+      "partial": 0,
+      "disabled": 6,
+      "causes": {
+        "missing Madden mapping": 41
+      },
+      "units": {
+        "pass_protection": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039790",
+              "name": "Olumuyiwa Fashanu",
+              "role": "LT",
+              "reason": "missing Madden mapping",
+              "detail": "LT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0037255",
+              "name": "Dylan Parham",
+              "role": "LG",
+              "reason": "missing Madden mapping",
+              "detail": "LG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036622",
+              "name": "Josh Myers",
+              "role": "C",
+              "reason": "missing Madden mapping",
+              "detail": "C: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039145",
+              "name": "Joe Tippmann",
+              "role": "RG",
+              "reason": "missing Madden mapping",
+              "detail": "RG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0040123",
+              "name": "Armand Membou",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_block": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0039790",
+              "name": "Olumuyiwa Fashanu",
+              "role": "LT",
+              "reason": "missing Madden mapping",
+              "detail": "LT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0037255",
+              "name": "Dylan Parham",
+              "role": "LG",
+              "reason": "missing Madden mapping",
+              "detail": "LG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036622",
+              "name": "Josh Myers",
+              "role": "C",
+              "reason": "missing Madden mapping",
+              "detail": "C: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039145",
+              "name": "Joe Tippmann",
+              "role": "RG",
+              "reason": "missing Madden mapping",
+              "detail": "RG: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0040123",
+              "name": "Armand Membou",
+              "role": "RT",
+              "reason": "missing Madden mapping",
+              "detail": "RT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0037083",
+              "name": "Kingsley Enagbare",
+              "role": "LDE",
+              "reason": "missing Madden mapping",
+              "detail": "LDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039886",
+              "name": "T'Vondre Sweat",
+              "role": "LDT",
+              "reason": "missing Madden mapping",
+              "detail": "LDT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034782",
+              "name": "Harrison Phillips",
+              "role": "RDT",
+              "reason": "missing Madden mapping",
+              "detail": "RDT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039142",
+              "name": "Will McDonald IV",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0037083",
+              "name": "Kingsley Enagbare",
+              "role": "LDE",
+              "reason": "missing Madden mapping",
+              "detail": "LDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039886",
+              "name": "T'Vondre Sweat",
+              "role": "LDT",
+              "reason": "missing Madden mapping",
+              "detail": "LDT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034782",
+              "name": "Harrison Phillips",
+              "role": "RDT",
+              "reason": "missing Madden mapping",
+              "detail": "RDT: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039142",
+              "name": "Will McDonald IV",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0029607",
+              "name": "Demario Davis",
+              "role": "WLB",
+              "reason": "missing Madden mapping",
+              "detail": "WLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036500",
+              "name": "Jamien Sherwood",
+              "role": "MLB",
+              "reason": "missing Madden mapping",
+              "detail": "MLB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0040186",
+              "name": "Francisco Mauigoa",
+              "role": "SLB",
+              "reason": "missing Madden mapping",
+              "detail": "SLB: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "secondary": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0036986",
+              "name": "Nahshon Wright",
+              "role": "LCB",
+              "reason": "missing Madden mapping",
+              "detail": "LCB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0038123",
+              "name": "Dane Belton",
+              "role": "SS",
+              "reason": "missing Madden mapping",
+              "detail": "SS: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0034789",
+              "name": "Minkah Fitzpatrick",
+              "role": "FS",
+              "reason": "missing Madden mapping",
+              "detail": "FS: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0036987",
+              "name": "Brandon Stephens",
+              "role": "RCB",
+              "reason": "missing Madden mapping",
+              "detail": "RCB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            },
+            {
+              "player_id": "00-0039372",
+              "name": "Jarvis Brownlee Jr.",
+              "role": "NB",
+              "reason": "missing Madden mapping",
+              "detail": "NB: no active, corroborated rated starter",
+              "mapping_evidence": [
+                "Unique name candidate; team or position not corroborated"
+              ]
+            }
+          ]
+        },
+        "receiving": {
+          "complete": false,
+          "partial": false,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0033375",
+              "name": "Tim Patrick",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0034959",
+              "name": "Andrew Beck",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0036842",
+              "name": "Kene Nwangwu",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0037740",
+              "name": "Garrett Wilson",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0037755",
+              "name": "Jelani Woods",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0037805",
+              "name": "Jeremy Ruckert",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0038120",
+              "name": "Breece Hall",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039451",
+              "name": "Isaiah Williams",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039794",
+              "name": "Braelon Allen",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039798",
+              "name": "Isaiah Davis",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0039890",
+              "name": "Adonai Mitchell",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040582",
+              "name": "Arian Smith",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040736",
+              "name": "Mason Taylor",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041032",
+              "name": "Kenyon Sadiq",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0041511",
+              "name": "Omar Cooper Jr.",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "PHI": {
+      "complete": 4,
+      "partial": 2,
+      "disabled": 2,
+      "causes": {
+        "missing roster evidence": 2,
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "",
+              "name": "",
+              "role": "NT",
+              "reason": "missing roster evidence",
+              "detail": "NT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "",
+              "name": "",
+              "role": "NT",
+              "reason": "missing roster evidence",
+              "detail": "NT: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0038498",
+              "name": "E.J. Jenkins",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "PIT": {
+      "complete": 4,
+      "partial": 2,
+      "disabled": 2,
+      "causes": {
+        "missing Madden mapping": 2
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0027969",
+              "name": "Cameron Heyward",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "run_front": {
+          "complete": false,
+          "partial": true,
+          "disabled": true,
+          "missing": [
+            {
+              "player_id": "00-0027969",
+              "name": "Cameron Heyward",
+              "role": "RDE",
+              "reason": "missing Madden mapping",
+              "detail": "RDE: no active, corroborated rated starter",
+              "mapping_evidence": null
+            }
+          ]
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "SEA": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 2
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0040058",
+              "name": "Nick Kallerup",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040621",
+              "name": "Montorie Foster Jr",
+              "role": "WR",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "SF": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "TB": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {},
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        }
+      }
+    },
+    "TEN": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 2
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0039648",
+              "name": "David Martin-Robinson",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            },
+            {
+              "player_id": "00-0040886",
+              "name": "Nicholas Singleton",
+              "role": "RB",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    },
+    "WAS": {
+      "complete": 6,
+      "partial": 0,
+      "disabled": 0,
+      "causes": {
+        "missing Madden mapping": 1
+      },
+      "units": {
+        "pass_protection": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_block": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "pass_rush": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "run_front": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "secondary": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": []
+        },
+        "receiving": {
+          "complete": true,
+          "partial": false,
+          "disabled": false,
+          "missing": [
+            {
+              "player_id": "00-0039686",
+              "name": "Colson Yankoff",
+              "role": "TE",
+              "reason": "missing Madden mapping"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

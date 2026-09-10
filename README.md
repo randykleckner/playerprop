@@ -93,3 +93,7 @@ Drive Lab is available at `/drive-lab/` as a separate experimental page. It supp
 Drive Lab's current-data/personnel foundation is documented in [personnel-ratings.md](docs/personnel-ratings.md). Use `npm run personnel:import`, `npm run v2:live:refresh`, `npm run drive-lab:build`, then `npm run personnel:build` to refresh the manual diagnostic bundle. `npm run personnel:diagnose -- --away BUF --home HOU` prints starter evidence and unit comparisons. Madden ratings are diagnostic only, with a minimum seven-day cache; the existing research/news schedule does not refresh EA.
 
 V2.0-C adds separately selectable Base/Personnel player outcomes in Drive Lab. After refreshing the source snapshots, run `npm run v2:players:build` then `npm run drive-lab:build`; `npm run v2:benchmark:players` records the 1,000/10,000-game comparison. See [player simulation methodology and release receipt](docs/player-simulation-v2.md). V1 remains the DFS model.
+
+## Simulation V2.0-D
+
+Expected-active personnel and workload redistribution are implemented in Drive Lab. Official injury/practice evidence, canonical roster/depth, historical snap context and Madden attributes feed a pure preparation step before Base/Personnel simulations. Scenario controls and source-grounded player explanations preserve official snapshots. See [availability and workload](docs/availability-and-workload.md) for the release audit and known limits. Next proposed milestone: freeze pregame availability inputs and evaluate final workload; no automatic expansion beyond V2.0-D.
