@@ -1,4 +1,4 @@
-import {matchupGraphic} from '../ui/components.js?v=ui-polish-2';
+import {matchupGraphic} from '../ui/components.js?v=ui-polish-5';
 import {prepareAvailability} from './availability-engine.js';
 import {renderActive,scenarioOptions} from './availability-views.js';
 import {renderFantasy} from './player-views.js';

@@ -42,3 +42,13 @@ Curated recommendation drilldowns, dense Props/detail redesign, Drive Lab and Si
 
 ### Verification
 Full regression suite passed (154 JavaScript tests, 93 Python tests). TypeScript passed. Browser checks covered prop filtering/detail, injury filtering/source detail, Drive Lab game switching and a 100-game run, Simulation Station player search and a 1,000-draw run, saved scenario creation/library/reload, stored analytics rendering and mobile page widths. The Drive Lab selector was visually verified at desktop and 390px mobile widths. No backend analytical changes or deployment.
+
+## Visual polish sprint — September 11, 2026
+
+Preserved routes, the shared shell, Builder structure, research bundle joins, optimizer, and simulation calculations. Added shared portrait sizes, avatar groups, position pills, strategy/action SVGs, sportsbook badges, confidence meters, stack previews, and histogram markers. Portraits resolve through the existing catalogs with a headshot → team logo → initials fallback, including failed image requests.
+
+Recommendations now distinguish overall, floor strategy, and upside stacks through restrained green/teal/purple accents, stronger projection hierarchy, player clusters, and actual required-player connections with bring-back labels. No floor, ownership, correlation, or win probabilities were invented. Builder uses lock/unlock and exclude icons, descriptive empty positions, and player matchup metadata. Props adds score meters, book badges, and portrait/team identity in details. Saved lineups share the player clusters; news sources use compact badges.
+
+Simulation charts now mark projection, median, P25/P75, and a sportsbook reference only when provided, using histogram bin boundaries. Seed controls are under Advanced; Drive engine/assumption controls are collapsed. Fixed control movement to use the detached inspector's own subtree. Methodology remains available in disclosures, and archived/stale/fallback notices remain visible.
+
+Validation: TypeScript check; syntax checks for changed JavaScript; 158 JavaScript and 93 Python tests passed. Added tests for missing confidence, bounded meters, chart marker placement, canonical avatar identities, stack bring-backs, and catalog fallback order. Live browser checks covered loaded portraits, recommendation cards at 1280px and 390px (no document overflow), simulation execution and markers, Advanced seed placement, Builder lock/unlock (restored prior state), Props detail dialog, and NO vs DET selector/team logos. Local static Props preview cannot serve the live API and correctly displays its saved-data fallback notice.
