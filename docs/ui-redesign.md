@@ -26,3 +26,19 @@ Curated recommendation drilldowns, dense Props/detail redesign, Drive Lab and Si
 - Existing mean optimizer result matches the published baseline lineup projection. Canonical player IDs survive recommendation transfers.
 - Local preview: Python static server on port 4173; API-dependent legacy pages require the normal Worker environment. No deployment performed.
 - Repository-wide whitespace check reports a pre-existing trailing blank line in scripts/build_v2_availability.py; that file was not changed by this increment.
+
+## Second increment — all-page visual migration
+- All existing routes now use a light workspace, navy navigation, compact controls and shared tables. Removed the temporary legacy dark palette. Root route now opens the redesigned Home.
+- Home aggregates real slate games, recommendations, source freshness and current news; existing shared model insights remain available in a disclosure.
+- Recommendations use compact overview cards with expandable rosters and floor/ceiling/stack view links. Builder handoffs are retained. Floor and ceiling strategies remain honestly labeled proxies.
+- Props is a searchable, market-filtered table with an in-place detail dialog. Existing matchup card/chart remains in the detail disclosure. Confidence is not misrepresented as a probability; receptions are included in Receiving.
+- News is a dense sourced table with status filters and detail dialogs, including practice participation and report times.
+- Drive Lab has a game selector in the toolbar, an inspector, and tabs for overview, matchup, projections, what-if and evidence. Existing engines/parameters are preserved. The game selector explicitly displays NO vs DET with a chevron, hover and keyboard focus styles; fixed zero-size font inheritance.
+- Simulation Station has searchable arbitrary player selection, a primary distribution view, percentiles and a settings inspector. Full player/roster workbench, stacks, candidate lineups and scenarios remain available.
+- Analytics promotes stored historical diagnostics and positional charts; methodology remains available. No invented ROI or accuracy percentages.
+- Saved content has compact lineup and scenario tabs; existing IndexedDB configurations can be loaded through library links. Settings provides persisted table density and source/storage details.
+- Added shared player-headshot enhancement using the existing canonical-ID media catalog; initials remain the fallback.
+- Asset versions prevent older cached scripts and styles from mixing with the redesigned pages.
+
+### Verification
+Full regression suite passed (154 JavaScript tests, 93 Python tests). TypeScript passed. Browser checks covered prop filtering/detail, injury filtering/source detail, Drive Lab game switching and a 100-game run, Simulation Station player search and a 1,000-draw run, saved scenario creation/library/reload, stored analytics rendering and mobile page widths. The Drive Lab selector was visually verified at desktop and 390px mobile widths. No backend analytical changes or deployment.

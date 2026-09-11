@@ -1,6 +1,6 @@
 import {get} from '/modeling/store.js';
 import {json} from '/modeling/sources.js';
-import {esc as e,decimal as n,money} from '/ui/components.js';
+import {esc as e,decimal as n,money} from '/ui/components.js?v=ui-polish-2';
 import {loadResearch,snapshotState} from '/research/readiness.js';
 import {activeStories} from '/newsroom/shared.js';
 const $=id=>document.getElementById(id);

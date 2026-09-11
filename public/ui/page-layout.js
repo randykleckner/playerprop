@@ -10,12 +10,12 @@ export function layoutPage(){
  if(path==='/drive-lab/'||path==='/drive-lab/index.html'){
   heading(main.querySelector('.drive-intro'),'Drive Lab','Explore a game, its matchups, and the players shaping the outcome.');
   const intro=main.querySelector('.drive-intro');main.prepend(intro);
-  const controls=main.querySelector(':scope > .drive-controls');moveContext('game');
-  const grid=el('div','ui-page-grid'),primary=el('div','ui-page-primary'),inspector=el('aside','ui-page-inspector','<h2>Game controls</h2>');inspector.setAttribute('aria-label','Game controls');inspector.append(controls);
-  for(const id of ['input-note','status'])if($(id))primary.append($(id));
+  const controls=main.querySelector(':scope > .drive-controls');moveContext('game');$('game')?.setAttribute('aria-label','Select game matchup');$('game')?.setAttribute('title','Choose a game to analyze');
+  const grid=el('div','ui-page-grid'),primary=el('div','ui-page-primary'),inspector=el('aside','ui-page-inspector','<h2>Game controls</h2>');inspector.setAttribute('aria-label','Game controls');inspector.append(controls);inspector.append(disclosure('Engine & assumptions',['model','influence','seed','home-rate','away-rate','trace'].map(id=>$(id)?.closest('label'))));
+  const hero=el('div','');hero.id='matchup-hero';primary.append(hero);if($('status'))primary.append($('status'));if($('input-note'))inspector.append(disclosure('Data details',[$('input-note')]));
   const embedded=main.querySelector(':scope > .model-app');if(embedded){const h=embedded.querySelector('h2');if(h)h.textContent='Shared scenario workspace';}
   const availability=$('availability-controls');if(availability){availability.querySelector('h2').textContent='What-If Scenario';availability.querySelector('p').classList.add('ui-scenario-banner');availability.querySelector('p').textContent='HYPOTHETICAL ASSUMPTIONS · Changes apply only to a scenario. Source injury and roster records stay unchanged.';}
-  const overview=$('results');const overviewEmpty=el('div','panel ui-drive-empty','<h2>Your game, in focus</h2><p>Select a matchup in the toolbar, then simulate games to view the score distribution, pace and drive outcomes.</p>');
+  const overview=$('results');const overviewEmpty=el('div','panel ui-drive-empty','<p>Run a simulation to explore scoring, pace and drive outcomes.</p>');
   if(overview){const watcher=new MutationObserver(()=>{overviewEmpty.hidden=!overview.hidden;});watcher.observe(overview,{attributes:true,attributeFilter:['hidden']});}
   const personnel=$('personnel')?.closest('details'),evaluation=$('evaluation')?.closest('section');
   tabs(primary,[['Game overview',[overviewEmpty,overview]],['Matchup',[$('active-personnel'),personnel]],['Player projections',[$('fantasy-results'),el('p','','Player outcome distributions appear here after simulating games with the Base or Personnel engine.')]],['What-if scenario',[availability,embedded]],['Model evidence',[evaluation]]]);
@@ -26,7 +26,7 @@ export function layoutPage(){
  if(path==='/simulation/'||path==='/simulation/index.html'){
   heading(main.querySelector('.intro'),'Simulation Station','Explore player outcomes and compare hypothetical changes with a baseline.');
   const controls=main.querySelector(':scope > .controls');moveContext('slate');
-  const grid=el('div','ui-page-grid'),primary=el('div','ui-page-primary'),inspector=el('aside','ui-page-inspector','<h2>Simulation settings</h2>');inspector.setAttribute('aria-label','Simulation settings');inspector.append(controls);
+  const grid=el('div','ui-page-grid'),primary=el('div','ui-page-primary'),inspector=el('aside','ui-page-inspector','<h2>Simulation settings</h2>');inspector.setAttribute('aria-label','Simulation settings');inspector.append(controls);if($('seed'))inspector.append(disclosure('Advanced settings',[$('seed').closest('label')]));
   const scenario=[...main.querySelectorAll(':scope > details')].find(d=>d.querySelector('#scenario'));if(scenario){scenario.querySelector('summary').textContent='What-If Scenario';scenario.querySelector('p').classList.add('ui-scenario-banner');inspector.append(scenario);}
   if($('research-panel'))inspector.append($('research-panel'));
   for(const id of ['snapshot-update','status','progress','comparison'])if($(id))primary.append($(id));

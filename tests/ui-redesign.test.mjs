@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {propTable} from '../public/ui/props-view.js';
+const records=[{playerId:'a',playerName:'Player One',playerTeam:'DET',position:'WR',opponentTeam:'NO',marketKey:'receptions',marketLabel:'receptions',line:4.5,recentAverage:5,confidence:72,direction:'over'}, {playerId:'b',playerName:'Player Two',playerTeam:'NO',position:'RB',opponentTeam:'DET',marketKey:'rushing_yards',marketLabel:'rushing yards',line:55,recentAverage:51,confidence:68,direction:'under'}];
+test('prop market filters include receptions under receiving and combine search/team filters',()=>{assert.equal(propTable(records,{market:'receiving'}).count,1);assert.equal(propTable(records,{market:'rushing'}).count,1);assert.equal(propTable(records,{market:'receiving',team:'NO'}).count,0);assert.equal(propTable(records,{search:'Player One',team:'DET'}).count,1);});
+test('prop table escapes source strings and does not turn confidence into probabilities',()=>{const result=propTable([{...records[0],playerName:'<script>bad</script>',sportsbook:'<b>book</b>'}]);assert.ok(result.html.includes('&lt;script&gt;'));assert.ok(!result.html.includes('<script>'));assert.ok(result.html.includes('72 / 100'));assert.ok(!result.html.includes('72%'));assert.ok(result.html.includes('Recent avg.'));});
+test('empty prop datasets have a visible empty state',()=>assert.match(propTable([]).html,/No props match/));

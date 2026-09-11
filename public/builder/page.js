@@ -1,4 +1,4 @@
-import {esc,money,decimal,option,avatar} from '../ui/components.js';
+import {esc,money,decimal,option,avatar} from '../ui/components.js?v=ui-polish-2';
 import {loadBuilderData,loadRecommendation,filterPool,validateRoster,readLineups,saveLineup} from '../ui/dfs-service.js';
 import {SLOTS,addPlayer,salaryUsed,eligible} from '../simulation/workbench.js';
 import {snapshotState} from '../research/readiness.js';
@@ -7,7 +7,7 @@ let data,roster=Array(9).fill(null),locks=new Set(),excluded=new Set(),position=
 const filterIds=['search','team','game','sort','minsalary','maxsalary','minprojection','maxprojection','availability'];
 function tell(message,error=false){$('feedback').textContent=message;$('feedback').dataset.error=String(error);}
 function currentState(){return snapshotState(data.manifest.snapshot,data.manifest.attempt);}
-function freshness(){const s=currentState();$('freshness').dataset.state=s.state;$('freshness').textContent=`${s.locked?'LOCKED · ':''}${s.state} · DraftKings salary pool + ESPN projections · Captured ${new Date(data.input.data_as_of).toLocaleString()}${s.state==='FAILED'?' · Latest refresh failed.':''}${s.freshness==='STALE'?' · Expired inputs; refresh before current-slate decisions.':''}`;$('generate').disabled=!!worker||s.locked;}
+function freshness(){const s=currentState();$('freshness').dataset.state=s.state;$('freshness').textContent=s.locked?'Slate locked':s.state==='FAILED'?'Refresh failed · Showing saved data':s.freshness==='STALE'?'Data needs refreshing':s.state==='AGING'?'Data update due':'Data up to date';$('freshness').title=`DraftKings salaries + ESPN projections · ${new Date(data.input.data_as_of).toLocaleString()}`;$('generate').disabled=!!worker||s.locked;}
 function filters(){return Object.fromEntries([...filterIds.map(id=>[id,$(id).value]),['position',position]]);}
 function storeDraft(){try{localStorage.setItem('dfs-roster:'+data.input.slate_id,JSON.stringify(roster));}catch{tell('Changes are in memory; browser storage is unavailable.',true);}}
 function renderPool(){
@@ -16,9 +16,9 @@ function renderPool(){
 }
 function render(){
  const picked=roster.map(id=>data.players.find(p=>p.player_id===id)),used=salaryUsed(roster,data.players),points=picked.reduce((sum,p)=>sum+(p?.final_projection||0),0);
- $('metrics').innerHTML=[['Salary used',money(used)],['Remaining',money(50000-used),'positive'],['Projection',decimal(points)],['Ceiling','—'],['Ownership','—'],['Leverage','—']].map(([label,value,tone])=>`<div class="ui-metric"><span>${label}</span><strong class="${tone||''}">${value}</strong></div>`).join('');
+ $('metrics').innerHTML=[['Salary used',money(used)],['Remaining',money(50000-used),'positive'],['Projection',decimal(points)]].map(([label,value,tone])=>`<div class="ui-metric"><span>${label}</span><strong class="${tone||''}">${value}</strong></div>`).join('');
  $('roster-count').textContent=`${picked.filter(Boolean).length} / 9`;
- $('roster').innerHTML=SLOTS.map((slot,i)=>{const p=picked[i];return `<div class="ui-slot ${replaceSlot===i?'ui-replacing':''}"><span class="ui-slot-label">${slot}</span>${p?`<div><span class="ui-slot-name">${esc(p.player_name)}</span><span class="ui-slot-meta">${esc(p.team)} · ${money(p.salary)} · ${decimal(p.final_projection)} pts</span></div><div class="ui-slot-actions"><button class="ui-icon-button" data-lock="${esc(p.player_id)}" aria-pressed="${locks.has(p.player_id)}" aria-label="${locks.has(p.player_id)?'Unlock':'Lock'} ${esc(p.player_name)}">${locks.has(p.player_id)?'●':'○'}</button><button class="ui-icon-button" data-replace="${i}" aria-label="Replace ${esc(p.player_name)}">↔</button><button class="ui-icon-button" data-remove="${i}" aria-label="Remove ${esc(p.player_name)}">×</button></div>`:`<button class="ui-empty-slot" data-replace="${i}">+ Add ${slot==='FLEX'?'flex player':slot}</button>`}</div>`;}).join('');
+ $('roster').innerHTML=SLOTS.map((slot,i)=>{const p=picked[i];return `<div class="ui-slot ${replaceSlot===i?'ui-replacing':''}"><span class="ui-slot-label">${slot}</span>${p?`<div class="ui-roster-player">${avatar(p)}<div><span class="ui-slot-name">${esc(p.player_name)}</span><span class="ui-slot-meta">${esc(p.team)} · ${money(p.salary)} · ${decimal(p.final_projection)} pts</span></div></div><div class="ui-slot-actions"><button class="ui-icon-button" data-lock="${esc(p.player_id)}" aria-pressed="${locks.has(p.player_id)}" aria-label="${locks.has(p.player_id)?'Unlock':'Lock'} ${esc(p.player_name)}">${locks.has(p.player_id)?'●':'○'}</button><button class="ui-icon-button" data-replace="${i}" aria-label="Replace ${esc(p.player_name)}">↔</button><button class="ui-icon-button" data-remove="${i}" aria-label="Remove ${esc(p.player_name)}">×</button></div>`:`<button class="ui-empty-slot" data-replace="${i}">+ Add ${slot==='FLEX'?'flex player':slot}</button>`}</div>`;}).join('');
  for(const [id,set,label] of [['locks',locks,'No locked players.'],['exclusions',excluded,'No exclusions.']])$(id).innerHTML=[...set].map(pid=>`<div>${esc(data.players.find(p=>p.player_id===pid)?.player_name)}<button class="ui-icon-button" data-unset="${id}:${esc(pid)}" aria-label="Remove ${esc(data.players.find(p=>p.player_id===pid)?.player_name)} from ${id}">×</button></div>`).join('')||label;
  $('save').disabled=!!worker||picked.filter(Boolean).length!==9;
  renderPool();freshness();

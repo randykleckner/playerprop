@@ -1,4 +1,4 @@
-import {propTable} from '/ui/props-view.js';
+import {propTable} from '/ui/props-view.js?v=ui-polish-2';
 import { propCard, flipCard } from "/prop-card.js";
 import { normalizeGames, matchGame, showLock, weatherText } from "/game-context.js";
 const endpoint = "/api/signals/live?historySeason=2025&limit=100&view=doctor-chart-v1";
