@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from newsroom.feed import rss, injuries, espn
+from newsroom.feed import rss, injuries, espn, article_published_at
 from refresh_newsroom import refresh, atomic
 F=Path(__file__).parent/'fixtures/newsroom'
 NOW='2026-09-08T23:00:00+00:00'
@@ -50,3 +50,22 @@ class NewsTests(unittest.TestCase):
  def test_cleared_status_removes_out_story(self):
   rows,counts=injuries((F/'nfl.html').read_text().replace('Out','').replace('Ankle','').replace('Did Not Participate In Practice','Full Participation in Practice'),PLAYERS,NOW)
   self.assertNotIn('2',[s['player_id'] for s in rows]);self.assertIn('2',counts['covered_player_ids'])
+
+ def test_recorded_bowers_brown_and_future_rss_date_repair(self):
+  people=[{'player_id':'bowers','display_name':'Brock Bowers','espn_id':'4432665','position':'TE','current_team_id':'LV'},{'player_id':'brown','display_name':'A.J. Brown','espn_id':'4047646','position':'WR','current_team_id':'NE'}]
+  dates={'49884014':'2026-09-09T20:24:29Z','49891924':'2026-09-10T14:01:55Z'}
+  resolve=lambda url:next((v for k,v in dates.items() if k in url),None)
+  rows,counts=rss((F/'espn-2026-09-10.xml').read_text(),people,'2026-09-10T15:01:20Z',resolve)
+  self.assertEqual({r['player_id'] for r in rows},{'bowers','brown'})
+  self.assertEqual(next(r for r in rows if r['player_id']=='bowers')['topic'],'Procedure')
+  self.assertIn('suspected',next(r for r in rows if r['player_id']=='brown')['highlight'])
+  self.assertEqual(counts['article_dates_resolved'],2)
+  self.assertEqual(rss((F/'espn-2026-09-10.xml').read_text(),people,'2026-09-10T15:01:20Z')[0],[])
+ def test_article_date_requires_unique_article_metadata(self):
+  html='<script type="application/ld+json">{"@type":"NewsArticle","datePublished":"2026-09-09T20:24:29Z"}</script>'
+  self.assertEqual(article_published_at(html),'2026-09-09T20:24:29Z')
+  self.assertIsNone(article_published_at(html+html.replace('2026-09-09','2026-09-08')))
+  self.assertIsNone(article_published_at('<html>bad payload</html>'))
+ def test_dnp_with_blank_injury_is_still_actionable(self):
+  rows,_=injuries((F/'nfl.html').read_text().replace('Out','').replace('Ankle',''),PLAYERS,NOW)
+  self.assertIn('2',[r['player_id'] for r in rows])

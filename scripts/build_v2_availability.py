@@ -8,7 +8,8 @@ from personnel.provider import atomic
 from dfs.catalog import load_catalog
 from dfs.identity import normalized_name
 from research.prepare import team
-from newsroom.feed import InjuryTable,NFL_URL
+from newsroom.feed import NFL_URL
+from availability.provider import official_rows,NflAvailabilityProvider
 from refresh_newsroom import fetch
 ROOT=Path(__file__).resolve().parents[1]
 def latest_depth(body,people,at):
@@ -28,23 +29,6 @@ def latest_depth(body,people,at):
    issues.append({'team':tm,'name':r['player_name'],'player_id':pid,'role':r['pos_abb'],'reason':'Depth identity not corroborated by current canonical roster'});pid='missing:'+tm+':'+r['pos_slot']+':'+r['pos_rank']
   result.append({'player_id':pid,'name':r['player_name'],'team':tm,'role':r['pos_abb'],'slot':r['pos_slot'],'rank':int(r['pos_rank']),'formation':r['pos_grp'],'depth_at':r['dt'],'correction':correction,'confidence':'corroborated_depth' if not pid.startswith('missing:') else 'unresolved'})
  return result,issues,dates
-
-def official_rows(body,people,season,week):
- title=re.search(r'Week\s+(\d+)\s+of\s+the\s+(\d{4})\s+Season',body)
- if not title or (int(title[2]),int(title[1]))!=(season,week):raise ValueError('Official report season/week does not match current research slate')
- parser=InjuryTable();parser.feed(body)
- if not parser.tables or not parser.rows:raise ValueError('No official injury tables')
- found={};issues=[]
- for tm,cols in parser.rows:
-  name,pos,injury,practice,game=cols
-  if game not in ['', 'Out','Doubtful','Questionable'] or practice not in ['', 'Full Participation in Practice','Limited Participation in Practice','Did Not Participate In Practice']:raise ValueError('Unknown official injury designation')
-  matches=[p for p in people.values() if p['team']==tm and family(p['position'])==family(pos) and normalized_name(name) in {normalized_name(a) for a in p['aliases']}]
-  if len(matches)!=1:issues.append({'team':tm,'name':name,'position':pos,'reason':'Unresolved injury identity'});continue
-  state=game.upper() if game else 'LIMITED' if practice in ['Limited Participation in Practice','Did Not Participate In Practice'] else 'ACTIVE' if practice=='Full Participation in Practice' else 'UNKNOWN'
-  pid=matches[0]['player_id'];record={'state':state,'practice_status':practice,'game_status':game,'injury':injury,'source':NFL_URL,'confidence':'official_designation' if game else 'practice_only_workload_assumption'}
-  if pid in found and found[pid]!=record:raise ValueError('Conflicting official rows')
-  found[pid]=record
- return found,issues,parser.tables
 
 def snap_history(path,catalog,people,season,week):
  files=sorted(path.glob('snaps-*.csv')) if path.is_dir() else [path] if path.exists() else []
@@ -77,7 +61,7 @@ def build(request=fetch):
  for p in ratings['players']:
   if p['mapping_status'] in ['verified','strongly_corroborated']:mapped[p['canonical_player_id']].append(p)
  manifest=json.loads((ROOT/'public/research/latest.json').read_text());sim=json.loads((ROOT/('public'+manifest['snapshot']['simulation_path'])).read_text())
- season=int(sim['season']);week=int(sim['week']);news=request(NFL_URL,ROOT/'.newsroom',at);injuries,injuryissues,tables=official_rows(news['body'],people,season,week)
+ season=int(sim['season']);week=int(sim['week']);news=request(NFL_URL,ROOT/'.newsroom',at);report=NflAvailabilityProvider().parse(news['body'],people,season,week,news['fetched_at']);injuries,injuryissues,tables=report['players'],report['issues'],report['tables']
  snaps,snap_hash=snap_history(ROOT/'.dfs-research',catalog,people,season,week)
  rawroster={r['gsis_id']:r for r in csv.DictReader(io.StringIO(roster['body']))}
  for pid,p in people.items():
@@ -89,6 +73,11 @@ def build(request=fetch):
   ms=mapped.get(pid,[]);p['attributes']=ms[0]['attributes'] if len(ms)==1 else None;p['mapping_status']=ms[0]['mapping_status'] if len(ms)==1 else 'unresolved'
   p['snap_history']=snaps.get(pid);p['rating_source']=ratings['snapshot_id'];p['depth_roles']=[r for r in roles if r['player_id']==pid]
  record={'version':'V2.0-D','as_of':at,'injury_at':news['fetched_at'],'injury_hash':news['sha256'],'roster_at':roster['captured_at'],'roster_snapshot':roster['sha256'],'depth_at':dates,'madden_snapshot':ratings['snapshot_id'],'personnel_snapshot':personnel['snapshot_id'],'player_snapshot':sourceplayers['snapshot_id'],'season':season,'week':week,'players':people,'depth':roles,'issues':depthissues+injuryissues,'snap_source_hash':snap_hash,'coverage':{'snap_history_players':len(snaps),'players':len(people),'official_injury_players':len(injuries),'official_tables':tables,'statuses':dict(Counter(p['availability']['state'] for p in people.values())),'madden':coverage},'unit_weights':json.loads((ROOT/'config/personnel.json').read_text())['unit_weights']}
- record['snapshot_id']='availability-'+hashlib.sha256(json.dumps(record,sort_keys=True).encode()).hexdigest()[:20];archive=ROOT/'.personnel'/f"{record['snapshot_id']}.json";atomic(archive,record);atomic(ROOT/'public/drive-lab/availability.json',record)
+ record['snapshot_id']='availability-'+hashlib.sha256(json.dumps(record,sort_keys=True).encode()).hexdigest()[:20];archive=ROOT/'.personnel'/f"{record['snapshot_id']}.json";atomic(archive,record);atomic(ROOT/'public/drive-lab/availability.json',record);atomic(ROOT/'public/drive-lab/availability-status.json',{'status':'ok','fetched_at':news['fetched_at'],'attempted_at':at,'snapshot_id':record['snapshot_id']})
  print(json.dumps({k:record[k] for k in ['snapshot_id','injury_at','roster_at','coverage']}));return record
-if __name__=='__main__':build()
+if __name__=='__main__':
+ try:build()
+ except Exception:
+  atomic(ROOT/'public/drive-lab/availability-status.json',{'status':'failed','attempted_at':datetime.now(timezone.utc).isoformat(),'detail':'Latest official refresh failed; last valid availability snapshot retained'})
+  raise
+

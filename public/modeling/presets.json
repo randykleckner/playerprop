@@ -1,0 +1,11 @@
+{
+ "version":"unified-1",
+ "presets":{
+  "balanced":{"name":"Dr Locks Balanced","recentShareWeight":0.25,"personnelInfluence":0.5,"marketWeight":0},
+  "recent":{"name":"Recent Form","recentShareWeight":0.75,"personnelInfluence":0.5,"marketWeight":0},
+  "stable":{"name":"Stable / Season","recentShareWeight":0,"personnelInfluence":0.5,"marketWeight":0},
+  "personnel":{"name":"Personnel Heavy","recentShareWeight":0.25,"personnelInfluence":1,"marketWeight":0},
+  "market":{"name":"Market Anchored","recentShareWeight":0.25,"personnelInfluence":0.5,"marketWeight":0.5},
+  "custom":{"name":"Custom","recentShareWeight":0.25,"personnelInfluence":0.5,"marketWeight":0}
+ }
+}

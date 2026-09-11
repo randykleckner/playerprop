@@ -7,7 +7,7 @@ import {dkScore} from '../../../public/simulation/engine.js';
 import {adjustments,resolvePersonnel,type PlayerOutcome} from './personnel-influence.ts';
 import {emptyPlayerStats,type PlayerTeam,type PlayerSnapshot,type PersonnelSnapshot,type InfluenceConfig,type PlayerBox,type PlayerInput} from './player-types.ts';
 export type EngineName='base'|'personnel';
-export interface FantasyOptions {seed:string;engine:EngineName;influence:number;empirical:EmpiricalProfile;players:PlayerSnapshot;personnel:PersonnelSnapshot;config:InfluenceConfig;debugTrace?:boolean;maxPlays?:number;availability?:AvailabilitySnapshot;availabilityConfig?:AvailabilityConfig;scenario?:Scenarios;asOf?:string;preparedAvailability?:ReturnType<typeof prepareAvailability>;}
+export interface FantasyOptions {coaching?:Options['coaching'];seed:string;engine:EngineName;influence:number;empirical:EmpiricalProfile;players:PlayerSnapshot;personnel:PersonnelSnapshot;config:InfluenceConfig;debugTrace?:boolean;maxPlays?:number;availability?:AvailabilitySnapshot;availabilityConfig?:AvailabilityConfig;scenario?:Scenarios;asOf?:string;preparedAvailability?:ReturnType<typeof prepareAvailability>;}
 export function validatePlayers(team:PlayerTeam,tm:string){
  if(!team||!team.players.length||team.players.length>60||new Set(team.players.map(p=>p.player_id)).size!==team.players.length)throw Error('Invalid player pool');
  if(team.players.filter(p=>p.position==='QB'&&p.player_id===team.qb_id&&p.active).length!==1)throw Error('A current starting QB is required');
@@ -42,7 +42,7 @@ export function simulateFantasyGame(game:GameInputV2,o:FantasyOptions){
  const modifiers=Object.fromEntries(teamNames.map((tm,i)=>[tm,adjustments(tm,teamNames[1-i],o.players.teams[tm],o.personnel,o.config,o.influence)]));
  const allocation=random(`V2.0-C-allocation|${o.seed}`),aux=random(`V2.0-C-personnel|${o.seed}`);
  const diagnostics=Object.fromEntries(teamNames.map(tm=>[tm,{pressures:0,pressure_changes:0,scrambles:0,designed_qb_runs:0,throwaways:0,dropbacks:0}]));
- const options:Options={seed:o.seed,empirical:o.empirical,debugTrace:o.debugTrace,maxPlays:o.maxPlays,
+ const options:Options={coaching:o.coaching,seed:o.seed,empirical:o.empirical,debugTrace:o.debugTrace,maxPlays:o.maxPlays,
   resolve:(type,state,t,rng,rules,profile)=>{
    const team=o.players.teams[state.possession];let out:PlayerOutcome=resolvePersonnel(type,state,t,rng,aux,rules,profile!,team,modifiers[state.possession],o.config);
    // resolvePersonnel with all zero modifiers draws the exact original play outcomes.

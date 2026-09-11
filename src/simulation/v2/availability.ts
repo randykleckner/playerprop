@@ -6,7 +6,7 @@ export interface State {state:Status;practice_status:string|null;game_status:str
 export interface Depth {player_id:string;name:string;team:string;role:string;slot:string;rank:number;formation:string;depth_at:string;confidence:string;}
 export interface Person {player_id:string;name:string;team:string;position:string;status:string;availability:State;attributes:Record<string,number>|null;mapping_status:string;depth_roles:Depth[];snap_history?:{share:number;weighted_games:number;side:string;source:string;source_hash:string}|null;}
 export interface AvailabilitySnapshot {snapshot_id:string;as_of:string;injury_at:string;roster_at:string;roster_snapshot:string;madden_snapshot:string;personnel_snapshot:string;player_snapshot:string;players:Record<string,Person>;depth:Depth[];unit_weights:Record<string,{attributes:Record<string,number>;positions?:Record<string,number>}>;}
-export type Scenarios=Record<string,{state:'ACTIVE'|'LIMITED'|'OUT';workload?:number}>;
+export type Scenarios=Record<string,{state:'ACTIVE'|'LIMITED'|'OUT';workload?:number;playProbability?:number}>;
 export interface Participation extends State {official_state:Status;active_probability:number;workload_multiplier:number;participation:number;scenario:boolean;basis:string;}
 export interface Contribution {player_id:string;name:string;role:string;weight:number;rating:number|null;attributes:Record<string,number>|null;missing:string[];replacement:boolean;availability?:Participation;confidence:string;snap_history?:Person['snap_history'];}
 export interface WeightedUnit extends Unit {coverage:number;scale:number;expected_weight:number;players:Contribution[];missing:string[];}
@@ -18,8 +18,8 @@ export function validateAvailability(c:AvailabilityConfig){
 }
 export function participation(p:Person,c:AvailabilityConfig,override?:Scenarios[string]):Participation{
  const state=override?.state??p.availability.state;const pair=c.statusPriors[state];if(!pair)throw Error('Unknown availability status');let [prob,work]=pair;
- if(override){if(!['ACTIVE','LIMITED','OUT'].includes(override.state))throw Error('Invalid scenario');prob=state==='OUT'?0:1;work=state==='LIMITED'?(override.workload??.7):state==='OUT'?0:1;}
- if(!Number.isFinite(work)||work<0||work>1)throw Error('Workload must be 0–100%');
+ if(override){if(!['ACTIVE','LIMITED','OUT'].includes(override.state))throw Error('Invalid scenario');prob=override.playProbability??(state==='OUT'?0:1);work=state==='LIMITED'?(override.workload??.7):state==='OUT'?0:1;}
+ if(!Number.isFinite(prob)||prob<0||prob>1||!Number.isFinite(work)||work<0||work>1)throw Error('Workload must be 0–100%');
  return {...p.availability,state,official_state:p.availability.state,active_probability:prob,workload_multiplier:work,participation:prob*work,scenario:!!override,basis:override?'User scenario; official evidence unchanged':p.availability.game_status?'Official game designation; numeric participation probability is an unfitted scenario prior':p.availability.practice_status?'Official practice participation; workload reduction is a model assumption, not a confirmed gameday restriction':p.status==='ACT'?'Active roster only; no matched game designation. Baseline workload retained with low confidence':'Roster designation excludes expected gameday participation'};
 }
 export function weightedUnit(players:Contribution[],expected:number,c:AvailabilityConfig):WeightedUnit {

@@ -1,4 +1,5 @@
 """Read-only, conservative news adapters. No prose generation from missing facts."""
+import json
 import hashlib
 import re
 from datetime import datetime, timedelta, timezone
@@ -6,6 +7,7 @@ from html import unescape
 from html.parser import HTMLParser
 from urllib.parse import urlparse
 from dfs.identity import normalized_name
+from personnel.model import family
 
 NFL_URL = 'https://www.nfl.com/injuries/'
 ESPN_URL = 'https://www.espn.com/espn/rss/nfl/news'
@@ -65,10 +67,11 @@ def injuries(html, players, now):
     result=[];unmatched=0;covered=[]
     for tm,row in parser.rows:
         name,pos,injury,practice,status=row
-        candidates=[p for p in players if normalized_name(p['display_name'])==normalized_name(name) and p['current_team_id']==tm and p['position']==pos]
+        candidates=[p for p in players if normalized_name(p['display_name'])==normalized_name(name) and p['current_team_id']==tm and family(p['position'])==family(pos)]
         if len(candidates)!=1:unmatched+=1;continue
         covered.append(candidates[0]['player_id'])
-        if not status and (not injury or practice=='Full Participation in Practice'):continue
+        if not status and practice=='Full Participation in Practice':continue
+        if not status and not injury and not practice:continue
         if status not in ('','Out','Doubtful','Questionable'):raise ValueError('Unknown NFL game status')
         if practice not in ('','Full Participation in Practice','Limited Participation in Practice','Did Not Participate In Practice'):raise ValueError('Unknown NFL practice status')
         p=candidates[0]
@@ -81,12 +84,19 @@ def injuries(html, players, now):
 
 # Match a player as the subject of a concrete statement, not merely an article tag.
 EVENTS=[
+ ('Procedure',r"(?:underwent|had|has undergone|will undergo|is undergoing) (?:a |an )?(?:[a-z-]+ ){0,3}(?:surgery|procedure|meniscus trim)\b",'reported to have undergone or require a procedure','A procedure can affect availability and recovery. A return date or official OUT designation must be established separately.'),
+ ('Injury update',r"(?:is |was )?believed to have suffered (?:a |an )?(?:high[- ]ankle sprain|ankle injury|knee injury|hip injury)\b",'reported with a suspected injury','The injury is reported, not a confirmed recovery timetable. Monitor subsequent team and medical updates.'),
+ ('Availability',r"(?:is )?expected to miss\b",'expected to miss playing time','Reported absence can redistribute opportunity. Confirm the affected game and official status.'),
+ ('Injury update',r"(?:left|exited)\b[^.!?]{0,130}\b(?:injury|injured)\b",'reported leaving a game with an injury','An in-game exit affects that game; next-game availability remains separate.'),
+
  ('Availability',r"(?:is |was |will be |has been )?(?:ruled out|inactive|placed on injured reserve)\b",'reported unavailable','Expected availability is affected. Check the stated game and subsequent status updates.'),
  ('Availability',r"(?:will not|won’t|won't) (?:play|travel)\b",'reported not playing or traveling','Expected availability is affected; normal workload should not be assumed.'),
  ('Availability',r"(?:is |was )?(?:questionable|doubtful)\b",'reported with an uncertain game status','Availability is uncertain; no numeric projection adjustment has been applied.'),
  ('Role',r"(?:is )?expected to start\b",'expected to start','A starting role is expected, not confirmed; workload and effectiveness remain uncertain.'),
  ('Role',r"(?:will |is set to |is going to )start\b",'reported to be starting','A starting assignment affects expected opportunity; snap share is not established by this report.'),
  ('Availability',r"(?:has |will |is )?(?:missed|miss|missing) (?:\w+ ){0,2}practice\b",'reported missing practice','Missed practice may affect availability or preparation; it does not by itself mean the player is out.'),
+ ('Suspension',r"(?:has been |was |is )suspended\b",'reported suspended','A reported suspension may affect availability. Verify official dates and roster status before changing a scenario.'),
+ ('Role',r"(?:will |is expected to )see (?:more|fewer|less|increased|reduced) (?:snaps|targets|carries|workload)\b",'reported with a workload change','Reported role expectations may change opportunity; no precise share is established.'),
  ('Transaction',r"(?:has been |was |is being )traded\b",'reported traded','A team change can alter role and opportunity. Destination workload is not yet established.'),
 ]
 
@@ -103,7 +113,7 @@ def espn(payload, players, now):
         description=clean(a.get('description'))
         ids={str(c.get('athleteId')) for c in a.get('categories',[]) if c.get('type')=='athlete'}
         for external in ids:
-            candidates=[p for p in players if str(p.get('espn_id'))==external and p['position'] in OFFENSE]
+            candidates=[p for p in players if str(p.get('espn_id'))==external]
             if len(candidates)!=1:continue
             p=candidates[0]
             # Names may have apostrophes/suffixes: prefer the provider's exact category name with the same ID.
@@ -112,23 +122,26 @@ def espn(payload, players, now):
             for name in names:
                 if not name:continue
                 for topic,pattern,label,impact in EVENTS:
-                    m=re.search(r'\b'+re.escape(name)+r'\s+('+pattern+r')',description,re.I)
+                    m=re.search(r'\b'+re.escape(name)+r'(?:,\s+who\b[^.!?]{0,200},)?\s+('+pattern+r')',description,re.I)
                     if m:matched=(topic,label,impact,m.group(0));break
                 if matched:break
             if not matched:skipped+=1;continue
             topic,label,impact,evidence=matched
             item=base(p,f'espn:{a.get("id")}:{p["player_id"]}',topic,f'{p["display_name"]} is {label}. Read the source for game-specific context.',impact,'ESPN',url,at,now,{'espn_id':external,'matched_statement':evidence,'article_id':a.get('id')})
+            item['evidence']['source_description']=description
+            if topic=='Procedure' and 'expected to miss' in description:item['highlight']=f'{p["display_name"]}: a procedure and missed playing time are reported. Availability needs review.'
+            if topic=='Injury update' and 'high ankle sprain' in description.lower():item['highlight']=f'{p["display_name"]}: a high-ankle sprain is suspected, according to the source. Recovery timing is not confirmed.'
             item['expires_at']=min(stamp(now)+timedelta(hours=24),stamp(at)+timedelta(hours=72)).isoformat()
             output.append(item)
     return list({s['key']:s for s in output}.values()),{'articles':len(articles),'unclassified_player_mentions':skipped}
 
-def rss(xml,players,now):
+def rss(xml,players,now,resolve_date=None):
     """ESPN's published RSS feed; full-name matches must be unique in canonical data."""
     import xml.etree.ElementTree as ET
     from email.utils import parsedate_to_datetime
     root=ET.fromstring(xml)
     if root.tag!='rss' or root.find('channel') is None:raise ValueError('ESPN RSS schema changed')
-    articles=[]
+    articles=[];corrected=0
     for item in root.findall('./channel/item'):
         description=clean(item.findtext('description'))
         categories=[]
@@ -139,8 +152,30 @@ def rss(xml,players,now):
         try:published=parsedate_to_datetime(item.findtext('pubDate')).isoformat()
         except (ValueError,TypeError):continue
         url=item.findtext('link') or ''
+        if stamp(published)>stamp(now)+timedelta(minutes=5) and resolve_date and categories and safe_url(url,'www.espn.com'):
+            try:
+                actual=resolve_date(url)
+                if actual and stamp(actual)<=stamp(now)+timedelta(minutes=5):published=actual;corrected+=1
+            except Exception:pass
         articles.append({'id':hashlib.sha256(url.encode()).hexdigest()[:16],'description':description,'published':published,'links':{'web':{'href':url}},'categories':categories})
     stories,counts=espn({'articles':articles},players,now)
     for s in stories:s['evidence']['identity_method']='Unique full name in RSS excerpt → NFLverse canonical ID and ESPN crosswalk; RSS has no provider athlete ID'
+    counts['article_dates_resolved']=corrected
     counts['future_dated_items']=sum(stamp(a['published'])>stamp(now)+timedelta(minutes=5) for a in articles)
     return stories,counts
+
+
+def article_published_at(html):
+    """Use the article's own JSON-LD date, never guess a feed timezone correction."""
+    values=set()
+    for raw in re.findall(r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',html,re.S|re.I):
+        try:data=json.loads(raw)
+        except (ValueError,TypeError):continue
+        def walk(node):
+            if isinstance(node,list):
+                for child in node:walk(child)
+            elif isinstance(node,dict):
+                if node.get('@type') in ['NewsArticle','Article'] and node.get('datePublished'):values.add(node['datePublished'])
+                if '@graph' in node:walk(node['@graph'])
+        walk(data)
+    return next(iter(values)) if len(values)==1 else None

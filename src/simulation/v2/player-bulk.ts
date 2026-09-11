@@ -6,14 +6,14 @@ import {fingerprint} from '../../../public/simulation/random.js';
 // @ts-expect-error Existing shared summarizer has no declaration.
 import {summarize} from '../../../public/simulation/statistics.js';
 const brief=(values:Float64Array)=>{const s=summarize(values);return Object.fromEntries(['mean','median','p10','p25','p75','p90','p95'].map(k=>[k,s[k]])) as Record<string,number>;};
-export function runFantasyBulk(game:GameInputV2,o:FantasyOptions,count:number,onProgress?:(done:number)=>void){
+export function runFantasyBulk(game:GameInputV2,o:FantasyOptions,count:number,onProgress?:(done:number)=>void,onDraw?:(result:FantasyGame)=>void){
  if(!Number.isInteger(count)||count<1||count>10000)throw Error('Choose 1–10,000 games');
  const start=performance.now();if(o.availability){if(!o.availabilityConfig)throw Error('Availability configuration missing');const prepared=prepareAvailability(o.players,o.personnel,o.availability,o.availabilityConfig,o.config,[game.homeTeam,game.awayTeam],o.scenario,o.asOf);o={...o,players:prepared.players,personnel:prepared.personnel,preparedAvailability:prepared};}
  const fields=Object.keys(emptyPlayerStats()),stats:Record<string,Record<string,Float64Array>>={},players:Record<string,PlayerInput>={};
  for(const tm of [game.homeTeam,game.awayTeam]){if(!o.players.teams[tm])throw Error(`${tm}: current QB/player evidence unavailable; use the legacy V2 engine`);for(const p of o.players.teams[tm].players){players[p.player_id]=p;stats[p.player_id]=Object.fromEntries([...fields,'dk_points'].map(k=>[k,new Float64Array(count)]));}}
  const home=new Float64Array(count),away=new Float64Array(count),total=new Float64Array(count),margin=new Float64Array(count);let example:FantasyGame|undefined;const teamSums:Record<string,Record<string,number>>={},diagnosticSums:Record<string,Record<string,number>>={};
  for(let i=0;i<count;i++){
-  const r=simulateFantasyGame(game,{...o,seed:`${o.seed}:${i}`,debugTrace:o.debugTrace&&i===0});if(!r.completed)throw Error('Incomplete game discarded');if(!example)example=r;
+  const r=simulateFantasyGame(game,{...o,seed:`${o.seed}:${i}`,debugTrace:o.debugTrace&&i===0});if(!r.completed)throw Error('Incomplete game discarded');if(!example)example=r;onDraw?.(r);
   home[i]=r.finalState.scoreHome;away[i]=r.finalState.scoreAway;total[i]=r.totalPoints;margin[i]=r.homeScoreDifferential;
   for(const [tm,t]of Object.entries(r.teams)){teamSums[tm]??={};teamSums[tm].points=(teamSums[tm].points||0)+(tm===game.homeTeam?r.finalState.scoreHome:r.finalState.scoreAway);for(const [k,v]of Object.entries(t))teamSums[tm][k]=(teamSums[tm][k]||0)+v;diagnosticSums[tm]??={};for(const [k,v]of Object.entries(r.diagnostics[tm]))diagnosticSums[tm][k]=(diagnosticSums[tm][k]||0)+v;}
   for(const [id,b]of Object.entries(r.players)){for(const k of fields)stats[id][k][i]=b.stats[k as keyof typeof b.stats];stats[id].dk_points[i]=b.dk_points;}

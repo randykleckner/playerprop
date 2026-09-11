@@ -9,7 +9,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 from dfs.catalog import load_catalog
 from dfs.http import NoRedirect
-from newsroom.feed import ESPN_URL, NFL_URL, rss, injuries, stamp
+from newsroom.feed import ESPN_URL, NFL_URL, rss, injuries, stamp, article_published_at
 ROOT=Path(__file__).resolve().parents[1]
 
 def atomic(path,data):
@@ -39,11 +39,30 @@ def refresh(root=ROOT/'public',state=ROOT/'.newsroom',request=fetch):
     if metadata.get('stale'):raise ValueError('Canonical identity catalog is stale')
     manifest_path=root/'research/latest.json'
     cohort=json.loads(manifest_path.read_text()).get('snapshot',{}) if manifest_path.exists() else {}
-    all_stories=[];sources=[];covered=set()
+    all_stories=[];sources=[];covered=set();article_checks=0
+    def resolve_date(url):
+        nonlocal article_checks
+        cached=state/(hashlib.sha256(url.encode()).hexdigest()+'.json')
+        if cached.exists():
+            prior=json.loads(cached.read_text())
+            if (stamp(now)-stamp(prior['fetched_at'])).total_seconds()<72*3600:return article_published_at(prior['body'])
+        if article_checks>=12:return None
+        article_checks+=1
+        return article_published_at(request(url,state,now)['body'])
     for name,url,parser in [('ESPN',ESPN_URL,rss),('NFL official injury report',NFL_URL,injuries)]:
         try:
             raw=request(url,state,now)
-            stories,counts=parser(raw['body'],players,raw['fetched_at'])
+            if name=='ESPN':
+                # A short rolling RSS archive prevents fast-moving feeds from losing recent injury stories.
+                rolling=state/'rss-recent.json';history=json.loads(rolling.read_text()) if rolling.exists() else []
+                history=[h for h in history if 0<=(stamp(now)-stamp(h['fetched_at'])).total_seconds()<72*3600]
+                history=list({h['sha256']:h for h in [raw,*history]}.values())[:6]
+                atomic(rolling,history)
+                stories,counts=rss(raw['body'],players,now,resolve_date)
+                for prior_feed in history[1:]:
+                    extra,_=rss(prior_feed['body'],players,now,resolve_date)
+                    keys={s['key'] for s in stories};stories.extend(s for s in extra if s['key'] not in keys)
+            else:stories,counts=parser(raw['body'],players,raw['fetched_at'])
             if name!='ESPN' and cohort and (counts['season'],counts['week'])!=(cohort.get('season'),cohort.get('week')):raise ValueError('Injury report does not match current research week')
             if name!='ESPN':covered.update(counts.get('covered_player_ids',[]))
             else:
@@ -56,14 +75,20 @@ def refresh(root=ROOT/'public',state=ROOT/'.newsroom',request=fetch):
             all_stories.extend(s for s in previous['stories'] if s['source']==name)
             sources.append({'name':name,'url':url,'status':'failed','error':type(error).__name__,'detail':'Source unavailable; retained last valid briefs with original timestamps.'})
     # A current official report replaces an older availability brief, but never a role/transaction report.
-    official=covered|{s['player_id'] for s in all_stories if s['source']!='ESPN' and stamp(s['expires_at'])>stamp(now)}
-    all_stories=[s for s in all_stories if not(s['source']=='ESPN' and s['topic']=='Availability' and s['player_id'] in official)]
+    official={s['player_id']:s for s in all_stories if s['source']!='ESPN' and s.get('evidence',{}).get('game_status') and stamp(s['expires_at'])>stamp(now)}
+    all_stories=[s for s in all_stories if not(s['source']=='ESPN' and s['topic']=='Availability' and s['player_id'] in official and stamp(s['published_at'] or s['observed_at'])<=stamp(official[s['player_id']]['observed_at']))]
     all_stories=sorted({s['key']:s for s in all_stories}.values(),key=lambda s:s['published_at'] or s['observed_at'],reverse=True)
     seen=set();deduped=[]
     for story in all_stories:
         key=(story['player_id'],story['topic'])
         if key not in seen:deduped.append(story);seen.add(key)
     all_stories=deduped
+    for story in all_stories:
+        position=story['position'];unit='pass_protection' if position in ['T','G','C','OT','OG','OL'] else 'secondary' if position in ['CB','S','FS','SS','DB'] else 'pass_rush' if position in ['DE','DT','DL','EDGE','LB','OLB','ILB'] else 'receiving'
+        story['affected_units']=[story['team']+'.'+unit]
+        story['potential_assumptions']=['play_probability','workload_if_active',story['team']+'.neutral_pass_rate',story['team']+'.'+unit+'_factor']
+        story['related_players']=[p['player_id'] for p in players if p['current_team_id']==story['team'] and p['player_id']!=story['player_id'] and p['position'] in ['QB','RB','WR','TE']]
+        story['relationship_basis']='Team context to investigate; no causal projection change asserted'
     data={'version':1,'generated_at':now,'sources':sources,'stories':all_stories,'policy':'Actionable facts only; performance implications are interpretations. News does not automatically change projections.','canonical_source':metadata.get('sha256'),'refresh_schedule':'10 a.m. and 5 p.m. America/Chicago'}
     digest=hashlib.sha256(json.dumps(data,sort_keys=True).encode()).hexdigest()
     archive=state/(digest+'.snapshot.json')
