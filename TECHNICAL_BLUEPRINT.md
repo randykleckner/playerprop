@@ -323,3 +323,7 @@ Next proposed milestone is frozen pregame player forecast evaluation and final-a
 ## Simulation V2.0-D
 
 Expected-active personnel and workload redistribution are implemented in Drive Lab. Official injury/practice evidence, canonical roster/depth, historical snap context and Madden attributes feed a pure preparation step before Base/Personnel simulations. Scenario controls and source-grounded player explanations preserve official snapshots. See [availability and workload](docs/availability-and-workload.md) for the release audit and known limits. Next proposed milestone: freeze pregame availability inputs and evaluate final workload; no automatic expansion beyond V2.0-D.
+
+### September 13 Props feed repair
+
+Investigated empty Props: the only stored sportsbook batch was September 3, with null kickoff times on all 32 events. The read-only twice-daily job copied that batch instead of refreshing the provider. Upcoming-only filtering correctly excludes those records. Added explicit feed-health metadata and a static health artifact; empty/stale snapshots now report failure. Added an opt-in, authenticated local sportsbook-refresh command, preserving the public-only schedule and existing secrets. Fresh provider ingestion requires authorized allowance use and the existing ingest token. See `docs/data-sources.md` for the audit and recovery path.

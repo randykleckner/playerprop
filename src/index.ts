@@ -211,6 +211,19 @@ type LivePropCandidate = {
 
 const clamp = (value: number, low: number, high: number) => Math.max(low, Math.min(high, value));
 
+// Recheck cached payloads at response time: a five-minute cache can cross kickoff.
+async function upcomingResponse(response: Response) {
+  const body = await response.json<{ signals?: { commenceAt?: string }[]; [key: string]: unknown }>();
+  const now = Date.now();
+  body.signals = (body.signals ?? []).filter(signal => Date.parse(signal.commenceAt ?? "") > now);
+  const capturedAt = typeof body.capturedAt === "string" ? body.capturedAt : null;
+  const ageHours = capturedAt ? (now - Date.parse(capturedAt)) / 3600000 : null;
+  body.feedHealth = { status: !body.signals.length ? "no_upcoming_quotes" : ageHours === null || ageHours > 24 ? "stale" : "current", capturedAt, ageHours, usableSignals: body.signals.length, checkedAt: new Date(now).toISOString(), message: !body.signals.length ? "No usable upcoming props. A successful API read does not refresh sportsbook quotes; inspect source import and kickoff coverage." : ageHours !== null && ageHours > 24 ? "Sportsbook quotes are older than 24 hours; verify current lines." : "Upcoming quoted lines available." };
+  const filtered = json(body);
+  filtered.headers.set("cache-control", "no-store");
+  return filtered;
+}
+
 async function liveSignals(url: URL, db: D1Database) {
   const historySeason = Number(url.searchParams.get("historySeason")) || 2025;
   const limit = Math.min(Math.max(Number(url.searchParams.get("limit")) || 50, 1), 100);
@@ -234,6 +247,7 @@ async function liveSignals(url: URL, db: D1Database) {
       JOIN teams home ON lower(home.team_name) = lower(e.home_team_name)
       JOIN teams away ON lower(away.team_name) = lower(e.away_team_name)
       WHERE o.provider = 'sports_game_odds' AND o.captured_at = ?
+        AND julianday(e.commence_at) > julianday(?)
         AND o.odd_id LIKE '%-game-ou-over'
         AND o.market_key IN (${marketKeys.map(() => "?").join(", ")})
         AND (
@@ -246,7 +260,7 @@ async function liveSignals(url: URL, db: D1Database) {
     SELECT * FROM candidate_props
     WHERE player_team_id = home_team_id OR player_team_id = away_team_id
     ORDER BY sportsbooks DESC, player_name ASC
-    LIMIT ?`).bind(latest.captured_at, ...marketKeys, candidateLimit).all<LivePropCandidate>();
+    LIMIT ?`).bind(latest.captured_at, new Date().toISOString(), ...marketKeys, candidateLimit).all<LivePropCandidate>();
 
   // Select a real quoted line, never attach a book logo to a cross-book average.
   const candidatesWithOpponent = (candidates.results ?? []).flatMap(candidate => {
@@ -413,11 +427,13 @@ async function defensivePositionSplits(url: URL, db: D1Database) {
 
 type SportsGameOddsEvent = {
   eventID?: string; id?: string; startTime?: string; commenceTime?: string;
+  status?: { startsAt?: string; started?: boolean; ended?: boolean; completed?: boolean; cancelled?: boolean };
   teams?: { home?: { names?: { long?: string } }; away?: { names?: { long?: string } } };
   odds?: Record<string, { oddID?: string; playerID?: string; statEntityID?: string; marketName?: string; statID?: string; sideID?: string; fairOverUnder?: string; bookOverUnder?: string; byBookmaker?: Record<string, { available?: boolean; overUnder?: string; odds?: string }> }>;
 };
 
 const numeric = (value: unknown) => {
+  if (value === null || value === undefined || value === "") return null;
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : null;
 };
@@ -430,6 +446,9 @@ async function syncSportsGameOdds(env: Env) {
   source.searchParams.set("apiKey", env.SPORTS_GAME_ODDS_API_KEY);
   source.searchParams.set("leagueID", "NFL");
   source.searchParams.set("oddsAvailable", "true");
+  source.searchParams.set("started", "false");
+  source.searchParams.set("cancelled", "false");
+  source.searchParams.set("startsAfter", new Date().toISOString());
   source.searchParams.set("includeAltLines", "false");
   source.searchParams.set("limit", "32");
   const response = await fetch(source, { headers: { "accept": "application/json" } });
@@ -443,10 +462,11 @@ async function syncSportsGameOdds(env: Env) {
   let propsStored = 0;
   for (const event of events) {
     const eventId = String(event.eventID ?? event.id ?? "");
-    if (!eventId) continue;
+    const kickoff = event.status?.startsAt ?? event.startTime ?? event.commenceTime;
+    if (!eventId || !(Date.parse(kickoff ?? "") > Date.now()) || event.status?.started || event.status?.ended || event.status?.completed || event.status?.cancelled) continue;
     statements.push(env.PLAYERPROP_DB.prepare(`INSERT INTO odds_events (provider, event_id, commence_at, home_team_name, away_team_name, fetched_at)
       VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(provider, event_id) DO UPDATE SET commence_at = excluded.commence_at, home_team_name = excluded.home_team_name, away_team_name = excluded.away_team_name, fetched_at = excluded.fetched_at`)
-      .bind(provider, eventId, event.startTime ?? event.commenceTime ?? null, event.teams?.home?.names?.long ?? null, event.teams?.away?.names?.long ?? null, capturedAt));
+      .bind(provider, eventId, kickoff, event.teams?.home?.names?.long ?? null, event.teams?.away?.names?.long ?? null, capturedAt));
     for (const odd of Object.values(event.odds ?? {})) {
       if (odd.sideID !== "over") continue;
       for (const [sportsbook, book] of Object.entries(odd.byBookmaker ?? {})) {
@@ -481,13 +501,13 @@ export default {
     if (request.method === "GET" && url.pathname === "/api/board") return board(url, env.PLAYERPROP_DB);
     if (request.method === "GET" && url.pathname === "/api/signals/live") {
       const cached = await caches.default.match(request);
-      if (cached) return cached;
+      if (cached) return upcomingResponse(cached);
       const response = await liveSignals(url, env.PLAYERPROP_DB);
       if (response.ok) {
         response.headers.set("cache-control", "public, max-age=300");
         await caches.default.put(request, response.clone());
       }
-      return response;
+      return response.ok ? upcomingResponse(response) : response;
     }
     if (request.method === "GET" && url.pathname === "/api/defense/position-splits") return defensivePositionSplits(url, env.PLAYERPROP_DB);
     if (request.method === "POST" && url.pathname === "/api/admin/refresh-sports-game-odds") {

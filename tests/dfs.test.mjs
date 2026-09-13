@@ -194,7 +194,7 @@ test('Doctor Chart uses an actual sportsbook quote and exact recent totals/defen
   db.batch=async statements=>Promise.all(statements.map(s=>s.all()));
   globalThis.caches={default:{match:async()=>undefined,put:async()=>{}}};
   sql.exec(`UPDATE teams SET team_name='Chicago Bears' WHERE team_id='CHI'; UPDATE teams SET team_name='Green Bay Packers' WHERE team_id='GB';
-    INSERT INTO odds_events VALUES ('sports_game_odds','event','2026-09-13T17:00:00Z','Green Bay Packers','Chicago Bears','2026-09-06T12:00:00Z');
+    INSERT INTO odds_events VALUES ('sports_game_odds','event','2099-09-13T17:00:00Z','Green Bay Packers','Chicago Bears','2026-09-06T12:00:00Z');
     INSERT INTO odds_player_props(provider,event_id,odd_id,player_name,market_key,sportsbook,line,captured_at) VALUES
     ('sports_game_odds','event','passing-game-ou-over','Sample Quarterback','passing_yards','fanduel',250.5,'2026-09-06T12:00:00Z'),
     ('sports_game_odds','event','passing-game-ou-over','Sample Quarterback','passing_yards','draftkings',275.5,'2026-09-06T12:00:00Z');`);
@@ -206,7 +206,24 @@ test('Doctor Chart uses an actual sportsbook quote and exact recent totals/defen
   const data=await response.json();const s=data.signals[0];assert.equal(s.line,275.5);assert.equal(s.sportsbook,'draftkings');assert.equal(s.lineSource,'quoted');
   assert.equal(s.recentTotal,1000);assert.equal(s.recentAverage,200);assert.equal(s.recentUnderCount,4);assert.equal(s.recentOverCount,1);assert.equal(s.recentPushCount,0);
   assert.equal(s.defenseRecentGames,5);assert.equal(s.defenseRecentAverageAllowed,200);assert.equal(s.defenseAverageAllowed,175);assert.equal(s.historySeason,2025);
+  for (const kickoff of ['2000-01-01T00:00:00Z', null, 'invalid']) {
+    sql.prepare('UPDATE odds_events SET commence_at=?').run(kickoff);
+    assert.deepEqual((await (await fetchRoute(db,'/api/signals/live')).json()).signals,[]);
+  }
   sql.close();
+});
+
+test('cached props are rechecked at serving time, including legacy missing dates',async()=>{
+ const old=globalThis.caches;
+ globalThis.caches={default:{match:async()=>Response.json({signals:[{commenceAt:'2000-01-01T00:00:00Z'},{},{commenceAt:'2099-01-01T00:00:00Z'}]}),put:async()=>{}}};
+ try{const response=await fetchRoute({},'/api/signals/live');assert.equal((await response.json()).signals.length,1);assert.equal(response.headers.get('cache-control'),'no-store');}finally{globalThis.caches=old;}
+});
+
+test('odds sync uses provider status.startsAt and rejects started, cancelled and undated events',async()=>{
+ const {sql,db}=database(),original=globalThis.fetch;let requested;
+ const event={eventID:'future',status:{startsAt:'2099-01-01T00:00:00Z'},teams:{home:{names:{long:'Chicago Bears'}},away:{names:{long:'Green Bay Packers'}}}};
+ globalThis.fetch=async url=>{requested=new URL(url);return Response.json({data:[event,{...event,eventID:'past',status:{startsAt:'2000-01-01T00:00:00Z'}},{...event,eventID:'started',status:{...event.status,started:true}},{...event,eventID:'cancelled',status:{...event.status,cancelled:true}},{...event,eventID:'missing',status:{}}]});};
+ try{const response=await worker.fetch(new Request('https://local.test/api/admin/refresh-sports-game-odds',{method:'POST',headers:{authorization:'Bearer test-token'}}),{PLAYERPROP_DB:db,INGEST_TOKEN:'test-token',SPORTS_GAME_ODDS_API_KEY:'test-only'});assert.equal(response.status,200);assert.equal(requested.searchParams.get('started'),'false');assert.equal(requested.searchParams.get('cancelled'),'false');const rows=sql.prepare('SELECT event_id,commence_at FROM odds_events').all();assert.equal(rows.length,1);assert.equal(rows[0].commence_at,event.status.startsAt);}finally{globalThis.fetch=original;sql.close();}
 });
 
 test('simulation API authenticates, bounds work, persists and retrieves immutable summaries', async () => {

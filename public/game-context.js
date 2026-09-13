@@ -31,3 +31,10 @@ export function weatherText(game, now = Date.now()) {
   if (!game.weather) return 'Forecast not available yet' + roof;
   return `${Math.round(game.weather.temperature)}°F · ${game.weather.description}${game.roofed ? ' · Outside roofed venue; roof status unverified' : ''}`;
 }
+
+// A missing kickoff cannot establish that a quote belongs to an upcoming game.
+// Never attach an undated old quote to a later rematch from the schedule.
+export function isUpcomingSignal(signal, now = Date.now()) {
+  const kickoff = Date.parse(signal.commenceAt);
+  return Number.isFinite(kickoff) && kickoff > now;
+}

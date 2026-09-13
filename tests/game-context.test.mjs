@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {normalizeGames,matchGame,weatherText,showLock} from '../public/game-context.js';
+import {normalizeGames,matchGame,weatherText,showLock,isUpcomingSignal} from '../public/game-context.js';
 const fixture=JSON.parse(readFileSync(new URL('../public/game-context-snapshot.json',import.meta.url)));
 const games=normalizeGames(fixture.payload,fixture.fetchedAt);
 test('lock strictly above 80, excludes malformed confidence',()=>{
@@ -27,4 +27,11 @@ test('forecast handles missing, stale, started and roofed venues honestly',()=>{
 test('missing optional weather fields do not break schedule parsing',()=>{
  const p=structuredClone(fixture.payload);delete p.events[0].weather;assert.equal(normalizeGames(p,fixture.fetchedAt)[0].weather,null);
  assert.deepEqual(normalizeGames({events:[{}]},fixture.fetchedAt),[]);
+});
+
+test('props exclude last night, exact kickoff, invalid and undated legacy quotes',()=>{
+ const now=Date.parse('2026-09-11T15:00:00Z');
+ for(const commenceAt of ['2026-09-10T19:20:00-05:00','2026-09-11T10:00:00-05:00','bad',null,undefined])assert.equal(isUpcomingSignal({commenceAt},now),false);
+ assert.equal(isUpcomingSignal({commenceAt:'2026-09-13T12:00:00-05:00'},now),true);
+ const signal={commenceAt:'2026-09-13T17:00:00Z'};assert.equal(isUpcomingSignal(signal,Date.parse(signal.commenceAt)-1),true);assert.equal(isUpcomingSignal(signal,Date.parse(signal.commenceAt)),false);
 });
