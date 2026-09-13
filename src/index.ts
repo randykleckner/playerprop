@@ -440,8 +440,32 @@ const numeric = (value: unknown) => {
 
 const inferredPlayerName = (sourceId?: string) => sourceId?.replace(/_NFL$/, "").replace(/_\d+$/, "").split("_").map((part) => part.charAt(0) + part.slice(1).toLowerCase()).join(" ") ?? null;
 
+async function sportsbookUsage(env: Env) {
+  if (!env.SPORTS_GAME_ODDS_API_KEY) throw Error("Sportsbook key missing");
+  const response=await fetch("https://api.sportsgameodds.com/v2/account/usage",{headers:{"X-Api-Key":env.SPORTS_GAME_ODDS_API_KEY}});
+  if(!response.ok)throw Error(`Usage check HTTP ${response.status}`);
+  const payload=await response.json<{data?:{isActive?:boolean;rateLimits?:Record<string,Record<string,unknown>>}}>();
+  return {isActive:payload.data?.isActive,rateLimits:payload.data?.rateLimits};
+}
+export function freeOddsBudget(usage:Awaited<ReturnType<typeof sportsbookUsage>>) {
+ const month=usage.rateLimits?.['per-month'];
+ const limit=month?.['max-entities']??month?.maxEntitiesPerInterval;
+ const used=month?.['current-entities']??month?.currentIntervalEntities;
+ if(usage.isActive!==true||typeof limit!=="number"||limit!==2500||typeof used!=="number"||!Number.isFinite(used)||used<0)throw Error("Active free-tier quota could not be verified; no odds requested");
+ if(used+32>2400)throw Error("Free monthly quota reserve reached; no odds requested");
+ for(const interval of Object.values(usage.rateLimits??{})){
+  const max=interval['max-requests']??interval.maxRequestsPerInterval,current=interval['current-requests']??interval.currentIntervalRequests;
+  if(typeof max==='number'&&typeof current==='number'&&current+2>max)throw Error("Provider request-rate reserve reached; no odds requested");
+ }
+ return {limit,used,reservedObjects:32,remaining:limit-used};
+}
+
 async function syncSportsGameOdds(env: Env) {
   if (!env.SPORTS_GAME_ODDS_API_KEY) return json({ error: "SPORTS_GAME_ODDS_API_KEY is not configured." }, 503);
+  const latest=await env.PLAYERPROP_DB.prepare("SELECT MAX(captured_at) AS captured_at FROM odds_player_props WHERE provider = 'sports_game_odds'").first<{captured_at:string|null}>();
+  if(latest?.captured_at&&Date.now()-Date.parse(latest.captured_at)<6*3600000)return json({provider:"sports_game_odds",skipped:"fresh_capture",capturedAt:latest.captured_at});
+  let quota;
+  try { quota=freeOddsBudget(await sportsbookUsage(env)); } catch(error) {return json({error:error instanceof Error?error.message:"Quota check failed"},409);}
   const source = new URL("https://api.sportsgameodds.com/v2/events");
   source.searchParams.set("apiKey", env.SPORTS_GAME_ODDS_API_KEY);
   source.searchParams.set("leagueID", "NFL");
@@ -449,6 +473,7 @@ async function syncSportsGameOdds(env: Env) {
   source.searchParams.set("started", "false");
   source.searchParams.set("cancelled", "false");
   source.searchParams.set("startsAfter", new Date().toISOString());
+  source.searchParams.set("startsBefore", new Date(Date.now()+7*86400000).toISOString());
   source.searchParams.set("includeAltLines", "false");
   source.searchParams.set("limit", "32");
   const response = await fetch(source, { headers: { "accept": "application/json" } });
@@ -482,7 +507,7 @@ async function syncSportsGameOdds(env: Env) {
     }
   }
   for (let index = 0; index < statements.length; index += 500) await env.PLAYERPROP_DB.batch(statements.slice(index, index + 500));
-  return json({ provider, eventsFound: events.length, propsStored, capturedAt });
+  return json({ provider, eventsFound: events.length, propsStored, capturedAt, quota, nextPageAvailable:!!(root as {nextCursor?:string}).nextCursor });
 }
 
 export default {
@@ -510,6 +535,11 @@ export default {
       return response.ok ? upcomingResponse(response) : response;
     }
     if (request.method === "GET" && url.pathname === "/api/defense/position-splits") return defensivePositionSplits(url, env.PLAYERPROP_DB);
+    if (request.method === "GET" && url.pathname === "/api/admin/odds-usage") {
+      if (!env.INGEST_TOKEN || request.headers.get("authorization") !== `Bearer ${env.INGEST_TOKEN}`) return unauthorized();
+      if (!env.SPORTS_GAME_ODDS_API_KEY) return json({error:"Sportsbook key missing"},503);
+      try{return json(await sportsbookUsage(env));}catch{return json({error:"Usage check failed"},502);}
+    }
     if (request.method === "POST" && url.pathname === "/api/admin/refresh-sports-game-odds") {
       if (!env.INGEST_TOKEN || request.headers.get("authorization") !== `Bearer ${env.INGEST_TOKEN}`) return unauthorized();
       return syncSportsGameOdds(env);

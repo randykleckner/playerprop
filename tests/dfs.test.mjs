@@ -222,7 +222,7 @@ test('cached props are rechecked at serving time, including legacy missing dates
 test('odds sync uses provider status.startsAt and rejects started, cancelled and undated events',async()=>{
  const {sql,db}=database(),original=globalThis.fetch;let requested;
  const event={eventID:'future',status:{startsAt:'2099-01-01T00:00:00Z'},teams:{home:{names:{long:'Chicago Bears'}},away:{names:{long:'Green Bay Packers'}}}};
- globalThis.fetch=async url=>{requested=new URL(url);return Response.json({data:[event,{...event,eventID:'past',status:{startsAt:'2000-01-01T00:00:00Z'}},{...event,eventID:'started',status:{...event.status,started:true}},{...event,eventID:'cancelled',status:{...event.status,cancelled:true}},{...event,eventID:'missing',status:{}}]});};
+ globalThis.fetch=async url=>{if(String(url).includes('/account/usage'))return Response.json({data:{isActive:true,rateLimits:{'per-month':{'max-entities':2500,'current-entities':32}}}});requested=new URL(url);return Response.json({data:[event,{...event,eventID:'past',status:{startsAt:'2000-01-01T00:00:00Z'}},{...event,eventID:'started',status:{...event.status,started:true}},{...event,eventID:'cancelled',status:{...event.status,cancelled:true}},{...event,eventID:'missing',status:{}}]});};
  try{const response=await worker.fetch(new Request('https://local.test/api/admin/refresh-sports-game-odds',{method:'POST',headers:{authorization:'Bearer test-token'}}),{PLAYERPROP_DB:db,INGEST_TOKEN:'test-token',SPORTS_GAME_ODDS_API_KEY:'test-only'});assert.equal(response.status,200);assert.equal(requested.searchParams.get('started'),'false');assert.equal(requested.searchParams.get('cancelled'),'false');const rows=sql.prepare('SELECT event_id,commence_at FROM odds_events').all();assert.equal(rows.length,1);assert.equal(rows[0].commence_at,event.status.startsAt);}finally{globalThis.fetch=original;sql.close();}
 });
 
@@ -246,4 +246,11 @@ test('simulation API authenticates, bounds work, persists and retrieves immutabl
   assert.equal(sql.prepare('SELECT COUNT(*) AS n FROM dfs_simulation_runs').get().n,1);
   assert.equal((await call('/api/dfs/simulations/lineup',{slate_id:'151307',lineup:[]})).status,400);
   sql.close();
+});
+
+test('free odds quota guard supports both documented and actual schema, stops before reserve',async()=>{
+ const {freeOddsBudget}=await import(pathToFileURL(join(temp,'worker.mjs')));
+ for(const m of [{'max-entities':2500,'current-entities':32},{maxEntitiesPerInterval:2500,currentIntervalEntities:32}])assert.equal(freeOddsBudget({isActive:true,rateLimits:{'per-month':m}}).remaining,2468);
+ for(const used of [2390,2500,NaN])assert.throws(()=>freeOddsBudget({isActive:true,rateLimits:{'per-month':{'max-entities':2500,'current-entities':used}}}));
+ assert.throws(()=>freeOddsBudget({isActive:false}));assert.throws(()=>freeOddsBudget({isActive:true,rateLimits:{}}));
 });
