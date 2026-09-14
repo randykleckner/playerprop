@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "bundle": "93d5f6aa620dd584829663b2",
+      "slate_id": "153069",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-13T13:10:34.245Z",
+      "lineups_path": "/research/bundles/93d5f6aa620dd584829663b2/lineups.json"
+    },
+    {
+      "bundle": "ce98d8a150c1c6b9efd4173f",
+      "slate_id": "153069",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-10T15:01:19.793Z",
+      "lineups_path": "/research/bundles/ce98d8a150c1c6b9efd4173f/lineups.json"
+    },
+    {
+      "bundle": "b11e0bc2a14f302a56517660",
+      "slate_id": "153069",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-10T00:19:25.172Z",
+      "lineups_path": "/research/bundles/b11e0bc2a14f302a56517660/lineups.json"
+    },
+    {
+      "bundle": "8d33f340355c5bb560f093bf",
+      "slate_id": "153069",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-09T19:12:24.500Z",
+      "lineups_path": "/research/bundles/8d33f340355c5bb560f093bf/lineups.json"
+    },
+    {
+      "bundle": "36dc8a5bfda31f2e91298a56",
+      "slate_id": "153069",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-09T01:06:09.379Z",
+      "lineups_path": "/research/bundles/36dc8a5bfda31f2e91298a56/lineups.json"
+    },
+    {
+      "bundle": "f54046e9630fa0d709368a99",
+      "slate_id": "151307",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-08T19:09:02.293Z",
+      "lineups_path": "/research/bundles/f54046e9630fa0d709368a99/lineups.json"
+    },
+    {
+      "bundle": "3dabca709ea6b611c91e8795",
+      "slate_id": "151307",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-08T14:38:26.729Z",
+      "lineups_path": "/research/bundles/3dabca709ea6b611c91e8795/lineups.json"
+    },
+    {
+      "bundle": "a8c81572bd5af2507918a08d",
+      "slate_id": "151307",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-08T14:17:27.600Z",
+      "lineups_path": "/research/bundles/a8c81572bd5af2507918a08d/lineups.json"
+    },
+    {
+      "bundle": "049409c3f0aeacba643614ad",
+      "slate_id": "151307",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-08T13:57:22.063Z",
+      "lineups_path": "/research/bundles/049409c3f0aeacba643614ad/lineups.json"
+    },
+    {
+      "bundle": "6e4fc8d162e6e29142d0ab0f",
+      "slate_id": "151307",
+      "season": 2026,
+      "week": 1,
+      "start_time": "2026-09-13T17:00:00.000Z",
+      "generated_at": "2026-09-08T02:22:06.026Z",
+      "lineups_path": "/research/bundles/6e4fc8d162e6e29142d0ab0f/lineups.json"
+    }
+  ]
+}

@@ -327,3 +327,7 @@ Expected-active personnel and workload redistribution are implemented in Drive L
 ### September 13 Props feed repair
 
 Investigated empty Props: the only stored sportsbook batch was September 3, with null kickoff times on all 32 events. The read-only twice-daily job copied that batch instead of refreshing the provider. Upcoming-only filtering correctly excludes those records. Added explicit feed-health metadata and a static health artifact; empty/stale snapshots now report failure. Added an opt-in, authenticated local sportsbook-refresh command, preserving the public-only schedule and existing secrets. Fresh provider ingestion requires authorized allowance use and the existing ingest token. See `docs/data-sources.md` for the audit and recovery path.
+
+### Lineup review — September 13
+
+Locked DFS builds remain visible for historical review instead of disappearing. Added an immutable-build archive selector and bookmark URLs, plus read-only ESPN live game scores with a visible freshness indicator. Original projections remain unchanged; game scores are not labeled fantasy actuals. Next scoring work: exact DK player/DST actual conversion, finality/stat-correction reconciliation, six-lineup realized totals and a separate hindsight-optimal lineup across the original salary pool.

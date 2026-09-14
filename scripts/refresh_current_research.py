@@ -97,6 +97,7 @@ def main():
             subprocess.run(['node','scripts/refresh_dfs_research.mjs','--root',args.root,'--failure',message],cwd=ROOT,check=False)
             print(str(error));return 1
         finally:
+            subprocess.run(['node','scripts/build_lineup_archive.mjs',args.root],cwd=ROOT,check=False)
             # Public API snapshot and kickoff expiry are independent of DFS/news failures.
             subprocess.run(['python3','scripts/refresh_prop_snapshot.py','--root',args.root],cwd=ROOT,check=False)
             # News has an independent failure boundary and also refreshes when salary discovery fails.
