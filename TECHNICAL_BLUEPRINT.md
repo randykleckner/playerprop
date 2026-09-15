@@ -331,3 +331,9 @@ Investigated empty Props: the only stored sportsbook batch was September 3, with
 ### Lineup review — September 13
 
 Locked DFS builds remain visible for historical review instead of disappearing. Added an immutable-build archive selector and bookmark URLs, plus read-only ESPN live game scores with a visible freshness indicator. Original projections remain unchanged; game scores are not labeled fantasy actuals. Next scoring work: exact DK player/DST actual conversion, finality/stat-correction reconciliation, six-lineup realized totals and a separate hindsight-optimal lineup across the original salary pool.
+
+### September 15: projection-first discovery
+
+`public/research/highlights.js` supplies pure, tested player and game ranking functions. `public/lineups/leaders.js` loads the selected immutable research bundle with a request-generation guard and slate-ID check; a leader-feed failure does not suppress recommendations. `public/drive-lab/matchups.js` reads the current research manifest and ranks upcoming saved market environments, clearly separating them from archived diagnostic controls. Both display saved data context. The lineup live-score section follows recommendations, leaders, and shared what-if results. No ingestion, model weights, scheduler, paid data, or D1 schema changes.
+
+Validation: three focused ranking tests (eligibility/deduplication, missing metrics/value denominators, market modes/lock exclusion), TypeScript check, browser verification. Actual season stat leaders and defensive positional advantage grades remain separate future work; these displays are explicitly projected usage/points and market environments.

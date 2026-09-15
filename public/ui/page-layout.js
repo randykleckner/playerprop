@@ -19,7 +19,7 @@ export function layoutPage(){
   if(overview){const watcher=new MutationObserver(()=>{overviewEmpty.hidden=!overview.hidden;});watcher.observe(overview,{attributes:true,attributeFilter:['hidden']});}
   const personnel=$('personnel')?.closest('details'),evaluation=$('evaluation')?.closest('section');
   tabs(primary,[['Game overview',[overviewEmpty,overview]],['Matchup',[$('active-personnel'),personnel]],['Player projections',[$('fantasy-results'),el('p','','Player outcome distributions appear here after simulating games with the Base or Personnel engine.')]],['What-if scenario',[availability,embedded]],['Model evidence',[evaluation]]]);
-  const leftovers=[...main.children].filter(n=>n!==intro&&!n.contains(grid)&&!n.matches('script'));
+  const leftovers=[...main.children].filter(n=>n!==intro&&n.id!=='favorable-matchups'&&!n.contains(grid)&&!n.matches('script'));
   const notes=leftovers.filter(n=>n!==grid);if(notes.length)inspector.append(disclosure('Sources & assumptions',notes));
   grid.append(primary,inspector);main.append(grid);
  }
