@@ -2,6 +2,24 @@
   "version": 1,
   "entries": [
     {
+      "bundle": "1d4ef8a1140d424da41675bd",
+      "slate_id": "153428",
+      "season": 2026,
+      "week": 2,
+      "start_time": "2026-09-20T17:00:00.000Z",
+      "generated_at": "2026-09-14T22:02:11.212Z",
+      "lineups_path": "/research/bundles/1d4ef8a1140d424da41675bd/lineups.json"
+    },
+    {
+      "bundle": "111faaa8a7c1ef816eaa48aa",
+      "slate_id": "153428",
+      "season": 2026,
+      "week": 2,
+      "start_time": "2026-09-20T17:00:00.000Z",
+      "generated_at": "2026-09-14T15:01:11.707Z",
+      "lineups_path": "/research/bundles/111faaa8a7c1ef816eaa48aa/lineups.json"
+    },
+    {
       "bundle": "93d5f6aa620dd584829663b2",
       "slate_id": "153069",
       "season": 2026,

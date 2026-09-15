@@ -1,262 +1,198 @@
 {
   "historySeason": 2025,
-  "capturedAt": "2026-09-13T18:17:28.166Z",
+  "capturedAt": "2026-09-14T22:01:54.353Z",
   "signals": [
     {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0040667",
-      "playerName": "Matthew Golden",
-      "position": "WR",
-      "playerTeam": "GB",
-      "opponentTeam": "MIN",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 3.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0040078",
+      "playerName": "Brashard Smith",
+      "position": "RB",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 4.5,
+      "sportsbooks": 1,
+      "sportsbook": "betmgm",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "under",
-      "score": -41.1,
-      "confidence": 85,
+      "score": -44.5,
+      "confidence": 72,
       "recentGames": 5,
-      "recentTotal": 5,
+      "recentTotal": 11,
       "recentGameValues": [
         {
           "week": 18,
-          "value": 1
-        },
-        {
-          "week": 17,
-          "value": 1
-        },
-        {
-          "week": 16,
-          "value": 0
-        },
-        {
-          "week": 15,
-          "value": 3
-        },
-        {
-          "week": 14,
-          "value": 0
-        }
-      ],
-      "recentOverCount": 0,
-      "recentUnderCount": 5,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 9,
-      "defenseRecentGames": 5,
-      "recentAverage": 1,
-      "hitRate": 0,
-      "defenseAverageAllowed": 8.8,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 2,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 0,
-      "recentSnapShare": 45.6,
-      "historicalHeadCoach": "Matt LaFleur",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 3.5 receptions: last 5 average 1.0 (0% over); MIN allows 8.8 per game to WRs versus a league average of 11.0 (rank 2 fewest)."
-    },
-    {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0034844",
-      "playerName": "Saquon Barkley",
-      "position": "RB",
-      "playerTeam": "PHI",
-      "opponentTeam": "WAS",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 2.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -41,
-      "confidence": 85,
-      "recentGames": 5,
-      "recentTotal": 2,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 0
-        },
-        {
-          "week": 16,
-          "value": 0
-        },
-        {
-          "week": 15,
           "value": 2
         },
         {
-          "week": 14,
-          "value": 0
-        },
-        {
-          "week": 13,
-          "value": 0
-        }
-      ],
-      "recentOverCount": 0,
-      "recentUnderCount": 5,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 2.2,
-      "defenseRecentGames": 5,
-      "recentAverage": 0.4,
-      "hitRate": 0,
-      "defenseAverageAllowed": 3.4,
-      "leagueDefenseAverageAllowed": 4.2,
-      "defenseRankFewestAllowed": 5,
-      "documentedAvailabilityGames": 2,
-      "limitedGames": 0,
-      "recentSnapShare": 77.8,
-      "historicalHeadCoach": "Nick Sirianni",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 2.5 receptions: last 5 average 0.4 (0% over); WAS allows 3.4 per game to RBs versus a league average of 4.2 (rank 5 fewest)."
-    },
-    {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0033293",
-      "playerName": "Aaron Jones",
-      "position": "RB",
-      "playerTeam": "MIN",
-      "opponentTeam": "GB",
-      "marketKey": "rushing_yards",
-      "marketLabel": "rushing yards",
-      "line": 29.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 36.8,
-      "confidence": 83,
-      "recentGames": 5,
-      "recentTotal": 251,
-      "recentGameValues": [
-        {
           "week": 17,
-          "value": 53
-        },
-        {
-          "week": 16,
-          "value": 85
-        },
-        {
-          "week": 15,
-          "value": 34
-        },
-        {
-          "week": 14,
-          "value": 76
-        },
-        {
-          "week": 13,
-          "value": 3
-        }
-      ],
-      "recentOverCount": 4,
-      "recentUnderCount": 1,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 134,
-      "defenseRecentGames": 5,
-      "recentAverage": 50.2,
-      "hitRate": 80,
-      "defenseAverageAllowed": 100.5,
-      "leagueDefenseAverageAllowed": 94.7,
-      "defenseRankFewestAllowed": 21,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 2,
-      "recentSnapShare": 53.8,
-      "historicalHeadCoach": "Kevin O'Connell",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 29.5 rushing yards: last 5 average 50.2 (80% over); GB allows 100.5 per game to RBs versus a league average of 94.7 (rank 21 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0039410",
-      "playerName": "Ryan Flournoy",
-      "position": "WR",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 2.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 36.6,
-      "confidence": 83,
-      "recentGames": 5,
-      "recentTotal": 23,
-      "recentGameValues": [
-        {
-          "week": 18,
           "value": 5
         },
         {
           "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
           "value": 4
         },
         {
+          "week": 15,
+          "value": 0
+        },
+        {
           "week": 14,
+          "value": 0
+        }
+      ],
+      "recentOverCount": 1,
+      "recentUnderCount": 4,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 12.4,
+      "defenseRecentGames": 5,
+      "recentAverage": 2.2,
+      "hitRate": 20,
+      "defenseAverageAllowed": 21.2,
+      "leagueDefenseAverageAllowed": 31.1,
+      "defenseRankFewestAllowed": 2,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 19.6,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "UNDER 4.5 receiving yards: last 5 average 2.2 (20% over); DEN allows 21.2 per game to RBs versus a league average of 31.1 (rank 2 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039732",
+      "playerName": "Bo Nix",
+      "position": "QB",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "rushing_attempts",
+      "marketLabel": "rushing attempts",
+      "line": 3.5,
+      "sportsbooks": 5,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 41.4,
+      "confidence": 83,
+      "recentGames": 5,
+      "recentTotal": 31,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 8
+        },
+        {
+          "week": 17,
           "value": 9
         },
         {
-          "week": 13,
+          "week": 16,
+          "value": 4
+        },
+        {
+          "week": 15,
+          "value": 7
+        },
+        {
+          "week": 14,
           "value": 3
         }
       ],
       "recentOverCount": 4,
       "recentUnderCount": 1,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 9.6,
+      "defenseRecentAverageAllowed": 3.8,
       "defenseRecentGames": 5,
-      "recentAverage": 4.6,
+      "recentAverage": 6.2,
       "hitRate": 80,
-      "defenseAverageAllowed": 11.6,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 21,
-      "documentedAvailabilityGames": 1,
+      "defenseAverageAllowed": 4.9,
+      "leagueDefenseAverageAllowed": 4.1,
+      "defenseRankFewestAllowed": 29,
+      "documentedAvailabilityGames": 0,
       "limitedGames": 0,
-      "recentSnapShare": 58.8,
-      "historicalHeadCoach": "Brian Schottenheimer",
+      "recentSnapShare": 100,
+      "historicalHeadCoach": "Sean Payton",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "OVER 2.5 receptions: last 5 average 4.6 (80% over); NYG allows 11.6 per game to WRs versus a league average of 11.0 (rank 21 fewest)."
+      "summary": "OVER 3.5 rushing attempts: last 5 average 6.2 (80% over); KC allows 4.9 per game to QBs versus a league average of 4.1 (rank 29 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0036637",
+      "playerName": "Noah Gray",
+      "position": "TE",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 9.5,
+      "sportsbooks": 5,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 38,
+      "confidence": 81,
+      "recentGames": 5,
+      "recentTotal": 71,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 30
+        },
+        {
+          "week": 17,
+          "value": 2
+        },
+        {
+          "week": 16,
+          "value": 0
+        },
+        {
+          "week": 14,
+          "value": 14
+        },
+        {
+          "week": 12,
+          "value": 25
+        }
+      ],
+      "recentOverCount": 3,
+      "recentUnderCount": 2,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 50,
+      "defenseRecentGames": 5,
+      "recentAverage": 14.2,
+      "hitRate": 60,
+      "defenseAverageAllowed": 59.7,
+      "leagueDefenseAverageAllowed": 53.6,
+      "defenseRankFewestAllowed": 23,
+      "documentedAvailabilityGames": 3,
+      "limitedGames": 0,
+      "recentSnapShare": 46.6,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 9.5 receiving yards: last 5 average 14.2 (60% over); DEN allows 59.7 per game to TEs versus a league average of 53.6 (rank 23 fewest)."
     },
     {
       "eventId": "dflovmgz7KuRpeUeYjiO",
@@ -272,14 +208,14 @@
       "marketKey": "rushing_yards",
       "marketLabel": "rushing yards",
       "line": 14.5,
-      "sportsbooks": 6,
+      "sportsbooks": 5,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 35.8,
-      "confidence": 83,
+      "confidence": 80,
       "recentGames": 5,
       "recentTotal": 137,
       "recentGameValues": [
@@ -339,7 +275,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 34.9,
@@ -387,260 +323,196 @@
       "summary": "OVER 2.5 receptions: last 5 average 4.2 (100% over); KC allows 10.9 per game to WRs versus a league average of 11.0 (rank 14 fewest)."
     },
     {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0038994",
-      "playerName": "Jordan Addison",
-      "position": "WR",
-      "playerTeam": "MIN",
-      "opponentTeam": "GB",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 3.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0040730",
+      "playerName": "RJ Harvey",
+      "position": "RB",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "rushing_attempts",
+      "marketLabel": "rushing attempts",
+      "line": 6.5,
+      "sportsbooks": 3,
+      "sportsbook": "betmgm",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -34,
-      "confidence": 82,
-      "recentGames": 5,
-      "recentTotal": 9,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 1
-        },
-        {
-          "week": 17,
-          "value": 0
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 14,
-          "value": 4
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 11,
-      "defenseRecentGames": 5,
-      "recentAverage": 1.8,
-      "hitRate": 20,
-      "defenseAverageAllowed": 11,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 15,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 1,
-      "recentSnapShare": 73.8,
-      "historicalHeadCoach": "Kevin O'Connell",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 3.5 receptions: last 5 average 1.8 (20% over); GB allows 11.0 per game to WRs versus a league average of 11.0 (rank 15 fewest)."
-    },
-    {
-      "eventId": "g1IGYmbDYjQ2xhJe6X4d",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Miami Dolphins at Las Vegas Raiders",
-      "awayTeam": "MIA",
-      "homeTeam": "LV",
-      "playerId": "00-0040729",
-      "playerName": "Jack Bech",
-      "position": "WR",
-      "playerTeam": "LV",
-      "opponentTeam": "MIA",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
-      "score": 33.8,
-      "confidence": 82,
+      "score": 33.4,
+      "confidence": 72,
       "recentGames": 5,
-      "recentTotal": 12,
+      "recentTotal": 72,
       "recentGameValues": [
         {
           "week": 18,
-          "value": 0
+          "value": 15
         },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 14,
-          "value": 6
-        },
-        {
-          "week": 13,
-          "value": 2
-        }
-      ],
-      "recentOverCount": 4,
-      "recentUnderCount": 1,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 11,
-      "defenseRecentGames": 5,
-      "recentAverage": 2.4,
-      "hitRate": 80,
-      "defenseAverageAllowed": 10.5,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 11,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 69.8,
-      "historicalHeadCoach": "Pete Carroll",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 1.5 receptions: last 5 average 2.4 (80% over); MIA allows 10.5 per game to WRs versus a league average of 11.0 (rank 11 fewest)."
-    },
-    {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0034844",
-      "playerName": "Saquon Barkley",
-      "position": "RB",
-      "playerTeam": "PHI",
-      "opponentTeam": "WAS",
-      "marketKey": "receiving_yards",
-      "marketLabel": "receiving yards",
-      "line": 15.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -33.6,
-      "confidence": 81,
-      "recentGames": 5,
-      "recentTotal": 14,
-      "recentGameValues": [
         {
           "week": 17,
-          "value": 0
-        },
-        {
-          "week": 16,
-          "value": 0
-        },
-        {
-          "week": 15,
           "value": 14
         },
         {
-          "week": 14,
-          "value": 0
-        },
-        {
-          "week": 13,
-          "value": 0
-        }
-      ],
-      "recentOverCount": 0,
-      "recentUnderCount": 5,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 19,
-      "defenseRecentGames": 5,
-      "recentAverage": 2.8,
-      "hitRate": 0,
-      "defenseAverageAllowed": 32.6,
-      "leagueDefenseAverageAllowed": 31.1,
-      "defenseRankFewestAllowed": 20,
-      "documentedAvailabilityGames": 2,
-      "limitedGames": 0,
-      "recentSnapShare": 77.8,
-      "historicalHeadCoach": "Nick Sirianni",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 15.5 receiving yards: last 5 average 2.8 (0% over); WAS allows 32.6 per game to RBs versus a league average of 31.1 (rank 20 fewest)."
-    },
-    {
-      "eventId": "kNbeaTiTpvpp4MWOWIKc",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Arizona Cardinals at Los Angeles Chargers",
-      "awayTeam": "ARI",
-      "homeTeam": "LAC",
-      "playerId": "00-0039915",
-      "playerName": "Ladd McConkey",
-      "position": "WR",
-      "playerTeam": "LAC",
-      "opponentTeam": "ARI",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 4.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -32.1,
-      "confidence": 81,
-      "recentGames": 5,
-      "recentTotal": 12,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 1
-        },
-        {
           "week": 16,
-          "value": 4
+          "value": 7
         },
         {
           "week": 15,
+          "value": 19
+        },
+        {
+          "week": 14,
+          "value": 17
+        }
+      ],
+      "recentOverCount": 5,
+      "recentUnderCount": 0,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 27.8,
+      "defenseRecentGames": 5,
+      "recentAverage": 14.4,
+      "hitRate": 100,
+      "defenseAverageAllowed": 20.6,
+      "leagueDefenseAverageAllowed": 21.8,
+      "defenseRankFewestAllowed": 9,
+      "documentedAvailabilityGames": 1,
+      "limitedGames": 0,
+      "recentSnapShare": 63.2,
+      "historicalHeadCoach": "Sean Payton",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 6.5 rushing attempts: last 5 average 14.4 (100% over); KC allows 20.6 per game to RBs versus a league average of 21.8 (rank 9 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0036422",
+      "playerName": "Adam Trautman",
+      "position": "TE",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "receiving_receptions",
+      "marketLabel": "receptions",
+      "line": 0.5,
+      "sportsbooks": 6,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 32.4,
+      "confidence": 81,
+      "recentGames": 5,
+      "recentTotal": 10,
+      "recentGameValues": [
+        {
+          "week": 17,
+          "value": 2
+        },
+        {
+          "week": 16,
           "value": 2
         },
         {
           "week": 14,
-          "value": 1
+          "value": 2
         },
         {
           "week": 13,
-          "value": 4
+          "value": 3
+        },
+        {
+          "week": 11,
+          "value": 1
         }
       ],
-      "recentOverCount": 0,
-      "recentUnderCount": 5,
+      "recentOverCount": 5,
+      "recentUnderCount": 0,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 10.4,
+      "defenseRecentAverageAllowed": 4.8,
       "defenseRecentGames": 5,
-      "recentAverage": 2.4,
-      "hitRate": 0,
-      "defenseAverageAllowed": 11.2,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 18,
+      "recentAverage": 2,
+      "hitRate": 100,
+      "defenseAverageAllowed": 4.8,
+      "leagueDefenseAverageAllowed": 5.3,
+      "defenseRankFewestAllowed": 7,
       "documentedAvailabilityGames": 1,
       "limitedGames": 1,
-      "recentSnapShare": 80,
-      "historicalHeadCoach": "Jim Harbaugh",
+      "recentSnapShare": 65.8,
+      "historicalHeadCoach": "Sean Payton",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "UNDER 4.5 receptions: last 5 average 2.4 (0% over); ARI allows 11.2 per game to WRs versus a league average of 11.0 (rank 18 fewest)."
+      "summary": "OVER 0.5 receptions: last 5 average 2.0 (100% over); KC allows 4.8 per game to TEs versus a league average of 5.3 (rank 7 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0040134",
+      "playerName": "Pat Bryant",
+      "position": "WR",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 24.5,
+      "sportsbooks": 6,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 31.9,
+      "confidence": 81,
+      "recentGames": 5,
+      "recentTotal": 229,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 31
+        },
+        {
+          "week": 16,
+          "value": 42
+        },
+        {
+          "week": 14,
+          "value": 32
+        },
+        {
+          "week": 13,
+          "value": 42
+        },
+        {
+          "week": 11,
+          "value": 82
+        }
+      ],
+      "recentOverCount": 5,
+      "recentUnderCount": 0,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 113.2,
+      "defenseRecentGames": 5,
+      "recentAverage": 45.8,
+      "hitRate": 100,
+      "defenseAverageAllowed": 124.6,
+      "leagueDefenseAverageAllowed": 139.1,
+      "defenseRankFewestAllowed": 9,
+      "documentedAvailabilityGames": 4,
+      "limitedGames": 1,
+      "recentSnapShare": 60.6,
+      "historicalHeadCoach": "Sean Payton",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 24.5 receiving yards: last 5 average 45.8 (100% over); KC allows 124.6 per game to WRs versus a league average of 139.1 (rank 9 fewest)."
     },
     {
       "eventId": "dflovmgz7KuRpeUeYjiO",
@@ -659,7 +531,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "under",
       "score": -31.9,
@@ -723,7 +595,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 31.8,
@@ -771,68 +643,68 @@
       "summary": "OVER 16.5 receiving yards: last 5 average 26.8 (60% over); KC allows 27.8 per game to RBs versus a league average of 31.1 (rank 13 fewest)."
     },
     {
-      "eventId": "kNbeaTiTpvpp4MWOWIKc",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Arizona Cardinals at Los Angeles Chargers",
-      "awayTeam": "ARI",
-      "homeTeam": "LAC",
-      "playerId": "00-0040666",
-      "playerName": "Omarion Hampton",
-      "position": "RB",
-      "playerTeam": "LAC",
-      "opponentTeam": "ARI",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 2.5,
-      "sportsbooks": 6,
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0036422",
+      "playerName": "Adam Trautman",
+      "position": "TE",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 6.5,
+      "sportsbooks": 3,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 31.6,
-      "confidence": 80,
+      "confidence": 71,
       "recentGames": 5,
-      "recentTotal": 18,
+      "recentTotal": 110,
       "recentGameValues": [
         {
           "week": 17,
-          "value": 8
+          "value": 24
         },
         {
           "week": 16,
-          "value": 1
-        },
-        {
-          "week": 15,
-          "value": 1
+          "value": 14
         },
         {
           "week": 14,
-          "value": 2
+          "value": 17
         },
         {
-          "week": 5,
-          "value": 6
+          "week": 13,
+          "value": 47
+        },
+        {
+          "week": 11,
+          "value": 8
         }
       ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
+      "recentOverCount": 5,
+      "recentUnderCount": 0,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 5.2,
+      "defenseRecentAverageAllowed": 45.6,
       "defenseRecentGames": 5,
-      "recentAverage": 3.6,
-      "hitRate": 40,
-      "defenseAverageAllowed": 4.3,
-      "leagueDefenseAverageAllowed": 4.2,
-      "defenseRankFewestAllowed": 17,
+      "recentAverage": 22,
+      "hitRate": 100,
+      "defenseAverageAllowed": 47.6,
+      "leagueDefenseAverageAllowed": 53.6,
+      "defenseRankFewestAllowed": 11,
       "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 52.2,
-      "historicalHeadCoach": "Jim Harbaugh",
+      "limitedGames": 1,
+      "recentSnapShare": 65.8,
+      "historicalHeadCoach": "Sean Payton",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "OVER 2.5 receptions: last 5 average 3.6 (40% over); ARI allows 4.3 per game to RBs versus a league average of 4.2 (rank 17 fewest)."
+      "summary": "OVER 6.5 receiving yards: last 5 average 22.0 (100% over); KC allows 47.6 per game to TEs versus a league average of 53.6 (rank 11 fewest)."
     },
     {
       "eventId": "dflovmgz7KuRpeUeYjiO",
@@ -847,15 +719,15 @@
       "opponentTeam": "KC",
       "marketKey": "rushing_yards",
       "marketLabel": "rushing yards",
-      "line": 18.5,
-      "sportsbooks": 6,
+      "line": 17.5,
+      "sportsbooks": 5,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 31.3,
-      "confidence": 80,
+      "confidence": 77,
       "recentGames": 5,
       "recentTotal": 261,
       "recentGameValues": [
@@ -896,108 +768,44 @@
       "historicalHeadCoach": "Sean Payton",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "OVER 18.5 rushing yards: last 5 average 52.2 (100% over); KC allows 83.1 per game to RBs versus a league average of 94.7 (rank 8 fewest)."
+      "summary": "OVER 17.5 rushing yards: last 5 average 52.2 (100% over); KC allows 83.1 per game to RBs versus a league average of 94.7 (rank 8 fewest)."
     },
     {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0036997",
-      "playerName": "Javonte Williams",
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0040078",
+      "playerName": "Brashard Smith",
       "position": "RB",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "receiving_yards",
-      "marketLabel": "receiving yards",
-      "line": 10.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "rushing_attempts",
+      "marketLabel": "rushing attempts",
+      "line": 1.5,
+      "sportsbooks": 1,
+      "sportsbook": "betmgm",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -31.2,
-      "confidence": 80,
-      "recentGames": 5,
-      "recentTotal": 30,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 0
-        },
-        {
-          "week": 16,
-          "value": 9
-        },
-        {
-          "week": 15,
-          "value": 0
-        },
-        {
-          "week": 14,
-          "value": 0
-        },
-        {
-          "week": 13,
-          "value": 21
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 25,
-      "defenseRecentGames": 5,
-      "recentAverage": 6,
-      "hitRate": 20,
-      "defenseAverageAllowed": 29.9,
-      "leagueDefenseAverageAllowed": 31.1,
-      "defenseRankFewestAllowed": 15,
-      "documentedAvailabilityGames": 2,
-      "limitedGames": 0,
-      "recentSnapShare": 54,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 10.5 receiving yards: last 5 average 6.0 (20% over); NYG allows 29.9 per game to RBs versus a league average of 31.1 (rank 15 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0033077",
-      "playerName": "Dak Prescott",
-      "position": "QB",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "rushing_yards",
-      "marketLabel": "rushing yards",
-      "line": 8.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
-      "score": 28.6,
-      "confidence": 79,
+      "score": 30.6,
+      "confidence": 65,
       "recentGames": 5,
-      "recentTotal": 53,
+      "recentTotal": 15,
       "recentGameValues": [
         {
           "week": 18,
-          "value": -1
+          "value": 12
         },
         {
           "week": 17,
-          "value": 24
+          "value": 0
         },
         {
           "week": 16,
-          "value": 14
+          "value": 0
         },
         {
           "week": 15,
@@ -1005,26 +813,218 @@
         },
         {
           "week": 14,
-          "value": 14
+          "value": 1
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 14.8,
+      "defenseRecentGames": 5,
+      "recentAverage": 3,
+      "hitRate": 40,
+      "defenseAverageAllowed": 18.6,
+      "leagueDefenseAverageAllowed": 21.8,
+      "defenseRankFewestAllowed": 3,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 19.6,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 1.5 rushing attempts: last 5 average 3.0 (40% over); DEN allows 18.6 per game to RBs versus a league average of 21.8 (rank 3 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039732",
+      "playerName": "Bo Nix",
+      "position": "QB",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "rushing_yards",
+      "marketLabel": "rushing yards",
+      "line": 18.5,
+      "sportsbooks": 3,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 28.6,
+      "confidence": 70,
+      "recentGames": 5,
+      "recentTotal": 127,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 49
+        },
+        {
+          "week": 17,
+          "value": 42
+        },
+        {
+          "week": 16,
+          "value": 11
+        },
+        {
+          "week": 15,
+          "value": 10
+        },
+        {
+          "week": 14,
+          "value": 15
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 14.4,
+      "defenseRecentGames": 5,
+      "recentAverage": 25.4,
+      "hitRate": 40,
+      "defenseAverageAllowed": 19.3,
+      "leagueDefenseAverageAllowed": 17.8,
+      "defenseRankFewestAllowed": 21,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 100,
+      "historicalHeadCoach": "Sean Payton",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 18.5 rushing yards: last 5 average 25.4 (40% over); KC allows 19.3 per game to QBs versus a league average of 17.8 (rank 21 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0034348",
+      "playerName": "Courtland Sutton",
+      "position": "WR",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 42.5,
+      "sportsbooks": 4,
+      "sportsbook": "betmgm",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 27.7,
+      "confidence": 72,
+      "recentGames": 5,
+      "recentTotal": 306,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 5
+        },
+        {
+          "week": 17,
+          "value": 40
+        },
+        {
+          "week": 16,
+          "value": 86
+        },
+        {
+          "week": 15,
+          "value": 113
+        },
+        {
+          "week": 14,
+          "value": 62
         }
       ],
       "recentOverCount": 3,
       "recentUnderCount": 2,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 23,
+      "defenseRecentAverageAllowed": 113.2,
       "defenseRecentGames": 5,
-      "recentAverage": 10.6,
+      "recentAverage": 61.2,
       "hitRate": 60,
-      "defenseAverageAllowed": 24.5,
-      "leagueDefenseAverageAllowed": 17.8,
-      "defenseRankFewestAllowed": 32,
+      "defenseAverageAllowed": 124.6,
+      "leagueDefenseAverageAllowed": 139.1,
+      "defenseRankFewestAllowed": 9,
       "documentedAvailabilityGames": 0,
       "limitedGames": 0,
-      "recentSnapShare": 88.4,
-      "historicalHeadCoach": "Brian Schottenheimer",
+      "recentSnapShare": 81.4,
+      "historicalHeadCoach": "Sean Payton",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "OVER 8.5 rushing yards: last 5 average 10.6 (60% over); NYG allows 24.5 per game to QBs versus a league average of 17.8 (rank 32 fewest)."
+      "summary": "OVER 42.5 receiving yards: last 5 average 61.2 (60% over); KC allows 124.6 per game to WRs versus a league average of 139.1 (rank 9 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0040078",
+      "playerName": "Brashard Smith",
+      "position": "RB",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "rushing_yards",
+      "marketLabel": "rushing yards",
+      "line": 3.5,
+      "sportsbooks": 1,
+      "sportsbook": "betmgm",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 27.7,
+      "confidence": 63,
+      "recentGames": 5,
+      "recentTotal": 64,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 56
+        },
+        {
+          "week": 17,
+          "value": 0
+        },
+        {
+          "week": 16,
+          "value": 0
+        },
+        {
+          "week": 15,
+          "value": 1
+        },
+        {
+          "week": 14,
+          "value": 7
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 58,
+      "defenseRecentGames": 5,
+      "recentAverage": 12.8,
+      "hitRate": 40,
+      "defenseAverageAllowed": 71.8,
+      "leagueDefenseAverageAllowed": 94.7,
+      "defenseRankFewestAllowed": 2,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 19.6,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 3.5 rushing yards: last 5 average 12.8 (40% over); DEN allows 71.8 per game to RBs versus a league average of 94.7 (rank 2 fewest)."
     },
     {
       "eventId": "dflovmgz7KuRpeUeYjiO",
@@ -1043,7 +1043,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 25.9,
@@ -1091,41 +1091,101 @@
       "summary": "OVER 3.5 receptions: last 5 average 4.8 (80% over); KC allows 10.9 per game to WRs versus a league average of 11.0 (rank 14 fewest)."
     },
     {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0038041",
-      "playerName": "Jake Ferguson",
-      "position": "TE",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0040078",
+      "playerName": "Brashard Smith",
+      "position": "RB",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_receptions",
+      "marketLabel": "receptions",
+      "line": 0.5,
+      "sportsbooks": 2,
+      "sportsbook": "betmgm",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 25.2,
+      "confidence": 65,
+      "recentGames": 5,
+      "recentTotal": 6,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 2
+        },
+        {
+          "week": 17,
+          "value": 3
+        },
+        {
+          "week": 16,
+          "value": 1
+        },
+        {
+          "week": 15,
+          "value": 0
+        },
+        {
+          "week": 14,
+          "value": 0
+        }
+      ],
+      "recentOverCount": 3,
+      "recentUnderCount": 2,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 3.4,
+      "defenseRecentGames": 5,
+      "recentAverage": 1.2,
+      "hitRate": 60,
+      "defenseAverageAllowed": 2.8,
+      "leagueDefenseAverageAllowed": 4.2,
+      "defenseRankFewestAllowed": 1,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 19.6,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 0.5 receptions: last 5 average 1.2 (60% over); DEN allows 2.8 per game to RBs versus a league average of 4.2 (rank 1 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039894",
+      "playerName": "Xavier Worthy",
+      "position": "WR",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
       "marketKey": "receiving_receptions",
       "marketLabel": "receptions",
       "line": 3.5,
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "under",
-      "score": -24.6,
-      "confidence": 77,
+      "score": -24,
+      "confidence": 76,
       "recentGames": 5,
-      "recentTotal": 12,
+      "recentTotal": 11,
       "recentGameValues": [
         {
-          "week": 18,
-          "value": 1
-        },
-        {
           "week": 17,
-          "value": 1
+          "value": 0
         },
         {
           "week": 16,
-          "value": 3
+          "value": 2
         },
         {
           "week": 15,
@@ -1133,263 +1193,11 @@
         },
         {
           "week": 14,
-          "value": 5
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 4.4,
-      "defenseRecentGames": 5,
-      "recentAverage": 2.4,
-      "hitRate": 20,
-      "defenseAverageAllowed": 4.8,
-      "leagueDefenseAverageAllowed": 5.3,
-      "defenseRankFewestAllowed": 7,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 0,
-      "recentSnapShare": 61.8,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 3.5 receptions: last 5 average 2.4 (20% over); NYG allows 4.8 per game to TEs versus a league average of 5.3 (rank 7 fewest)."
-    },
-    {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0036389",
-      "playerName": "Jalen Hurts",
-      "position": "QB",
-      "playerTeam": "PHI",
-      "opponentTeam": "WAS",
-      "marketKey": "rushing_attempts",
-      "marketLabel": "rushing attempts",
-      "line": 7.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -23.9,
-      "confidence": 76,
-      "recentGames": 5,
-      "recentTotal": 25,
-      "recentGameValues": [
-        {
-          "week": 17,
           "value": 3
-        },
-        {
-          "week": 16,
-          "value": 7
-        },
-        {
-          "week": 15,
-          "value": 7
-        },
-        {
-          "week": 14,
-          "value": 4
         },
         {
           "week": 13,
           "value": 4
-        }
-      ],
-      "recentOverCount": 0,
-      "recentUnderCount": 5,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 6,
-      "defenseRecentGames": 5,
-      "recentAverage": 5,
-      "hitRate": 0,
-      "defenseAverageAllowed": 4,
-      "leagueDefenseAverageAllowed": 4.1,
-      "defenseRankFewestAllowed": 16,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 93.8,
-      "historicalHeadCoach": "Nick Sirianni",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 7.5 rushing attempts: last 5 average 5.0 (0% over); WAS allows 4.0 per game to QBs versus a league average of 4.1 (rank 16 fewest)."
-    },
-    {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0036912",
-      "playerName": "DeVonta Smith",
-      "position": "WR",
-      "playerTeam": "PHI",
-      "opponentTeam": "WAS",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 5.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -23.6,
-      "confidence": 76,
-      "recentGames": 5,
-      "recentTotal": 17,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 3
-        },
-        {
-          "week": 17,
-          "value": 2
-        },
-        {
-          "week": 16,
-          "value": 6
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 14,
-          "value": 4
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 12.6,
-      "defenseRecentGames": 5,
-      "recentAverage": 3.4,
-      "hitRate": 20,
-      "defenseAverageAllowed": 12.1,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 26,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 66.8,
-      "historicalHeadCoach": "Nick Sirianni",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 5.5 receptions: last 5 average 3.4 (20% over); WAS allows 12.1 per game to WRs versus a league average of 11.0 (rank 26 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0033077",
-      "playerName": "Dak Prescott",
-      "position": "QB",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "passing_touchdowns",
-      "marketLabel": "passing touchdowns",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -23.5,
-      "confidence": 76,
-      "recentGames": 5,
-      "recentTotal": 5,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 0
-        },
-        {
-          "week": 17,
-          "value": 2
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 0
-        },
-        {
-          "week": 14,
-          "value": 1
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 0.8,
-      "defenseRecentGames": 5,
-      "recentAverage": 1,
-      "hitRate": 40,
-      "defenseAverageAllowed": 1.5,
-      "leagueDefenseAverageAllowed": 1.5,
-      "defenseRankFewestAllowed": 15,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 88.4,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 1.5 passing touchdowns: last 5 average 1.0 (40% over); NYG allows 1.5 per game to QBs versus a league average of 1.5 (rank 15 fewest)."
-    },
-    {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0036322",
-      "playerName": "Justin Jefferson",
-      "position": "WR",
-      "playerTeam": "MIN",
-      "opponentTeam": "GB",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 6.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -22.6,
-      "confidence": 75,
-      "recentGames": 5,
-      "recentTotal": 22,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 8
-        },
-        {
-          "week": 17,
-          "value": 4
-        },
-        {
-          "week": 16,
-          "value": 6
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 14,
-          "value": 2
         }
       ],
       "recentOverCount": 1,
@@ -1397,18 +1205,82 @@
       "recentPushCount": 0,
       "defenseRecentAverageAllowed": 11,
       "defenseRecentGames": 5,
-      "recentAverage": 4.4,
+      "recentAverage": 2.2,
       "hitRate": 20,
-      "defenseAverageAllowed": 11,
+      "defenseAverageAllowed": 11.7,
       "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 15,
+      "defenseRankFewestAllowed": 22,
       "documentedAvailabilityGames": 1,
-      "limitedGames": 1,
-      "recentSnapShare": 89,
-      "historicalHeadCoach": "Kevin O'Connell",
+      "limitedGames": 0,
+      "recentSnapShare": 79,
+      "historicalHeadCoach": "Andy Reid",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "UNDER 6.5 receptions: last 5 average 4.4 (20% over); GB allows 11.0 per game to WRs versus a league average of 11.0 (rank 15 fewest)."
+      "summary": "UNDER 3.5 receptions: last 5 average 2.2 (20% over); DEN allows 11.7 per game to WRs versus a league average of 11.0 (rank 22 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039067",
+      "playerName": "Rashee Rice",
+      "position": "WR",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 52.5,
+      "sportsbooks": 5,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 23.2,
+      "confidence": 73,
+      "recentGames": 5,
+      "recentTotal": 356,
+      "recentGameValues": [
+        {
+          "week": 15,
+          "value": 51
+        },
+        {
+          "week": 14,
+          "value": 34
+        },
+        {
+          "week": 13,
+          "value": 92
+        },
+        {
+          "week": 12,
+          "value": 141
+        },
+        {
+          "week": 11,
+          "value": 38
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 131.6,
+      "defenseRecentGames": 5,
+      "recentAverage": 71.2,
+      "hitRate": 40,
+      "defenseAverageAllowed": 130.8,
+      "leagueDefenseAverageAllowed": 139.1,
+      "defenseRankFewestAllowed": 13,
+      "documentedAvailabilityGames": 3,
+      "limitedGames": 0,
+      "recentSnapShare": 78,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 52.5 receiving yards: last 5 average 71.2 (40% over); DEN allows 130.8 per game to WRs versus a league average of 139.1 (rank 13 fewest)."
     },
     {
       "eventId": "dflovmgz7KuRpeUeYjiO",
@@ -1427,7 +1299,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "under",
       "score": -22.5,
@@ -1475,260 +1347,324 @@
       "summary": "UNDER 1.5 passing touchdowns: last 5 average 1.2 (20% over); KC allows 1.1 per game to QBs versus a league average of 1.5 (rank 4 fewest)."
     },
     {
-      "eventId": "kNbeaTiTpvpp4MWOWIKc",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Arizona Cardinals at Los Angeles Chargers",
-      "awayTeam": "ARI",
-      "homeTeam": "LAC",
-      "playerId": "00-0036355",
-      "playerName": "Justin Herbert",
-      "position": "QB",
-      "playerTeam": "LAC",
-      "opponentTeam": "ARI",
-      "marketKey": "rushing_attempts",
-      "marketLabel": "rushing attempts",
-      "line": 4.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0030506",
+      "playerName": "Travis Kelce",
+      "position": "TE",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 41.5,
+      "sportsbooks": 5,
+      "sportsbook": "betmgm",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
-      "direction": "over",
-      "score": 21.9,
-      "confidence": 75,
+      "direction": "under",
+      "score": -22.1,
+      "confidence": 72,
       "recentGames": 5,
-      "recentTotal": 29,
+      "recentTotal": 132,
       "recentGameValues": [
         {
+          "week": 18,
+          "value": 12
+        },
+        {
           "week": 17,
-          "value": 6
+          "value": 36
         },
         {
           "week": 16,
-          "value": 8
+          "value": 6
         },
         {
           "week": 15,
-          "value": 2
+          "value": 70
         },
         {
           "week": 14,
-          "value": 10
-        },
-        {
-          "week": 13,
-          "value": 3
+          "value": 8
         }
       ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
+      "recentOverCount": 1,
+      "recentUnderCount": 4,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 5,
+      "defenseRecentAverageAllowed": 50,
       "defenseRecentGames": 5,
-      "recentAverage": 5.8,
-      "hitRate": 60,
-      "defenseAverageAllowed": 4.3,
-      "leagueDefenseAverageAllowed": 4.1,
-      "defenseRankFewestAllowed": 20,
-      "documentedAvailabilityGames": 4,
-      "limitedGames": 1,
-      "recentSnapShare": 97,
-      "historicalHeadCoach": "Jim Harbaugh",
+      "recentAverage": 26.4,
+      "hitRate": 20,
+      "defenseAverageAllowed": 59.7,
+      "leagueDefenseAverageAllowed": 53.6,
+      "defenseRankFewestAllowed": 23,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 89,
+      "historicalHeadCoach": "Andy Reid",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "OVER 4.5 rushing attempts: last 5 average 5.8 (60% over); ARI allows 4.3 per game to QBs versus a league average of 4.1 (rank 20 fewest)."
+      "summary": "UNDER 41.5 receiving yards: last 5 average 26.4 (20% over); DEN allows 59.7 per game to TEs versus a league average of 53.6 (rank 23 fewest)."
     },
     {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0039910",
-      "playerName": "Jayden Daniels",
-      "position": "QB",
-      "playerTeam": "WAS",
-      "opponentTeam": "PHI",
-      "marketKey": "passing_touchdowns",
-      "marketLabel": "passing touchdowns",
-      "line": 0.5,
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0038104",
+      "playerName": "Tyquan Thornton",
+      "position": "WR",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_receptions",
+      "marketLabel": "receptions",
+      "line": 1.5,
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
-      "direction": "over",
-      "score": 21.7,
+      "direction": "under",
+      "score": -21.4,
       "confidence": 75,
       "recentGames": 5,
       "recentTotal": 5,
       "recentGameValues": [
         {
+          "week": 15,
+          "value": 2
+        },
+        {
+          "week": 14,
+          "value": 2
+        },
+        {
+          "week": 13,
+          "value": 0
+        },
+        {
+          "week": 12,
+          "value": 0
+        },
+        {
+          "week": 11,
+          "value": 1
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 11,
+      "defenseRecentGames": 5,
+      "recentAverage": 1,
+      "hitRate": 40,
+      "defenseAverageAllowed": 11.7,
+      "leagueDefenseAverageAllowed": 11,
+      "defenseRankFewestAllowed": 22,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 30.8,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "UNDER 1.5 receptions: last 5 average 1.0 (40% over); DEN allows 11.7 per game to WRs versus a league average of 11.0 (rank 22 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039894",
+      "playerName": "Xavier Worthy",
+      "position": "WR",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "rushing_yards",
+      "marketLabel": "rushing yards",
+      "line": 0.5,
+      "sportsbooks": 5,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 20,
+      "confidence": 71,
+      "recentGames": 5,
+      "recentTotal": 14,
+      "recentGameValues": [
+        {
+          "week": 17,
+          "value": 1
+        },
+        {
+          "week": 16,
+          "value": 0
+        },
+        {
+          "week": 15,
+          "value": 0
+        },
+        {
           "week": 14,
           "value": 0
         },
         {
-          "week": 9,
+          "week": 13,
+          "value": 13
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 0.4,
+      "defenseRecentGames": 5,
+      "recentAverage": 2.8,
+      "hitRate": 40,
+      "defenseAverageAllowed": 1.2,
+      "leagueDefenseAverageAllowed": 3.8,
+      "defenseRankFewestAllowed": 6,
+      "documentedAvailabilityGames": 1,
+      "limitedGames": 0,
+      "recentSnapShare": 79,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 0.5 rushing yards: last 5 average 2.8 (40% over); DEN allows 1.2 per game to WRs versus a league average of 3.8 (rank 6 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0038104",
+      "playerName": "Tyquan Thornton",
+      "position": "WR",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 19.5,
+      "sportsbooks": 3,
+      "sportsbook": "bovada",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 19.4,
+      "confidence": 65,
+      "recentGames": 5,
+      "recentTotal": 127,
+      "recentGameValues": [
+        {
+          "week": 15,
+          "value": 47
+        },
+        {
+          "week": 14,
+          "value": 19
+        },
+        {
+          "week": 13,
           "value": 0
         },
         {
-          "week": 7,
+          "week": 12,
+          "value": 0
+        },
+        {
+          "week": 11,
+          "value": 61
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 131.6,
+      "defenseRecentGames": 5,
+      "recentAverage": 25.4,
+      "hitRate": 40,
+      "defenseAverageAllowed": 130.8,
+      "leagueDefenseAverageAllowed": 139.1,
+      "defenseRankFewestAllowed": 13,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 30.8,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "OVER 19.5 receiving yards: last 5 average 25.4 (40% over); DEN allows 130.8 per game to WRs versus a league average of 139.1 (rank 13 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039894",
+      "playerName": "Xavier Worthy",
+      "position": "WR",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "rushing_attempts",
+      "marketLabel": "rushing attempts",
+      "line": 0.5,
+      "sportsbooks": 1,
+      "sportsbook": "betmgm",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "over",
+      "score": 19.3,
+      "confidence": 59,
+      "recentGames": 5,
+      "recentTotal": 4,
+      "recentGameValues": [
+        {
+          "week": 17,
           "value": 1
         },
         {
-          "week": 6,
-          "value": 3
+          "week": 16,
+          "value": 1
         },
         {
-          "week": 5,
-          "value": 1
+          "week": 15,
+          "value": 0
+        },
+        {
+          "week": 14,
+          "value": 0
+        },
+        {
+          "week": 13,
+          "value": 2
         }
       ],
       "recentOverCount": 3,
       "recentUnderCount": 2,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 0.4,
+      "defenseRecentAverageAllowed": 0.6,
       "defenseRecentGames": 5,
-      "recentAverage": 1,
+      "recentAverage": 0.8,
       "hitRate": 60,
-      "defenseAverageAllowed": 0.8,
-      "leagueDefenseAverageAllowed": 1.5,
-      "defenseRankFewestAllowed": 1,
-      "documentedAvailabilityGames": 5,
-      "limitedGames": 0,
-      "recentSnapShare": 86.4,
-      "historicalHeadCoach": "Dan Quinn",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 0.5 passing touchdowns: last 5 average 1.0 (60% over); PHI allows 0.8 per game to QBs versus a league average of 1.5 (rank 1 fewest)."
-    },
-    {
-      "eventId": "g1IGYmbDYjQ2xhJe6X4d",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Miami Dolphins at Las Vegas Raiders",
-      "awayTeam": "MIA",
-      "homeTeam": "LV",
-      "playerId": "00-0039066",
-      "playerName": "Michael Mayer",
-      "position": "TE",
-      "playerTeam": "LV",
-      "opponentTeam": "MIA",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 4.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -20.1,
-      "confidence": 74,
-      "recentGames": 5,
-      "recentTotal": 14,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 3
-        },
-        {
-          "week": 17,
-          "value": 9
-        },
-        {
-          "week": 16,
-          "value": 1
-        },
-        {
-          "week": 15,
-          "value": 0
-        },
-        {
-          "week": 12,
-          "value": 1
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 6.6,
-      "defenseRecentGames": 5,
-      "recentAverage": 2.8,
-      "hitRate": 20,
-      "defenseAverageAllowed": 6.4,
-      "leagueDefenseAverageAllowed": 5.3,
-      "defenseRankFewestAllowed": 31,
+      "defenseAverageAllowed": 0.6,
+      "leagueDefenseAverageAllowed": 0.7,
+      "defenseRankFewestAllowed": 15,
       "documentedAvailabilityGames": 1,
       "limitedGames": 0,
-      "recentSnapShare": 58,
-      "historicalHeadCoach": "Pete Carroll",
+      "recentSnapShare": 79,
+      "historicalHeadCoach": "Andy Reid",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "UNDER 4.5 receptions: last 5 average 2.8 (20% over); MIA allows 6.4 per game to TEs versus a league average of 5.3 (rank 31 fewest)."
-    },
-    {
-      "eventId": "g1IGYmbDYjQ2xhJe6X4d",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Miami Dolphins at Las Vegas Raiders",
-      "awayTeam": "MIA",
-      "homeTeam": "LV",
-      "playerId": "00-0040122",
-      "playerName": "Ashton Jeanty",
-      "position": "RB",
-      "playerTeam": "LV",
-      "opponentTeam": "MIA",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 3.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -17.4,
-      "confidence": 73,
-      "recentGames": 5,
-      "recentTotal": 12,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 3
-        },
-        {
-          "week": 17,
-          "value": 2
-        },
-        {
-          "week": 16,
-          "value": 1
-        },
-        {
-          "week": 15,
-          "value": 4
-        },
-        {
-          "week": 14,
-          "value": 2
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 5,
-      "defenseRecentGames": 5,
-      "recentAverage": 2.4,
-      "hitRate": 20,
-      "defenseAverageAllowed": 4.8,
-      "leagueDefenseAverageAllowed": 4.2,
-      "defenseRankFewestAllowed": 28,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 82.4,
-      "historicalHeadCoach": "Pete Carroll",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 3.5 receptions: last 5 average 2.4 (20% over); MIA allows 4.8 per game to RBs versus a league average of 4.2 (rank 28 fewest)."
+      "summary": "OVER 0.5 rushing attempts: last 5 average 0.8 (60% over); DEN allows 0.6 per game to WRs versus a league average of 0.7 (rank 15 fewest)."
     },
     {
       "eventId": "dflovmgz7KuRpeUeYjiO",
@@ -1747,7 +1683,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 17.4,
@@ -1795,70 +1731,6 @@
       "summary": "OVER 2.5 receptions: last 5 average 3.2 (60% over); KC allows 3.9 per game to RBs versus a league average of 4.2 (rank 10 fewest)."
     },
     {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0034351",
-      "playerName": "Dallas Goedert",
-      "position": "TE",
-      "playerTeam": "PHI",
-      "opponentTeam": "WAS",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 3.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 16.7,
-      "confidence": 72,
-      "recentGames": 5,
-      "recentTotal": 22,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 3
-        },
-        {
-          "week": 16,
-          "value": 3
-        },
-        {
-          "week": 15,
-          "value": 6
-        },
-        {
-          "week": 14,
-          "value": 8
-        },
-        {
-          "week": 13,
-          "value": 2
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 4.8,
-      "defenseRecentGames": 5,
-      "recentAverage": 4.4,
-      "hitRate": 40,
-      "defenseAverageAllowed": 5.1,
-      "leagueDefenseAverageAllowed": 5.3,
-      "defenseRankFewestAllowed": 11,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 84.6,
-      "historicalHeadCoach": "Nick Sirianni",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 3.5 receptions: last 5 average 4.4 (40% over); WAS allows 5.1 per game to TEs versus a league average of 5.3 (rank 11 fewest)."
-    },
-    {
       "eventId": "dflovmgz7KuRpeUeYjiO",
       "commenceAt": "2026-09-15T00:15:00.000Z",
       "matchup": "Denver Broncos at Kansas City Chiefs",
@@ -1875,7 +1747,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 16,
@@ -1923,1030 +1795,6 @@
       "summary": "OVER 5.5 receptions: last 5 average 6.6 (80% over); DEN allows 11.7 per game to WRs versus a league average of 11.0 (rank 22 fewest)."
     },
     {
-      "eventId": "g1IGYmbDYjQ2xhJe6X4d",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Miami Dolphins at Las Vegas Raiders",
-      "awayTeam": "MIA",
-      "homeTeam": "LV",
-      "playerId": "00-0039880",
-      "playerName": "Malik Washington",
-      "position": "WR",
-      "playerTeam": "MIA",
-      "opponentTeam": "LV",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 2.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -15.9,
-      "confidence": 72,
-      "recentGames": 5,
-      "recentTotal": 9,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 3
-        },
-        {
-          "week": 17,
-          "value": 1
-        },
-        {
-          "week": 16,
-          "value": 1
-        },
-        {
-          "week": 15,
-          "value": 1
-        },
-        {
-          "week": 14,
-          "value": 3
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 10.8,
-      "defenseRecentGames": 5,
-      "recentAverage": 1.8,
-      "hitRate": 40,
-      "defenseAverageAllowed": 12.4,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 28,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 59,
-      "historicalHeadCoach": "Mike McDaniel",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 2.5 receptions: last 5 average 1.8 (40% over); LV allows 12.4 per game to WRs versus a league average of 11.0 (rank 28 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0037801",
-      "playerName": "KaVontae Turpin",
-      "position": "WR",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "rushing_yards",
-      "marketLabel": "rushing yards",
-      "line": 4.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 14.8,
-      "confidence": 71,
-      "recentGames": 5,
-      "recentTotal": 26,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 7
-        },
-        {
-          "week": 17,
-          "value": 0
-        },
-        {
-          "week": 16,
-          "value": 13
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 14,
-          "value": 4
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 1.4,
-      "defenseRecentGames": 5,
-      "recentAverage": 5.2,
-      "hitRate": 40,
-      "defenseAverageAllowed": 4.3,
-      "leagueDefenseAverageAllowed": 3.8,
-      "defenseRankFewestAllowed": 21,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 0,
-      "recentSnapShare": 27.2,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 4.5 rushing yards: last 5 average 5.2 (40% over); NYG allows 4.3 per game to WRs versus a league average of 3.8 (rank 21 fewest)."
-    },
-    {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0036389",
-      "playerName": "Jalen Hurts",
-      "position": "QB",
-      "playerTeam": "PHI",
-      "opponentTeam": "WAS",
-      "marketKey": "passing_touchdowns",
-      "marketLabel": "passing touchdowns",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 14,
-      "confidence": 71,
-      "recentGames": 5,
-      "recentTotal": 8,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 1
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 3
-        },
-        {
-          "week": 14,
-          "value": 0
-        },
-        {
-          "week": 13,
-          "value": 2
-        }
-      ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 2,
-      "defenseRecentGames": 5,
-      "recentAverage": 1.6,
-      "hitRate": 60,
-      "defenseAverageAllowed": 1.9,
-      "leagueDefenseAverageAllowed": 1.5,
-      "defenseRankFewestAllowed": 30,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 93.8,
-      "historicalHeadCoach": "Nick Sirianni",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 1.5 passing touchdowns: last 5 average 1.6 (60% over); WAS allows 1.9 per game to QBs versus a league average of 1.5 (rank 30 fewest)."
-    },
-    {
-      "eventId": "xnZBKrx0t2wyONucMxW8",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Washington Commanders at Philadelphia Eagles",
-      "awayTeam": "WAS",
-      "homeTeam": "PHI",
-      "playerId": "00-0039910",
-      "playerName": "Jayden Daniels",
-      "position": "QB",
-      "playerTeam": "WAS",
-      "opponentTeam": "PHI",
-      "marketKey": "rushing_yards",
-      "marketLabel": "rushing yards",
-      "line": 36.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 13.7,
-      "confidence": 71,
-      "recentGames": 5,
-      "recentTotal": 193,
-      "recentGameValues": [
-        {
-          "week": 14,
-          "value": 16
-        },
-        {
-          "week": 9,
-          "value": 51
-        },
-        {
-          "week": 7,
-          "value": 35
-        },
-        {
-          "week": 6,
-          "value": 52
-        },
-        {
-          "week": 5,
-          "value": 39
-        }
-      ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 28.8,
-      "defenseRecentGames": 5,
-      "recentAverage": 38.6,
-      "hitRate": 60,
-      "defenseAverageAllowed": 23.5,
-      "leagueDefenseAverageAllowed": 17.8,
-      "defenseRankFewestAllowed": 31,
-      "documentedAvailabilityGames": 5,
-      "limitedGames": 0,
-      "recentSnapShare": 86.4,
-      "historicalHeadCoach": "Dan Quinn",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 36.5 rushing yards: last 5 average 38.6 (60% over); PHI allows 23.5 per game to QBs versus a league average of 17.8 (rank 31 fewest)."
-    },
-    {
-      "eventId": "kNbeaTiTpvpp4MWOWIKc",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Arizona Cardinals at Los Angeles Chargers",
-      "awayTeam": "ARI",
-      "homeTeam": "LAC",
-      "playerId": "00-0038544",
-      "playerName": "Quentin Johnston",
-      "position": "WR",
-      "playerTeam": "LAC",
-      "opponentTeam": "ARI",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 3.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -13.5,
-      "confidence": 70,
-      "recentGames": 5,
-      "recentTotal": 14,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 5
-        },
-        {
-          "week": 16,
-          "value": 4
-        },
-        {
-          "week": 14,
-          "value": 2
-        },
-        {
-          "week": 13,
-          "value": 3
-        },
-        {
-          "week": 11,
-          "value": 0
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 10.4,
-      "defenseRecentGames": 5,
-      "recentAverage": 2.8,
-      "hitRate": 40,
-      "defenseAverageAllowed": 11.2,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 18,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 0,
-      "recentSnapShare": 73.2,
-      "historicalHeadCoach": "Jim Harbaugh",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 3.5 receptions: last 5 average 2.8 (40% over); ARI allows 11.2 per game to WRs versus a league average of 11.0 (rank 18 fewest)."
-    },
-    {
-      "eventId": "g1IGYmbDYjQ2xhJe6X4d",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Miami Dolphins at Las Vegas Raiders",
-      "awayTeam": "MIA",
-      "homeTeam": "LV",
-      "playerId": "00-0037252",
-      "playerName": "Greg Dulcich",
-      "position": "TE",
-      "playerTeam": "MIA",
-      "opponentTeam": "LV",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 2.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 12.6,
-      "confidence": 70,
-      "recentGames": 5,
-      "recentTotal": 16,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 3
-        },
-        {
-          "week": 17,
-          "value": 5
-        },
-        {
-          "week": 16,
-          "value": 3
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 14,
-          "value": 3
-        }
-      ],
-      "recentOverCount": 4,
-      "recentUnderCount": 1,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 5.2,
-      "defenseRecentGames": 5,
-      "recentAverage": 3.2,
-      "hitRate": 80,
-      "defenseAverageAllowed": 4.1,
-      "leagueDefenseAverageAllowed": 5.3,
-      "defenseRankFewestAllowed": 3,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 41.8,
-      "historicalHeadCoach": "Mike McDaniel",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 2.5 receptions: last 5 average 3.2 (80% over); LV allows 4.1 per game to TEs versus a league average of 5.3 (rank 3 fewest)."
-    },
-    {
-      "eventId": "kNbeaTiTpvpp4MWOWIKc",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Arizona Cardinals at Los Angeles Chargers",
-      "awayTeam": "ARI",
-      "homeTeam": "LAC",
-      "playerId": "00-0033119",
-      "playerName": "Jacoby Brissett",
-      "position": "QB",
-      "playerTeam": "ARI",
-      "opponentTeam": "LAC",
-      "marketKey": "passing_touchdowns",
-      "marketLabel": "passing touchdowns",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 12.4,
-      "confidence": 70,
-      "recentGames": 5,
-      "recentTotal": 10,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 2
-        },
-        {
-          "week": 17,
-          "value": 2
-        },
-        {
-          "week": 16,
-          "value": 1
-        },
-        {
-          "week": 15,
-          "value": 3
-        },
-        {
-          "week": 14,
-          "value": 2
-        }
-      ],
-      "recentOverCount": 4,
-      "recentUnderCount": 1,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 0.8,
-      "defenseRecentGames": 5,
-      "recentAverage": 2,
-      "hitRate": 80,
-      "defenseAverageAllowed": 0.9,
-      "leagueDefenseAverageAllowed": 1.5,
-      "defenseRankFewestAllowed": 3,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 100,
-      "historicalHeadCoach": "Jonathan Gannon",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 1.5 passing touchdowns: last 5 average 2.0 (80% over); LAC allows 0.9 per game to QBs versus a league average of 1.5 (rank 3 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0040691",
-      "playerName": "Jaxson Dart",
-      "position": "QB",
-      "playerTeam": "NYG",
-      "opponentTeam": "DAL",
-      "marketKey": "passing_touchdowns",
-      "marketLabel": "passing touchdowns",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -11.6,
-      "confidence": 69,
-      "recentGames": 5,
-      "recentTotal": 5,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 2
-        },
-        {
-          "week": 17,
-          "value": 0
-        },
-        {
-          "week": 16,
-          "value": 0
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 13,
-          "value": 1
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 1.4,
-      "defenseRecentGames": 5,
-      "recentAverage": 1,
-      "hitRate": 40,
-      "defenseAverageAllowed": 2.1,
-      "leagueDefenseAverageAllowed": 1.5,
-      "defenseRankFewestAllowed": 31,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 99.4,
-      "historicalHeadCoach": "Brian Daboll",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 1.5 passing touchdowns: last 5 average 1.0 (40% over); DAL allows 2.1 per game to QBs versus a league average of 1.5 (rank 31 fewest)."
-    },
-    {
-      "eventId": "g1IGYmbDYjQ2xhJe6X4d",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Miami Dolphins at Las Vegas Raiders",
-      "awayTeam": "MIA",
-      "homeTeam": "LV",
-      "playerId": "00-0040122",
-      "playerName": "Ashton Jeanty",
-      "position": "RB",
-      "playerTeam": "LV",
-      "opponentTeam": "MIA",
-      "marketKey": "rushing_yards",
-      "marketLabel": "rushing yards",
-      "line": 61.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "over",
-      "score": 11.4,
-      "confidence": 69,
-      "recentGames": 5,
-      "recentTotal": 340,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 87
-        },
-        {
-          "week": 17,
-          "value": 60
-        },
-        {
-          "week": 16,
-          "value": 128
-        },
-        {
-          "week": 15,
-          "value": 35
-        },
-        {
-          "week": 14,
-          "value": 30
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 102.8,
-      "defenseRecentGames": 5,
-      "recentAverage": 68,
-      "hitRate": 40,
-      "defenseAverageAllowed": 107.2,
-      "leagueDefenseAverageAllowed": 94.7,
-      "defenseRankFewestAllowed": 26,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 82.4,
-      "historicalHeadCoach": "Pete Carroll",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "OVER 61.5 rushing yards: last 5 average 68.0 (40% over); MIA allows 107.2 per game to RBs versus a league average of 94.7 (rank 26 fewest)."
-    },
-    {
-      "eventId": "kNbeaTiTpvpp4MWOWIKc",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Arizona Cardinals at Los Angeles Chargers",
-      "awayTeam": "ARI",
-      "homeTeam": "LAC",
-      "playerId": "00-0040666",
-      "playerName": "Omarion Hampton",
-      "position": "RB",
-      "playerTeam": "LAC",
-      "opponentTeam": "ARI",
-      "marketKey": "rushing_yards",
-      "marketLabel": "rushing yards",
-      "line": 71.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -10.3,
-      "confidence": 69,
-      "recentGames": 5,
-      "recentTotal": 275,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 29
-        },
-        {
-          "week": 16,
-          "value": 85
-        },
-        {
-          "week": 15,
-          "value": 61
-        },
-        {
-          "week": 14,
-          "value": 56
-        },
-        {
-          "week": 5,
-          "value": 44
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 155.2,
-      "defenseRecentGames": 5,
-      "recentAverage": 55,
-      "hitRate": 20,
-      "defenseAverageAllowed": 113.3,
-      "leagueDefenseAverageAllowed": 94.7,
-      "defenseRankFewestAllowed": 29,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 52.2,
-      "historicalHeadCoach": "Jim Harbaugh",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 71.5 rushing yards: last 5 average 55.0 (20% over); ARI allows 113.3 per game to RBs versus a league average of 94.7 (rank 29 fewest)."
-    },
-    {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0037525",
-      "playerName": "Jordan Mason",
-      "position": "RB",
-      "playerTeam": "MIN",
-      "opponentTeam": "GB",
-      "marketKey": "rushing_attempts",
-      "marketLabel": "rushing attempts",
-      "line": 10.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -9.4,
-      "confidence": 68,
-      "recentGames": 5,
-      "recentTotal": 43,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 14
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 10
-        },
-        {
-          "week": 14,
-          "value": 11
-        },
-        {
-          "week": 13,
-          "value": 6
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 28.4,
-      "defenseRecentGames": 5,
-      "recentAverage": 8.6,
-      "hitRate": 40,
-      "defenseAverageAllowed": 24.1,
-      "leagueDefenseAverageAllowed": 21.8,
-      "defenseRankFewestAllowed": 27,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 28.4,
-      "historicalHeadCoach": "Kevin O'Connell",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 10.5 rushing attempts: last 5 average 8.6 (40% over); GB allows 24.1 per game to RBs versus a league average of 21.8 (rank 27 fewest)."
-    },
-    {
-      "eventId": "g1IGYmbDYjQ2xhJe6X4d",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Miami Dolphins at Las Vegas Raiders",
-      "awayTeam": "MIA",
-      "homeTeam": "LV",
-      "playerId": "00-0039066",
-      "playerName": "Michael Mayer",
-      "position": "TE",
-      "playerTeam": "LV",
-      "opponentTeam": "MIA",
-      "marketKey": "receiving_yards",
-      "marketLabel": "receiving yards",
-      "line": 41.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -8.7,
-      "confidence": 68,
-      "recentGames": 5,
-      "recentTotal": 160,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 47
-        },
-        {
-          "week": 17,
-          "value": 89
-        },
-        {
-          "week": 16,
-          "value": 10
-        },
-        {
-          "week": 15,
-          "value": 0
-        },
-        {
-          "week": 12,
-          "value": 14
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 63.4,
-      "defenseRecentGames": 5,
-      "recentAverage": 32,
-      "hitRate": 40,
-      "defenseAverageAllowed": 66.7,
-      "leagueDefenseAverageAllowed": 53.6,
-      "defenseRankFewestAllowed": 29,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 58,
-      "historicalHeadCoach": "Pete Carroll",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 41.5 receiving yards: last 5 average 32.0 (40% over); MIA allows 66.7 per game to TEs versus a league average of 53.6 (rank 29 fewest)."
-    },
-    {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0039146",
-      "playerName": "Jayden Reed",
-      "position": "WR",
-      "playerTeam": "GB",
-      "opponentTeam": "MIN",
-      "marketKey": "receiving_yards",
-      "marketLabel": "receiving yards",
-      "line": 43.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -8.4,
-      "confidence": 68,
-      "recentGames": 5,
-      "recentTotal": 207,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 41
-        },
-        {
-          "week": 16,
-          "value": 35
-        },
-        {
-          "week": 15,
-          "value": 55
-        },
-        {
-          "week": 14,
-          "value": 31
-        },
-        {
-          "week": 1,
-          "value": 45
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 103,
-      "defenseRecentGames": 5,
-      "recentAverage": 41.4,
-      "hitRate": 40,
-      "defenseAverageAllowed": 115.9,
-      "leagueDefenseAverageAllowed": 139.1,
-      "defenseRankFewestAllowed": 5,
-      "documentedAvailabilityGames": 4,
-      "limitedGames": 0,
-      "recentSnapShare": 53,
-      "historicalHeadCoach": "Matt LaFleur",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 43.5 receiving yards: last 5 average 41.4 (40% over); MIN allows 115.9 per game to WRs versus a league average of 139.1 (rank 5 fewest)."
-    },
-    {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0036264",
-      "playerName": "Jordan Love",
-      "position": "QB",
-      "playerTeam": "GB",
-      "opponentTeam": "MIN",
-      "marketKey": "passing_touchdowns",
-      "marketLabel": "passing touchdowns",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -7.4,
-      "confidence": 67,
-      "recentGames": 5,
-      "recentTotal": 8,
-      "recentGameValues": [
-        {
-          "week": 16,
-          "value": 0
-        },
-        {
-          "week": 15,
-          "value": 1
-        },
-        {
-          "week": 14,
-          "value": 3
-        },
-        {
-          "week": 13,
-          "value": 4
-        },
-        {
-          "week": 12,
-          "value": 0
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 0.2,
-      "defenseRecentGames": 5,
-      "recentAverage": 1.6,
-      "hitRate": 40,
-      "defenseAverageAllowed": 0.9,
-      "leagueDefenseAverageAllowed": 1.5,
-      "defenseRankFewestAllowed": 2,
-      "documentedAvailabilityGames": 5,
-      "limitedGames": 0,
-      "recentSnapShare": 85.4,
-      "historicalHeadCoach": "Matt LaFleur",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 1.5 passing touchdowns: last 5 average 1.6 (40% over); MIN allows 0.9 per game to QBs versus a league average of 1.5 (rank 2 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0036358",
-      "playerName": "CeeDee Lamb",
-      "position": "WR",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 5.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -7.3,
-      "confidence": 67,
-      "recentGames": 5,
-      "recentTotal": 24,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 1
-        },
-        {
-          "week": 17,
-          "value": 5
-        },
-        {
-          "week": 16,
-          "value": 6
-        },
-        {
-          "week": 15,
-          "value": 6
-        },
-        {
-          "week": 14,
-          "value": 6
-        }
-      ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 9.6,
-      "defenseRecentGames": 5,
-      "recentAverage": 4.8,
-      "hitRate": 60,
-      "defenseAverageAllowed": 11.6,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 21,
-      "documentedAvailabilityGames": 2,
-      "limitedGames": 0,
-      "recentSnapShare": 70,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 5.5 receptions: last 5 average 4.8 (60% over); NYG allows 11.6 per game to WRs versus a league average of 11.0 (rank 21 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0036997",
-      "playerName": "Javonte Williams",
-      "position": "RB",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "rushing_yards",
-      "marketLabel": "rushing yards",
-      "line": 76.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -7.3,
-      "confidence": 67,
-      "recentGames": 5,
-      "recentTotal": 305,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 54
-        },
-        {
-          "week": 16,
-          "value": 34
-        },
-        {
-          "week": 15,
-          "value": 91
-        },
-        {
-          "week": 14,
-          "value": 67
-        },
-        {
-          "week": 13,
-          "value": 59
-        }
-      ],
-      "recentOverCount": 1,
-      "recentUnderCount": 4,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 91.8,
-      "defenseRecentGames": 5,
-      "recentAverage": 61,
-      "hitRate": 20,
-      "defenseAverageAllowed": 116.5,
-      "leagueDefenseAverageAllowed": 94.7,
-      "defenseRankFewestAllowed": 31,
-      "documentedAvailabilityGames": 2,
-      "limitedGames": 0,
-      "recentSnapShare": 54,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 76.5 rushing yards: last 5 average 61.0 (20% over); NYG allows 116.5 per game to RBs versus a league average of 94.7 (rank 31 fewest)."
-    },
-    {
       "eventId": "dflovmgz7KuRpeUeYjiO",
       "commenceAt": "2026-09-15T00:15:00.000Z",
       "matchup": "Denver Broncos at Kansas City Chiefs",
@@ -2963,7 +1811,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
       "score": 6.4,
@@ -3011,132 +1859,68 @@
       "summary": "OVER 1.5 receptions: last 5 average 1.6 (40% over); DEN allows 5.6 per game to TEs versus a league average of 5.3 (rank 20 fewest)."
     },
     {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0038124",
-      "playerName": "Christian Watson",
-      "position": "WR",
-      "playerTeam": "GB",
-      "opponentTeam": "MIN",
-      "marketKey": "receiving_yards",
-      "marketLabel": "receiving yards",
-      "line": 56.5,
-      "sportsbooks": 6,
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0033873",
+      "playerName": "Patrick Mahomes",
+      "position": "QB",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "passing_yards",
+      "marketLabel": "passing yards",
+      "line": 223.5,
+      "sportsbooks": 4,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "over",
-      "score": 6.3,
-      "confidence": 66,
+      "score": 5.9,
+      "confidence": 60,
       "recentGames": 5,
-      "recentTotal": 328,
+      "recentTotal": 1238,
       "recentGameValues": [
         {
-          "week": 17,
-          "value": 113
-        },
-        {
-          "week": 16,
-          "value": 17
-        },
-        {
           "week": 15,
-          "value": 29
+          "value": 189
         },
         {
           "week": 14,
-          "value": 89
+          "value": 160
         },
         {
           "week": 13,
-          "value": 80
+          "value": 261
+        },
+        {
+          "week": 12,
+          "value": 352
+        },
+        {
+          "week": 11,
+          "value": 276
         }
       ],
       "recentOverCount": 3,
       "recentUnderCount": 2,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 103,
+      "defenseRecentAverageAllowed": 194,
       "defenseRecentGames": 5,
-      "recentAverage": 65.6,
+      "recentAverage": 247.6,
       "hitRate": 60,
-      "defenseAverageAllowed": 115.9,
-      "leagueDefenseAverageAllowed": 139.1,
-      "defenseRankFewestAllowed": 5,
+      "defenseAverageAllowed": 212.1,
+      "leagueDefenseAverageAllowed": 224.7,
+      "defenseRankFewestAllowed": 11,
       "documentedAvailabilityGames": 3,
       "limitedGames": 0,
-      "recentSnapShare": 64.2,
-      "historicalHeadCoach": "Matt LaFleur",
+      "recentSnapShare": 98.4,
+      "historicalHeadCoach": "Andy Reid",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "OVER 56.5 receiving yards: last 5 average 65.6 (60% over); MIN allows 115.9 per game to WRs versus a league average of 139.1 (rank 5 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0037247",
-      "playerName": "George Pickens",
-      "position": "WR",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 4.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "under",
-      "score": -6.1,
-      "confidence": 66,
-      "recentGames": 5,
-      "recentTotal": 20,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 1
-        },
-        {
-          "week": 17,
-          "value": 4
-        },
-        {
-          "week": 16,
-          "value": 7
-        },
-        {
-          "week": 15,
-          "value": 3
-        },
-        {
-          "week": 14,
-          "value": 5
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 9.6,
-      "defenseRecentGames": 5,
-      "recentAverage": 4,
-      "hitRate": 40,
-      "defenseAverageAllowed": 11.6,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 21,
-      "documentedAvailabilityGames": 1,
-      "limitedGames": 0,
-      "recentSnapShare": 78,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 4.5 receptions: last 5 average 4.0 (40% over); NYG allows 11.6 per game to WRs versus a league average of 11.0 (rank 21 fewest)."
+      "summary": "OVER 223.5 passing yards: last 5 average 247.6 (60% over); DEN allows 212.1 per game to QBs versus a league average of 224.7 (rank 11 fewest)."
     },
     {
       "eventId": "dflovmgz7KuRpeUeYjiO",
@@ -3155,7 +1939,7 @@
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "under",
       "score": -5.4,
@@ -3203,452 +1987,324 @@
       "summary": "UNDER 2.5 receptions: last 5 average 2.4 (40% over); KC allows 4.8 per game to TEs versus a league average of 5.3 (rank 7 fewest)."
     },
     {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0038124",
-      "playerName": "Christian Watson",
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039894",
+      "playerName": "Xavier Worthy",
       "position": "WR",
-      "playerTeam": "GB",
-      "opponentTeam": "MIN",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 35.5,
+      "sportsbooks": 6,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "neutral",
+      "score": 3.9,
+      "confidence": 65,
+      "recentGames": 5,
+      "recentTotal": 192,
+      "recentGameValues": [
+        {
+          "week": 17,
+          "value": 0
+        },
+        {
+          "week": 16,
+          "value": 41
+        },
+        {
+          "week": 15,
+          "value": 35
+        },
+        {
+          "week": 14,
+          "value": 55
+        },
+        {
+          "week": 13,
+          "value": 61
+        }
+      ],
+      "recentOverCount": 3,
+      "recentUnderCount": 2,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 131.6,
+      "defenseRecentGames": 5,
+      "recentAverage": 38.4,
+      "hitRate": 60,
+      "defenseAverageAllowed": 130.8,
+      "leagueDefenseAverageAllowed": 139.1,
+      "defenseRankFewestAllowed": 13,
+      "documentedAvailabilityGames": 1,
+      "limitedGames": 0,
+      "recentSnapShare": 79,
+      "historicalHeadCoach": "Andy Reid",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "Near the line 35.5 receiving yards: last 5 average 38.4 (60% over); DEN allows 130.8 per game to WRs versus a league average of 139.1 (rank 13 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0033881",
+      "playerName": "Evan Engram",
+      "position": "TE",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "receiving_yards",
+      "marketLabel": "receiving yards",
+      "line": 22.5,
+      "sportsbooks": 4,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "neutral",
+      "score": 2.5,
+      "confidence": 58,
+      "recentGames": 5,
+      "recentTotal": 122,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 45
+        },
+        {
+          "week": 17,
+          "value": 21
+        },
+        {
+          "week": 16,
+          "value": 36
+        },
+        {
+          "week": 15,
+          "value": 12
+        },
+        {
+          "week": 14,
+          "value": 8
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 45.6,
+      "defenseRecentGames": 5,
+      "recentAverage": 24.4,
+      "hitRate": 40,
+      "defenseAverageAllowed": 47.6,
+      "leagueDefenseAverageAllowed": 53.6,
+      "defenseRankFewestAllowed": 11,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 35.6,
+      "historicalHeadCoach": "Sean Payton",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "Near the line 22.5 receiving yards: last 5 average 24.4 (40% over); KC allows 47.6 per game to TEs versus a league average of 53.6 (rank 11 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0033873",
+      "playerName": "Patrick Mahomes",
+      "position": "QB",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "rushing_attempts",
+      "marketLabel": "rushing attempts",
       "line": 3.5,
       "sportsbooks": 6,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
-      "direction": "under",
-      "score": -4.1,
-      "confidence": 65,
+      "direction": "neutral",
+      "score": -1.2,
+      "confidence": 64,
       "recentGames": 5,
-      "recentTotal": 18,
+      "recentTotal": 17,
       "recentGameValues": [
         {
-          "week": 17,
-          "value": 5
-        },
-        {
-          "week": 16,
+          "week": 15,
           "value": 2
         },
         {
-          "week": 15,
+          "week": 14,
+          "value": 7
+        },
+        {
+          "week": 13,
           "value": 3
         },
         {
-          "week": 14,
+          "week": 12,
           "value": 4
         },
         {
-          "week": 13,
-          "value": 4
-        }
-      ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 9,
-      "defenseRecentGames": 5,
-      "recentAverage": 3.6,
-      "hitRate": 60,
-      "defenseAverageAllowed": 8.8,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 2,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 0,
-      "recentSnapShare": 64.2,
-      "historicalHeadCoach": "Matt LaFleur",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "UNDER 3.5 receptions: last 5 average 3.6 (60% over); MIN allows 8.8 per game to WRs versus a league average of 11.0 (rank 2 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0037801",
-      "playerName": "KaVontae Turpin",
-      "position": "WR",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "neutral",
-      "score": -3,
-      "confidence": 65,
-      "recentGames": 5,
-      "recentTotal": 7,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 0
-        },
-        {
-          "week": 17,
+          "week": 11,
           "value": 1
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 2
-        },
-        {
-          "week": 14,
-          "value": 2
-        }
-      ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 9.6,
-      "defenseRecentGames": 5,
-      "recentAverage": 1.4,
-      "hitRate": 60,
-      "defenseAverageAllowed": 11.6,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 21,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 0,
-      "recentSnapShare": 27.2,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "Near the line 1.5 receptions: last 5 average 1.4 (60% over); NYG allows 11.6 per game to WRs versus a league average of 11.0 (rank 21 fewest)."
-    },
-    {
-      "eventId": "kNbeaTiTpvpp4MWOWIKc",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Arizona Cardinals at Los Angeles Chargers",
-      "awayTeam": "ARI",
-      "homeTeam": "LAC",
-      "playerId": "00-0036355",
-      "playerName": "Justin Herbert",
-      "position": "QB",
-      "playerTeam": "LAC",
-      "opponentTeam": "ARI",
-      "marketKey": "passing_touchdowns",
-      "marketLabel": "passing touchdowns",
-      "line": 1.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "neutral",
-      "score": 2.3,
-      "confidence": 64,
-      "recentGames": 5,
-      "recentTotal": 7,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 1
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 1
-        },
-        {
-          "week": 14,
-          "value": 1
-        },
-        {
-          "week": 13,
-          "value": 2
         }
       ],
       "recentOverCount": 2,
       "recentUnderCount": 3,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 2.8,
+      "defenseRecentAverageAllowed": 4.4,
       "defenseRecentGames": 5,
-      "recentAverage": 1.4,
+      "recentAverage": 3.4,
       "hitRate": 40,
-      "defenseAverageAllowed": 1.8,
-      "leagueDefenseAverageAllowed": 1.5,
-      "defenseRankFewestAllowed": 28,
-      "documentedAvailabilityGames": 4,
-      "limitedGames": 1,
-      "recentSnapShare": 97,
-      "historicalHeadCoach": "Jim Harbaugh",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "Near the line 1.5 passing touchdowns: last 5 average 1.4 (40% over); ARI allows 1.8 per game to QBs versus a league average of 1.5 (rank 28 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0040691",
-      "playerName": "Jaxson Dart",
-      "position": "QB",
-      "playerTeam": "NYG",
-      "opponentTeam": "DAL",
-      "marketKey": "rushing_attempts",
-      "marketLabel": "rushing attempts",
-      "line": 6.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "neutral",
-      "score": 0.6,
-      "confidence": 63,
-      "recentGames": 5,
-      "recentTotal": 29,
-      "recentGameValues": [
-        {
-          "week": 18,
-          "value": 5
-        },
-        {
-          "week": 17,
-          "value": 9
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 9
-        },
-        {
-          "week": 13,
-          "value": 4
-        }
-      ],
-      "recentOverCount": 2,
-      "recentUnderCount": 3,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 4.2,
-      "defenseRecentGames": 5,
-      "recentAverage": 5.8,
-      "hitRate": 40,
-      "defenseAverageAllowed": 5.2,
+      "defenseAverageAllowed": 4.2,
       "leagueDefenseAverageAllowed": 4.1,
-      "defenseRankFewestAllowed": 31,
-      "documentedAvailabilityGames": 1,
+      "defenseRankFewestAllowed": 18,
+      "documentedAvailabilityGames": 3,
       "limitedGames": 0,
-      "recentSnapShare": 99.4,
-      "historicalHeadCoach": "Brian Daboll",
+      "recentSnapShare": 98.4,
+      "historicalHeadCoach": "Andy Reid",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "Near the line 6.5 rushing attempts: last 5 average 5.8 (40% over); DAL allows 5.2 per game to QBs versus a league average of 4.1 (rank 31 fewest)."
+      "summary": "Near the line 3.5 rushing attempts: last 5 average 3.4 (40% over); DEN allows 4.2 per game to QBs versus a league average of 4.1 (rank 18 fewest)."
     },
     {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0033293",
-      "playerName": "Aaron Jones",
-      "position": "RB",
-      "playerTeam": "MIN",
-      "opponentTeam": "GB",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 2.5,
-      "sportsbooks": 6,
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0039732",
+      "playerName": "Bo Nix",
+      "position": "QB",
+      "playerTeam": "DEN",
+      "opponentTeam": "KC",
+      "marketKey": "passing_yards",
+      "marketLabel": "passing yards",
+      "line": 225.5,
+      "sportsbooks": 3,
       "sportsbook": "draftkings",
       "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
+      "historySeason": 2025,
+      "direction": "neutral",
+      "score": 1.2,
+      "confidence": 55,
+      "recentGames": 5,
+      "recentTotal": 1189,
+      "recentGameValues": [
+        {
+          "week": 18,
+          "value": 141
+        },
+        {
+          "week": 17,
+          "value": 182
+        },
+        {
+          "week": 16,
+          "value": 352
+        },
+        {
+          "week": 15,
+          "value": 302
+        },
+        {
+          "week": 14,
+          "value": 212
+        }
+      ],
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
+      "recentPushCount": 0,
+      "defenseRecentAverageAllowed": 185.6,
+      "defenseRecentGames": 5,
+      "recentAverage": 237.8,
+      "hitRate": 40,
+      "defenseAverageAllowed": 205.1,
+      "leagueDefenseAverageAllowed": 224.7,
+      "defenseRankFewestAllowed": 8,
+      "documentedAvailabilityGames": 0,
+      "limitedGames": 0,
+      "recentSnapShare": 100,
+      "historicalHeadCoach": "Sean Payton",
+      "historicalPlayCaller": null,
+      "historicalCoachingGames": 5,
+      "summary": "Near the line 225.5 passing yards: last 5 average 237.8 (40% over); KC allows 205.1 per game to QBs versus a league average of 224.7 (rank 8 fewest)."
+    },
+    {
+      "eventId": "dflovmgz7KuRpeUeYjiO",
+      "commenceAt": "2026-09-15T00:15:00.000Z",
+      "matchup": "Denver Broncos at Kansas City Chiefs",
+      "awayTeam": "DEN",
+      "homeTeam": "KC",
+      "playerId": "00-0030506",
+      "playerName": "Travis Kelce",
+      "position": "TE",
+      "playerTeam": "KC",
+      "opponentTeam": "DEN",
+      "marketKey": "receiving_receptions",
+      "marketLabel": "receptions",
+      "line": 3.5,
+      "sportsbooks": 5,
+      "sportsbook": "draftkings",
+      "lineSource": "quoted",
+      "oddsCapturedAt": "2026-09-14T22:01:54.353Z",
       "historySeason": 2025,
       "direction": "neutral",
       "score": -0.3,
-      "confidence": 63,
+      "confidence": 60,
       "recentGames": 5,
-      "recentTotal": 12,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 3
-        },
-        {
-          "week": 16,
-          "value": 2
-        },
-        {
-          "week": 15,
-          "value": 3
-        },
-        {
-          "week": 14,
-          "value": 0
-        },
-        {
-          "week": 13,
-          "value": 4
-        }
-      ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 3.6,
-      "defenseRecentGames": 5,
-      "recentAverage": 2.4,
-      "hitRate": 60,
-      "defenseAverageAllowed": 4.5,
-      "leagueDefenseAverageAllowed": 4.2,
-      "defenseRankFewestAllowed": 22,
-      "documentedAvailabilityGames": 3,
-      "limitedGames": 2,
-      "recentSnapShare": 53.8,
-      "historicalHeadCoach": "Kevin O'Connell",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "Near the line 2.5 receptions: last 5 average 2.4 (60% over); GB allows 4.5 per game to RBs versus a league average of 4.2 (rank 22 fewest)."
-    },
-    {
-      "eventId": "IhNMBpTtM0CmvFLlESy3",
-      "commenceAt": "2026-09-14T00:20:00.000Z",
-      "matchup": "Dallas Cowboys at New York Giants",
-      "awayTeam": "DAL",
-      "homeTeam": "NYG",
-      "playerId": "00-0033077",
-      "playerName": "Dak Prescott",
-      "position": "QB",
-      "playerTeam": "DAL",
-      "opponentTeam": "NYG",
-      "marketKey": "passing_yards",
-      "marketLabel": "passing yards",
-      "line": 260.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "neutral",
-      "score": -0.1,
-      "confidence": 63,
-      "recentGames": 5,
-      "recentTotal": 1291,
+      "recentTotal": 17,
       "recentGameValues": [
         {
           "week": 18,
-          "value": 70
-        },
-        {
-          "week": 17,
-          "value": 307
-        },
-        {
-          "week": 16,
-          "value": 244
-        },
-        {
-          "week": 15,
-          "value": 294
-        },
-        {
-          "week": 14,
-          "value": 376
-        }
-      ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
-      "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 197.6,
-      "defenseRecentGames": 5,
-      "recentAverage": 258.2,
-      "hitRate": 60,
-      "defenseAverageAllowed": 228.8,
-      "leagueDefenseAverageAllowed": 224.7,
-      "defenseRankFewestAllowed": 17,
-      "documentedAvailabilityGames": 0,
-      "limitedGames": 0,
-      "recentSnapShare": 88.4,
-      "historicalHeadCoach": "Brian Schottenheimer",
-      "historicalPlayCaller": null,
-      "historicalCoachingGames": 5,
-      "summary": "Near the line 260.5 passing yards: last 5 average 258.2 (60% over); NYG allows 228.8 per game to QBs versus a league average of 224.7 (rank 17 fewest)."
-    },
-    {
-      "eventId": "IzR10JOrQjHutF3Q55KL",
-      "commenceAt": "2026-09-13T20:25:00.000Z",
-      "matchup": "Green Bay Packers at Minnesota Vikings",
-      "awayTeam": "GB",
-      "homeTeam": "MIN",
-      "playerId": "00-0039146",
-      "playerName": "Jayden Reed",
-      "position": "WR",
-      "playerTeam": "GB",
-      "opponentTeam": "MIN",
-      "marketKey": "receiving_receptions",
-      "marketLabel": "receptions",
-      "line": 3.5,
-      "sportsbooks": 6,
-      "sportsbook": "draftkings",
-      "lineSource": "quoted",
-      "oddsCapturedAt": "2026-09-13T18:17:28.166Z",
-      "historySeason": 2025,
-      "direction": "neutral",
-      "score": -0.1,
-      "confidence": 63,
-      "recentGames": 5,
-      "recentTotal": 19,
-      "recentGameValues": [
-        {
-          "week": 17,
-          "value": 4
-        },
-        {
-          "week": 16,
           "value": 3
         },
         {
-          "week": 15,
+          "week": 17,
           "value": 5
         },
         {
-          "week": 14,
-          "value": 4
+          "week": 16,
+          "value": 1
         },
         {
-          "week": 1,
-          "value": 3
+          "week": 15,
+          "value": 7
+        },
+        {
+          "week": 14,
+          "value": 1
         }
       ],
-      "recentOverCount": 3,
-      "recentUnderCount": 2,
+      "recentOverCount": 2,
+      "recentUnderCount": 3,
       "recentPushCount": 0,
-      "defenseRecentAverageAllowed": 9,
+      "defenseRecentAverageAllowed": 5.8,
       "defenseRecentGames": 5,
-      "recentAverage": 3.8,
-      "hitRate": 60,
-      "defenseAverageAllowed": 8.8,
-      "leagueDefenseAverageAllowed": 11,
-      "defenseRankFewestAllowed": 2,
-      "documentedAvailabilityGames": 4,
+      "recentAverage": 3.4,
+      "hitRate": 40,
+      "defenseAverageAllowed": 5.6,
+      "leagueDefenseAverageAllowed": 5.3,
+      "defenseRankFewestAllowed": 20,
+      "documentedAvailabilityGames": 0,
       "limitedGames": 0,
-      "recentSnapShare": 53,
-      "historicalHeadCoach": "Matt LaFleur",
+      "recentSnapShare": 89,
+      "historicalHeadCoach": "Andy Reid",
       "historicalPlayCaller": null,
       "historicalCoachingGames": 5,
-      "summary": "Near the line 3.5 receptions: last 5 average 3.8 (60% over); MIN allows 8.8 per game to WRs versus a league average of 11.0 (rank 2 fewest)."
+      "summary": "Near the line 3.5 receptions: last 5 average 3.4 (40% over); DEN allows 5.6 per game to TEs versus a league average of 5.3 (rank 20 fewest)."
     }
   ],
   "excludedMarkets": [
@@ -3662,10 +2318,10 @@
   ],
   "feedHealth": {
     "status": "current",
-    "capturedAt": "2026-09-13T18:17:28.166Z",
-    "ageHours": 0.031068333333333333,
-    "usableSignals": 57,
-    "checkedAt": "2026-09-13T18:19:20.012Z",
+    "capturedAt": "2026-09-14T22:01:54.353Z",
+    "ageHours": 0.0050327777777777775,
+    "usableSignals": 36,
+    "checkedAt": "2026-09-14T22:02:12.471Z",
     "message": "Upcoming quoted lines available."
   }
 }
