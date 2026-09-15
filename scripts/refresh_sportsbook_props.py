@@ -48,7 +48,16 @@ def main():
         from refresh_prop_snapshot import refresh
         return refresh('public')
     except urllib.error.HTTPError as error:
-        print(f'Protected refresh returned HTTP {error.code}. '+('Check the existing ingest token.' if error.code==401 else 'Check Worker/provider health; previous quotes retained.'))
+        try:
+            failure=json.loads(error.read(2048))
+        except Exception:
+            failure={}
+        reason={
+            'authorization_missing':'The Worker did not receive the authorization header.',
+            'credential_mismatch':'The Worker rejected the saved credential. Check active deployment/secret synchronization before re-entering a token.',
+            'ingest_not_configured':'The active Worker is missing its ingest secret.'
+        }.get(failure.get('code'),'Check Worker/provider health; previous quotes retained.')
+        print(f'Protected refresh returned HTTP {error.code}. '+reason)
         return 1
     except Exception as error:
         print('Refresh did not complete: '+type(error).__name__+'. Verify API state before retrying.')

@@ -78,6 +78,14 @@ const json = (body: unknown, status = 200) => Response.json(body, { status, head
 const number = (value: unknown) => typeof value === "number" && Number.isFinite(value) ? value : 0;
 const nullableNumber = (value: unknown) => typeof value === "number" && Number.isFinite(value) ? value : null;
 const unauthorized = () => json({ error: "Unauthorized" }, 401);
+export function adminAuthFailure(request: Request, token?: string): Response | null {
+  if (!token) return json({error: "Ingest authentication is not configured", code: "ingest_not_configured"}, 503);
+  const header = request.headers.get("authorization");
+  if (!header) return json({error: "Authorization header missing", code: "authorization_missing"}, 401);
+  if (header !== `Bearer ${token}`) return json({error: "Unauthorized", code: "credential_mismatch"}, 401);
+  return null;
+}
+
 const teamNames: Record<string, string> = {
   ARI: "Arizona Cardinals", ATL: "Atlanta Falcons", BAL: "Baltimore Ravens", BUF: "Buffalo Bills", CAR: "Carolina Panthers", CHI: "Chicago Bears", CIN: "Cincinnati Bengals", CLE: "Cleveland Browns",
   DAL: "Dallas Cowboys", DEN: "Denver Broncos", DET: "Detroit Lions", GB: "Green Bay Packers", HOU: "Houston Texans", IND: "Indianapolis Colts", JAX: "Jacksonville Jaguars", KC: "Kansas City Chiefs",
@@ -536,12 +544,14 @@ export default {
     }
     if (request.method === "GET" && url.pathname === "/api/defense/position-splits") return defensivePositionSplits(url, env.PLAYERPROP_DB);
     if (request.method === "GET" && url.pathname === "/api/admin/odds-usage") {
-      if (!env.INGEST_TOKEN || request.headers.get("authorization") !== `Bearer ${env.INGEST_TOKEN}`) return unauthorized();
+      const authFailure = adminAuthFailure(request, env.INGEST_TOKEN);
+      if (authFailure) return authFailure;
       if (!env.SPORTS_GAME_ODDS_API_KEY) return json({error:"Sportsbook key missing"},503);
       try{return json(await sportsbookUsage(env));}catch{return json({error:"Usage check failed"},502);}
     }
     if (request.method === "POST" && url.pathname === "/api/admin/refresh-sports-game-odds") {
-      if (!env.INGEST_TOKEN || request.headers.get("authorization") !== `Bearer ${env.INGEST_TOKEN}`) return unauthorized();
+      const authFailure = adminAuthFailure(request, env.INGEST_TOKEN);
+      if (authFailure) return authFailure;
       return syncSportsGameOdds(env);
     }
     const logMatch = url.pathname.match(/^\/api\/players\/([^/]+)\/game-logs$/);

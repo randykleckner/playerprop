@@ -254,3 +254,13 @@ test('free odds quota guard supports both documented and actual schema, stops be
  for(const used of [2390,2500,NaN])assert.throws(()=>freeOddsBudget({isActive:true,rateLimits:{'per-month':{'max-entities':2500,'current-entities':used}}}));
  assert.throws(()=>freeOddsBudget({isActive:false}));assert.throws(()=>freeOddsBudget({isActive:true,rateLimits:{}}));
 });
+
+test('admin authentication diagnoses failures without exposing credentials or accepting mismatches',async()=>{
+ const {adminAuthFailure}=await import(pathToFileURL(join(temp,'worker.mjs')));
+ const req=value=>new Request('https://example.test/api/admin/odds-usage',{headers:value?{Authorization:value}:{}});
+ assert.equal((await adminAuthFailure(req(),undefined).json()).code,'ingest_not_configured');
+ assert.equal((await adminAuthFailure(req(),'test-only-token').json()).code,'authorization_missing');
+ const wrong=adminAuthFailure(req('Bearer wrong'),'test-only-token');
+ assert.equal(wrong.status,401);assert.equal((await wrong.json()).code,'credential_mismatch');
+ assert.equal(adminAuthFailure(req('Bearer test-only-token'),'test-only-token'),null);
+});
