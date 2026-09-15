@@ -7,9 +7,9 @@ const paths={home:'M3 10 12 3l9 7v11h-6v-7H9v7H3Z',grid:'M3 3h18v18H3ZM3 9h18M9 
 const icon = key => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[key]||paths.grid}"/></svg>`;
 export function mountShell(){
  if(document.querySelector('.ui-sidebar'))return;
- if(new URLSearchParams(location.search).has('embed')){document.body.classList.add('ui-embedded');const style=document.createElement('link');style.rel='stylesheet';style.href='/ui/redesign.css?v=ui-polish-5';document.head.append(style);return;}
+ if(new URLSearchParams(location.search).has('embed')){document.body.classList.add('ui-embedded');const style=document.createElement('link');style.rel='stylesheet';style.href='/ui/redesign.css?v=visual-slate-2';document.head.append(style);return;}
  const link=document.createElement('link');link.rel='stylesheet';link.href='/ui/workspace.css?v=ui-polish-5';document.head.append(link);
- const redesign=document.createElement('link');redesign.rel='stylesheet';redesign.href='/ui/redesign.css?v=ui-polish-5';document.head.append(redesign);
+ const redesign=document.createElement('link');redesign.rel='stylesheet';redesign.href='/ui/redesign.css?v=visual-slate-2';document.head.append(redesign);
  document.body.classList.add('ui-shell');
  try{document.body.dataset.density=localStorage.getItem('drlocks-density')||'comfortable';}catch{}
  const route=routes.find(([url])=>location.pathname===url||location.pathname===url+'index.html'||url==='/command-center/'&&['/','/index.html'].includes(location.pathname));

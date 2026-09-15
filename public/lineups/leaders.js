@@ -19,6 +19,6 @@ export async function loadLeaders(bundle,slate){
   if(id!==request)return;
   if(String(data.slate_id)!==String(slate)||!Array.isArray(data.players))throw Error();
   snapshot=data;
-  document.getElementById('leaders-context').textContent=`${data.season} · Week ${data.week} · ${Date.now()>=Date.parse(data.expires_at)?'Saved / expired projections':'Pregame projections'} · captured ${stamp(data.data_as_of)}. Top 10 in this salary pool, not season actuals. ESPN projections; availability is limited to the saved salary status.`;render();
+  document.getElementById('leaders-context').textContent=`${data.season} · Week ${data.week} · ${Date.now()>=Date.parse(data.expires_at)?'Saved / expired projections':'Pregame projections'} · Top 10 projected leaders`;render();
  }catch{if(id===request)document.getElementById('leaders-context').textContent='Leaders unavailable for this saved build. Recommendations are still available above.';}
 }

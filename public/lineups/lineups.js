@@ -1,4 +1,4 @@
-import {loadLeaders} from './leaders.js';
+import {loadLeaders} from './leaders.js?v=visual-slate-2';
 import {avatar,avatarGroup,icon,stackPreview,positionBadge} from '../ui/components.js?v=ui-polish-5';
 import {newsIcon} from '../newsroom/shared.js';
 import {loadResearch,readinessHtml} from '../research/readiness.js';
