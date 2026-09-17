@@ -13,6 +13,7 @@
       "custom_domain": true
     }
   ],
+  "triggers": { "crons": ["0 12,13 * * TUE"] },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS"

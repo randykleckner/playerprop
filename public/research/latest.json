@@ -1,27 +1,27 @@
 {
   "version": 1,
   "snapshot": {
-    "bundle": "1d4ef8a1140d424da41675bd",
-    "source_key": "86e6eb5ab0edf9be0535b75e3630c575eb47749d1d2559de22f2376ee2cd1e5e",
-    "slate_id": "153428",
+    "bundle": "88e061a33c4fa5774d5e538c",
+    "source_key": "e59017f04c052cf935ac5dad1c8f07f2ec3232becc131d02f3c099b30ef8080b",
+    "slate_id": "153430",
     "season": 2026,
     "week": 2,
     "lock_time": "2026-09-20T17:00:00.000Z",
-    "generated_at": "2026-09-14T22:02:11.212Z",
-    "data_as_of": "2026-09-14T22:02:01.425Z",
-    "expires_at": "2026-09-15T22:02:01.425Z",
-    "simulation_path": "/research/bundles/1d4ef8a1140d424da41675bd/simulation.json",
-    "lineups_path": "/research/bundles/1d4ef8a1140d424da41675bd/lineups.json",
-    "identities_path": "/research/bundles/1d4ef8a1140d424da41675bd/identities.json",
+    "generated_at": "2026-09-17T15:15:29.545Z",
+    "data_as_of": "2026-09-17T15:15:18.204Z",
+    "expires_at": "2026-09-18T15:15:18.204Z",
+    "simulation_path": "/research/bundles/88e061a33c4fa5774d5e538c/simulation.json",
+    "lineups_path": "/research/bundles/88e061a33c4fa5774d5e538c/lineups.json",
+    "identities_path": "/research/bundles/88e061a33c4fa5774d5e538c/identities.json",
     "readiness": [
       {
         "label": "DK salaries",
-        "detail": "658 normalized entities in Classic draft group 153428; 317 eligible research entries",
-        "fetched_at": "2026-09-14T22:02:01.425Z"
+        "detail": "765 normalized entities in Classic draft group 153430; 343 eligible research entries",
+        "fetched_at": "2026-09-17T15:15:18.204Z"
       },
       {
         "label": "Player mapping",
-        "detail": "Eligible offense: 0 verified, 290 strongly corroborated, 1 provisional, 0 unresolved; 26 team defenses. 3 documented overrides applied. Full offensive pool: 25 unresolved"
+        "detail": "Eligible offense: 0 verified, 313 strongly corroborated, 2 provisional, 0 unresolved; 28 team defenses. 3 documented overrides applied. Full offensive pool: 28 unresolved"
       },
       {
         "label": "NFLverse stats",
@@ -29,8 +29,8 @@
       },
       {
         "label": "Sportsbook game lines",
-        "detail": "13/13 games",
-        "fetched_at": "2026-09-14T22:01:57.076Z"
+        "detail": "14/14 games",
+        "fetched_at": "2026-09-17T15:15:15.262Z"
       },
       {
         "label": "Sportsbook player props",
@@ -39,22 +39,22 @@
       {
         "label": "Injury data",
         "detail": "DK salary status only; current injury/practice feed not connected",
-        "fetched_at": "2026-09-14T22:02:01.425Z"
+        "fetched_at": "2026-09-17T15:15:18.204Z"
       },
       {
         "label": "Projections",
-        "detail": "ESPN 317/317; market player forecast 0; independent NFLverse forecast 0",
-        "fetched_at": "2026-09-14T22:02:03.169Z"
+        "detail": "ESPN 343/343; market player forecast 0; independent NFLverse forecast 0",
+        "fetched_at": "2026-09-17T15:15:20.119Z"
       },
       {
         "label": "Simulation snapshot",
-        "detail": "317 players, 13 games; simulations run on demand",
-        "fetched_at": "2026-09-14T22:02:11.212Z"
+        "detail": "343 players, 14 games; simulations run on demand",
+        "fetched_at": "2026-09-17T15:15:29.545Z"
       }
     ]
   },
   "attempt": {
-    "attempted_at": "2026-09-14T22:02:11.212Z",
+    "attempted_at": "2026-09-17T15:15:29.545Z",
     "error": null
   }
 }

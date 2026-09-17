@@ -9,6 +9,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 from dfs.catalog import load_catalog
 from dfs.http import NoRedirect
+from newsroom.injury_wire import parse as injury_wire, URL as INJURY_WIRE_URL
 from newsroom.feed import ESPN_URL, NFL_URL, rss, injuries, stamp, article_published_at
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -24,8 +25,15 @@ def fetch(url,state,now):
         if (stamp(now)-stamp(prior['fetched_at'])).total_seconds()<3600:return prior
     opener=urllib.request.build_opener(NoRedirect(),urllib.request.HTTPSHandler(context=ssl.create_default_context(cafile=certifi.where())))
     request=urllib.request.Request(url,headers={'User-Agent':'DrLocks-Newsroom/1.0 (+https://drlocksmd.com/newsroom/; public read-only)','Accept':'application/json,text/html'})
-    with opener.open(request,timeout=30) as response:raw=response.read(8*1024*1024+1)
-    if len(raw)>8*1024*1024:raise ValueError('News source exceeds size limit')
+    limit=16*1024*1024 if url==INJURY_WIRE_URL else 8*1024*1024
+    try:
+        with opener.open(request,timeout=30) as response:raw=response.read(limit+1)
+    except urllib.error.HTTPError as error:
+        if error.code!=403 or url!=INJURY_WIRE_URL:raise
+        # This public JSON endpoint accepts curl's standard UA; no authentication involved.
+        import subprocess
+        raw=subprocess.run(['curl','--fail','--silent','--show-error','--max-time','30','--max-filesize',str(limit),url],capture_output=True,check=True).stdout
+    if len(raw)>limit:raise ValueError('News source exceeds size limit')
     digest=hashlib.sha256(raw).hexdigest();archive=state/(digest+'.source')
     if not archive.exists():archive.write_bytes(raw)
     data={'fetched_at':now,'sha256':digest,'body':raw.decode('utf-8'),'url':url}
@@ -74,6 +82,23 @@ def refresh(root=ROOT/'public',state=ROOT/'.newsroom',request=fetch):
             # Preserve source-specific last valid records with their ORIGINAL expiry.
             all_stories.extend(s for s in previous['stories'] if s['source']==name)
             sources.append({'name':name,'url':url,'status':'failed','error':type(error).__name__,'detail':'Source unavailable; retained last valid briefs with original timestamps.'})
+    try:
+        raw=request(INJURY_WIRE_URL,state,now)
+        wire,counts=injury_wire(json.loads(raw['body']),players,now,cohort.get('season'))
+        all_stories.extend(wire)
+        sources.append({'name':'ESPN injury wire','url':INJURY_WIRE_URL,'status':'ok','fetched_at':raw['fetched_at'],'counts':counts})
+    except Exception as error:
+        all_stories.extend(s for s in previous['stories'] if s['source']=='ESPN injury wire')
+        sources.append({'name':'ESPN injury wire','url':INJURY_WIRE_URL,'status':'failed','error':type(error).__name__})
+    # Preserve every dated brief, independently of current-feed expiry and deduplication.
+    archive_path=root/'newsroom/history.json'
+    history=json.loads(archive_path.read_text()).get('stories',[]) if archive_path.exists() else []
+    # Recover previously captured public briefs on the first archive build.
+    if not archive_path.exists():
+        for saved in state.glob('*.snapshot.json'):
+            history.extend(json.loads(saved.read_text()).get('stories',[]))
+    history={s['key']:s for s in [*history,*previous['stories'],*all_stories]}
+    atomic(archive_path,{'version':1,'generated_at':now,'stories':sorted(history.values(),key=lambda s:s.get('published_at') or s['observed_at'],reverse=True)})
     # A current official report replaces an older availability brief, but never a role/transaction report.
     official={s['player_id']:s for s in all_stories if s['source']!='ESPN' and s.get('evidence',{}).get('game_status') and stamp(s['expires_at'])>stamp(now)}
     all_stories=[s for s in all_stories if not(s['source']=='ESPN' and s['topic']=='Availability' and s['player_id'] in official and stamp(s['published_at'] or s['observed_at'])<=stamp(official[s['player_id']]['observed_at']))]

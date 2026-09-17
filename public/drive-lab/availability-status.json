@@ -1,1 +1,1 @@
-{"status": "failed", "attempted_at": "2026-09-14T22:02:54.199298+00:00", "detail": "Latest official refresh failed; last valid availability snapshot retained"}
+{"status": "ok", "fetched_at": "2026-09-17T15:15:32.173774+00:00", "attempted_at": "2026-09-17T15:16:14.555518+00:00", "snapshot_id": "availability-37bc745b4745fbd9d7e2"}

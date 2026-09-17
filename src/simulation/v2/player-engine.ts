@@ -2,7 +2,6 @@ import {prepareAvailability,type AvailabilitySnapshot,type AvailabilityConfig,ty
 import {simulateGameV2,resolvePlay,type GameInputV2,type GameState,type Transition,type Options} from './engine.ts';
 import type {EmpiricalProfile} from './empirical.ts';
 import {random,fingerprint,type Random} from '../../../public/simulation/random.js';
-// @ts-expect-error Shared V1 scoring has no declaration; implementation is unchanged.
 import {dkScore} from '../../../public/simulation/engine.js';
 import {adjustments,resolvePersonnel,type PlayerOutcome} from './personnel-influence.ts';
 import {emptyPlayerStats,type PlayerTeam,type PlayerSnapshot,type PersonnelSnapshot,type InfluenceConfig,type PlayerBox,type PlayerInput} from './player-types.ts';

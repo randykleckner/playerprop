@@ -1,3 +1,5 @@
+import { leaderboardRoute } from "./leaderboard/routes";
+import { scheduledGeneration } from "./leaderboard/service";
 import { simulationRoute } from "./simulation/routes";
 import { dfsRoute } from "./dfs/foundation";
 
@@ -519,9 +521,14 @@ async function syncSportsGameOdds(env: Env) {
 }
 
 export default {
+  async scheduled(controller, env): Promise<void> {
+    await scheduledGeneration(env, controller.scheduledTime);
+  },
   async fetch(request, env): Promise<Response> {
     const url = new URL(request.url);
     try {
+    const leaderboardResponse = await leaderboardRoute(request, env);
+    if (leaderboardResponse) return leaderboardResponse;
     if (request.method === "GET" && url.pathname === "/health") return json({ ok: true, service: "drlocks-nfl-props-api" });
     const simulationResponse = await simulationRoute(request, env);
     if (simulationResponse) return simulationResponse;

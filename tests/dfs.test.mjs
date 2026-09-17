@@ -11,8 +11,8 @@ import ts from "typescript";
 // remote D1 or provider calls. These parent tables are TEST contracts, not a
 // claimed production schema or a replacement bootstrap migration.
 const temp = mkdtempSync(join(tmpdir(), "playerprop-dfs-tests-"));
-for (const [source, target] of [["src/simulation/routes.ts", "simulation.mjs"], ["src/dfs/foundation.ts", "foundation.mjs"], ["src/index.ts", "worker.mjs"]]) {
-  const code = readFileSync(source, "utf8").replace('"./dfs/foundation"', '"./foundation.mjs"').replace('"./simulation/routes"', '"./simulation.mjs"').replaceAll('../../public/simulation/', pathToFileURL(process.cwd() + '/public/simulation/').href);
+for (const [source, target] of [["src/leaderboard/service.ts", "leaderboard-service.mjs"], ["src/leaderboard/routes.ts", "leaderboard-routes.mjs"], ["src/simulation/routes.ts", "simulation.mjs"], ["src/dfs/foundation.ts", "foundation.mjs"], ["src/index.ts", "worker.mjs"]]) {
+  const code = readFileSync(source, "utf8").replaceAll('"./leaderboard/routes"', '"./leaderboard-routes.mjs"').replaceAll('"./leaderboard/service"', '"./leaderboard-service.mjs"').replaceAll("'./service'", "'./leaderboard-service.mjs'").replace('"./dfs/foundation"', '"./foundation.mjs"').replace('"./simulation/routes"', '"./simulation.mjs"').replaceAll('../../public/simulation/', pathToFileURL(process.cwd() + '/public/simulation/').href);
   writeFileSync(join(temp, target), ts.transpileModule(code, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText);
 }
 const { normalizeImport, modelingCutoff, timestamp } = await import(pathToFileURL(join(temp, "foundation.mjs")));
