@@ -66,14 +66,8 @@ export async function generateWeek(env:Environment,season:number,week:number,pro
   const actuals=(await db.prepare(`SELECT s.*,p.display_name,t.team_abbreviation FROM player_game_stats s JOIN games g ON g.id=s.game_id JOIN players p ON p.player_id=s.player_id JOIN teams t ON t.team_id=s.team_id WHERE g.season=? AND g.week=? AND g.season_type='REG' AND s.position IN ('QB','RB','WR','TE')`).bind(season,week).all<ActualRow>()).results.filter(s=>expected.has(s.game_id));
   const defenses=(await db.prepare(`SELECT d.*,t.team_name,t.team_abbreviation FROM team_game_fantasy_stats d JOIN games g ON g.id=d.game_id JOIN teams t ON t.team_id=d.team_id WHERE g.season=? AND g.week=? AND g.season_type='REG'`).bind(season,week).all<DefenseRow>()).results.filter(s=>expected.has(s.game_id));
   if(actuals.some(s=>s.passing_interceptions===null||s.fumbles_lost===null)||games.some(g=>[g.home_team_id,g.away_team_id].some(team=>!actuals.some(s=>s.game_id===g.id&&s.team_id===team)||!defenses.some(s=>s.game_id===g.id&&s.team_id===team))))return null;
-  const media=await catalogs(env.ASSETS);
-  const identity=(teamId:string,abbreviation:string)=>({teamId,team:normalizeTeam(abbreviation),teamLogo:safeImage(media.teams[normalizeTeam(abbreviation)]?.logo)});
-  const rows:Leader[]=actuals.map(s=>({position:s.position,playerId:s.player_id,gameId:s.game_id,name:s.display_name,...identity(s.team_id,s.team_abbreviation),playerImage:safeImage(media.players[s.player_id]?.headshot),fantasyPoints:dkScore({...s,passing_tds:s.passing_touchdowns,rushing_tds:s.rushing_touchdowns,receiving_tds:s.receiving_touchdowns,interceptions:s.passing_interceptions!},s.position)}));
-  rows.push(...defenses.map(s=>({position:'DST',playerId:null,gameId:s.game_id,name:s.team_name,...identity(s.team_id,s.team_abbreviation),playerImage:null,fantasyPoints:dkScore(s,'DST')})));
-  // Weekly totals combine multiple games, with the highest-scoring game used for artwork.
-  const totals=new Map<string,Leader>();
-  for(const row of rows.sort((a,b)=>b.fantasyPoints-a.fantasyPoints||a.gameId.localeCompare(b.gameId))){const key=row.playerId??`team:${row.teamId}`,prior=totals.get(key);if(prior)prior.fantasyPoints+=row.fantasyPoints;else totals.set(key,{...row});}
-  const {leaders,hero}=rankLeaders([...totals.values()]);if(leaders.length!==POSITIONS.length||!hero)return null;
+  const {leaders,hero}=await leadersFromActuals(env,actuals,defenses);
+  if(leaders.length!==POSITIONS.length||!hero)return null;
   const snapshot:Snapshot={season,week,status:'ready',generatedAt:new Date().toISOString(),scoringVersion:SCORING_VERSION,leaders,hero:{...hero,image:await resolveHero(hero,season,week,provider)}};
   await db.prepare(`INSERT INTO weekly_leaderboards (season,week,status,generated_at,scoring_version,snapshot_json) VALUES (?,?,'ready',?,?,?) ON CONFLICT(season,week) DO NOTHING`).bind(season,week,snapshot.generatedAt,SCORING_VERSION,JSON.stringify(snapshot)).run();
   return readSnapshot(db,season,week);
@@ -82,4 +76,43 @@ export async function scheduledGeneration(env:Environment,time:number) {
   if(!isGenerationTime(time))return;
   const weeks=await env.PLAYERPROP_DB.prepare(`SELECT r.season,r.week FROM leaderboard_week_readiness r LEFT JOIN weekly_leaderboards w ON w.season=r.season AND w.week=r.week WHERE w.week IS NULL AND r.finalized_at<=? ORDER BY r.season DESC,r.week DESC LIMIT 18`).bind(new Date(time).toISOString()).all<{season:number;week:number}>();
   for(const week of weeks.results){const snapshot=await generateWeek(env,week.season,week.week);console.log(JSON.stringify({event:'leaderboard_generation',...week,status:snapshot?'ready':'pending'}));}
+}
+
+async function leadersFromActuals(env:Environment,actuals:ActualRow[],defenses:DefenseRow[]) {
+  const media=await catalogs(env.ASSETS);
+  const identity=(teamId:string,abbreviation:string)=>({teamId,team:normalizeTeam(abbreviation),teamLogo:safeImage(media.teams[normalizeTeam(abbreviation)]?.logo)});
+  const rows:Leader[]=actuals.map(s=>({position:s.position,playerId:s.player_id,gameId:s.game_id,name:s.display_name,...identity(s.team_id,s.team_abbreviation),playerImage:safeImage(media.players[s.player_id]?.headshot),fantasyPoints:dkScore({...s,passing_tds:s.passing_touchdowns,rushing_tds:s.rushing_touchdowns,receiving_tds:s.receiving_touchdowns,interceptions:s.passing_interceptions??0,fumbles_lost:s.fumbles_lost??0},s.position)}));
+  rows.push(...defenses.map(s=>({position:'DST',playerId:null,gameId:s.game_id,name:s.team_name,...identity(s.team_id,s.team_abbreviation),playerImage:null,fantasyPoints:dkScore(s,'DST')})));
+  // Weekly totals combine multiple games, with the highest-scoring game used for artwork.
+  const totals=new Map<string,Leader>();
+  for(const row of rows.sort((a,b)=>b.fantasyPoints-a.fantasyPoints||a.gameId.localeCompare(b.gameId))){const key=row.playerId??`team:${row.teamId}`,prior=totals.get(key);if(prior)prior.fantasyPoints+=row.fantasyPoints;else totals.set(key,{...row});}
+  const {leaders,hero}=rankLeaders([...totals.values()]);return {leaders,hero};
+}
+
+// Snapshot/media tables are optional on the read path. Core historical stats are enough.
+export async function leaderboardTables(db:D1Database) {
+  const tables=await db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name IN ('weekly_leaderboards','team_game_fantasy_stats','leaderboard_hero_media')").all<{name:string}>();
+  return new Set(tables.results.map(row=>row.name));
+}
+export async function databaseWeeks(db:D1Database,tables:Set<string>) {
+  const snapshots=tables.has('weekly_leaderboards') ? " UNION SELECT season,week FROM weekly_leaderboards WHERE status='ready'" : '';
+  return (await db.prepare(`SELECT DISTINCT g.season,g.week FROM games g JOIN player_game_stats s ON s.game_id=g.id WHERE g.season_type='REG' AND s.position IN ('QB','RB','WR','TE')${snapshots} ORDER BY season DESC,week DESC`).all<{season:number;week:number}>()).results;
+}
+export async function readDatabaseWeek(env:Environment,season:number,week:number,tables:Set<string>) {
+  const db=env.PLAYERPROP_DB;
+  if(tables.has('weekly_leaderboards')){const snapshot=await readSnapshot(db,season,week);if(snapshot)return {...snapshot,dataSource:'snapshot',scoringComplete:true,missingPositions:[]};}
+  const actuals=(await db.prepare(`SELECT s.*,p.display_name,t.team_abbreviation FROM player_game_stats s JOIN games g ON g.id=s.game_id JOIN players p ON p.player_id=s.player_id JOIN teams t ON t.team_id=s.team_id WHERE g.season=? AND g.week=? AND g.season_type='REG' AND s.position IN ('QB','RB','WR','TE')`).bind(season,week).all<ActualRow>()).results;
+  if(!actuals.length)return null;
+  const defenses=tables.has('team_game_fantasy_stats') ? (await db.prepare(`SELECT d.*,t.team_name,t.team_abbreviation FROM team_game_fantasy_stats d JOIN games g ON g.id=d.game_id JOIN teams t ON t.team_id=d.team_id WHERE g.season=? AND g.week=? AND g.season_type='REG'`).bind(season,week).all<DefenseRow>()).results : [];
+  // Only rank DST when all games represented in the player data have both team totals.
+  const teamsByGame=new Map<string,Set<string>>();
+  for(const row of actuals){if(!teamsByGame.has(row.game_id))teamsByGame.set(row.game_id,new Set());teamsByGame.get(row.game_id)!.add(row.team_id);}
+  const completeDefense=[...teamsByGame].every(([gameId,teams])=>teams.size===2&&[...teams].every(teamId=>defenses.some(d=>d.game_id===gameId&&d.team_id===teamId)));
+  const {leaders,hero}=await leadersFromActuals(env,actuals,completeDefense?defenses:[]);
+  if(!hero)return null;
+  const scoringComplete=actuals.every(row=>row.passing_interceptions!=null&&row.fumbles_lost!=null);
+  const provider=tables.has('leaderboard_hero_media')?approvedMediaProvider(db):{getHeroImage:async()=>null};
+  return {season,week,status:'ready',dataSource:'database',scoringComplete,
+    scoringVersion:SCORING_VERSION,missingPositions:POSITIONS.filter(position=>!leaders.some(row=>row.position===position)),
+    leaders,hero:{...hero,image:await resolveHero(hero,season,week,provider)}};
 }

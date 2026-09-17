@@ -1,4 +1,4 @@
-import {generateWeek,readSnapshot,approvedMediaProvider,resolveHero,safeImage} from './service';
+import {generateWeek,readSnapshot,approvedMediaProvider,resolveHero,safeImage,leaderboardTables,databaseWeeks,readDatabaseWeek} from './service';
 interface Environment {PLAYERPROP_DB:D1Database;ASSETS:Fetcher;INGEST_TOKEN?:string}
 const json=(value:unknown,status=200)=>Response.json(value,{status,headers:{'cache-control':'no-store'}});
 export function selection(url:URL) {
@@ -12,11 +12,12 @@ export async function leaderboardRoute(request:Request,env:Environment):Promise<
   const url=new URL(request.url);
   if(request.method==='GET'&&url.pathname==='/api/leaderboard'){
     let selected;try{selected=selection(url);}catch{return json({error:'Invalid season or week'},400);}
-    const available=(await env.PLAYERPROP_DB.prepare("SELECT season,week FROM weekly_leaderboards WHERE status='ready' ORDER BY season DESC,week DESC").all<{season:number;week:number}>()).results;
+    const tables=await leaderboardTables(env.PLAYERPROP_DB);
+    const available=await databaseWeeks(env.PLAYERPROP_DB,tables);
     const currentYear=new Date().getUTCFullYear()-(new Date().getUTCMonth()<2?1:0);
     const season=selected.season??available[0]?.season??currentYear;
     const week=selected.week??available.find(w=>w.season===season)?.week??1;
-    const snapshot=await readSnapshot(env.PLAYERPROP_DB,season,week);
+    const snapshot=await readDatabaseWeek(env,season,week,tables);
     return json({...snapshot,season,week,status:snapshot?'ready':'pending',available});
   }
   const actions=['/api/admin/leaderboard/finalize','/api/admin/leaderboard/generate','/api/admin/leaderboard/hero'];

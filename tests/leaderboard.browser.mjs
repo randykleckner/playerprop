@@ -16,10 +16,10 @@ try{
  await page.route('https://**/*',route=>route.abort());
  const leaders=['QB','RB','WR','TE','DST'].map((position,i)=>({position,playerId:position==='DST'?null:`fixture-${i}`,gameId:'fixture-game',teamId:'CHI',team:'CHI',name:['Fixture Quarterback','Fixture Running Back','Fixture Receiver','Fixture Tight End','Chicago Bears'][i],fantasyPoints:37.26-i*3,playerImage:null,teamLogo:null}));
  let fail=false;
- await page.route('**/api/leaderboard?*',async route=>{const url=new URL(route.request().url()),season=Number(url.searchParams.get('season')||2026),week=Number(url.searchParams.get('week')||1);await route.fulfill({status:fail?503:200,json:{season,week,status:week===1?'ready':'pending',available:[{season:2026,week:1},{season:2025,week:1}],leaders,hero:{...leaders[0],image:{url:null,kind:'team',focalX:25,focalY:40}}}});});
+ await page.route('**/api/leaderboard?*',async route=>{const url=new URL(route.request().url()),season=Number(url.searchParams.get('season')||2026),week=Number(url.searchParams.get('week')||1);await route.fulfill({status:fail?503:200,json:{season,week,status:week===1?'ready':'pending',available:[{season:2026,week:1},{season:2025,week:1}],dataSource:'database',scoringComplete:false,missingPositions:['DST'],leaders:leaders.slice(0,4),hero:{...leaders[0],image:{url:null,kind:'team',focalX:25,focalY:40}}}});});
  await page.goto(`http://127.0.0.1:${server.address().port}/leaderboard/`);
  await page.locator('#workspace[aria-busy="false"]').waitFor();
- assert.equal(await page.locator('.leader-row').count(),5);assert.equal(await page.locator('nav a[aria-current="page"]').innerText(),'Leaderboard\nWeekly fantasy finishes');
+ assert.equal(await page.locator('.leader-row').count(),5);assert.match(await page.locator('#leaderboard-basis').innerText(),/TURNOVER DATA MISSING/);assert.equal(await page.locator('.leader-missing').count(),1);assert.equal(await page.locator('nav a[aria-current="page"]').innerText(),'Leaderboard\nWeekly fantasy finishes');
  assert.equal(await page.locator('#results-title').evaluate(el=>getComputedStyle(el).color),'rgb(255, 255, 255)');
  assert.equal(await page.locator('body').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(8, 24, 43)');
  await page.screenshot({path:'/tmp/leaderboard-desktop.png',fullPage:true});

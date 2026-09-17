@@ -28,12 +28,19 @@ def value(row: dict[str, str], name: str) -> float:
         return 0.0
 
 
-def records(season: int):
+def optional_value(row: dict[str, str], name: str) -> float | None:
+    raw = row.get(name)
+    return None if raw in (None, "") else float(raw)
+
+
+def records(season: int, selected_week: int | None = None):
     source_url = NFLVERSE_WEEKLY_URL.format(season=season)
     with urllib.request.urlopen(source_url, timeout=60, context=SSL_CONTEXT) as response:
         reader = csv.DictReader(io.TextIOWrapper(response, encoding="utf-8"))
         for row in reader:
             if row.get("season") != str(season) or row.get("season_type") != "REG":
+                continue
+            if selected_week is not None and int(row.get("week", "0")) != selected_week:
                 continue
             player_id = row.get("player_id", "")
             # player_display_name is populated more consistently in historical rows.
@@ -44,6 +51,7 @@ def records(season: int):
                 continue
             yield {"player_id": player_id, "player_name": player_name, "position": row.get("position", "UNK"), "team": team, "opponent": opponent,
                    "game_id": row.get("game_id", f"{season}_{week}_{team}_{opponent}"), "season": season, "week": int(float(week)),
+                   "passing_interceptions": optional_value(row, "passing_interceptions"), "fumbles_lost": optional_value(row, "fumbles_lost_total"),
                    "passing_yards": value(row, "passing_yards"), "passing_touchdowns": value(row, "passing_tds"), "rushing_yards": value(row, "rushing_yards"),
                    "rushing_touchdowns": value(row, "rushing_tds"), "receptions": value(row, "receptions"), "receiving_yards": value(row, "receiving_yards"),
                    "receiving_touchdowns": value(row, "receiving_tds"), "targets": value(row, "targets"), "carries": value(row, "carries"),
@@ -88,6 +96,7 @@ def post(url: str, token: str, batch: list[dict[str, object]]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--season", type=int, required=True)
+    parser.add_argument("--week", type=int, choices=range(1, 19), help="Import one regular-season week only")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--available-seasons", action="store_true", help="Print regular-season years currently published by NFLverse, then exit.")
     args = parser.parse_args()
@@ -103,7 +112,7 @@ def main() -> int:
             parser.error("PLAYERPROP_API_URL must be the API origin only, for example https://api.drlocksmd.com (do not include /health or /api paths).")
     batch: list[dict[str, object]] = []
     processed = 0
-    for record in records(args.season):
+    for record in records(args.season, args.week):
         batch.append(record)
         if len(batch) == BATCH_SIZE:
             if not args.dry_run:

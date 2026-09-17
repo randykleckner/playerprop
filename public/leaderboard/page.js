@@ -11,15 +11,18 @@ function controls(data){
 function resetHero(){hero.className='weekly-hero';hero.innerHTML='<div class="hero-placeholder" aria-hidden="true">DR<br>LOCKS</div>';}
 async function load(){
  const request=++requestNumber;controller?.abort();controller=new AbortController();
- $('workspace').setAttribute('aria-busy','true');$('leaderboard-retry').hidden=true;rows.innerHTML=skeletonMarkup();resetHero();
+ $('workspace').setAttribute('aria-busy','true');$('leaderboard-retry').hidden=true;$('leaderboard-basis').hidden=true;rows.innerHTML=skeletonMarkup();resetHero();
  const params=new URLSearchParams(location.search),selectedWeek=params.get('week');
  $('week-label').textContent=selectedWeek?`WEEK ${selectedWeek}`:'WEEK —';$('results-title').innerHTML='TOP FANTASY<br>FINISHES';$('leaderboard-status').textContent='Loading weekly leaderboard';
  try{
   const response=await fetch(`/api/leaderboard?${params}`,{signal:controller.signal,cache:'no-store'});if(!response.ok)throw Error('Request failed');const data=await response.json();if(request!==requestNumber)return;
   controls(data);history.replaceState(null,'',selectionUrl(data.season,data.week));$('week-label').textContent=`WEEK ${data.week}`;
   if(data.status!=='ready'){$('results-title').innerHTML='RESULTS<br>PENDING';rows.innerHTML='';$('leaderboard-status').textContent=`Week ${data.week} results pending`;return;}
-  $('results-title').innerHTML='TOP FANTASY<br>FINISHES';rows.innerHTML=data.leaders.map(rowMarkup).join('');
+  $('results-title').innerHTML='TOP FANTASY<br>FINISHES';
+  const basis=$('leaderboard-basis');basis.hidden=data.dataSource!=='database';basis.textContent=data.scoringComplete===false?'RECORDED STATS · TURNOVER DATA MISSING':'RECORDED STATS';
+  rows.innerHTML=data.leaders.map(rowMarkup).join('');
   [...rows.children].forEach((node,index)=>{const row=data.leaders[index];attachImage(node.querySelector('.row-team-mark'),[row.teamLogo]);if(row.playerId)attachImage(node.querySelector('.row-player-mark'),[row.playerImage,row.teamLogo]);});
+  for(const position of data.missingPositions??[]){const missing=document.createElement('article');missing.className='leader-row leader-missing';missing.innerHTML=`<span class="leader-position">${esc(position)}</span><strong class="missing-score">—</strong><div class="leader-identity"><h2>STATS NOT STORED</h2></div>`;rows.append(missing);}
   const h=data.hero;hero.classList.add(`hero-${h.image.kind==='game-action'||h.image.kind==='approved-media'?'photo':h.image.kind==='headshot'?'headshot':'team'}`);
   hero.innerHTML=`<div class="hero-backdrop" aria-hidden="true">${esc(h.team)}</div><div class="hero-image"></div><div class="hero-caption"><span>WEEK ${data.week} / TOP FINISH</span><h2>${esc(h.name)}</h2><p>${esc(h.team)} <span>•</span> ${Number(h.fantasyPoints).toFixed(2)} PTS</p></div>`;
   attachImage(hero.querySelector('.hero-image'),[h.image.url,h.playerImage,h.teamLogo],{alt:h.name,focalX:h.image.focalX,focalY:h.image.focalY,eager:true});

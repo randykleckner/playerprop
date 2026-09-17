@@ -1,5 +1,21 @@
 # Weekly Leaderboard
 
+## Week 1 actuals imported (2026-09-17)
+
+Imported 1,117 canonical player-game rows across all 16 regular-season Week 1 games from NFLverse `stats_player_week_2026.csv`. The source contained one additional row with no player ID/name; it was excluded. All 357 QB/RB/WR/TE rows were included. Offensive passing interceptions and lost fumbles are now stored and included in the shared scorer. The default live selection is **2026 Week 1**, with Josh Allen as the hero at **38.66**. Team DST remains unavailable pending validated points-allowed inputs.
+
+`scripts/ingest_nflverse.py --season 2026 --week 1` now supports targeted weekly imports and passes the two turnover fields through the existing ingest endpoint. Older payloads without these fields preserve already imported values. The Worker update was deployed; 38 focused JavaScript tests, two importer tests, TypeScript and production build passed. No external provider is called when viewing the leaderboard.
+
+## Direct-database repair (2026-09-17)
+
+The public read path now queries existing `games`, `player_game_stats`, `players`, and `teams` directly when no saved snapshot exists. No external stats API, finalization manifest, or new leaderboard tables are required to display stored offensive results. The default selection is the latest week with actual stored player stats. Explicit weeks with no stored data remain pending. Existing ready snapshots retain precedence and remain unchanged.
+
+Production inspection found actuals through **2025 Week 18**, with no offensive turnover values or team DST rows. The page labels direct results **RECORDED STATS · TURNOVER DATA MISSING** when penalties cannot be included and displays **DST — STATS NOT STORED** rather than inventing a defense score. These are totals from recorded inputs, not certified complete fantasy totals. The shared scoring function remains unchanged.
+
+Migration 0010 was applied to production to resolve the original missing-table 500. The new read path also works on the original schema without that migration. Finalization and Tuesday snapshot generation remain optional for publishing certified historical snapshots; they no longer gate reading available stats.
+
+Verification: 37/37 focused leaderboard/Worker tests, TypeScript, desktop/tablet/mobile Chrome checks, and production dry-run passed. Added regressions cover direct stored-data selection, an entirely unmigrated leaderboard schema, and incomplete DST coverage.
+
 The new `/leaderboard/` page uses the existing static ES-module frontend and shared `public/ui/shell.js` navigation. Desktop uses a 42/58 hero/results composition; screens up to 850px stack the hero above the results. Controls use `?season=2026&week=1` and browser history. Loading, pending, unavailable/retry, and broken-image fallbacks are implemented. No sample scores ship to the site.
 
 ## Architecture and reused data
@@ -20,11 +36,11 @@ The new `/leaderboard/` page uses the existing static ES-module frontend and sha
 - `weekly_leaderboards`: one immutable statistical JSON snapshot per season/week, with scoring version, display identities and hero metadata. A single insert publishes it atomically. No separate entry table is needed.
 - `leaderboard_hero_media`: approved game action/player media, provenance and `hero_focal_x`/`hero_focal_y`.
 
-Apply the migration before deploying the Worker. It has been exercised on SQLite in tests; it has **not** been applied remotely. No deployment was performed.
+Apply the migration before deploying the Worker. It has been exercised on SQLite in tests and was applied remotely during the missing-table repair.
 
 ## API
 
-- `GET /api/leaderboard?season=2026&week=1`: exact ready snapshot or `{season, week, status: "pending", available: [...]}`. With no selection, defaults to latest ready week, or current season/week 1 when empty. Explicit unknown historical weeks remain pending, without substitution.
+- `GET /api/leaderboard?season=2026&week=1`: exact ready snapshot or `{season, week, status: "pending", available: [...]}`. With no selection, defaults to the latest stored-stat or ready-snapshot week, or current season/week 1 when empty. Explicit unknown historical weeks remain pending, without substitution.
 - `POST /api/admin/leaderboard/finalize`: authenticated complete-week manifest (below), validates canonical identities and input coverage, then atomically writes supplemental actuals and readiness.
 - `POST /api/admin/leaderboard/generate`: authenticated `{season, week}`, for backfills/retries. An existing ready week is returned unchanged.
 - `POST /api/admin/leaderboard/hero`: authenticated approved artwork update, updates only hero metadata. Requires `{season, week, playerId, gameId, kind, url, source, sourceUrl, focalX, focalY, approved: true}`. `kind` is `game-action` or `approved-media`; identity must match the published hero. Focal percentages are 0–100.
@@ -54,7 +70,7 @@ Admin endpoints use the existing `INGEST_TOKEN`. They do not call any untrusted 
 
 This abbreviated schema example is intentionally not a valid complete week: include every QB/RB/WR/TE actual row and both teams' DST records for every game. Do not infer missing inputs as zero, manufacture players, use projected stats, sum partial individual defensive records into DST, or infer finality from kickoff time. `points_allowed` must be the provider's fantasy DST points-allowed statistic, not blindly the opposing scoreboard total. Require the provider's canonical game/player mapping; some legacy import fallback game IDs are not league schedule IDs.
 
-`python3 scripts/finalize_leaderboard.py final-week.json --generate` submits this contract using `PLAYERPROP_API_URL` and `PLAYERPROP_INGEST_TOKEN`. It is a transport utility, **not** an implemented final-stat provider. Until a trusted importer supplies complete actuals, the production page correctly says RESULTS PENDING. The scheduled job retrieves finalized D1 data; it does not download missing final actuals from an external provider.
+`python3 scripts/finalize_leaderboard.py final-week.json --generate` submits this contract using `PLAYERPROP_API_URL` and `PLAYERPROP_INGEST_TOKEN`. It is a transport utility, **not** an implemented final-stat provider. The direct database view displays available offensive results while complete-actuals snapshots await this contract. The scheduled job retrieves finalized D1 data; it does not download missing final actuals from an external provider.
 
 The existing `dkScore` is the site's foundation scoring format, not a newly audited full DraftKings rules implementation: it does not include two-point conversions, safeties, blocked kicks, or all return-scoring categories. Those remain an existing scoring limitation. This feature deliberately reuses it without changing unrelated model results. No kicker is included. Fantasy scores display two decimals; ties at that precision break by canonical ID. Multiple games in a week are summed, with the individual's best game selected for imagery.
 
@@ -86,4 +102,4 @@ Checks: `npm run check`; `node --test tests/leaderboard.test.mjs`; `npm test`; i
 - Python suite, run independently because `npm test` stops after the JavaScript failure: **99/100 passed**. Existing `test_supersession_failure_retention_and_archives` fails in the newsroom fixture path with an ESPN injury-wire JSON decode failure. That failure is outside the changed leaderboard files; existing newsroom work was preserved.
 - `git diff --check`: passed.
 
-Outstanding production work: apply migration 0010 and deploy; connect an audited full-week final-stat importer to the documented finalization contract; optionally configure approved/licensed action photos. The current fallback is existing headshot → team logo → branded CSS artwork. No fabricated statistics or production placeholder players were introduced.
+Outstanding data enhancements: populate missing turnover/DST fields for complete scores; optionally connect a final-stat importer for certified snapshots and approved/licensed action photos. The current fallback is existing headshot → team logo → branded CSS artwork. No fabricated statistics or production placeholder players were introduced.

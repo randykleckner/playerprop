@@ -33,3 +33,7 @@ body.leaderboard-page #leaderboard-retry{background:var(--leader-green);border:0
 /* The shared workspace declares a light theme with !important. Scope its override here. */
 body.leaderboard-page.ui-shell{background:#08182b!important;color:#fff!important}
 body.leaderboard-page #results-title{color:#fff}
+
+body.leaderboard-page .leaderboard-basis{color:#a7b5c3;font-size:10px;letter-spacing:.1em;margin:-12px 0 18px}
+.leader-missing .missing-score{font-size:28px;color:#a7b5c3;text-align:center}
+body.leaderboard-page .leader-missing h2{font-size:16px;color:#a7b5c3}

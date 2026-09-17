@@ -264,3 +264,13 @@ test('admin authentication diagnoses failures without exposing credentials or ac
  assert.equal(wrong.status,401);assert.equal((await wrong.json()).code,'credential_mismatch');
  assert.equal(adminAuthFailure(req('Bearer test-only-token'),'test-only-token'),null);
 });
+
+test('player stats ingestion retains offensive turnovers and older imports cannot erase them',async()=>{
+ const {db,sql}=database();
+ const stat={player_id:'gsis-qb',player_name:'Sample Quarterback',position:'QB',team:'CHI',opponent:'GB',game_id:'2026_01_GB_CHI',season:2026,week:1,passing_yards:320,passing_interceptions:2,fumbles_lost:1};
+ assert.equal((await fetchRoute(db,'/api/ingest/player-stats',{stats:[stat]})).status,200);
+ let row=sql.prepare('SELECT passing_interceptions,fumbles_lost FROM player_game_stats WHERE player_id=?').get('gsis-qb');assert.equal(row.passing_interceptions,2);assert.equal(row.fumbles_lost,1);
+ delete stat.passing_interceptions;delete stat.fumbles_lost;
+ assert.equal((await fetchRoute(db,'/api/ingest/player-stats',{stats:[stat]})).status,200);
+ row=sql.prepare('SELECT passing_interceptions,fumbles_lost FROM player_game_stats WHERE player_id=?').get('gsis-qb');assert.equal(row.passing_interceptions,2);assert.equal(row.fumbles_lost,1);
+});
