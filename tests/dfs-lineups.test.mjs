@@ -62,7 +62,7 @@ test('unavailable, conflicting and wrong-schedule players are excluded',()=>{
 async function render(data,now,failed=false){
   const elements=new Map();const get=id=>{if(!elements.has(id))elements.set(id,{hidden:false,innerHTML:'',textContent:'',setAttribute(){}});return elements.get(id)};
   class Clock extends Date{static now(){return Date.parse(now)}}
-  const context=vm.createContext({document:{getElementById:get,body:{dataset:{}}},localStorage:{getItem(){return null}},Date:Clock,Intl,console,newsIcon,avatar,avatarGroup,icon,stackPreview,positionBadge,loadResearch:async()=>{throw Error('Legacy fallback test')},setInterval(){},fetch:async()=>({ok:!failed,json:async()=>data})});
+  const context=vm.createContext({document:{getElementById:get,body:{dataset:{}}},localStorage:{getItem(){return null}},Date:Clock,Intl,console,URLSearchParams,location:{search:""},loadLeaders(){},newsIcon,avatar,avatarGroup,icon,stackPreview,positionBadge,loadResearch:async()=>{throw Error('Legacy fallback test')},setInterval(){},fetch:async()=>({ok:!failed,json:async()=>data})});
   vm.runInContext(readFileSync(new URL('../public/lineups/lineups.js',import.meta.url),'utf8').replace(/^import .*\n/gm,''),context);
   await new Promise(resolve=>setImmediate(resolve));return get;
 }
@@ -73,8 +73,8 @@ test('frontend renders 1/2/3 cards and escapes source-provided names',async()=>{
   for(const [tier,count]of [['projection',1],['floor',2],['ceiling',3]])assert.equal((get(tier+'-lineups').innerHTML.match(/<article/g)||[]).length,count);
   assert.match(get('projection-lineups').innerHTML,/&lt;img/);assert.equal(get('lineup-content').hidden,false);
 });
-test('frontend clearly flags stale builds and hides locked or failed data',async()=>{
+test('frontend clearly flags stale builds, retains locked review, and hides failed data',async()=>{
   const stale=await render(saved,'2026-09-08T15:00:00Z');assert.match(stale('lineup-status').innerHTML,/STALE SNAPSHOT/);
-  const locked=await render(saved,'2026-09-13T17:00:00Z');assert.equal(locked('lineup-content').hidden,true);assert.match(locked('lineup-status').textContent,/locked/);
+  const locked=await render(saved,'2026-09-13T17:00:00Z');assert.equal(locked('lineup-content').hidden,false);assert.equal(locked('review-banner').hidden,false);assert.match(locked('lineup-status').textContent,/locked/);
   const failed=await render(saved,'2026-09-06T15:00:00Z',true);assert.equal(failed('lineup-empty').hidden,false);assert.equal(failed('lineup-content').hidden,true);
 });

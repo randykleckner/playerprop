@@ -4,8 +4,9 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from datetime import datetime
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from newsroom.feed import rss, injuries, espn, article_published_at
+from newsroom.feed import rss, injuries, espn, article_published_at, InjuryTable
 from refresh_newsroom import refresh, atomic
 F=Path(__file__).parent/'fixtures/newsroom'
 NOW='2026-09-08T23:00:00+00:00'
@@ -36,9 +37,21 @@ class NewsTests(unittest.TestCase):
  def test_supersession_failure_retention_and_archives(self):
   with tempfile.TemporaryDirectory() as tmp:
    root=Path(tmp)/'public';state=Path(tmp)/'state'
+   parser=InjuryTable();parser.feed((F/'nfl.html').read_text())
+   catalog=list(PLAYERS)
+   for tm,row in parser.rows:
+    if not any(p['display_name']==row[0] for p in catalog):catalog.append({'player_id':'fixture-'+row[0],'display_name':row[0],'espn_id':None,'position':row[1],'current_team_id':tm})
+   (root/'research').mkdir(parents=True)
+   (root/'research/latest.json').write_text(json.dumps({'snapshot':{'season':2026,'week':1}}))
+   class Clock(datetime):
+    @classmethod
+    def now(cls,tz=None):return datetime.fromisoformat(NOW)
    def request(url,state,now):
+    if '/apis/' in url:
+     wire={'season':{'year':2026},'injuries':[{'injuries':[{'athlete':{'links':[{'href':'https://www.espn.com/nfl/player/_/id/2/test'}],'team':{'abbreviation':'NE'}},'status':'Out','date':NOW,'details':{'type':'Ankle'}}]}]}
+     return {'body':json.dumps(wire),'fetched_at':NOW,'sha256':'wire'}
     return {'body':(F/('espn.xml' if 'espn' in url else 'nfl.html')).read_text(),'fetched_at':NOW,'sha256':'recorded'}
-   with patch('refresh_newsroom.load_catalog',return_value=(PLAYERS,{'sha256':'catalog'})):
+   with patch('refresh_newsroom.load_catalog',return_value=(catalog,{'sha256':'catalog'})),patch('refresh_newsroom.datetime',Clock):
     self.assertEqual(refresh(root,state,request),0)
     first=json.loads((root/'newsroom/latest.json').read_text())
     self.assertEqual(len([s for s in first['stories'] if s['player_id']=='2']),1)

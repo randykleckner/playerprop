@@ -29,7 +29,8 @@ class NflAvailabilityProvider:
  source = NFL_URL
  def parse(self,body,people,season,week,fetched_at):
   rows,issues,tables=official_rows(body,people,season,week)
-  return {'players':{pid:dict(row,updated_at=fetched_at,source_published_at=None,season=season,week=week) for pid,row in rows.items()},'issues':issues,'tables':tables,'fetched_at':fetched_at,'source_published_at':None,'season':season,'week':week,'source':self.source,'status':'ok'}
+  parser=InjuryTable();parser.feed(body)
+  return {'teams':parser.table_teams,'players':{pid:dict(row,player_id=pid,team=people[pid]['team'],updated_at=fetched_at,source_published_at=None,season=season,week=week) for pid,row in rows.items()},'issues':issues,'tables':tables,'fetched_at':fetched_at,'source_published_at':None,'season':season,'week':week,'source':self.source,'status':'ok'}
 
 def apply_official_inactives(report,evidence):
  """Optional verified structured inactive evidence; never inferred from a news headline."""

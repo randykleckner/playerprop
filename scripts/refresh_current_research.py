@@ -107,6 +107,7 @@ def main():
             if Path(args.root).resolve()==(ROOT/'public').resolve():
                 subprocess.run(['python3','scripts/import_personnel.py'],cwd=ROOT,check=False)
                 subprocess.run(['python3','scripts/build_v2_availability.py'],cwd=ROOT,check=False)
+                subprocess.run(['python3','scripts/build_data_health.py'],cwd=ROOT,check=False)
 
 
 if __name__=='__main__':raise SystemExit(main())

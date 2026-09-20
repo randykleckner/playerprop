@@ -11,6 +11,7 @@ from research.prepare import team
 from newsroom.feed import NFL_URL
 from availability.provider import official_rows,NflAvailabilityProvider
 from refresh_newsroom import fetch
+from availability.persistence import reconcile,failure
 ROOT=Path(__file__).resolve().parents[1]
 def latest_depth(body,people,at):
  rows=list(csv.DictReader(io.StringIO(body)));dates={}
@@ -62,22 +63,24 @@ def build(request=fetch):
   if p['mapping_status'] in ['verified','strongly_corroborated']:mapped[p['canonical_player_id']].append(p)
  manifest=json.loads((ROOT/'public/research/latest.json').read_text());sim=json.loads((ROOT/('public'+manifest['snapshot']['simulation_path'])).read_text())
  season=int(sim['season']);week=int(sim['week']);news=request(NFL_URL,ROOT/'.newsroom',at);report=NflAvailabilityProvider().parse(news['body'],people,season,week,news['fetched_at']);injuries,injuryissues,tables=report['players'],report['issues'],report['tables']
+ previous_path=ROOT/'public/drive-lab/availability.json';previous=json.loads(previous_path.read_text()) if previous_path.exists() else {}
+ expected={g[k] for g in sim['games'] for k in ('home','away')}
+ injuries=reconcile(report,previous,people,expected)
  snaps,snap_hash=snap_history(ROOT/'.dfs-research',catalog,people,season,week)
  rawroster={r['gsis_id']:r for r in csv.DictReader(io.StringIO(roster['body']))}
  for pid,p in people.items():
   status=p['status'];abbr=rawroster.get(pid,{}).get('status_description_abbr','');state='UNKNOWN' if status=='ACT' else 'IR/PUP' if status=='RES' and abbr in ['R01','R04','R48'] else 'SUSPENDED' if abbr in ['R30','R33','R40'] else 'INACTIVE'
   p['availability']={'state':state,'practice_status':None,'game_status':None,'source':roster['url'],'updated_at':roster['captured_at'],'confidence':'roster_only','roster_designation':abbr}
   # Injury practice evidence cannot activate a player absent from the active roster.
-  if pid in injuries and status=='ACT':p['availability']=injuries[pid]|{'updated_at':news['fetched_at']}
+  if pid in injuries and status=='ACT':p['availability']=injuries[pid]
   elif pid in injuries:p['availability']['official_report']=injuries[pid]
   ms=mapped.get(pid,[]);p['attributes']=ms[0]['attributes'] if len(ms)==1 else None;p['mapping_status']=ms[0]['mapping_status'] if len(ms)==1 else 'unresolved'
   p['snap_history']=snaps.get(pid);p['rating_source']=ratings['snapshot_id'];p['depth_roles']=[r for r in roles if r['player_id']==pid]
- record={'version':'V2.0-D','as_of':at,'injury_at':news['fetched_at'],'injury_hash':news['sha256'],'roster_at':roster['captured_at'],'roster_snapshot':roster['sha256'],'depth_at':dates,'madden_snapshot':ratings['snapshot_id'],'personnel_snapshot':personnel['snapshot_id'],'player_snapshot':sourceplayers['snapshot_id'],'season':season,'week':week,'players':people,'depth':roles,'issues':depthissues+injuryissues,'snap_source_hash':snap_hash,'coverage':{'snap_history_players':len(snaps),'players':len(people),'official_injury_players':len(injuries),'official_tables':tables,'statuses':dict(Counter(p['availability']['state'] for p in people.values())),'madden':coverage},'unit_weights':json.loads((ROOT/'config/personnel.json').read_text())['unit_weights']}
- record['snapshot_id']='availability-'+hashlib.sha256(json.dumps(record,sort_keys=True).encode()).hexdigest()[:20];archive=ROOT/'.personnel'/f"{record['snapshot_id']}.json";atomic(archive,record);atomic(ROOT/'public/drive-lab/availability.json',record);atomic(ROOT/'public/drive-lab/availability-status.json',{'status':'ok','fetched_at':news['fetched_at'],'attempted_at':at,'snapshot_id':record['snapshot_id']})
+ record={'version':'V2.0-D','as_of':at,'injury_at':news['fetched_at'],'injury_hash':news['sha256'],'roster_at':roster['captured_at'],'roster_snapshot':roster['sha256'],'depth_at':dates,'madden_snapshot':ratings['snapshot_id'],'personnel_snapshot':personnel['snapshot_id'],'player_snapshot':sourceplayers['snapshot_id'],'season':season,'week':week,'players':people,'depth':roles,'issues':depthissues+injuryissues,'snap_source_hash':snap_hash,'coverage':{'snap_history_players':len(snaps),'players':len(people),'official_injury_players':len(report['players']),'retained_injury_players':sum(bool(v.get('retained')) for v in injuries.values()),'official_tables':tables,'statuses':dict(Counter(p['availability']['state'] for p in people.values())),'madden':coverage},'unit_weights':json.loads((ROOT/'config/personnel.json').read_text())['unit_weights']}
+ record['snapshot_id']='availability-'+hashlib.sha256(json.dumps(record,sort_keys=True).encode()).hexdigest()[:20];archive=ROOT/'.personnel'/f"{record['snapshot_id']}.json";atomic(archive,record);atomic(ROOT/'public/drive-lab/availability.json',record);atomic(ROOT/'public/drive-lab/availability-status.json',{'status':'ok','fetched_at':news['fetched_at'],'attempted_at':at,'snapshot_id':record['snapshot_id'],'last_success':at,'record_count':len(report['players'])})
  print(json.dumps({k:record[k] for k in ['snapshot_id','injury_at','roster_at','coverage']}));return record
 if __name__=='__main__':
  try:build()
- except Exception:
-  atomic(ROOT/'public/drive-lab/availability-status.json',{'status':'failed','attempted_at':datetime.now(timezone.utc).isoformat(),'detail':'Latest official refresh failed; last valid availability snapshot retained'})
+ except Exception as error:
+  failure(ROOT,error)
   raise
-

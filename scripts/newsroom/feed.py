@@ -35,12 +35,12 @@ def base(player, key, topic, summary, implication, source, url, at, now, evidenc
 
 class InjuryTable(HTMLParser):
     def __init__(self):
-        super().__init__();self.rows=[];self.tables=0;self.in_table=False;self.cell=None;self.row=[];self.heading=False;self.team='';self.headers=[]
+        super().__init__();self.rows=[];self.table_teams=[];self.tables=0;self.in_table=False;self.cell=None;self.row=[];self.heading=False;self.team='';self.headers=[]
     def handle_starttag(self, tag, attrs):
         a=dict(attrs)
         if tag=='div' and 'd3-o-section-sub-title' in a.get('class',''):self.heading=True
         if tag=='table' and 'd3-o-reports--detailed' in a.get('class',''):
-            self.in_table=True;self.tables+=1;self.headers=[]
+            self.in_table=True;self.tables+=1;self.headers=[];self.table_teams.append(self.team)
         if self.in_table and tag=='tr':self.row=[]
         if self.in_table and tag in ('td','th'):self.cell=[];self.is_header=tag=='th'
     def handle_data(self, data):
@@ -80,7 +80,7 @@ def injuries(html, players, now):
         impact='Unavailable for this reported game; do not assume normal production.' if status=='Out' else 'Availability or workload needs monitoring. A practice designation alone does not establish game availability.'
         item=base(p,f'nfl:{cohort[2]}:{cohort[1]}:{p["player_id"]}','Availability',summary,impact,'NFL official injury report',NFL_URL,None,now,{'name':name,'team':tm,'position':pos,'injury':injury,'practice':practice,'game_status':status,'season':int(cohort[2]),'week':int(cohort[1])})
         item['report_week']=int(cohort[1]);result.append(item)
-    return result,{'tables':parser.tables,'rows':len(parser.rows),'unmatched_rows':unmatched,'season':int(cohort[2]),'week':int(cohort[1]),'covered_player_ids':covered}
+    return result,{'teams':parser.table_teams,'tables':parser.tables,'rows':len(parser.rows),'unmatched_rows':unmatched,'season':int(cohort[2]),'week':int(cohort[1]),'covered_player_ids':covered}
 
 # Match a player as the subject of a concrete statement, not merely an article tag.
 EVENTS=[

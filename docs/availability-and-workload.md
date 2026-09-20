@@ -160,3 +160,7 @@ Runtime: baseline 4.69s, OUT 4.79s locally. Exact active player membership, weig
 218 tests pass (128 Node + 90 Python), including 35 additions for availability/source parsing, status inference, exact workload conservation, LT/CB/EDGE/QB substitution, weighted coverage, missing reserves, immutable scenarios, snap evidence, stale metadata and reproducibility. TypeScript passes. Browser checks confirm a 50% LIMITED scenario reruns and shows its official baseline, user override and reduced shares. The existing 183 tests remain passing.
 
 Published on both existing custom domains as Cloudflare version `f712de41-2b14-46e5-b989-19c276e7cacf`. The deployment updates static Drive Lab assets; D1 schema and production Cron configuration are unchanged.
+
+## Weekly Edge persistence update
+
+See [Weekly Edge Engine](weekly-edge-engine.md) for validated report replacement, retained injury evidence, failure logging and the Data Health view.

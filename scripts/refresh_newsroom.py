@@ -72,7 +72,13 @@ def refresh(root=ROOT/'public',state=ROOT/'.newsroom',request=fetch):
                     keys={s['key'] for s in stories};stories.extend(s for s in extra if s['key'] not in keys)
             else:stories,counts=parser(raw['body'],players,raw['fetched_at'])
             if name!='ESPN' and cohort and (counts['season'],counts['week'])!=(cohort.get('season'),cohort.get('week')):raise ValueError('Injury report does not match current research week')
-            if name!='ESPN':covered.update(counts.get('covered_player_ids',[]))
+            if name!='ESPN':
+                prior_source=next((s for s in previous.get('sources',[]) if s['name']==name),{})
+                prior_counts=prior_source.get('counts',{})
+                if not counts.get('rows') or len(set(counts.get('teams',[])))!=counts.get('tables'):raise ValueError('Empty or duplicate injury report')
+                if counts.get('tables',0)<prior_counts.get('tables',0):raise ValueError('Partial injury report')
+                if counts.get('unmatched_rows'):raise ValueError('Injury identity mismatch')
+                covered.update(counts.get('covered_player_ids',[]))
             else:
                 keys={s['key'] for s in stories}
                 stories.extend(s for s in previous['stories'] if s['source']==name and s['key'] not in keys and stamp(s['expires_at'])>stamp(now))
@@ -81,7 +87,8 @@ def refresh(root=ROOT/'public',state=ROOT/'.newsroom',request=fetch):
         except Exception as error:
             # Preserve source-specific last valid records with their ORIGINAL expiry.
             all_stories.extend(s for s in previous['stories'] if s['source']==name)
-            sources.append({'name':name,'url':url,'status':'failed','error':type(error).__name__,'detail':'Source unavailable; retained last valid briefs with original timestamps.'})
+            prior_source=next((s for s in previous.get('sources',[]) if s['name']==name),{})
+            sources.append({**prior_source,'name':name,'url':url,'status':'failed','error':type(error).__name__,'detail':'Source unavailable; retained last valid briefs with original timestamps.'})
     try:
         raw=request(INJURY_WIRE_URL,state,now)
         wire,counts=injury_wire(json.loads(raw['body']),players,now,cohort.get('season'))
