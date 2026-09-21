@@ -21,7 +21,7 @@ from research.prepare import markets
 from research.identity_evidence import recorded_evidence
 
 
-def scoreboard(date, state):
+def scoreboard(date, state, allow_empty=False):
     cache=state/('scoreboard-'+date+'.json')
     if cache.exists():
         previous=json.loads(cache.read_text())
@@ -32,7 +32,7 @@ def scoreboard(date, state):
     with opener.open(urllib.request.Request(url,headers={'Accept':'application/json','User-Agent':'DrLocks-research-refresh/1.0 (public read-only)'}),timeout=30) as response:raw=response.read(12*1024*1024+1)
     if len(raw)>12*1024*1024:raise ValueError('Scoreboard exceeds limit')
     payload=json.loads(raw)
-    if not payload.get('events'):raise ValueError('No scheduled games available')
+    if not isinstance(payload.get('events'),list) or (not payload['events'] and not allow_empty):raise ValueError('No scheduled games available')
     result={'fetched_at':utc_now(),'url':url,'payload':payload}
     digest=hashlib.sha256(raw).hexdigest();archive=state/(digest+'.json')
     if not archive.exists():archive.write_bytes(raw)
@@ -99,6 +99,7 @@ def main():
         finally:
             subprocess.run(['node','scripts/build_lineup_archive.mjs',args.root],cwd=ROOT,check=False)
             # Public API snapshot and kickoff expiry are independent of DFS/news failures.
+            subprocess.run(['python3','scripts/refresh_game_outlook.py'],cwd=ROOT,check=False)
             subprocess.run(['python3','scripts/refresh_season_leaders.py'],cwd=ROOT,check=False)
             subprocess.run(['python3','scripts/refresh_prop_snapshot.py','--root',args.root],cwd=ROOT,check=False)
             # News has an independent failure boundary and also refreshes when salary discovery fails.

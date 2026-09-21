@@ -349,3 +349,6 @@ September 15 follow-up: Drive Lab uses `current-games.js` and current research r
 ## Weekly Edge Engine — Phase 1
 
 The first increment adds injury replacement validation, retained dated injury evidence, failure logs and a centralized `/data-health/` view. See [implementation and remaining phases](docs/weekly-edge-engine.md). No new D1 tables, secrets or Cron triggers in this increment.
+
+### Essential coverage continuity
+Drive Lab uses an independent upcoming schedule rather than waiting for a DraftKings salary slate. Persistent injury/return news also powers homepage summaries and player icons. Matchup, actual-leader and basic weather context now appears below recommendations. See `docs/weekly-edge-engine.md` for source limitations and validation.

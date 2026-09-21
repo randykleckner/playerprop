@@ -64,13 +64,14 @@ def injuries(html, players, now):
     if not cohort or int(cohort[2])!=stamp(now).year:raise ValueError('NFL injury season unavailable or old')
     parser=InjuryTable();parser.feed(html)
     if not parser.tables:raise ValueError('NFL injury tables unavailable')
-    result=[];unmatched=0;covered=[]
+    result=[];unmatched=0;covered=[];practice_updates=[]
     for tm,row in parser.rows:
         name,pos,injury,practice,status=row
         candidates=[p for p in players if normalized_name(p['display_name'])==normalized_name(name) and p['current_team_id']==tm and family(p['position'])==family(pos)]
         if len(candidates)!=1:unmatched+=1;continue
         covered.append(candidates[0]['player_id'])
-        if not status and practice=='Full Participation in Practice':continue
+        if not status and practice=='Full Participation in Practice':
+            practice_updates.append({'player_id':candidates[0]['player_id'],'practice':practice,'season':int(cohort[2]),'week':int(cohort[1]),'injury':injury});continue
         if not status and not injury and not practice:continue
         if status not in ('','Out','Doubtful','Questionable'):raise ValueError('Unknown NFL game status')
         if practice not in ('','Full Participation in Practice','Limited Participation in Practice','Did Not Participate In Practice'):raise ValueError('Unknown NFL practice status')
@@ -80,7 +81,7 @@ def injuries(html, players, now):
         impact='Unavailable for this reported game; do not assume normal production.' if status=='Out' else 'Availability or workload needs monitoring. A practice designation alone does not establish game availability.'
         item=base(p,f'nfl:{cohort[2]}:{cohort[1]}:{p["player_id"]}','Availability',summary,impact,'NFL official injury report',NFL_URL,None,now,{'name':name,'team':tm,'position':pos,'injury':injury,'practice':practice,'game_status':status,'season':int(cohort[2]),'week':int(cohort[1])})
         item['report_week']=int(cohort[1]);result.append(item)
-    return result,{'teams':parser.table_teams,'tables':parser.tables,'rows':len(parser.rows),'unmatched_rows':unmatched,'season':int(cohort[2]),'week':int(cohort[1]),'covered_player_ids':covered}
+    return result,{'teams':parser.table_teams,'tables':parser.tables,'rows':len(parser.rows),'unmatched_rows':unmatched,'season':int(cohort[2]),'week':int(cohort[1]),'covered_player_ids':covered,'practice_updates':practice_updates}
 
 # Match a player as the subject of a concrete statement, not merely an article tag.
 EVENTS=[

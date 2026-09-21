@@ -16,7 +16,7 @@ def parse(payload,players,now,season):
             p=candidates[0];provider_team=a.get('team',{}).get('abbreviation','').replace('LAR','LA')
             if provider_team!=p['current_team_id']:unmapped+=1;continue
             status=row.get('status');detail=row.get('details',{});at=row.get('date')
-            if not status or status.lower() in ['active','healthy']:continue
+            if not status:continue
             try:
                 if stamp(at)>stamp(now):continue
             except (ValueError,TypeError,AttributeError):continue

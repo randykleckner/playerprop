@@ -92,11 +92,19 @@ def refresh(root=ROOT/'public',state=ROOT/'.newsroom',request=fetch):
     try:
         raw=request(INJURY_WIRE_URL,state,now)
         wire,counts=injury_wire(json.loads(raw['body']),players,now,cohort.get('season'))
+        history_path=root/'newsroom/history.json'
+        prior_reports=previous['stories']+(json.loads(history_path.read_text()).get('stories',[]) if history_path.exists() else [])
+        previously_affected={s['player_id'] for s in prior_reports if s['topic']=='Availability' and s.get('evidence',{}).get('game_status') not in [None,'','Active','Healthy','Full practice']}
+        wire=[s for s in wire if s.get('evidence',{}).get('game_status') not in ['Active','Healthy'] or s['player_id'] in previously_affected]
+        for story in wire:
+            if story.get('evidence',{}).get('game_status') in ['Active','Healthy']:story['return_update']=True
         all_stories.extend(wire)
         sources.append({'name':'ESPN injury wire','url':INJURY_WIRE_URL,'status':'ok','fetched_at':raw['fetched_at'],'counts':counts})
     except Exception as error:
         all_stories.extend(s for s in previous['stories'] if s['source']=='ESPN injury wire')
         sources.append({'name':'ESPN injury wire','url':INJURY_WIRE_URL,'status':'failed','error':type(error).__name__})
+    from newsroom.lifecycle import retain_and_update
+    all_stories=retain_and_update(all_stories,previous['stories'],players,sources)
     # Preserve every dated brief, independently of current-feed expiry and deduplication.
     archive_path=root/'newsroom/history.json'
     history=json.loads(archive_path.read_text()).get('stories',[]) if archive_path.exists() else []

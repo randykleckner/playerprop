@@ -15,5 +15,5 @@ export function enhancePlayerMedia(){
    let index=0;const next=()=>{if(index>=urls.length){node.classList.add('ui-media-unavailable');return;}const url=urls[index++],img=document.createElement('img');img.alt='';img.loading='lazy';if(url===teams[team]?.logo)img.className='ui-team-image';img.addEventListener('error',()=>{img.remove();next();},{once:true});img.src=url.includes('static.www.nfl.com/image/')?url.replace('/f_auto,q_auto/','/f_auto,q_auto,w_192/'):url;node.append(img);};next();}
 
  }
- const observer=new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(update,60);});observer.observe(document.body,{childList:true,subtree:true});update();
+ const observer=new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(update,60);});if(document.body){observer.observe(document.body,{childList:true,subtree:true});update();}else document.addEventListener('DOMContentLoaded',()=>{observer.observe(document.body,{childList:true,subtree:true});update();},{once:true});
 }

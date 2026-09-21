@@ -31,9 +31,13 @@ def build(root=ROOT):
     rows.append(health('stats',stats.get('fetched_at'),stats.get('fetched_at'),len(stats.get('players',[])),ttl=192))
     rows.append(health('odds',odds.get('checked_at'),odds.get('captured_at'),odds.get('upcoming_props',0),odds.get('error') or (odds.get('message') if odds.get('status') not in ['ok','current'] else None)))
     rows.append(health('Madden',ratings.get('last_checked_at'),ratings.get('captured_at'),ratings.get('player_count',0),ratings.get('refresh_error'),ttl=192))
-    for source in ['weather','ownership']:rows.append(health(source,None,None,0,expected=False))
+    outlook=read('public/drive-lab/upcoming.json');outlook_status=read('public/drive-lab/upcoming-status.json')
+    rows.append(health('schedule',outlook_status.get('last_attempt'),outlook.get('data_as_of'),len(outlook.get('games',[])),outlook_status.get('error')))
+    forecasts=[g for g in outlook.get('games',[]) if isinstance(g.get('weather'),dict)]
+    rows.append(health('weather',outlook_status.get('last_attempt'),outlook.get('data_as_of'),len(forecasts),outlook_status.get('error'),ttl=6))
+    rows.append(health('ownership',None,None,0,expected=False))
     result={'version':1,'generated_at':datetime.now(timezone.utc).isoformat(),'sources':rows,
-            'limitations':['Weather and ownership have no persisted pipeline yet.', 'Legacy sources may not record every failed attempt; unknown attempt times stay null.']}
+            'limitations':['Weather covers basic ESPN forecasts only; wind, precipitation intensity and model effects are unavailable. Ownership is not connected.', 'Legacy sources may not record every failed attempt; unknown attempt times stay null.']}
     atomic(root/'public/data-health/latest.json',result)
     return result
 if __name__=='__main__':print(json.dumps(build()))
