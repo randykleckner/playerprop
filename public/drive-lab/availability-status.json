@@ -1,1 +1,1 @@
-{"status": "ok", "fetched_at": "2026-09-20T17:58:45.337184+00:00", "attempted_at": "2026-09-20T17:59:05.414814+00:00", "snapshot_id": "availability-9c94a4b214922e5f3204"}
+{"status": "failed", "attempted_at": "2026-09-21T15:03:22.510495+00:00", "last_success": "2026-09-20T17:59:05.414814+00:00", "fetched_at": "2026-09-20T17:58:45.337184+00:00", "snapshot_id": "availability-9c94a4b214922e5f3204", "record_count": 251, "error": "ValueError", "detail": "Latest official refresh failed; last valid availability snapshot retained"}

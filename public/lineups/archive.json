@@ -2,6 +2,15 @@
   "version": 1,
   "entries": [
     {
+      "bundle": "39e655a789fbddb741e835eb",
+      "slate_id": "153769",
+      "season": 2026,
+      "week": 3,
+      "start_time": "2026-09-27T17:00:00.000Z",
+      "generated_at": "2026-09-21T15:02:34.651Z",
+      "lineups_path": "/research/bundles/39e655a789fbddb741e835eb/lineups.json"
+    },
+    {
       "bundle": "88e061a33c4fa5774d5e538c",
       "slate_id": "153430",
       "season": 2026,

@@ -46,6 +46,11 @@ async function load(){
   roster=Array(9).fill(null);
   if(draft){try{validateRoster(draft,data.players);roster=draft;}catch(error){tell(`${error.message} Saved content was not changed; starting an empty draft.`,true);locks.clear();}}
   locks=new Set([...locks].filter(id=>roster.includes(id)));
+  if(params.has('add')){
+   const id=params.get('add');
+   try{if(!roster.includes(id))roster=addPlayer(roster,id,data.players);validateRoster(roster,data.players);if(params.get('lock')==='1')locks.add(id);storeDraft();tell('Research player added'+(params.get('lock')==='1'?' and locked':'')+'.');}catch(error){tell(error.message,true);}
+  }
+  if(params.has('add')){const clean=new URL(location.href);clean.searchParams.delete('add');clean.searchParams.delete('lock');history.replaceState(null,'',clean);}
   updatePosition();render();$('builder-content').hidden=false;
  }catch(error){$('freshness').textContent=error.message;$('freshness').dataset.state='FAILED';$('retry').hidden=false;}
 }
