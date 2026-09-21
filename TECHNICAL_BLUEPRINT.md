@@ -352,3 +352,9 @@ The first increment adds injury replacement validation, retained dated injury ev
 
 ### Essential coverage continuity
 Drive Lab uses an independent upcoming schedule rather than waiting for a DraftKings salary slate. Persistent injury/return news also powers homepage summaries and player icons. Matchup, actual-leader and basic weather context now appears below recommendations. See `docs/weekly-edge-engine.md` for source limitations and validation.
+
+### Research workspace — September 21, 2026
+
+Research now owns Season Leaders and connects current-slate player data, weekly NFLverse actuals, positional defensive splits, historical team tendencies, value discovery, player details, existing Monte Carlo scenarios and canonical Builder handoffs. Identity review moved to `/research/readiness/`; calibration stays at its existing URL. No D1 migration, Worker API route, secret, quota or Cron changes.
+
+See [Research workspace implementation receipt](docs/research-workspace.md) for the ten-phase status, file inventory, metric definitions, validation, available data and explicit missing features. Value weights are centralized. Production gap uses a clearly labeled retrospective cohort expectation; MC breakout is a salary-relative outcome exceedance, not a contest win probability. Unsupported metrics remain null. The full advanced research roadmap remains partial.
