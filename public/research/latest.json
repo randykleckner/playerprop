@@ -54,7 +54,7 @@
     ]
   },
   "attempt": {
-    "attempted_at": "2026-09-17T15:15:29.545Z",
-    "error": null
+    "attempted_at": "2026-09-20T17:58:43.359Z",
+    "error": "Public research refresh failed (ProviderError); last valid snapshot retained"
   }
 }

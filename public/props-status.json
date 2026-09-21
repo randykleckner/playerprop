@@ -1,8 +1,8 @@
 {
-  "status": "current",
-  "checked_at": "2026-09-17T15:15:30.350836+00:00",
+  "status": "stale",
+  "checked_at": "2026-09-20T17:58:43.870044+00:00",
   "captured_at": "2026-09-17T15:15:01.122Z",
-  "age_hours": 0.008119121111111112,
-  "upcoming_props": 58,
-  "message": "Upcoming quotes available"
+  "age_hours": 74.72854112333333,
+  "upcoming_props": 56,
+  "message": "Snapshot copying does not refresh the sportsbook provider. An empty or stale feed requires attention."
 }
